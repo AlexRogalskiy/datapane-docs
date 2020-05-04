@@ -5,7 +5,7 @@ description: >-
   a few primitives to help with this.
 ---
 
-# 📈 Create a front-end for a data science model
+# 📈 Create dynamic reports from an ML model using a form
 
 ## Introduction
 
@@ -73,24 +73,26 @@ fitted = GridSearchCV(
 ).fit(in_df[features], in_df[purchased_col])
 
 b = dp.Blob.upload_obj(fitted)
-b.id
-# deadbeef
+print(b.id)
 ```
 
 ## Creating a front-end
 
-To provide a front-end on Datapane, we write a [Script]() which uses our serialised model and provides a web form which stakeholders can use. In our code, we take a single item id, pull down recent order data from our database, and use the model to predict purchases  Our script creates a Report which contains the most likely purchasers of a given item inside of a Table component.
+To create our script and output report on Datapane, we write a notebook which uses our serialised model to classify inputs, which are passed to Datapane through a form. In our code, we take a single item id, pull down recent order data from our database, and use the model to predict purchases. Our script creates a Report which contains the most likely purchasers of a given item inside of a Table component.
 
 {% hint style="info" %}
-Datapane supports providing your own Python and OS libraries. In this example, we're using our own `acme_corp_data_lib` to pull data from our database.
+Datapane supports providing your own Python and OS libraries. In this example, we're using our own `acme_corp_data_lib` to pull data from our database, and using `lightgbm` for the classification.
 {% endhint %}
 
-{% code title="purchase\_predictions.ipynb" %}
+{% code title="dp\_script.ipynb" %}
 ```python
 import datapane as dp
 import pandas as pd
 import pickle
 import acme_corp_data_lib
+import lightbgm
+
+from datapane import Params, Report, Markdown, Table
 
 item_id = dp.config.item_id
 purchase_data = acme_corp_data_lib.get_purchase_data();
@@ -104,38 +106,40 @@ df = purchase_data[["user_id", "item_id", "purchased"]]
 df["p_purchase"] = predictions[:, 1]
 out_table = df[df['item_id'] == item_id]
 
-def render():
-  return [
-      dp.Markdown(f"# Predicted purchasers for {item_id}"), 
-      dp.Table.create(out_table)
-  ]
+Report.create(
+  Markdown(f"# Predicted purchasers for {item_id}"), 
+  Table.create(out_table)
+ )
 ```
 {% endcode %}
 
-In our `datapane.yaml` we can optionally write a schema which defines the fields which are exposed in the form. 
+In our `datapane.yaml` we can define which fields to expose in our form, and specify the local and external library requirements.
 
 {% code title="datapane.yaml" %}
 ```yaml
 name: purchase_predictor
+
 parameters:
-  - name: "item_id"
-    type: "string"
+  - name: item_id
+    type: string
+    
+include:
+  - acme_corp_data_lib
+
+requirements:
+  - lightgbm
 ```
 {% endcode %}
 
 Next, we deploy our script to Datapane using the CLI:
 
 ```bash
-$ datapane script upload --script=purchase_predictions.ipynb
+$ datapane script deploy
 ```
 
 ## Using the script
 
-Once deployed, stakeholders are able to run this script through a form on our Datapane instance. 
-
-![](../.gitbook/assets/image%20%2837%29.png)
-
-Each time this form is run with an item id, it generates our [Report](), which contains the output predictions in a table component.
+Once deployed, stakeholders are able to run this script through a form on our Datapane instance. Each time this form is run with an item id, it generates a Report, which contains the output predictions in a table component.
 
 ![](../.gitbook/assets/image%20%2824%29.png)
 

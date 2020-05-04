@@ -27,7 +27,7 @@ Report.create(Table.create(df['High']), Plot.create(chart))
 {% endtab %}
 {% endtabs %}
 
-Using Datapane's CLI, you can deploy Python scripts or Jupyter Notebooks to a server, so that others can use them to parameterise your script and generate reports dynamically through a web form.
+If you want your report to be generated dynamically by other people, you can deploy your Python script or notebook to Datapane using Datapane's CLI. If you share it with others, they are able to provide parameters through a friendly web form, which are passed into your script. 
 
 {% tabs %}
 {% tab title="Code" %}
@@ -35,23 +35,35 @@ Using Datapane's CLI, you can deploy Python scripts or Jupyter Notebooks to a se
 ```python
 import altair as alt
 import pandas as pd
-from datapane import Plot, Table
+from datapane import Plot, Table, Params, Report 
 
-ticker = params.get('ticker', 'GOOG')
+ticker = Params.get('ticker')
 df = pd.read_csv(f"https://query1.finance.yahoo.com/v7/finance/download/{ticker}?period1=1553600505&period2=1585222905&interval=1d&events=history")
 chart = alt.Chart(df).encode(x='Date', y='High', y2='Low').mark_area(opacity=0.5).interactive()
 
-# Add a render method to generate dynamic reports!
-def render(): 
-    return [Table.create(df['High']), Plot.create(chart)]
+Report.create(Table.create(df['High']), Plot.create(chart))
 ```
 {% endcode %}
 
 {% code title="CLI" %}
 ```python
-$ datapane script upload --script=script.ipynb
+$ datapane script deploy --script=script.ipynb
 ```
 {% endcode %}
+
+```yaml
+name: stock_plot
+
+parameters:
+  - name: ticker
+    type: string
+    default: GOOG
+    required: True
+  - name: start_date
+    type: date
+  - name: end_date
+    type: date
+```
 {% endtab %}
 
 {% tab title="Web form" %}

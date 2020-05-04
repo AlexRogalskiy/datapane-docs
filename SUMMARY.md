@@ -10,11 +10,11 @@
 
 ## API Reference <a id="reference"></a>
 
+* [datapane.yaml](reference/datapane.yaml.md)
 * [Blobs](reference/blobs.md)
 * [Variables](reference/variables.md)
 
 ## Guides
 
-* [📈 Create a front-end for a data science model](guides/creating-ml-model-form.md)
-* [📝 Turn a Jupyter Notebook into a hosted web form](guides/turning-your-jupyter-notebook-into-a-form.md)
+* [📈 Create dynamic reports from an ML model using a form](guides/creating-ml-model-form.md)
 
