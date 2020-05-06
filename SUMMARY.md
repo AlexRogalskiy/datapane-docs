@@ -24,6 +24,7 @@
 * [📈 Create dynamic reports from an ML model](guides/guide-creating-ml-model-form.md)
 * [Using Datapane to process SQL](guides/using-datapane-to-process-sql.md)
 * [Calling from your existing workflow tools](guides/calling-from-your-existing-workflow-tools.md)
+* [Adding a report to an existing notebook](guides/adding-a-report-to-an-existing-notebook.md)
 
 ## Resources
 
