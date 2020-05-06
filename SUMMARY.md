@@ -30,4 +30,5 @@
 * [FAQ](resources/faq.md)
 * [Blog](https://blog.datapane.com)
 * [Open Source](https://github.com/datapane/datapane)
+* [Demos](https://github.com/datapane/datapane-demos)
 
