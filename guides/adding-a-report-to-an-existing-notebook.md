@@ -6,3 +6,7 @@ description: >-
 
 # Adding a report to an existing notebook
 
+{% hint style="info" %}
+Coming soon! We're just working on this example right now. 
+{% endhint %}
+
