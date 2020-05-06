@@ -12,7 +12,7 @@ For instance, Datapane provides a Table component which takes a pandas DataFrame
 
 ```python
 import pandas as pd
-from datapane import Report, Table
+import datapane as dp
 
 df = pd.DataFrame({
     'A': np.random.normal(-1, 1, 5000),
@@ -21,15 +21,15 @@ df = pd.DataFrame({
     'D': np.random.normal(-3, 0.5, 5000)
 })
 
-table = Table.create(df)
-report = Report.create(table)
+table = dp.Table.create(df)
+report = dp.Report.create(table)
 ```
 
 When we create a report, it is hosted on the Datapane server which we logged into using the CLI. To get the URL of our new report, we can look at the `web_url` property on the report object. In this example, we will have something like [this](https://acme.datapane.com/reports/Bj3LQ7Q/).
 
 ![A simple report with a single table](../.gitbook/assets/image%20%2829%29.png)
 
-This report is pretty basic, but we can jazz it up by adding some plots and markdown. Datapane supports Python visualisation libraries such as Altair and Bokeh. Let's create a plot with Altair, and add it to our report, along with some example Markdown text. This time, we pass a list of components to our Report.
+This report is pretty basic, but we can jazz it up by adding some plots and markdown. Datapane supports Python visualisation libraries such as [Altair](https://altair-viz.github.io/) and [Bokeh](https://bokeh.org/). Let's create a plot with Altair, and add it to our report, along with some example Markdown text. This time, we pass a list of components to our Report.
 
 ```python
 import pandas as pd

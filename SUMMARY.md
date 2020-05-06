@@ -10,7 +10,7 @@
 
 ## API Reference <a id="reference"></a>
 
-* [Overview](reference/overview.md)
+* [Overview](reference/reference-overview.md)
 * [Reports](reference/reports/README.md)
   * [Components](reference/reports/components.md)
 * [Scripts](reference/scripts/README.md)
