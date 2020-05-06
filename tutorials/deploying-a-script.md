@@ -96,7 +96,7 @@ script: analysis.ipynb
 ```
 {% endcode %}
 
-See the [API reference](../reference/datapane.yaml.md) for all the available configuration fields.
+See the [API reference](../reference/scripts/datapane.yaml.md) for all the available configuration fields.
 
 {% hint style="info" %}
 If there is a datapane.yaml, you don't need to provide the path of your analysis when you deploy. Instead, your script lives in `dp_script.py` or `dp_script.ipynb` by default.
@@ -113,7 +113,7 @@ Params.load_defaults('datapane.yaml')
 In this case, let's allow users to provide the stock tickers they are interested in through a `tickers` parameter. To create an input for our `tickers` parameter on the web interface, we must add it to our `datapane.yaml` . 
 
 {% hint style="info" %}
-Full details of parameter configuration and available fields are provided in the [API reference](../reference/datapane.yaml.md#parameters).
+Full details of parameter configuration and available fields are provided in the [API reference](../reference/scripts/datapane.yaml.md#parameters).
 {% endhint %}
 
 {% code title="datapane.yaml" %}
