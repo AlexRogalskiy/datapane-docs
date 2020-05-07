@@ -37,7 +37,7 @@ Enter your API Key: [paste your API key here]
 
 ### Private Servers
 
-Datapane provides private hosted servers and supports on-premise instances for teams and enterprises. In such as case, log in to your instance, for instance `https://youur-company.datapane.com,` using your existing credentials \(these will have been provide to you by your admin\).
+Datapane provides private hosted servers and supports on-premise instances for teams and enterprises. In such a case, log in to your instance, for instance `https://your-company.datapane.com,` using your existing credentials \(these will have been provide to you by your admin\).
 
 Similarly to using the public instance, your home page will indicate your API key and you will be able authenticate by passing in your API key to the login command. You can pass in the full URL of your server to the login command as follows.
 
