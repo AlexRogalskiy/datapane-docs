@@ -25,7 +25,7 @@ $ datapane script deploy --script=analysis.ipynb
 Let's take the following code which pulls stock data from Yahoo finance and deploy it using Datapane's CLI. At the bottom, we have a `Report.create` method which constructs our report, which will be returned to the user when they run our script using the Datapane web interface.
 
 {% hint style="info" %}
-Make sure you only only call `Report.create` a single time for each script you deploy to Datapane. If there are multiple reports created in a script, you will get an error or they will be ignored.
+Make sure you only call `Report.create` a single time for each script you deploy to Datapane. If there are multiple reports created in a script, you will get an error or they will be ignored.
 {% endhint %}
 
 {% code title="analysis.ipynb" %}
