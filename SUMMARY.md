@@ -4,9 +4,10 @@
 
 ## Tutorials
 
-* [Getting Started](tutorials/getting-started.md)
-* [Creating a Report](tutorials/creating-a-report.md)
-* [Deploying a Script](tutorials/deploying-a-script.md)
+* [Getting Started](tutorials/tut-getting-started.md)
+* [Creating a Report](tutorials/tut-creating-a-report.md)
+* [Deploying a Script](tutorials/tut-deploying-a-script.md)
+* [Parameterising a Script](tutorials/tut-parameterising-a-script.md)
 
 ## API Reference <a id="reference"></a>
 

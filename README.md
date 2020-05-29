@@ -6,9 +6,9 @@ description: High-level introduction to Datapane
 
 ## What is Datapane?
 
-Datapane makes it simple to build interactive reports in Python and share them publicly and with your team.
+Datapane is for people who analyse data in Python and want an easy way to share their results.
 
-It provides a library which allows you to create reports programatically from components that wrap around the common objects in analyses: [Pandas DataFrames](https://pandas.pydata.org/), plots from Python visualisation libraries such as [Bokeh](https://bokeh.org/) and [Altair](https://altair-viz.github.io/), and Markdown text. Once created, reports can be shared on the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualisations can be used interactively.
+It provides a library which allows you to create reports programatically from components that wrap around the common objects in analyses: [Pandas DataFrames](https://pandas.pydata.org/), plots from Python visualisation libraries such as [Bokeh](https://bokeh.org/) and [Altair](https://altair-viz.github.io/), and Markdown text. Once created, reports can be published on the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualisations can be used interactively.
 
 {% tabs %}
 {% tab title="Code" %}
@@ -21,7 +21,7 @@ import datapane as dp
 df = pd.read_csv('https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1553600505&period2=1585222905&interval=1d&events=history')
 chart = alt.Chart(df).encode(x='Date', y='High', y2='Low').mark_area(opacity=0.5).interactive()
 
-dp.Report.create(dp.Table.create(df['High']), dp.Plot.create(chart))
+dp.Report(dp.Table(df['High']), dp.Plot(chart)).publish(name='stock_analysis')
 ```
 {% endcode %}
 {% endtab %}
@@ -45,13 +45,13 @@ ticker = dp.Params.get('ticker')
 df = pd.read_csv(f"https://query1.finance.yahoo.com/v7/finance/download/{ticker}?period1=1553600505&period2=1585222905&interval=1d&events=history")
 chart = alt.Chart(df).encode(x='Date', y='High', y2='Low').mark_area(opacity=0.5).interactive()
 
-dp.Report.create(dp.Table.create(df['High']), dp.Plot.create(chart))
+dp.Report(dp.Table(df['High']), dp.Plot(chart)).publish(name='stock_analysis')
 ```
 {% endcode %}
 
 {% code title="CLI" %}
 ```python
-$ datapane script deploy --script=script.ipynb
+$ datapane script deploy --script=script.ipynb --name=stock_analyser
 ```
 {% endcode %}
 
