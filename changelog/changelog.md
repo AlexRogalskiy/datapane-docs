@@ -69,7 +69,7 @@ To do this, create a Docker image which inherits from the our base image and add
 For instance:
 
 ```text
-from datapane/python3-default:0.0.0
+from nstack/datapane-python-runner:latest
 COPY requirements.txt .
 RUN pip3 install --user -r requirements.txt
 ```
