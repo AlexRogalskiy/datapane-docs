@@ -15,8 +15,8 @@ Variables can be created through the CLI or Python library.
 {% tabs %}
 {% tab title="CLI" %}
 ```text
-~/> datapane variable add <variable_value>
-Created variable ID: ZXAmDk1
+~/> datapane variable add <variable_name> <variable_value>
+Created variable: <variable_name>
 ```
 {% endtab %}
 
@@ -28,7 +28,7 @@ v = dp.api.Variable.add('foo')
 {% endtab %}
 {% endtabs %}
 
-When a variable is created, it is assigned an `id` which can be used to retrieve it. By default, variables are private to the creator's account, but they can be be shared across an organisation. To set visibility, use the `--visibility` flag with `OWNER_ONLY` or `DOMAIN`. 
+By default, variables are private to the creator's account, but they can be be shared across an organisation. To set visibility, use the `--visibility` flag with `OWNER_ONLY` or `DOMAIN`. 
 
 {% hint style="info" %}
 If you want other people inside your organisation to run your scripts, your variable must be `DOMAIN`, as scripts are executed under their user account.
@@ -53,11 +53,11 @@ Available Variables:
 {% tabs %}
 {% tab title="CLI" %}
 ```text
-~/> datapane variable get <variable-id>
+~/> datapane variable get <variable-name> [--version=version_number]
 Available Variable:
-    id       value    visibility
+    name     value    visibility
 --  -------  -------  ------------
- 0  XBAmDk1  foo      OWNER_ONLY
+ 0  foo      bar      OWNER_ONLY
 ```
 {% endtab %}
 
@@ -75,8 +75,8 @@ v = dp.api.Variable(id).value
 {% tabs %}
 {% tab title="CLI" %}
 ```text
-~/> datapane variable delete XBAmDk1    
-Deleted variable ZBAmDk1
+~/> datapane variable delete <variable-name>    
+Deleted variable foo
 ```
 {% endtab %}
 {% endtabs %}

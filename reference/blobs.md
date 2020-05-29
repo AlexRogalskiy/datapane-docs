@@ -25,7 +25,7 @@ Blobs are exposed in both the Python library and CLI.
 Upload a blob and return an id and a url which you can use to retrieve the blob.
 
 ```text
-datapane blob upload <file>
+datapane blob upload <blob_name> <file>
 ```
 
 ### Download
@@ -33,7 +33,7 @@ datapane blob upload <file>
 Download a blob and save it to a file.
 
 ```text
-datapane blob download <blob_id> <filename>
+datapane blob download <blob_name> <filename> [--version=version]
 ```
 
 ## Python 
@@ -46,13 +46,13 @@ Upload a DataFrame or file from Python.
 import datapane as dp
 
 # Upload a DataFrame
-b = dp.api.Blob.upload_df(df)
+b = dp.api.Blob.upload_df(df, name='my_df')
 
 # Upload a file
-b = dp.api.Blob.upload_file("~/my_dataset.csv")
+b = dp.api.Blob.upload_file("~/my_dataset.csv", name='my_ds')
 
 # Upload an object
-b = dp.api.Blob.upload_df([1,2,3])
+b = dp.api.Blob.upload_df([1,2,3], name='my_list')
 ```
 
 ### Download
@@ -63,7 +63,7 @@ Download a DataFrame, object, or file.
 import datapane as dp
 
 # Download a DataFrame
-blob = dp.api.Blob("blob_id")
+blob = dp.api.Blob.get(name="blob_id")
 
 # Download a DataFrame
 b = blob.download_df()

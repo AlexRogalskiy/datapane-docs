@@ -27,6 +27,10 @@
 * [Calling from your existing workflow tools](guides/calling-from-your-existing-workflow-tools.md)
 * [Adding a report to an existing notebook](guides/adding-a-report-to-an-existing-notebook.md)
 
+## Changelog
+
+* [Changelog](changelog/changelog.md)
+
 ## Resources
 
 * [FAQ](resources/faq.md)
