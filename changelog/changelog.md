@@ -77,7 +77,7 @@ RUN pip3 install --user -r requirements.txt
 If you build this and push it to Dockerhub, you can then specify it in your `datapane.yaml` as follows:
 
 ```text
-container-image: your-image-name
+container_image_name: your-image-name
 ```
 
 When you run a script, it will run inside this Docker container. Note that the first run may take a bit longer, as it needs to pull the image from Dockerhub. Once it pulls it once, it's cached for future runs so will be instantaneous.
