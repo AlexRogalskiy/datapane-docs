@@ -14,7 +14,7 @@ Datapane "scripts" are created by deploying your Python code or Jupyter Notebook
 
 You create a script on datapane by deploying your Python code or Jupyter Notebook using Datapane's CLI. Scripts on Datapane are exposed to users through web forms which can be run in the browser to generate reports. This means that people can generate reports without worrying about code, notebooks, or setting up a Python environment. Scripts can take parameters from users which are passed into your Python code at runtime.
 
-![](../.gitbook/assets/image%20%2876%29.png)
+![](../.gitbook/assets/image%20%2883%29.png)
 
 ## Deploying a script
 
@@ -53,11 +53,11 @@ stock_data['cum_prod'] = (1 + stock_data['pct_change']).cumprod()
 
 plot = alt.Chart(stock_data).encode(x='Date:T',y='cum_prod', color='ticker').mark_line()
 
-Report.create(
+Report(
     Markdown("## Stock Report"),
     Table.create(stock_data),
     Plot.create(plot)
- )
+).publish(name='stock_report')
 ```
 {% endcode %}
 
@@ -141,7 +141,7 @@ parameters:
 
 We can then access it in our code, and use `load_defaults` to load in the default values from our `datapane.yaml`
 
-```text
+```python
 import pandas as pd
 import datapane as dp
 import altair as alt
@@ -163,7 +163,7 @@ base_chart = alt.Chart(df).encode(x='Date:T', y='price:Q', color='symbol').inter
 
 chart = base_chart.mark_line() if plot_type == 'line' else base_chart.mark_bar()
 
-dp.Report.create(dp.Plot.create(chart), dp.Table.create(df))
+dp.Report(dp.Plot(chart), dp.Table(df)).publish(name='my_report')
 ```
 
 {% code title="analysis.ipynb" %}
@@ -190,11 +190,11 @@ stock_data['cum_prod'] = (1 + stock_data['pct_change']).cumprod()
 
 plot = alt.Chart(stock_data).encode(x='Date:T',y='cum_prod', color='ticker').mark_line()
 
-Report.create(
+Report(
   Markdown("## Stock Report"),
-  Table.create(stock_data),
-  Plot.create(plot)
-)
+  Table(stock_data),
+  Plot(plot)
+).publish(name='my_report')
 ```
 {% endcode %}
 

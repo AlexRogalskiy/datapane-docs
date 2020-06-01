@@ -68,11 +68,11 @@ stock_data['cum_prod'] = (1 + stock_data['pct_change']).cumprod()
 
 plot = alt.Chart(stock_data).encode(x='Date:T',y='cum_prod', color='ticker').mark_line()
 
-Report.create(
+Report(
   Markdown("## Stock Report"),
-  Table.create(stock_data),
-  Plot.create(plot)
-)
+  Table(stock_data),
+  Plot(plot)
+).publish(name='my_report')
 ```
 {% endcode %}
 

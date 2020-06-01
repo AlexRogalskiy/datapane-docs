@@ -106,10 +106,10 @@ df = purchase_data[["user_id", "item_id", "purchased"]]
 df["p_purchase"] = predictions[:, 1]
 out_table = df[df['item_id'] == item_id]
 
-Report.create(
+Report(
   Markdown(f"# Predicted purchasers for {item_id}"), 
-  Table.create(out_table)
- )
+  Table(out_table)
+ ).publish(name='my_report')
 ```
 {% endcode %}
 

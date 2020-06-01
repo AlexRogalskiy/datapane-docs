@@ -30,11 +30,11 @@ df = pd.DataFrame({
 
 table = dp.Table(df)
 report = dp.Report(table)
-report.open()
+report.save(path='test.html')
 ```
 {% endcode %}
 
-Copying this code into a new script and running it will generate the report and open it in your browser, try it for yourself:
+Copying this code into a new script and running it will generate the report. Try it for yourself:
 
 ```bash
 $ python3 simple_report.py
@@ -70,34 +70,33 @@ for t in tickers:
 
 stock_data = pd.concat(dfs)
 stock_data['Date'] = pd.to_datetime(stock_data['Date'])
-stock_data['zscore'] = zscore(stock_data.groupby('ticker')['Close'])
+stock_data['zscore'] = stock_data.groupby('ticker')['Close'].transform(lambda x: zscore(x))
 
 plot = alt.Chart(stock_data).encode(x='Date:T',y='zscore', color='ticker').mark_line()
 
 report = dp.Report(
-    dp.Markdown("## Stock Report"),
+    dp.Markdown("## Stock Report"),
     dp.Table(stock_data),
     dp.Plot(plot)
  )
-report.open()
+ 
+ report.save(path='test.html')
 ```
 {% endcode %}
 
-When this python script is run, using the same command as earlier, we get the following report
+When this python script is run, using the same command as earlier, we get the following report:
 
-![A more exciting report](../.gitbook/assets/image%20%2873%29.png)
+![](../.gitbook/assets/image%20%2882%29.png)
 
 The existing components and report API are described in more detail in the [API reference](../reference/reports/).
 
 ## Viewing your report
 
-As described above, we can easily view our report in a browser by calling `report.open()`. However there are other ways to view and share our report whilst developing it.
+As described above, we can easily view our report in a browser. However there are other ways to view and share our report whilst developing it.
 
 Datapane has specific integration into for Jupyter notebooks: for instance, If you're iterating a report, instead of having to open a new window to view it, you can preview a report directly from inside your notebook by calling `report.preview()` - embedding it live into your notebook
 
-![A live preview of a report from within your notebook](../.gitbook/assets/image%20%2866%29.png)
-
-We can also save our report by calling `report.save("my_report.html")` - this is a full self-contained HTML document that you can share, email, etc.
+![](../.gitbook/assets/image%20%2884%29.png)
 
 ## Publish your report
 
@@ -107,11 +106,11 @@ This feature requires use of the free Datapane public host
 
 So far we've demonstrated how to build and view reports locally - however one of the most powerful features of Datapane is the ability to publish your report straight from your code and share it directly with your team or the wider world.
 
-Once you've [logged in](tut-getting-started.md#logging-in), all you need to do is call `report.publish()` in your script and your report will be published to your Datapane instance for sharing and viewing using the web. This will return the URL of the report that you can share, tweet, etc.
+Once you've [logged in](tut-getting-started.md#logging-in), call `report.publish(name='your-report-name')` in your script and your report will be published to your Datapane instance for sharing and viewing using the web. This will return the URL of the report that you can share, tweet, etc.
 
 ```python
-report = dp.Report.create(plot, table)
-report.publish()
+report = dp.Report(plot, table)
+report.publish(name='test-report')
 "http://datapane.com/datapane/reports/test-report"
 ```
 
@@ -126,7 +125,7 @@ Reports on Datapane have visibility settings_**.**_ By default, only you can vie
 report.publish(visibility='PUBLIC')
 
 # Available to everyone on your Datapane instance
-report.publish(visibility='DOMAIN')
+report.publish(visibility='ORG')
 ```
 
 {% hint style="info" %}
