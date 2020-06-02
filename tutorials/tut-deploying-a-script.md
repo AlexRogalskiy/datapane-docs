@@ -8,22 +8,18 @@ description: >-
 
 ## Overview
 
-In the [previous section](tut-creating-a-report.md), we explored building and sharing a report programatically using the Datapane library in your Python script. This tutorial shows you how to run and deploy this script \(or Jupyter Notebook\) via a Datapane hosted instance so that other people can use them to dynamically generate their own reports.
+In the [previous section](tut-creating-a-report.md), we explored building and sharing a report programatically using the Datapane library in your Python script. This tutorial shows you how to run and deploy this script \(or Jupyter Notebook\) via a Datapane hosted instance so that other people can use it to dynamically generate their own reports. 
 
-Datapane "scripts" are created by deploying your Python code or Jupyter Notebook using Datapane's CLI. Scripts on Datapane can be shared and run directly from your browser without having to install anything to generate reports on demand or run actions.
-
-You create a script on datapane by deploying your Python code or Jupyter Notebook using Datapane's CLI. Scripts on Datapane are exposed to users through web forms which can be run in the browser to generate reports. This means that people can generate reports without worrying about code, notebooks, or setting up a Python environment. Scripts can take parameters from users which are passed into your Python code at runtime.
+Scripts are created by deploying your Python code or Jupyter Notebook using Datapane's CLI. They can be shared and are exposed to users through web forms which can be run in the browser. This means that people can generate reports without worrying about code, notebooks, or setting up a Python environment. The parameters from these web forms are passed into your Python code at runtime.
 
 ![](../.gitbook/assets/screenshot-2020-06-01-at-19.45.18.png)
 
 ## Deploying a script
 
-Python scripts or Jupyter Notebooks \(using a Python kernel\) are supported, and you can make full use of the Datapane API to generate reports or run any actions.
-
 If you have a local Python script or notebook which creates a report using Datapane's `Report.publish` method \(see [Creating a Report](tut-creating-a-report.md)\), you can upload it straight to Datapane using the CLI. Let's take the following code which pulls stock data from Yahoo finance and deploy it using Datapane's CLI. The report we publish in this code will be returned to the user when they run our script using the Datapane web interface.
 
 {% hint style="info" %}
-We recommend creating only one report per script - as many can be created as needed, however only the last one in each script will be tracked in the web interface.
+We recommend creating only one report per script. As many can be created as needed; however, only the last one in each script will be tracked in the web interface.
 {% endhint %}
 
 {% code title="financial\_report.py" %}

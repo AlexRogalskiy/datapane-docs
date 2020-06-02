@@ -14,11 +14,7 @@ When you add parameters to your script, they are presented in your browser as we
 
 ## Running & Parameters
 
-Input parameters are passed into your code at runtime and are defined in your `datapane.yaml` . In Python, they are accessible in the `Params` dictionary. When we are developing locally, `Params` is empty by default, but you can load in the default parameters from your `datapane.yaml` \(or any other YAML file\) using the following command:
-
-```python
-Params.load_defaults('datapane.yaml')
-```
+Input parameters are passed into your code at runtime and are defined in your `datapane.yaml` . In Python, they are accessible in the `Params` dictionary. 
 
 Let's allow users to provide the stock tickers they are interested in through a `tickers` parameter. To create an input for our `tickers` parameter on the web interface, we must add it to our `datapane.yaml` from the [Deploying a Script](tut-deploying-a-script.md#deploying-a-script) section. 
 
@@ -40,6 +36,14 @@ parameters:
 {% endcode %}
 
 We can then access it in our code, and use `load_defaults` to load in the default values from our `datapane.yaml`
+
+{% hint style="info" %}
+When we are developing locally, `Params` is empty by default, but you can load in the default parameters from your `datapane.yaml` \(or any other YAML file\) using the following command:
+
+```python
+Params.load_defaults('datapane.yaml')
+```
+{% endhint %}
 
 {% code title="financial\_analysis.py" %}
 ```python
