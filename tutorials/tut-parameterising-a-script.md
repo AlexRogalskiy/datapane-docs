@@ -20,7 +20,7 @@ Input parameters are passed into your code at runtime and are defined in your `d
 Params.load_defaults('datapane.yaml')
 ```
 
-Let's allow users to provide the stock tickers they are interested in through a `tickers` parameter. To create an input for our `tickers` parameter on the web interface, we must add it to our `datapane.yaml` from the previous section. 
+Let's allow users to provide the stock tickers they are interested in through a `tickers` parameter. To create an input for our `tickers` parameter on the web interface, we must add it to our `datapane.yaml` from the [Deploying a Script](tut-deploying-a-script.md#deploying-a-script) section. 
 
 {% hint style="info" %}
 Full details of parameter configuration and available fields are provided in the [API reference](../reference/scripts/datapane.yaml.md#parameters).
@@ -28,12 +28,9 @@ Full details of parameter configuration and available fields are provided in the
 
 {% code title="datapane.yaml" %}
 ```yaml
-script: analysis.ipynb
 name: stock_plotter
-
-requirements:
-  - yfinance
-
+script: financial_report.py # this could also be ipynb if it was a notebook
+  
 parameters:
   - name: tickers
     type: list
@@ -44,16 +41,17 @@ parameters:
 
 We can then access it in our code, and use `load_defaults` to load in the default values from our `datapane.yaml`
 
-{% code title="analysis.ipynb" %}
+{% code title="financial\_analysis.py" %}
 ```python
 import pandas as pd
 import altair as alt
-from datapane import Table, Plot, Markdown, Params
+import datapane as dp
 
-# tickers = ['GOOG']
-Params.load_defaults('datapane.yaml')
-tickers = Params.get('tickers')
+from scipy.stats import zscore
 
+#tickers = ['GOOG']
+dp.Params.load_defaults('datapane.yaml')
+tickers = dp.Params.get('tickers')
 dfs = []
 
 for t in tickers:
@@ -63,26 +61,27 @@ for t in tickers:
 
 stock_data = pd.concat(dfs)
 stock_data['Date'] = pd.to_datetime(stock_data['Date'])
-stock_data['pct_change'] = stock_data.groupby('ticker')['Close'].pct_change()
-stock_data['cum_prod'] = (1 + stock_data['pct_change']).cumprod()
+stock_data['zscore'] = stock_data.groupby('ticker')['Close'].transform(lambda x: zscore(x))
 
-plot = alt.Chart(stock_data).encode(x='Date:T',y='cum_prod', color='ticker').mark_line()
+plot = alt.Chart(stock_data).encode(x='Date:T',y='zscore', color='ticker').mark_line()
 
-Report(
-  Markdown("## Stock Report"),
-  Table(stock_data),
-  Plot(plot)
-).publish(name='my_report')
+report = dp.Report(
+    dp.Markdown("## Stock Report"),
+    dp.Table(stock_data),
+    dp.Plot(plot)
+ )
+ 
+ report.publish(name='financial_report')
 ```
 {% endcode %}
 
 When we run `script deploy`, Datapane will use configuration to generate the following form.
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%2887%29.png)
 
 Users can now enter various stocks which they would like to plot, and receive a dynamic report each time.
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2883%29.png)
 
 ## 
 

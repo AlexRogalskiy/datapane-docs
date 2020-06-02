@@ -7,6 +7,7 @@
 * [Getting Started](tutorials/tut-getting-started.md)
 * [Creating a Report](tutorials/tut-creating-a-report.md)
 * [Deploying a Script](tutorials/tut-deploying-a-script.md)
+* [Configuration & Dependencies](tutorials/configuration-and-dependencies.md)
 * [Parameterising a Script](tutorials/tut-parameterising-a-script.md)
 
 ## API Reference <a id="reference"></a>

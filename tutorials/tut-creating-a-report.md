@@ -96,7 +96,7 @@ As described above, we can easily view our report in a browser. However there ar
 
 Datapane has specific integration into for Jupyter notebooks: for instance, If you're iterating a report, instead of having to open a new window to view it, you can preview a report directly from inside your notebook by calling `report.preview()` - embedding it live into your notebook
 
-![](../.gitbook/assets/image%20%2884%29.png)
+![](../.gitbook/assets/image%20%2885%29.png)
 
 ## Publish your report
 
