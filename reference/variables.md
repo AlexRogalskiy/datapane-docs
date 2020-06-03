@@ -26,6 +26,12 @@ A Variable object
 
 Create a new user variable. Adding multiple versions of variables with the same name will create new versions.
 
+By default, variables are private to the creator's account, but they can be be shared across an organisation. To set visibility, use the `--visibility` flag \(or `visibility` field in Python\) with `OWNER_ONLY` or `ORG`. 
+
+{% hint style="warning" %}
+If you want other people inside your organisation to run your scripts, your variable must be `ORG`, as scripts are executed under their user account.
+{% endhint %}
+
 {% tabs %}
 {% tab title="CLI" %}
 ```text
@@ -37,16 +43,10 @@ Created variable: <variable_name>
 {% tab title="Python" %}
 ```python
 import datapane as dp
-v = dp.Variable.add(name, value)
+v = dp.Variable.add(name, value, visibility='ORG')
 ```
 {% endtab %}
 {% endtabs %}
-
-By default, variables are private to the creator's account, but they can be be shared across an organisation. To set visibility, use the `--visibility` flag with `OWNER_ONLY` or `ORG`. 
-
-{% hint style="info" %}
-If you want other people inside your organisation to run your scripts, your variable must be `ORG`, as scripts are executed under their user account.
-{% endhint %}
 
 ## `list`
 
@@ -81,6 +81,7 @@ Available Variables:
 | :--- | :--- | :--- |
 | `name` | The name of your variable | True |
 | `version` | The version of the variable to retrieve | False |
+| `owner` | The owner of the variable. _This defaults to the person running the script, so should be set explicitly if you want other people to run scripts with a user variable you created._ | False |
 
 #### Response
 
@@ -88,7 +89,15 @@ A single Variable object
 
 #### Description & Example
 
-By default, `get` will retrieve the latest version of your variable.
+By default, `get` will retrieve the latest version of your variable. 
+
+{% hint style="warning" %}
+If you want other people inside your organisation to run your scripts with a variable which you created, you must specify yourself as the `owner` in this method. When someone runs your script, it runs under their name, and if you do not set an explicitly specify the `owner` , it will try and look for the variable under their name and fail.
+
+```python
+dp.Variable.get(name='foo', owner='linus')
+```
+{% endhint %}
 
 {% tabs %}
 {% tab title="CLI" %}

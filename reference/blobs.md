@@ -14,9 +14,9 @@ It is often neccesary to make use of non-code assets such as datasets, models, o
 
 For these use-cases, Datapane provides a Blob API which allows you to upload files from any Python or CLI environment, and access them inside your scripts or through the CLI.
 
-## CLI
+## **CLI**
 
-### `upload`
+## `upload`
 
 Upload a file and return an id and a url which you can use to retrieve the blob.
 
@@ -34,9 +34,22 @@ datapane blob download <name> <filename> [--version=version]
 
 ## Python 
 
-### Upload
+## `upload_df, upload_file, upload_obj`
 
-Upload a DataFrame, file, or object from Python. All upload operations can be passed a `visibility` parameter of `ORG`, `OWNER`, or `PUBLIC`.
+#### Parameters
+
+All upload methods take the object to upload as the first parameter. Depending on the method, this can be a file path, DataFrame, or a Python object. 
+
+All methods have the additional parameters:
+
+| Parameter | Description | Required |
+| :--- | :--- | :--- |
+| `name` | The value of your variable | True |
+| `visibility` | The visibility setting \(`ORG`, `PRIVATE`, or `PUBLIC`\) | False |
+
+{% hint style="warning" %}
+ If you want other people in your organisation to make use of blobs you created in their scripts, you must set visibility to `ORG`
+{% endhint %}
 
 ```python
 import datapane as dp
@@ -51,9 +64,23 @@ b = dp.Blob.upload_file("~/my_dataset.csv", name='my_ds')
 b = dp.Blob.upload_obj([1,2,3], name='my_list')
 ```
 
-### Download
+## `download_df, download_file, download_obj`
 
-Download a DataFrame, file, or object. All download operations can be passed a `version` parameter.
+Download a DataFrame, file, or object. All download operations have the following parameters:
+
+|  |  | Required |
+| :--- | :--- | :--- |
+| `name` | The name of your blob | True |
+| `version` | The version of the blob to retrieve | False |
+| `owner` | The owner of the blob.  | False |
+
+{% hint style="warning" %}
+If you want other people inside your organisation to run your scripts which access a blob which you created, you must specify yourself as the `owner` in this method. When someone runs your script, it runs under their name, and if you do not set an explicitly specify the `owner` , it will try and look for the blob under their name and fail.
+
+```python
+dp.Blob.get(name='foo', owner='linus')
+```
+{% endhint %}
 
 ```python
 import datapane as dp
