@@ -27,11 +27,9 @@ The `type` of your parameter and other settings dictates how it is presented in 
 | Float input | `float` |  | `undefined` |
 | Boolean input | `boolean` |  | `false` |
 | Dropdown | `enum` |  | The first choice supplied |
-| Date picker | `date` |  | The current date |
-| Time picker | `time` |  | The current time |
-| Date and time picker | `datetime` |  | The current date and time |
+| Date picker | `date` |  | `undefined` |
+| Time picker | `time` |  | `undefined` |
+| Date and time picker | `datetime` |  | `undefined` |
 | List Input | `list` | If provides with no `choices` | `[]` |
 | Multi Select Input | `list` | If provided with `choices`: an array of strings and numbers. | `[]` |
-
-An example with all implemented form fields can be found here, and is available on GitHub [here](https://github.com/datapane/datapane-demos/blob/master/all-params/datapane.yaml).
 
