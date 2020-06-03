@@ -120,14 +120,14 @@ v = dp.Variable.get(name='foo')
 
 #### Response
 
-A single Variable object
+None
 
 #### Description & Example
 
 {% tabs %}
 {% tab title="CLI" %}
 ```text
-~/> datapane variable delete <variable-name>    
+~/> datapane variable delete foo   
 Deleted variable foo
 ```
 {% endtab %}
