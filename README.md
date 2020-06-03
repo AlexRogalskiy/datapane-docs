@@ -12,7 +12,7 @@ It provides a library which allows you to create reports programatically from co
 
 {% tabs %}
 {% tab title="Code" %}
-{% code title="stocks.ipynb" %}
+{% code title="stocks.py" %}
 ```python
 import altair as alt
 import pandas as pd
