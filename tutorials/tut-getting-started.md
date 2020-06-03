@@ -16,9 +16,7 @@ $ pip3 install datapane
 We support Python 3.6 onwards, instructions for installing Python can be found at [https://wiki.python.org/moin/BeginnersGuide/Download](https://wiki.python.org/moin/BeginnersGuide/Download)
 {% endhint %}
 
-Once installed, you can use the API described in this tutorial and in the [reference](../reference/reference-overview.md) to build and export your own reports locally and share them as HTML files.
-
-From there you can also sign up to the free hosted server to deploy your reports and run scripts as needed.
+Once installed, you can use the API described in this tutorial and in the [reference](../reference/reference-overview.md) to build and export your own reports locally and share them as HTML files. From there, you can also sign up to the free hosted server to deploy your reports and run scripts.
 
 ## Authentication
 

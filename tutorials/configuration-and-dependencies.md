@@ -65,7 +65,7 @@ include:
 
 By default, scripts on Datapane run in our standard docker container. By default, this includes the following libraries.
 
-```text
+```python
 seaborn == 0.10.*
 altair-recipes ~= 0.8.0
 git+https://github.com/altair-viz/altair_pandas@master#egg=altair-pandas
@@ -103,7 +103,7 @@ This support currently only supports **public** Docker images, and we're adding 
 
 Although you can use any base for your Docker image, we would recommend inhereting off ours. To do this, create a Docker image which inherits from the our base image \(`nstack/datapane-python-runner`\) and adds your required dependencies. 
 
-```text
+```yaml
 from nstack/datapane-python-runner:latest
 COPY requirements.txt .
 RUN pip3 install --user -r requirements.txt
@@ -111,7 +111,7 @@ RUN pip3 install --user -r requirements.txt
 
 If you build this and push it to Dockerhub, you can then specify it in your `datapane.yaml` as follows:
 
-```text
+```yaml
 container_image_name: your-image-name
 ```
 

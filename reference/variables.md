@@ -21,17 +21,17 @@ Created variable: <variable_name>
 {% endtab %}
 
 {% tab title="Python" %}
-```
+```python
 import datapane as dp
-v = dp.api.Variable.add('foo')
+v = dp.Variable.add(name, value)
 ```
 {% endtab %}
 {% endtabs %}
 
-By default, variables are private to the creator's account, but they can be be shared across an organisation. To set visibility, use the `--visibility` flag with `OWNER_ONLY` or `DOMAIN`. 
+By default, variables are private to the creator's account, but they can be be shared across an organisation. To set visibility, use the `--visibility` flag with `OWNER_ONLY` or `ORG`. 
 
 {% hint style="info" %}
-If you want other people inside your organisation to run your scripts, your variable must be `DOMAIN`, as scripts are executed under their user account.
+If you want other people inside your organisation to run your scripts, your variable must be `ORG`, as scripts are executed under their user account.
 {% endhint %}
 
 ## Listing current variables
@@ -62,10 +62,10 @@ Available Variable:
 {% endtab %}
 
 {% tab title="Python" %}
-```
+```python
 import datapane as dp
 
-v = dp.api.Variable(id).value
+v = dp.Variable.get(name='my_var')
 ```
 {% endtab %}
 {% endtabs %}
