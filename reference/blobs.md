@@ -14,56 +14,52 @@ It is often neccesary to make use of non-code assets such as datasets, models, o
 
 For these use-cases, Datapane provides a Blob API which allows you to upload files from any Python or CLI environment, and access them inside your scripts or through the CLI.
 
-## Using Blobs
-
-Blobs are exposed in both the Python library and CLI. 
-
 ## CLI
 
-### Upload
+### `upload`
 
-Upload a blob and return an id and a url which you can use to retrieve the blob.
+Upload a file and return an id and a url which you can use to retrieve the blob.
 
 ```text
-datapane blob upload <blob_name> <file>
+datapane blob upload <name> <filename>
 ```
 
-### Download
+### `download`
 
 Download a blob and save it to a file.
 
 ```text
-datapane blob download <blob_name> <filename> [--version=version]
+datapane blob download <name> <filename> [--version=version]
 ```
 
 ## Python 
 
 ### Upload
 
-Upload a DataFrame or file from Python.
+Upload a DataFrame, file, or object from Python. All upload operations can be passed a `visibility` parameter of `ORG`, `OWNER`, or `PUBLIC`.
 
 ```python
 import datapane as dp
 
 # Upload a DataFrame
-b = dp.api.Blob.upload_df(df, name='my_df')
+b = dp.Blob.upload_df(df, name='my_df')
 
 # Upload a file
-b = dp.api.Blob.upload_file("~/my_dataset.csv", name='my_ds')
+b = dp.Blob.upload_file("~/my_dataset.csv", name='my_ds')
 
 # Upload an object
-b = dp.api.Blob.upload_df([1,2,3], name='my_list')
+b = dp.Blob.upload_obj([1,2,3], name='my_list')
 ```
 
 ### Download
 
-Download a DataFrame, object, or file.
+Download a DataFrame, file, or object. All download operations can be passed a `version` parameter.
 
 ```python
 import datapane as dp
 
 # Download a DataFrame
-blob = dp.api.Blob.get(name="blob_id")
+blob = dp.Blob.get(name="blob_id")
 
 # Download a DataFrame
 b = blob.download_df()
@@ -73,7 +69,6 @@ b = blob.download_file("~/my_dataset.csv")
 
 # Download an object
 b = blob.download_obj()
-
 ```
 
 

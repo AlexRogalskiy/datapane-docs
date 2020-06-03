@@ -21,16 +21,16 @@
 * [Blobs](reference/blobs.md)
 * [Variables](reference/variables.md)
 
+## Changelog
+
+* [Changelog](changelog/changelog.md)
+
 ## Guides
 
 * [📈 Create dynamic reports from an ML model](guides/guide-creating-ml-model-form.md)
 * [Using Datapane to run SQL](guides/using-datapane-to-process-sql.md)
 * [Calling from your existing workflow tools](guides/calling-from-your-existing-workflow-tools.md)
 * [Adding a report to an existing notebook](guides/adding-a-report-to-an-existing-notebook.md)
-
-## Changelog
-
-* [Changelog](changelog/changelog.md)
 
 ## Resources
 

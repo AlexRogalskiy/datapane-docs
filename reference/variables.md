@@ -8,9 +8,23 @@ description: 'Variables are secret, encrypted values which you can share between
 
 Scripts often contain variables such as database keys and passwords, which you do not want embedded in your source code and visible to the outside world. Datapane's `Variable` object provides a safe and secure way to create, store, and retrieve values which your scripts require.
 
-## Creating a variable
+## `add`
 
-Variables can be created through the CLI or Python library.
+#### Parameters
+
+| Parameter | Description | Required |
+| :--- | :--- | :--- |
+| `name` | The name of your variable | True |
+| `value` | The value of your variable | True |
+| `visibility` | The visibility setting \(`ORG`, `PRIVATE`, or `PUBLIC`\) | False |
+
+#### Response
+
+A Variable object
+
+#### Description & Example
+
+Create a new user variable. Adding multiple versions of variables with the same name will create new versions.
 
 {% tabs %}
 {% tab title="CLI" %}
@@ -34,26 +48,52 @@ By default, variables are private to the creator's account, but they can be be s
 If you want other people inside your organisation to run your scripts, your variable must be `ORG`, as scripts are executed under their user account.
 {% endhint %}
 
-## Listing current variables
+## `list`
+
+#### Parameters
+
+None
+
+#### Response
+
+A list of variable names and versions
+
+#### Description & Example
 
 {% tabs %}
 {% tab title="CLI" %}
 ```text
 ~/> datapane variable list
 Available Variables:
-    id
---  -------
- 0  XBAmDk1
+    name      versions
+--  ------  ----------
+ 0  foo              1
+
 ```
 {% endtab %}
 {% endtabs %}
 
-## Retrieving a variable
+## `get`
+
+#### Parameters
+
+| Parameter | Description | Required |
+| :--- | :--- | :--- |
+| `name` | The name of your variable | True |
+| `version` | The version of the variable to retrieve | False |
+
+#### Response
+
+A single Variable object
+
+#### Description & Example
+
+By default, `get` will retrieve the latest version of your variable.
 
 {% tabs %}
 {% tab title="CLI" %}
 ```text
-~/> datapane variable get <variable-name> [--version=version_number]
+~/> datapane variable get foo
 Available Variable:
     name     value    visibility
 --  -------  -------  ------------
@@ -65,12 +105,24 @@ Available Variable:
 ```python
 import datapane as dp
 
-v = dp.Variable.get(name='my_var')
+v = dp.Variable.get(name='foo')
 ```
 {% endtab %}
 {% endtabs %}
 
-## Deleting a variable
+## `delete`
+
+#### Parameters
+
+| Parameter | Description | Required |
+| :--- | :--- | :--- |
+| `name` | The name of your variable | True |
+
+#### Response
+
+A single Variable object
+
+#### Description & Example
 
 {% tabs %}
 {% tab title="CLI" %}

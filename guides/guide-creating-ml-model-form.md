@@ -94,11 +94,11 @@ import lightbgm
 
 from datapane import Params, Report, Markdown, Table
 
-item_id = dp.config.item_id
+item_id = dp.Params.get('item_id', 'abc')
 purchase_data = acme_corp_data_lib.get_purchase_data();
 features = [col for col in in_df.columns if col not in ["user_id", "item_id", "purchased"]]
 
-model = dp.Blob("deadbeef").download_obj()
+model = dp.Blob.get(name="deadbeef").download_obj()
 
 predictions = fitted.predict_proba(purchase_data[features])
 

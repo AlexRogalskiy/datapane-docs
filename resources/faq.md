@@ -14,7 +14,7 @@ No. Datapane's philosophy is to fit into your existing infrastructure, and provi
 
 ### What libraries can my script use on Datapane?
 
-Datapane supports the majority of Python visualisation libraries, such as Bokeh, Altair, and Matplotlib, and many Python analysis libraries. You can also provide your own requirements from pip or local libraries.
+Datapane supports the majority of Python visualisation libraries, such as Bokeh, Altair, and Matplotlib, and many Python analysis libraries. You can also provide your own requirements from pip or local libraries, or provide your own Docker container which your script will run in.
 
 ### Can I generate static reports from Airflow, a hosted Jupyter, or my local Python environment?
 
