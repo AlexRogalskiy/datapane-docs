@@ -38,4 +38,5 @@
 * [Blog](https://blog.datapane.com)
 * [Open Source](https://github.com/datapane/datapane)
 * [Demos](https://github.com/datapane/datapane-demos)
+* [Embedding Reports in Social Platforms](embedding-reports-in-social-platforms.md)
 
