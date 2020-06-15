@@ -27,10 +27,8 @@
 
 ## Guides
 
-* [📈 Create dynamic reports from an ML model](guides/guide-creating-ml-model-form.md)
-* [Using Datapane to run SQL](guides/using-datapane-to-process-sql.md)
-* [Calling from your existing workflow tools](guides/calling-from-your-existing-workflow-tools.md)
-* [Adding a report to an existing notebook](guides/adding-a-report-to-an-existing-notebook.md)
+* [Embedding Reports in Social Platforms](guides/embedding-reports-in-social-platforms.md)
+* [Create dynamic reports from an ML model](guides/guide-creating-ml-model-form.md)
 
 ## Resources
 
@@ -38,5 +36,4 @@
 * [Blog](https://blog.datapane.com)
 * [Open Source](https://github.com/datapane/datapane)
 * [Demos](https://github.com/datapane/datapane-demos)
-* [Embedding Reports in Social Platforms](embedding-reports-in-social-platforms.md)
 

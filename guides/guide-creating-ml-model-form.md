@@ -5,7 +5,7 @@ description: >-
   a few primitives to help with this.
 ---
 
-# 📈 Create dynamic reports from an ML model
+# Create dynamic reports from an ML model
 
 ## Introduction
 

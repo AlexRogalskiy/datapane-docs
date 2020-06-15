@@ -16,9 +16,9 @@ Before embedding, make sure your report's visibility is set to public
 
 To embed a report on Medium, publish it to Datapane, and copy and paste the full URL of your report into your Medium editor. Medium will automatically create the embed, and you will see the following. In edit mode, your embed will not be interactive - you must publish the post first to use interactive elements.
 
-![Edit mode](.gitbook/assets/image%20%2893%29.png)
+![Edit mode](../.gitbook/assets/image%20%2893%29.png)
 
-![Interactive plot in view mode](.gitbook/assets/image%20%2892%29.png)
+![Interactive plot in view mode](../.gitbook/assets/image%20%2892%29.png)
 
 ### Reddit
 
@@ -28,7 +28,7 @@ To embed a report into reddit, create a post with your report's URL. If your rep
 
 In the post view, your report will be able to be used interactively.
 
-![](.gitbook/assets/image%20%2894%29.png)
+![](../.gitbook/assets/image%20%2894%29.png)
 
 
 
