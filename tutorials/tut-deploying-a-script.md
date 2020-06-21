@@ -50,7 +50,7 @@ report = dp.Report(
     dp.Plot(plot)
  )
  
- report.publish(name='financial_report')
+ report.publish(headline='Financial Report', name='financial_report')
 ```
 {% endcode %}
 

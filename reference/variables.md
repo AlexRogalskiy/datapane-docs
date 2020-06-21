@@ -95,7 +95,7 @@ By default, `get` will retrieve the latest version of your variable.
 If you want other people inside your organisation to run your scripts with a variable which you created, you must specify yourself as the `owner` in this method. When someone runs your script, it runs under their name, and if you do not set an explicitly specify the `owner` , it will try and look for the variable under their name and fail.
 
 ```python
-dp.Variable.get(name='foo', owner='linus')
+foo = dp.Variable.get(name='foo', owner='linus')
 ```
 {% endhint %}
 
@@ -118,6 +118,14 @@ v = dp.Variable.get(name='foo')
 ```
 {% endtab %}
 {% endtabs %}
+
+**Get Value**
+
+To get the value that you save in foo, use:
+
+```text
+foo_value = foo.value
+```
 
 ## `delete`
 
