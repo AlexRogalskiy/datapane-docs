@@ -5,7 +5,7 @@
 When you publish a report to https://datapane.com, you can embed it into other platforms.
 
 {% hint style="info" %}
-Before embedding, make sure your report's visibility is set to public
+Before embedding, make sure your report's visibility is set to public.  Also make sure to have just one graph or table in the URL
 {% endhint %}
 
 ## Integrations

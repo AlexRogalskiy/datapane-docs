@@ -12,7 +12,7 @@ It provides a way to create reports programatically from components that wrap ar
 
 * [Pandas DataFrames](https://pandas.pydata.org/)
 * Plots from Python visualisation libraries such as [Bokeh](https://bokeh.org/) and [Altair](https://altair-viz.github.io/)
-* Markdown
+* Markdown and text
 
 Once created, reports can be published on the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualisations can be used interactively.
 
