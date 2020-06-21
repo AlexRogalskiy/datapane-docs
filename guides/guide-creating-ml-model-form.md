@@ -72,6 +72,7 @@ fitted = GridSearchCV(
     scoring=scorer,
 ).fit(in_df[features], in_df[purchased_col])
 
+# Save the model on Datapane for later use
 b = dp.Blob.upload_obj(fitted)
 print(b.id)
 ```
@@ -98,7 +99,7 @@ item_id = dp.Params.get('item_id', 'abc')
 purchase_data = acme_corp_data_lib.get_purchase_data();
 features = [col for col in in_df.columns if col not in ["user_id", "item_id", "purchased"]]
 
-model = dp.Blob.get(name="deadbeef").download_obj()
+model = dp.Blob.get(name="my_blob").download_obj()
 
 predictions = fitted.predict_proba(purchase_data[features])
 

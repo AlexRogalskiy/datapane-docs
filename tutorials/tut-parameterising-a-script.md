@@ -14,7 +14,7 @@ When you add parameters to your script, they are presented in your browser as we
 
 ## Running & Parameters
 
-Input parameters are passed into your code at runtime and are defined in your `datapane.yaml` . In Python, they are accessible in the `Params` dictionary. 
+Input parameters are passed into your code at runtime and are defined in your `datapane.yaml` . In Python, they are accessible in the `Params` dictionary. You can get an item from the dictionary with `Params.get([value_name], [default_value])`
 
 Let's allow users to provide the stock tickers they are interested in through a `tickers` parameter. To create an input for our `tickers` parameter on the web interface, we must add it to our `datapane.yaml` from the [Deploying a Script](tut-deploying-a-script.md#deploying-a-script) section. 
 
