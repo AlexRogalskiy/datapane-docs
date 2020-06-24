@@ -11,7 +11,7 @@ Datapane is for people who analyse data in Python and need a way to share their 
 It provides a way to create reports programatically from components that wrap around the common objects in analyses, such as:
 
 * [Pandas DataFrames](https://pandas.pydata.org/)
-* Plots from Python visualisation libraries such as [Bokeh](https://bokeh.org/) and [Altair](https://altair-viz.github.io/)
+* Plots from Python visualisation libraries such as [Bokeh](https://bokeh.org/), [Altair](https://altair-viz.github.io/), [Plotly](https://plotly.com/python/), and [Folium](https://python-visualization.github.io/folium/quickstart.html)
 * Markdown and text
 
 Once created, reports can be published on the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualisations can be used interactively.
