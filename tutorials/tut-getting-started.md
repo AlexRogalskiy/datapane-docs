@@ -57,3 +57,13 @@ $ datapane --env acme login --server=https://acme.datapane.com
 ```
 {% endhint %}
 
+
+
+## Check your Authentication
+
+To check which account you are logged in as, run:
+
+```text
+$ datapane ping
+```
+

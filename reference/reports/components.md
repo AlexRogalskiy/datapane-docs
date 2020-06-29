@@ -12,11 +12,13 @@ Components are used to create [Reports](./). Components are compatible with Pyth
 
 The plot component takes a supported plot object and renders it in your report.
 
-Currently supported libraries are:
+Currently, supported libraries are:
 
 * Matplotlib and seaborn figures
+* Plotly plots
 * Bokeh plots
 * Altair plots
+* Folium plots
 * SVG images
 
 ### Altair

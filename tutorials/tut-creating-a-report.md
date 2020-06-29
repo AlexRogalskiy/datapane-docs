@@ -128,11 +128,38 @@ report.publish(visibility='PUBLIC')
 
 # Available to everyone on your Datapane instance
 report.publish(visibility='ORG')
+
+# Available to only you
+report.publish(visibility='PRIVATE')
 ```
 
 {% hint style="info" %}
 Datapane also supports access tokens to allow you to share or embed your report with certain people, but keep it private from everyone else.  
 {% endhint %}
+
+You can also configure visibility settings through the web UI
+
+![](../.gitbook/assets/image%20%2898%29.png)
+
+## Sharing your report <a id="nextshare-stepsyour-report"></a>
+
+If your report is public, you can copy the link and share it with others.
+
+![](../.gitbook/assets/image%20%2899%29.png)
+
+{% hint style="info" %}
+If you are using Datapane on a private instance, any report with ORG visibility will be accessible to people inside your organisation, but not the public.
+{% endhint %}
+
+### Access Tokens
+
+If you want to share a private report without having it visible to the public, you can use the link provided next to the **Share** button to share it. This link contains an access token which allows anyone with the link to access the report, without signing up to Datapane.
+
+![](../.gitbook/assets/image%20%2897%29.png)
+
+You can also embed reports into other platforms, such as Confluence, Medium, or your own webpage, as detailed in the following guide
+
+{% page-ref page="../guides/embedding-reports-in-social-platforms.md" %}
 
 ## Next steps
 

@@ -30,7 +30,19 @@ dp.Report(
 ).save(path='stocks.html')
 ```
 
+If you have already signed in with token, publishing your report could be done in one line of code.
+
+```python
+dp.publish(name='stocks_report', open=True)
+```
+
+And a website on Datapane will be automatically created for you!
+
 ![Standalone output report](.gitbook/assets/image%20%2888%29.png)
+
+You could either share this link on social media or with your team.  
+
+![](.gitbook/assets/image%20%2896%29.png)
 
 If you want your report to be generated dynamically by other people \(such as your team or stakeholders\) you can deploy your Python script or notebook to a Datapane hosted server using Datapane's CLI. If you share it with others, they are able to provide parameters through a friendly web form, which are passed into your script, and generate your reports dynamically.
 
