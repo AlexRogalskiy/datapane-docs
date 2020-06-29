@@ -103,6 +103,24 @@ dp.Report(dp.Plot(plotly_chart)).publish(name='bubble')
 
 ![](../../.gitbook/assets/screenshot-from-2020-06-26-11-46-31.png)
 
+### Folium
+
+[Folium](https://python-visualization.github.io/folium/) makes it easy to visualize data that’s been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for `choropleth` visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map.
+
+The library has a number of built-in tilesets from OpenStreetMap, Mapbox, and Stamen, and supports custom tilesets with Mapbox or Cloudmade API keys. 
+
+```python
+import folium
+import datapane as dp 
+
+m = folium.Map(location=[45.5236, -122.6750])
+
+
+dp.Report(dp.Plot(m)).publish(name='folium_map')
+```
+
+![https://datapane.com/khuyentran1401/reports/folium\_map/](../../.gitbook/assets/screenshot-from-2020-06-29-12-14-45.png)
+
 ## Markdown
 
 **Markdown** is a lightweight markup language that allows you to include text in your report.
