@@ -98,5 +98,24 @@ b = blob.download_file("~/my_dataset.csv")
 b = blob.download_obj()
 ```
 
+## Share your Blob
 
+You may wish to share your blob to others such as your teammates so that your team could work on the same dataframe, object, or file. 
+
+To enable sharing with the public,  set `visibility=PUBLIC` when uploading your dataframe, file, or object to a blob. 
+
+```python
+dp.Blob.upload(df, name='myblob', visibility='PUBLIC')
+```
+
+When others want to access your blob, they could simply retrieve by specifying the name of the blob and  your account in `owner`
+
+```python
+blob = dp.Blob.get(name='myblob', owner='khuyentran')
+
+# Retrieve blob
+b = blob.download_df() # Or download_file(), download_obj()
+```
+
+Now others can use your blob for their code! If you want to share your blob privately in your organisation, follow the same process, but set the visibility of your blob to `ORG`
 
