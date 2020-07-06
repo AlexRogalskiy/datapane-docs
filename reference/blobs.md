@@ -105,7 +105,7 @@ You may wish to share your blob to others such as your teammates so that your te
 To enable sharing with the public,  set `visibility=PUBLIC` when uploading your dataframe, file, or object to a blob. 
 
 ```python
-dp.Blob.upload(df, name='myblob', visibility='PUBLIC')
+dp.Blob.upload_df(df, name='myblob', visibility='PUBLIC')
 ```
 
 When others want to access your blob, they could simply retrieve by specifying the name of the blob and  your account in `owner`
