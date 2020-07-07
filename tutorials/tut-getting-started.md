@@ -36,7 +36,7 @@ Having problems running on Windows? Please read...
 We generally recommend installing via `conda` over `pip` on Windows as it's easier to install all the required dependencies. 
 
 If you need to install Python first, the latest versions of Windows 10 can install Python for you automatically - running `python` from the command-prompt will take you to the Windows Store where you can download an [official version](https://docs.python.org/3/using/windows.html#the-microsoft-store-package).
-We also recommend using a 64-bit rather than 32-bit version of Python, you can check this by running the command `python -c "import struct; print(struct.calcsize('P')*8, 'bit')"` from the Command Prompt.
+We also strongly recommend using a 64-bit rather than 32-bit version of Python, you can check this by running the command `python -c "import struct; print(struct.calcsize('P')*8, 'bit')"` from the Command Prompt.
 
 Also note that on Windows, you can run the `datapane` command either by running `datapane` or `datapane.exe` on the command-line.
 
