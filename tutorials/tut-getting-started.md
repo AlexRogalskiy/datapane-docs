@@ -6,17 +6,42 @@ description: Installing and setting up the Datapane API & CLI on your device
 
 ## Installation
 
-Datapane's Python library and CLI can be installed using pip.
+Datapane's Python library and CLI can be installed using either `conda` or `pip`. 
+
+{% hint style="info" %}
+Datapane support Python 3.6 onwards, instructions for installing Python can be found at [https://wiki.python.org/moin/BeginnersGuide/Download](https://wiki.python.org/moin/BeginnersGuide/Download)
+{% endhint %}
+
+### conda
+If you use `conda`, you can install it with:
+
+```bash
+$ conda install -c conda-forge datapane
+```
+
+### pip
+
+If you use `pip`, you can install it with:
 
 ```bash
 $ pip3 install datapane
 ```
 
+### Windows Users
+
 {% hint style="info" %}
-We support Python 3.6 onwards, instructions for installing Python can be found at [https://wiki.python.org/moin/BeginnersGuide/Download](https://wiki.python.org/moin/BeginnersGuide/Download)
+Windows users please read :)
 {% endhint %}
 
-Once installed, you can use the API described in this tutorial and in the [reference](../reference/reference-overview.md) to build and export your own reports locally and share them as HTML files. From there, you can also sign up to the free hosted server to deploy your reports and run scripts.
+A couple of extra notes for Windows users,
+
+- We recommend installing via `conda` over `pip` on Windows as it's easier to install all the required dependencies.
+- If you do install via `pip` and encounter issues during install or usage, first try installing installing the [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145) from Microsoft, and secondly ensure you have a 64-bit version of Python installed.
+- The latest versions of Windows 10 can install Python for you automatically - just run `python` from the command-prompt and it will take you to the Windows Store where you can download an [official version](https://docs.python.org/3/using/windows.html#the-microsoft-store-package).
+- Finally, if you get "Command Not Found" errors when running `datapane` on the command line, either adjust your `%PATH%` to ensure it includes both the Python application and `Scripts` paths (see [https://datatofish.com/add-python-to-windows-path/](here)), or try running `python3.exe -m datapane.client` instead
+
+
+For all users, once installed, you can use the API described in this tutorial and in the [reference](../reference/reference-overview.md) to build and export your own reports locally and share them as HTML files. From there, you can also sign up to the free hosted server to deploy your reports and run scripts.
 
 ## Authentication
 
