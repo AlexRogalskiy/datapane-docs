@@ -13,6 +13,7 @@ Datapane support Python 3.6 onwards, instructions for installing Python can be f
 {% endhint %}
 
 ### conda
+
 If you use `conda`, you can install it with:
 
 ```bash
@@ -33,10 +34,9 @@ $ pip3 install datapane
 Having problems running on Windows? Please read...
 {% endhint %}
 
-We generally recommend installing via `conda` over `pip` on Windows as it's easier to install all the required dependencies. 
+We generally recommend installing via `conda` over `pip` on Windows as it's easier to install all the required dependencies.
 
-If you need to install Python first, the latest versions of Windows 10 can install Python for you automatically - running `python` from the command-prompt will take you to the Windows Store where you can download an [official version](https://docs.python.org/3/using/windows.html#the-microsoft-store-package).
-We also strongly recommend using a 64-bit rather than 32-bit version of Python, you can check this by running the command `python -c "import struct; print(struct.calcsize('P')*8, 'bit')"` from the Command Prompt.
+If you need to install Python first, the latest versions of Windows 10 can install Python for you automatically - running `python` from the command-prompt will take you to the Windows Store where you can download an [official version](https://docs.python.org/3/using/windows.html#the-microsoft-store-package). We also strongly recommend using a 64-bit rather than 32-bit version of Python, you can check this by running the command `python -c "import struct; print(struct.calcsize('P')*8, 'bit')"` from the Command Prompt.
 
 Also note that on Windows, you can run the `datapane` command either by running `datapane` or `datapane.exe` on the command-line.
 
@@ -46,11 +46,11 @@ Some specific issues you may encounter on Windows include:
 
 You may encounter errors such as `ImportError: DLL load failed` when running datapane or importing it within your Python code.
 
-If so, try installing installing the [Visual C++ Redistributables for Windows](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) from Microsoft and running again (you most likely want to download the version for x64, i.e. `vc_redist.x64.exe`)
+If so, try installing installing the [Visual C++ Redistributables for Windows](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) from Microsoft and running again \(you most likely want to download the version for x64, i.e. `vc_redist.x64.exe`\)
 
 #### Datapane install errors trying to compile `pyarrow` using Visual C++
 
-This usually occurs when you are running a 32-bit version of Python and installing via `pip`. Either try using `conda` or install a 64-bit version of Python (for example from the Windows Store as mentioned above).
+This usually occurs when you are running a 32-bit version of Python and installing via `pip`. Either try using `conda` or install a 64-bit version of Python \(for example from the Windows Store as mentioned above\).
 
 This may also occur when using Windows 7 - we only support directly Windows 10, however it may be worth trying to install via `conda` instead if you are stuck on Windows 7.
 
@@ -58,16 +58,14 @@ This may also occur when using Windows 7 - we only support directly Windows 10, 
 
 This occurs when your Windows `%PATH%` doesn't include all the Python directories, specifically the `Scripts` directory.
 
-You may notice during the datapane install messages such as (or similar to):
+You may notice during the datapane install messages such as \(or similar to\):
 
-```
+```text
 The script datapane.exe is installed in 'C:\users\<USERNAME>\appdata\local\programs\python\python37\Scripts' which is not on PATH.
 Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
 ```
 
-To fix this, adjust your `%PATH%` to include your specific `Scripts` path as mentioned in the `pip` warning (see [https://datatofish.com/add-python-to-windows-path/](here) for more detailed instructions).
-Alternatively, you can try running the datapane client directly, using the command `python3.exe -m datapane.client` instead.
-  
+To fix this, adjust your `%PATH%` to include your specific `Scripts` path as mentioned in the `pip` warning \(see [https://datatofish.com/add-python-to-windows-path/](https://github.com/datapane/datapane-docs/tree/5f551e8c5b2748f0785683bbd62cb59f1dfe46ca/tutorials/here/README.md) for more detailed instructions\). Alternatively, you can try running the datapane client directly, using the command `python3.exe -m datapane.client` instead.
 
 ## Post-installation
 
@@ -111,8 +109,6 @@ $ datapane --env public login
 $ datapane --env acme login --server=https://acme.datapane.com
 ```
 {% endhint %}
-
-
 
 ## Check your Authentication
 

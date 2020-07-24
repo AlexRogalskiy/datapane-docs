@@ -33,7 +33,10 @@ dp.Report(
 If you have already signed in with token, publishing your report could be done in one line of code.
 
 ```python
-dp.publish(name='stocks_report', open=True)
+dp.Report(
+  dp.Table(df['High']), 
+  dp.Plot(chart)
+).publish(name='stocks_report', open=True)
 ```
 
 And a website on Datapane will be automatically created for you!
