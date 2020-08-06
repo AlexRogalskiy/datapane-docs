@@ -19,7 +19,7 @@ Currently, supported libraries are:
 * Bokeh plots
 * Altair plots
 * Folium plots
-* SVG images
+* Files and images
 
 ### Altair
 
@@ -150,6 +150,22 @@ report.publish(name = 'results')
 
 Check [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for more information on how to format your text with markdown.
 
+## Code
+
+You can also share your code using `dp.Markdown` like below
+
+```python
+code = dp.Markdown(f'''
+```df = data.reset_index().melt('Date', var_name='symbol', value_name='price')
+
+base_chart = alt.Chart(df).encode(x='Date:T', y='price:Q', color='symbol').interactive()
+
+chart = base_chart.mark_line() if plot_type == 'line' else base_chart.mark_bar()```
+''')
+
+dp.Report(code).publish(name='report_with_code')
+```
+
 ## Table
 
 The Table component takes a pandas DataFrame and renders an interactive, sortable, searchable table in your Datapane report. Viewers can also download the table from the website. Tables can typically render datasets up to 2-3m cells without performance problems. 
@@ -173,6 +189,18 @@ report.publish(name='sample_table')
 ```
 
 ![](../../.gitbook/assets/table.png)
+
+## File and Image
+
+Datapane also enables you to share files and images. For example, to share your image, simply use `dp.File` like below
+
+```python
+dp.File(file=dp.Path('./image.png'))
+```
+
+And your image would appear on Datapane report automatically!
+
+![](../../.gitbook/assets/screenshot-from-2020-08-05-10-00-54.png)
 
 ## PivotTable
 
