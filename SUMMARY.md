@@ -15,6 +15,7 @@
 * [Overview](reference/reference-overview.md)
 * [Reports](reference/reports/README.md)
   * [Components](reference/reports/components.md)
+  * [Share or Embed Individual Component of a Multi-component Report](reference/reports/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Scripts](reference/scripts/README.md)
   * [Configuration](reference/scripts/datapane.yaml.md)
   * [Parameters](reference/scripts/parameters.md)
