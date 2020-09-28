@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-When you add parameters to your script, they are presented in your browser as web forms which users can run to generate reports. This means that people can generate reports without worrying about code, notebooks, or setting up a Python environment. 
+When you add parameters to your script, they are presented in your browser as web forms that users can run to generate reports. This means that people can generate reports without worrying about code, notebooks, or setting up a Python environment. 
 
 ![](../.gitbook/assets/image%20%2876%29.png)
 
@@ -83,7 +83,7 @@ When we run `script deploy`, Datapane will use configuration to generate the fol
 
 ![](../.gitbook/assets/image%20%2887%29.png)
 
-Users can now enter various stocks which they would like to plot, and receive a dynamic report each time.
+Users can now enter various stocks which they would like to plot and receive a dynamic report each time.
 
 ![](../.gitbook/assets/image%20%2883%29.png)
 

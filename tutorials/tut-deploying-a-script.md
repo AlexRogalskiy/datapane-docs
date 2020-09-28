@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-In the [previous section](tut-creating-a-report.md), we explored building and sharing a report programatically using the Datapane library in your Python script. This tutorial shows you how to run and deploy this script \(or Jupyter Notebook\) via a Datapane hosted instance so that other people can use it to dynamically generate their own reports. 
+In the [previous section](tut-creating-a-report.md), we explored the building and sharing a report programmatically using the Datapane library in your Python script. This tutorial shows you how to run and deploy this script \(or Jupyter Notebook\) via a Datapane hosted instance so that other people can use it to dynamically generate their own reports. 
 
 Scripts are created by deploying your Python code or Jupyter Notebook using Datapane's CLI. They can be shared and are exposed to users through web forms which can be run in the browser. This means that people can generate reports without worrying about code, notebooks, or setting up a Python environment. The parameters from these web forms are passed into your Python code at runtime.
 

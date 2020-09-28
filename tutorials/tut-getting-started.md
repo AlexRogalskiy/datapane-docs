@@ -36,7 +36,7 @@ Having problems running on Windows? Please read...
 
 We generally recommend installing via `conda` over `pip` on Windows as it's easier to install all the required dependencies.
 
-If you need to install Python first, the latest versions of Windows 10 can install Python for you automatically - running `python` from the command-prompt will take you to the Windows Store where you can download an [official version](https://docs.python.org/3/using/windows.html#the-microsoft-store-package). We also strongly recommend using a 64-bit rather than 32-bit version of Python, you can check this by running the command `python -c "import struct; print(struct.calcsize('P')*8, 'bit')"` from the Command Prompt.
+If you need to install Python first, the latest versions of Windows 10 can install Python for you automatically - running `python` from the command-prompt will take you to the Windows Store where you can download an [official version](https://docs.python.org/3/using/windows.html#the-microsoft-store-package). We also strongly recommend using a 64-bit rather than the 32-bit version of Python, you can check this by running the command `python -c "import struct; print(struct.calcsize('P')*8, 'bit')"` from the Command Prompt.
 
 Also note that on Windows, you can run the `datapane` command either by running `datapane` or `datapane.exe` on the command-line.
 
@@ -46,13 +46,13 @@ Some specific issues you may encounter on Windows include:
 
 You may encounter errors such as `ImportError: DLL load failed` when running datapane or importing it within your Python code.
 
-If so, try installing installing the [Visual C++ Redistributables for Windows](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) from Microsoft and running again \(you most likely want to download the version for x64, i.e. `vc_redist.x64.exe`\)
+If so, try installing the [Visual C++ Redistributables for Windows](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) from Microsoft and running again \(you most likely want to download the version for x64, i.e. `vc_redist.x64.exe`\)
 
 #### Datapane install errors trying to compile `pyarrow` using Visual C++
 
 This usually occurs when you are running a 32-bit version of Python and installing via `pip`. Either try using `conda` or install a 64-bit version of Python \(for example from the Windows Store as mentioned above\).
 
-This may also occur when using Windows 7 - we only support directly Windows 10, however it may be worth trying to install via `conda` instead if you are stuck on Windows 7.
+This may also occur when using Windows 7 - we only support directly Windows 10, however, it may be worth trying to install via `conda` instead, if you are stuck on Windows 7.
 
 #### 'datapane.exe' is not recognized as an internal or external command
 
@@ -69,15 +69,15 @@ To fix this, adjust your `%PATH%` to include your specific `Scripts` path as men
 
 ## Post-installation
 
-For all users, once installed, you can use the API described in this tutorial and in the [reference](../reference/reference-overview.md) to build and export your own reports locally and share them as HTML files. From there, you can also sign up to the free hosted server to deploy your reports and run scripts.
+For all users, once installed, you can use the API described in this tutorial and in the [reference](../reference/reference-overview.md) to build and export your own reports locally and share them as HTML files. From there, you can also sign up for the free hosted server to deploy your reports and run scripts.
 
 ## Authentication
 
-As well as a Python client, Datapane has a server component which allows you to both share reports and execute your scripts to allow others generate reports and actions dynamically.
+As well as a Python client, Datapane has a server component that allows you to both share reports and executes your scripts to allow others to generate reports and actions dynamically.
 
 ### Public Server
 
-[datapane.com](https://datapane.com) is available as a free, public server, which you can use to share reports and scripts. The API and CLI is configured to use this server by default.
+[datapane.com](https://datapane.com) is available as a free, public server, which you can use to share reports and scripts. The API and CLI are configured to use this server by default.
 
 To use Datapane, first [sign up for a free account](https://datapane.com/accounts/signup/) and copy the API key provided in the web interface. Next, login using the CLI using this key. All requests from both the CLI and Python library will now be authenticated.
 
@@ -88,9 +88,9 @@ Enter your API Key: [paste your API key here]
 
 ### Private Teams
 
-Datapane provides private hosted servers and supports on-premise instances for teams and enterprises. In such a case, log in to your instance, for instance `https://your-company.datapane.com,` using your existing credentials \(these will have been provide to you by your admin\).
+Datapane provides private hosted servers and supports on-premise instances for teams and enterprises. In such a case, log in to your instance, for instance `https://your-company.datapane.com,` using your existing credentials \(these will have been providing to you by your admin\).
 
-Similarly to using the public instance, your home page will indicate your API key and you will be able authenticate by passing in your API key to the login command. You can pass in the full URL of your server to the login command as follows.
+Similarly to using the public instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You can pass in the full URL of your server to the login command as follows.
 
 ```text
 $ datapane login --server=https://acme.datapane.com

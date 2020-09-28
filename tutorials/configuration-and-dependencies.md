@@ -2,7 +2,7 @@
 
 ## Configuration
 
-In the previous example, we are deploying a single script and providing configuration through command-line arguments. This works well for simple scripts, but scripts often need other configuration, such as parameters definitions, other files or folders to deploy, and pip requirements.
+In the previous example, we are deploying a single script and providing configuration through command-line arguments. This works well for simple scripts, but scripts often need other configurations, such as parameters definitions, other files or folders to deploy, and pip requirements.
 
 Datapane allows you to provide a configuration file called `datapane.yaml`. When you `deploy`, Datapane looks for this file automatically. Before we continue, create a project structure with the `script init` command, which creates a sample `datapane.yaml` and a simple script.
 
@@ -98,10 +98,10 @@ sh ~= 1.13.0
 If you want your script to run in your own Docker container, you can specify your own. 
 
 {% hint style="info" %}
-This support currently only supports **public** Docker images, and we're adding support for private repositories in the near future. With that in mind, for anything that you don't want to be public, we would recommend continuing to upload private directories through the regular `include` mechanism, and including OS requirements or pip `requirements.txt` in the Dockerfile.
+This support currently only supports **public** Docker images, and we're adding support for private repositories in the near future. With that in mind, for anything that you don't want to be public, we would recommend continuing to upload private directories through the regular `include` the mechanism, and including OS requirements or pip `requirements.txt` in the Dockerfile.
 {% endhint %}
 
-Although you can use any base for your Docker image, we would recommend inhereting off ours. To do this, create a Docker image which inherits from the our base image \(`nstack/datapane-python-runner`\) and adds your required dependencies. 
+Although you can use any base for your Docker image, we would recommend inheriting off ours. To do this, create a Docker image which inherits from our base image \(`nstack/datapane-python-runner`\) and adds your required dependencies. 
 
 ```yaml
 from nstack/datapane-python-runner:latest

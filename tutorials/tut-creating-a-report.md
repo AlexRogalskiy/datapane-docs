@@ -8,15 +8,15 @@ description: >-
 
 ## Introduction
 
-For many Python data analyses, you only want to share a specific user-facing part of it rather than the whole code or notebook. This often is of the form of a standalone product that non-technical people can view direct from their existing tools - e.g. browsers, email, Slack, etc., and without the overhead and requirements of Python and Jupyter.
+For many Python data analyses, you only want to share a specific user-facing part of it rather than the whole code or notebook. This often is of the form of a standalone product that non-technical people can view directly from their existing tools - e.g. browsers, email, Slack, etc., and without the overhead and requirements of Python and Jupyter.
 
-Datapane allows you to programatically create reports from the objects in your Python analyses, such as pandas DataFrames, plots from visualisation libraries, and Markdown text. 
+Datapane allows you to programmatically create reports from the objects in your Python analyses, such as pandas DataFrames, plots from visualization libraries, and Markdown text. 
 
 ## Creating a report
 
-Datapane provides a Python API that allow you to create, save and publish reports comprised from a collection of data-centric components.
+Datapane provides a Python API that allows you to create, save, and publish reports comprised of a collection of data-centric components.
 
-For instance, Datapane provides a Table component which takes a pandas DataFrame. We can create a Table component by passing a DataFrame into it, and create a Report with that single component in it as follows:
+For instance, Datapane provides a Table component that takes a pandas DataFrame. We can create a Table component by passing a DataFrame into it, and create a Report with that single component in it as follows:
 
 {% code title="simple\_report.py" %}
 ```python
@@ -44,7 +44,7 @@ $ python3 simple_report.py
 
 ### A more complex report
 
-That report was pretty basic, but we can jazz it up quite easily by adding some plots and markdown. Datapane supports Python visualisation libraries such as [Altair](https://altair-viz.github.io/) and [Bokeh](https://bokeh.org/). 
+That report was pretty basic, but we can jazz it up quite easily by adding some plots and markdowns. Datapane supports Python visualization libraries such as [Altair](https://altair-viz.github.io/) and [Bokeh](https://bokeh.org/). 
 
 Let's take the following code which pulls stock data from Yahoo finance and create a report with some interactive plots along with some example Markdown text. 
 
@@ -92,7 +92,7 @@ The existing components and report API are described in more detail in the [API 
 
 ## Viewing your report
 
-As described above, we can easily view our report in a browser. However there are other ways to view and share our report whilst developing it.
+As described above, we can easily view our report in a browser. However, there are other ways to view and share our report whilst developing it.
 
 Datapane has specific integration into for Jupyter notebook: if you're iterating a report, instead of having to open a new window to view it, you can preview a report directly from inside your notebook by calling `report.preview()`, embedding it live into your notebook.
 
@@ -101,7 +101,7 @@ Datapane has specific integration into for Jupyter notebook: if you're iterating
 ## Publish your report
 
 {% hint style="info" %}
-This feature requires use of the free Datapane public hosted platform
+This feature requires the use of the free Datapane public hosted platform
 {% endhint %}
 
 So far we've demonstrated how to build and view reports locally; however, one of the most powerful features of Datapane is the ability to publish your report straight from your code and share it directly with your team or the wider world.
@@ -118,9 +118,9 @@ report.publish(name='test-report')
 You can also embed reports into other places, such as Notion, Confluence, Reddit, Slack, a blog post, or your own web page. 
 {% endhint %}
 
-We can view the report demonstrated in this tutorial on Datapane[ here](https://acme.datapane.com/reports/Bj3LQ7Q/), and you can we have more on [gallery page](www.datapane.com/gallary/). 
+We can view the report demonstrated in this tutorial on Datapane[ here](https://acme.datapane.com/reports/Bj3LQ7Q/), and you can have more on [gallery page](www.datapane.com/gallary/). 
 
-Reports published on on Datapane have visibility settings_**.**_ By default, only you can view your reports on your web, but you can make your report public when you create it. If you're on a private Datapane instance, you can also restrict it to everyone on your domain.
+Reports published on Datapane have visibility settings_**.**_ By default, only you can view your reports on your web, but you can make your report public when you create it. If you're on a private Datapane instance, you can also restrict it to everyone on your domain.
 
 ```python
 # Publicly available
