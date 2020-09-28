@@ -6,7 +6,7 @@ description: 'Variables are secret, encrypted values which you can share between
 
 ## Overview
 
-Scripts often contain variables such as database keys and passwords, which you do not want embedded in your source code and visible to the outside world. Datapane's `Variable` object provides a safe and secure way to create, store, and retrieve values which your scripts require.
+Scripts often contain variables such as database keys and passwords, which you do not want embedding in your source code and visible to the outside world. Datapane's `Variable` object provides a safe and secure way to create, store, and retrieve values which your scripts require.
 
 ## `add`
 
@@ -26,7 +26,7 @@ A Variable object
 
 Create a new user variable. Adding multiple versions of variables with the same name will create new versions.
 
-By default, variables are private to the creator's account, but they can be be shared across an organisation. To set visibility, use the `--visibility` flag \(or `visibility` field in Python\) with `OWNER_ONLY` or `ORG`. 
+By default, variables are private to the creator's account, but they can be shared across an organization. To set visibility, use the `--visibility` flag \(or `visibility` field in Python\) with `OWNER_ONLY` or `ORG`. 
 
 {% hint style="warning" %}
 If you want other people inside your organisation to run your scripts, your variable must be `ORG`, as scripts are executed under their user account.

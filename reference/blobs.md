@@ -48,7 +48,7 @@ All methods have the additional parameters:
 | `visibility` | The visibility setting \(`ORG`, `PRIVATE`, or `PUBLIC`\) | False |
 
 {% hint style="warning" %}
- If you want other people in your organisation to make use of blobs you created in their scripts, you must set visibility to `ORG`
+ If you want other people in your organization to make use of blobs you created in their scripts, you must set visibility to `ORG`
 {% endhint %}
 
 ```python
@@ -75,7 +75,7 @@ Download a DataFrame, file, or object. All download operations have the followin
 | `owner` | The owner of the blob.  | False |
 
 {% hint style="warning" %}
-If you want other people inside your organisation to run your scripts which access a blob which you created, you must specify yourself as the `owner` in this method. When someone runs your script, it runs under their name, and if you do not set an explicitly specify the `owner` , it will try and look for the blob under their name and fail.
+If you want other people inside your organization to run your scripts which access a blob which you created, you must specify yourself as the `owner` in this method. When someone runs your script, it runs under their name, and if you do not set an explicitly specify the `owner` , it will try and look for the blob under their name and fail.
 
 ```python
 dp.Blob.get(name='foo', owner='linus')
@@ -117,5 +117,5 @@ blob = dp.Blob.get(name='myblob', owner='khuyentran')
 b = blob.download_df() # Or download_file(), download_obj()
 ```
 
-Now others can use your blob for their code! If you want to share your blob privately in your organisation, follow the same process, but set the visibility of your blob to `ORG`
+Now others can use your blob for their code! If you want to share your blob privately in your organization, follow the same process, but set the visibility of your blob to `ORG`
 

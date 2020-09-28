@@ -22,6 +22,7 @@ For instance, Datapane provides a Table component that takes a pandas DataFrame.
 ```python
 import pandas as pd
 import datapane as dp
+import numpy as np
 
 df = pd.DataFrame({
     'A': np.random.normal(-1, 1, 5000),
@@ -80,7 +81,7 @@ report = dp.Report(
     dp.Plot(plot)
  )
  
- report.save(path='test.html')
+report.save(path='test.html')
 ```
 {% endcode %}
 
@@ -148,7 +149,7 @@ If your report is public, you can copy the link and share it with others.
 ![](../.gitbook/assets/image%20%2899%29.png)
 
 {% hint style="info" %}
-If you are using Datapane on a private instance, any report with ORG visibility will be accessible to people inside your organisation, but not the public.
+If you are using Datapane on a private instance, any report with ORG visibility will be accessible to people inside your organization, but not the public.
 {% endhint %}
 
 ### Access Tokens
