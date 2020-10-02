@@ -77,40 +77,54 @@ If you are still having problems installing, please ask on the [Datapane Forum](
 
 ## Authentication
 
-For all users, once installed, you can use the API described in this tutorial and in the [reference](reference/reference-overview.md) to build and export your own reports locally and share them as HTML files. From there, you can also sign up for the free hosted server to deploy your reports and run scripts.
+As well as a local Python framework for generating reports, Datapane has a server component which is accessed through the CLI and Python library and requires an authentication token. You can authenticate through either the CLI or the Python library, and all future requests from both the CLI and Python library will automatically be authenticated.
 
-Once you've installed the open-source Datapane library, you can use the Datapane API to publish and share your reports.
+### Datapane Public
 
-As well as a Python client, Datapane has a server component that allows you to both share reports and executes your scripts to allow others to generate reports and actions dynamically.
+_Datapane Public_ is hosted on [datapane.com](https://datapane.com) and is available as a free, public server which you can use to publish and share reports. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), copy the API key provided in the web interface. Next, login using the CLI or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated.
 
-### Public Server
-
-[datapane.com](https://datapane.com) is available as a free, public server, which you can use to share reports and scripts. The API and CLI are configured to use this server by default.
-
-To use Datapane, first [sign up for a free account](https://datapane.com/accounts/signup/) and copy the API key provided in the web interface. Next, login using the CLI using this key. All future requests from both the CLI and Python library will automatically be authenticated.
-
+{% tabs %}
+{% tab title="CLI" %}
 ```text
-$ datapane login
+$ datapane login 
 Enter your API Key: [paste your API key here]
 ```
+{% endtab %}
 
-### Private Teams
+{% tab title="Python Library" %}
+```python
+import datapane as dp
+dp.login(token=your_token)
+```
+{% endtab %}
+{% endtabs %}
 
-Datapane provides private hosted servers and supports on-premise instances for teams and enterprises. In such a case, log in to your instance, for instance `https://your-company.datapane.com,` using your existing credentials \(these will have been providing to you by your admin\).
+### Datapane for Teams
 
-Similarly to using the public instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You can pass in the full URL of your server to the login command as follows.
+_Datapane for Teams_ provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net,` using the credentials provided to you by your admin.
 
+Similarly to using the public instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You will need to pass in the full URL of your server \(including the `https://`\) to the login command as follows.
+
+{% tabs %}
+{% tab title="CLI" %}
 ```text
-$ datapane login --server=https://acme.datapane.net
+$ datapane login --server=https://[your-server].datapane.net
 Enter your API Key: [paste your API key here]
 ```
+{% endtab %}
+
+{% tab title="Python Library" %}
+```python
+import datapane as dp
+dp.login(token=your_token, server='https://[your-server].datapane.net')
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 {% hint style="info" %}
-If you're signing into a private server, remember to include the `https://` in your server URL!
-{% endhint %}
-
-{% hint style="info" %}
-The CLI supports multiple profiles using the `--env` flag, so you can easily work with both the public and your team instance at the same time
+The CLI supports multiple profiles using the --env flag, so you can easily work with both the public and your team instance at the same time
 
 ```bash
 $ datapane --env public login
@@ -118,11 +132,24 @@ $ datapane --env acme login --server=https://acme.datapane.net
 ```
 {% endhint %}
 
+
+
 ## Check your Authentication
 
 To check which account you are logged in as, run:
 
+{% tabs %}
+{% tab title="CLI" %}
 ```text
 $ datapane ping
 ```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import datapane as dp
+dp.ping()
+```
+{% endtab %}
+{% endtabs %}
 
