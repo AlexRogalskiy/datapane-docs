@@ -10,8 +10,6 @@ description: >-
 
 Stakeholders commonly need to provide some configuration to scripts to enable self-service report generation. Datapane allows you to add parameters to a script, which are presented to end users as web forms. This means that other people who have accounts on your instance can generate reports without worrying about code, notebooks, or setting up a Python environment. 
 
-![](../.gitbook/assets/image%20%2890%29.png)
-
 ## Running & Parameters
 
 Input parameters can be defined in your `datapane.yaml` configuration file, where you can enter a schema and configure the inputs. In your Python code, the parameters which you define in this file are accessible in the `Params` dictionary. You can get an item from the dictionary with `Params.get([value_name], [default_value])`
@@ -92,5 +90,5 @@ Stakeholders can enter parameters and generate custom reports themselves, based 
 
 ![](../.gitbook/assets/image%20%28109%29.png)
 
-## 
+
 

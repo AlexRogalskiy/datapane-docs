@@ -76,11 +76,7 @@ dp.Report(
 ```
 {% endcode %}
 
-We can view the report demonstrated in this tutorial on Datapane[ here](https://acme.datapane.com/reports/Bj3LQ7Q/), and you can we have more on [gallery page](www.datapane.com/gallary/). 
-
 When this python script is run, using the same command as earlier, we get the following report.
-
-Reports published on Datapane have visibility settings_**.**_ By default, only you can view your reports on your web, but you can make your report public when you create it. If you're on a private Datapane instance, you can also restrict it to everyone on your domain.
 
 ![](../.gitbook/assets/image%20%28100%29.png)
 

@@ -35,23 +35,13 @@ dp.Report(
 ```
 {% endcode %}
 
-We can view the report demonstrated in this tutorial on Datapane[ here](https://acme.datapane.com/reports/Bj3LQ7Q/), and you can we have examples from the community on our [gallery page](www.datapane.com/gallary/). 
+Once published, you can share the link with others. We can view the report demonstrated in this tutorial on Datapane[ here](https://acme.datapane.com/reports/Bj3LQ7Q/), and you can we have examples from the community on our [gallery page](www.datapane.com/gallary/). 
 
 ### Versioning
 
 Reports published to _Datapane Public_ and _Datapane for Teams_ are versioned. If you publish a report with the **same name** as a previous report, it will increment the version. Using the Datapane web UI, you can view previous versions of reports. 
 
 ![](../.gitbook/assets/image%20%28110%29.png)
-
-## Public sharing <a id="nextshare-stepsyour-report"></a>
-
-{% hint style="info" %}
-If you are using Datapane for Teams, your reports are **not public** by default and can be private or shared only with your organisation. Please see the [relevant section](../datapane-teams/untitled.md) for more information.
-{% endhint %}
-
-Once you have published your report, you can copy the link and share it with others.
-
-![](../.gitbook/assets/image%20%2899%29.png)
 
 In the next section, we will explore how to embed your report into a range of other platforms. 
 

@@ -1,7 +1,5 @@
 # Libraries and Dependencies
 
-In the previous example, we are deploying a single script and providing configuration through command-line arguments. This works well for simple scripts, but scripts often need other configuration, such as parameters definitions, other files or folders to deploy, and pip requirements.
-
 Your Python script or notebook may have requirements on external libraries. Datapane supports the ability to add local folders and files, which you can deploy alongside your script, the ability to include `pip` requirements, which are made available to your script when it is run on Datapane, and the ability to specify a Docker container which your script runs in. These are all configured in your `datapane.yaml`.
 
 ## Python dependencies
