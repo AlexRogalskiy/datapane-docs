@@ -1,21 +1,32 @@
 # Table of contents
 
 * [Welcome to Datapane](README.md)
+* [Getting Started](tut-getting-started.md)
 
-## Tutorials
+## Reports <a id="tutorials"></a>
 
-* [Getting Started](tutorials/tut-getting-started.md)
 * [Creating a Report](tutorials/tut-creating-a-report.md)
-* [Deploying a Script](tutorials/tut-deploying-a-script.md)
-* [Configuration & Dependencies](tutorials/configuration-and-dependencies.md)
-* [Parameterising a Script](tutorials/tut-parameterising-a-script.md)
+* [Publishing and Sharing](tutorials/publishing-and-sharing.md)
+* [Embedding Reports](tutorials/embedding-reports-in-social-platforms.md)
+* [Layout and Customization](tutorials/layout-and-customization.md)
+
+## Datapane for Teams <a id="datapane-teams"></a>
+
+* [Introduction](datapane-teams/tut-deploying-a-script.md)
+* [Authentication and Sharing](datapane-teams/untitled.md)
+* [Script and Jupyter Deployment](datapane-teams/script-and-jupyter-deployment.md)
+* [Parameters and Forms](datapane-teams/tut-parameterising-a-script.md)
+* [Scheduled Report Runs](datapane-teams/scheduling.md)
+* [Libraries and Dependencies](datapane-teams/configuration-and-dependencies.md)
+* [Integrating Databases or APIs](datapane-teams/database-and-network-access.md)
+* [Data, Model, and Asset Storage](datapane-teams/data-model-and-asset-storage.md)
 
 ## API Reference <a id="reference"></a>
 
 * [Overview](reference/reference-overview.md)
 * [Reports](reference/reports/README.md)
   * [Components](reference/reports/components.md)
-  * [Share or Embed Individual Component of a Multi-component Report](reference/reports/share-or-embed-individual-component-of-a-multi-component-report.md)
+  * [Querying Components](reference/reports/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Scripts](reference/scripts/README.md)
   * [Configuration](reference/scripts/datapane.yaml.md)
   * [Parameters](reference/scripts/parameters.md)
@@ -28,7 +39,6 @@
 
 ## Guides
 
-* [Embedding Reports in Social Platforms](guides/embedding-reports-in-social-platforms.md)
 * [Create dynamic reports from an ML model](guides/guide-creating-ml-model-form.md)
 
 ## Resources

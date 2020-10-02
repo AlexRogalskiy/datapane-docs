@@ -31,6 +31,6 @@ The `type` of your parameter and other settings dictates how it is presented in 
 | Date picker | `date` |  | `undefined` |
 | Time picker | `time` |  | `undefined` |
 | Date and time picker | `datetime` |  | `undefined` |
-| List Input | `list` | If provides with no `choices` | `[]` |
+| List Input | `list` | If provided with no `choices` | `[]` |
 | Multi Select Input | `list` | If provided with `choices`: an array of strings and numbers. | `[]` |
 

@@ -21,37 +21,51 @@ import pandas as pd
 import altair as alt
 import datapane as dp
 
-df = pd.read_csv('https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1553600505&period2=1585222905&interval=1d&events=history')
-chart = alt.Chart(df).encode(x='Date', y='High', y2='Low').mark_area(opacity=0.5).interactive()
+dataset = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv')
+df = dataset.groupby(['continent', 'date'])['new_cases_smoothed_per_million'].mean().reset_index()
+
+plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
+    x='date:T',
+    y=alt.Y('new_cases_smoothed_per_million:Q', stack=None),
+    color=alt.Color('continent:N', scale=alt.Scale(scheme='set1')),
+    tooltip='continent:N'
+).interactive().properties(width='container')
 
 dp.Report(
-  dp.Table(df['High']), 
-  dp.Plot(chart)
-).save(path='stocks.html')
+    dp.Plot(plot), 
+    dp.Table(df)
+).save(path='report.html', open=True)
+
 ```
 
-If you have already signed in with token, publishing your report could be done in one line of code.
+![An HTML report](.gitbook/assets/image%20%28100%29.png)
+
+## Datapane Public
+
+{% page-ref page="tutorials/publishing-and-sharing.md" %}
+
+If you want to share your report on the web, _Datapane Public_ provides a free API and hosted platform for publishing and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can publish your report, including datasets and plots, in a single command.
 
 ```python
 dp.Report(
-  dp.Table(df['High']), 
-  dp.Plot(chart)
-).publish(name='stocks_report', open=True)
+    dp.Plot(plot), 
+    dp.Table(df)
+).publish(name='covid_report', open=True)
 ```
 
-And a website on Datapane will be automatically created for you!
+Once published, you can share your report with your community, class, or friends by sharing the link.
 
-![Standalone output report](.gitbook/assets/image%20%2888%29.png)
+![](.gitbook/assets/image%20%28101%29.png)
 
-You could either share this link on social media or with your team.  
+Alternatively, you can embed your published report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content.
 
-![](.gitbook/assets/image%20%2896%29.png)
+![](.gitbook/assets/image%20%28106%29.png)
 
-If you want your report to be generated dynamically by other people \(such as your team or stakeholders\) you can deploy your Python script or notebook to a Datapane hosted server using Datapane's CLI. If you share it with others, they are able to provide parameters through a friendly web form, which are passed into your script, and generate your reports dynamically.
-
-![](.gitbook/assets/image%20%2889%29.png)
-
-## Our Mission
+## Datapane for Teams
 
 Although there are many enterprise BI and reporting tools with drag and drop interfaces, using SQL with Python is often the best combination for querying, analyzing, and visualizing data. Datapane's goal is to provide an API-first way to provide the last mile of sharing results, so you can analyze data in your existing environment, instead of using "Yet Another BI Platform".
+
+If your team is using the Python data stack for analysis and visualization, but is still relying on a drag-and-drop BI tool to share results, _Datapane for Teams_ provides an API-first way to share reports directly from Python. This enables data teams to use the tools they are gifted at to drive business decisions, and allows stakeholders to self-serve on what the data team is building, instead of going through a backlog.
+
+In addition to providing secure, authenticated report sharing, _Datapane for Teams_ allows automated report generation by allowing data teams to deploy their Python scripts and Jupyter Notebooks to the cloud. Reports can be generated from parameters entered through web forms, on a schedule, or on-demand through our HTTP and Python APIs.
 
