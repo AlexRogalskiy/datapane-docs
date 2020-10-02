@@ -84,11 +84,11 @@ dp.Report(
 
 When we run `script deploy`, Datapane will deploy a new version of our script, and use our parameters definition to generate the following form:
 
-![](../.gitbook/assets/image%20%28102%29.png)
+![](../.gitbook/assets/image%20%28103%29.png)
 
 Stakeholders can enter parameters and generate custom reports themselves, based on these fields.  
 
-![](../.gitbook/assets/image%20%28109%29.png)
+![](../.gitbook/assets/image%20%28111%29.png)
 
 
 

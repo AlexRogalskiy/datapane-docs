@@ -4,7 +4,7 @@
 
 When you publish a report to a Datapane instance, you can embed it into other platforms. 
 
-![](../.gitbook/assets/image%20%28106%29.png)
+![](../.gitbook/assets/image%20%28107%29.png)
 
 Datapane reports can be embedded into anywhere that supports iframes or oembed, including the following third-party tools:
 
@@ -30,21 +30,21 @@ To embed the chart in Notion, just paste the link into any page. A menu will pop
 
 You can embed into your own website using an iframe. After publishing your report, if you browse to it's page on Datapane.com, and select **Embed** in the share menu, you will be able to copy and paste a snippet of code to embed it into your page.
 
-![Screenshot 2020-08-17 at 19.34.11.png](https://storage.googleapis.com/datapane-files-prod/images/Screenshot_2020-08-17_at_19.34.11.width-800.png?Expires=1601557562&GoogleAccessId=gcs-files%40datapane-env-prod.iam.gserviceaccount.com&Signature=hwYXNc3yPaFYYCN9raMOIYFrgTScOAXbRGwol3Fk7pl1QtRWV6%2B7bzjTQ%2BYnC0X4o%2By9PIuRjDE04PsK4IOiaTRYIO4eQK7Cy3FqMXJMsP1T0FpOUsqkKmx%2FUbuwc8SwvCbeYmJf8rjtmcpbx0SUSRvRAaxxy2gHrKS%2F%2B6V5f7M13pK2MTWEmr3Vr1EUnYzJCkhlTTMpoSz5G2nR3c23Y97LCaZ9SxIIHrD8Cz6oj30jjPjZleBEshHEesCPIo6OvKGPpBjq5Ft6AiyY%2FamtQ1l%2FSo%2BDUZux5mvk0Phq4UpkGTgTA3PukfV%2BgHRDSoNIN4%2Bw2U%2FjYtYEBbOEY2EwXQ%3D%3D)
-
 You can use this on any website where you control the underlying HTML code.
 
 ### Confluence 
 
 You can embed a Datapane report into Confluence using an iframe, but instead of copying the code tag like you do when embedding in your own website, you need to use Confluence's built-in iframe support.
 
-On your Confluence page, type `/iframe` and the iframe popup will appear.![Screenshot 2020-08-17 at 19.05.58.png](https://storage.googleapis.com/datapane-files-prod/images/Screenshot_2020-08-17_at_19.05.58.width-800.png?Expires=1601557562&GoogleAccessId=gcs-files%40datapane-env-prod.iam.gserviceaccount.com&Signature=aOqyYMEUI1GQHi8yWc4B9%2FwN85UoTRmN0kYRHNdOx%2FdA%2FcBWFQrYXeYRsjWZKD8ucgklnZqyvHwbkVq6GwkLSTgqrmRVJGrh4cKZCQDxo219VcJOy3QeZwk8rJ4A83uK27Y9NQmLEv1H0vTUi1GzOOBGy1b4nnsgPiWCAHys5k7dr%2FZWDNPwmDjIimglA%2F596zXB6SORHdmhHD7PrUrp3u99shmJpOYXLCYvenSGJtlTh75tkRvgzyDGCEmVakN0GlzgLvZGQvjULddQ08XkJE7Lmex3XaIN0lBZ5YSLtkojfn4XPgBkRaXSo07V7eUgz%2FMUePBE%2Bty0zf7Ti7OyaQ%3D%3D)
+On your Confluence page, type `/iframe` and the iframe popup will appear.
+
+![](../.gitbook/assets/image%20%28100%29.png)
 
 Similarly to when you are embedding in your own website, when you embed into Confluence, make sure you add `/embed` to the end of your URL, as Confluence does not automatically add it as Notion, Medium, and Reddit do.
 
 Confluence will then display your report or visualization in the page:
 
-![Screenshot 2020-08-17 at 19.11.47.png](https://storage.googleapis.com/datapane-files-prod/images/Screenshot_2020-08-17_at_19.11.47.width-800.png?Expires=1601557562&GoogleAccessId=gcs-files%40datapane-env-prod.iam.gserviceaccount.com&Signature=mqloaYxVnYAfxXTDnSX69IgoIdz8cJGnndcdMXUW%2FAf3cv%2F6dDxXo9JqIAFxEGkS0xBlnOzCSMsfN3jrEQ73ESbum2tdUL%2BysxE0GmFTkDTsM%2FCjeWpxTHxzhfOo%2BtspRyqUtZoLXFEwHWPBQeeT6Y7oqQxoLZl4emCMM4vLQ2LkMk0eU5lG7zRK6JcSmOu8jXwwERS7HIXIBC6L3ocIgquOwDsmk17O7g%2BGDa4vat8MJBEjEn%2B3orck9c4%2BAXpvf7fMoNJhL32KtC%2Fcy%2FLC9SYj%2BLbzNInLkoQq0BOp0XFj55iO6OeI5jfGQrD0tacItS%2Fc2q8tbDJTfRVyOn61aA%3D%3D)
+![](../.gitbook/assets/image%20%28110%29.png)
 
 ## Social Integrations
 

@@ -41,7 +41,7 @@ Once published, you can share the link with others. We can view the report demon
 
 Reports published to _Datapane Public_ and _Datapane for Teams_ are versioned. If you publish a report with the **same name** as a previous report, it will increment the version. Using the Datapane web UI, you can view previous versions of reports. 
 
-![](../.gitbook/assets/image%20%28110%29.png)
+![](../.gitbook/assets/image%20%28112%29.png)
 
 In the next section, we will explore how to embed your report into a range of other platforms. 
 

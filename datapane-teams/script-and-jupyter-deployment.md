@@ -62,11 +62,11 @@ Uploaded simple_script.py to https://acme.datapane.net/leo/scripts/covid_script/
 
 This makes your script available on your private instance, where you can share it with other users. If you send them your script, they are able to generate the report from the previous example dynamically by hitting the **Run** button.
 
-![](../.gitbook/assets/image%20%28104%29.png)
+![](../.gitbook/assets/image%20%28105%29.png)
 
 Every time the script is run, it pulls new COVID data and generates a fresh report, which can be shared or embedded.
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28113%29.png)
 
 ## Configuration
 

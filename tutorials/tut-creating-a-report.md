@@ -39,7 +39,7 @@ Copying this code into a new script and running it will generate the report.
 $ python3 simple_report.py
 ```
 
-![](../.gitbook/assets/image%20%28107%29.png)
+![](../.gitbook/assets/image%20%28108%29.png)
 
 If you send this HTML file to somebody \(or [publish it on _Datapane Public_](publishing-and-sharing.md#publish-your-report)\), they will be able to view your dataset, filter it, and download it as a CSV.
 
@@ -78,7 +78,7 @@ dp.Report(
 
 When this python script is run, using the same command as earlier, we get the following report.
 
-![](../.gitbook/assets/image%20%28100%29.png)
+![](../.gitbook/assets/image%20%28101%29.png)
 
 #### Viewing your report
 

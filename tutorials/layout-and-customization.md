@@ -34,7 +34,7 @@ dp.Report(
 ```
 {% endcode %}
 
-![](../.gitbook/assets/image%20%28103%29.png)
+![](../.gitbook/assets/image%20%28104%29.png)
 
 {% hint style="info" %}
 As `Blocks` are components themselves, it means they are composable, and you can create more custom layers of nested blocks.
@@ -45,7 +45,7 @@ As `Blocks` are components themselves, it means they are composable, and you can
 By default, reports appear in a portrait orientation. This works well for many reports, but may not be desired if you have multiple columns of blocks. You can opt to make your report full-width by setting the `full_width` property to `True` on the `Report` object. This allows the creation of rich, dashboard-like layouts such as the following:  
 
 
-![](../.gitbook/assets/image%20%28105%29.png)
+![](../.gitbook/assets/image%20%28106%29.png)
 
 
 
