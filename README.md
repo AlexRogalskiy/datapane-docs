@@ -63,8 +63,6 @@ Alternatively, you can embed your published report into social platforms, like R
 
 ## Datapane for Teams
 
-Although there are many enterprise BI and reporting tools with drag and drop interfaces, using SQL with Python is often the best combination for querying, analyzing, and visualizing data. Datapane's goal is to provide an API-first way to provide the last mile of sharing results, so you can analyze data in your existing environment, instead of using "Yet Another BI Platform".
-
 If your team is using the Python data stack for analysis and visualization, but is still relying on a drag-and-drop BI tool to share results, _Datapane for Teams_ provides an API-first way to share reports directly from Python. This enables data teams to use the tools they are gifted at to drive business decisions, and allows stakeholders to self-serve on what the data team is building, instead of going through a backlog.
 
 In addition to providing secure, authenticated report sharing, _Datapane for Teams_ allows automated report generation by allowing data teams to deploy their Python scripts and Jupyter Notebooks to the cloud. Reports can be generated from parameters entered through web forms, on a schedule, or on-demand through our HTTP and Python APIs.
