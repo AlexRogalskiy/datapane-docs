@@ -35,7 +35,7 @@ dp.Report(
 ```
 {% endcode %}
 
-Once published, you can share the link with others. We can view the report demonstrated in this tutorial on Datapane[ here](https://acme.datapane.com/reports/Bj3LQ7Q/), and you can we have examples from the community on our [gallery page](www.datapane.com/gallary/). 
+Once published, you can share the link with others. 
 
 ### Versioning
 
