@@ -10,6 +10,7 @@
 * [Publishing and Sharing](tutorials/publishing-and-sharing.md)
 * [Embedding Reports](tutorials/embedding-reports-in-social-platforms.md)
 * [Layout and Customization](tutorials/layout-and-customization.md)
+* [Automation with GitHub Actions](tutorials/automation-with-github-actions.md)
 
 ## Datapane for Teams <a id="datapane-teams"></a>
 
