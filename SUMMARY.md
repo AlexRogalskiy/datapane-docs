@@ -22,6 +22,7 @@
 * [Libraries and Dependencies](datapane-teams/configuration-and-dependencies.md)
 * [Integrating Databases or APIs](datapane-teams/database-and-network-access.md)
 * [Data, Model, and Asset Storage](datapane-teams/data-model-and-asset-storage.md)
+* [Comparisons](datapane-teams/comparisons.md)
 
 ## API Reference <a id="reference"></a>
 
@@ -39,13 +40,8 @@
 
 * [Changelog](changelog/changelog.md)
 
-## Guides
-
-* [Create dynamic reports from an ML model](guides/guide-creating-ml-model-form.md)
-
 ## Resources
 
-* [FAQ](resources/faq.md)
 * [Blog](https://blog.datapane.com)
 * [Open Source](https://github.com/datapane/datapane)
 * [Demos](https://github.com/datapane/datapane-demos)
