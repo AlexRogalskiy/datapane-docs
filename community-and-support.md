@@ -8,9 +8,9 @@ description: How to find other Datapane users and get help
 
 We actively develop on our public repository on GitHub. If you have found a specific bug in the product, please submit an issue and we will get to fixing it. If you have a more general query, please use the forums below.
 
-## [Forums](https://discuss.datapane.com)
+## [Community Forums](https://github.com/datapane/datapane/discussions)
 
-Need help building a report, have a product suggestion, or want to share something cool you've built? The forum is usually the best place to ask and learn from the Datapane community.
+Need help building a report, have a product suggestion, or want to share something cool you've built? The community forums on GitHub are usually the best place to ask and learn from the Datapane community.
 
 ## [Twitter](https://twitter.com/datapaneapp)
 

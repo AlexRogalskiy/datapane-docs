@@ -36,13 +36,10 @@
 * [Blobs](reference/blobs.md)
 * [Variables](reference/variables.md)
 
-## Changelog
-
-* [Changelog](changelog/changelog.md)
-
 ## Resources
 
 * [Blog](https://blog.datapane.com)
-* [Open Source](https://github.com/datapane/datapane)
+* [GitHub](https://github.com/datapane/datapane)
 * [Demos](https://github.com/datapane/datapane-demos)
+* [Community](https://github.com/datapane/datapane/discussions)
 
