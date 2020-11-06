@@ -15,7 +15,7 @@
 ## Datapane for Teams <a id="datapane-teams"></a>
 
 * [Introduction](datapane-teams/tut-deploying-a-script.md)
-* [Authentication and Sharing](datapane-teams/untitled.md)
+* [Authentication, Sharing, and Versioning](datapane-teams/untitled.md)
 * [Script and Jupyter Deployment](datapane-teams/script-and-jupyter-deployment.md)
 * [Parameters and Forms](datapane-teams/tut-parameterising-a-script.md)
 * [Scheduled Report Runs](datapane-teams/scheduling.md)
@@ -38,8 +38,9 @@
 
 ## Resources
 
-* [Blog](https://blog.datapane.com)
+* [API Docs](https://datapane.github.io/datapane/)
 * [GitHub](https://github.com/datapane/datapane)
-* [Demos](https://github.com/datapane/datapane-demos)
 * [Community](https://github.com/datapane/datapane/discussions)
+* [Blog](https://datapane.com/blog/)
+* [Demos](https://github.com/datapane/datapane-demos)
 

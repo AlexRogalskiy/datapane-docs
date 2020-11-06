@@ -31,7 +31,7 @@ $ pip3 install -U datapane
 ## Windows Tips and Troubleshooting
 
 {% hint style="info" %}
-Having problems running on Windows? Please read...
+Having problems running on Windows? Please read on...
 {% endhint %}
 
 We generally recommend installing via `conda` over `pip` on Windows as it's easier to install all the required dependencies.
@@ -121,8 +121,6 @@ dp.login(token=your_token, server='https://[your-server].datapane.net')
 {% endtab %}
 {% endtabs %}
 
-
-
 {% hint style="info" %}
 The CLI supports multiple profiles using the --env flag, so you can easily work with both the public and your team instance at the same time
 
@@ -131,8 +129,6 @@ $ datapane --env public login
 $ datapane --env acme login --server=https://acme.datapane.net
 ```
 {% endhint %}
-
-
 
 ## Check your Authentication
 

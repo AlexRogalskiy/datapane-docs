@@ -10,7 +10,11 @@ We actively develop on our public repository on GitHub. If you have found a spec
 
 ## [Community Forums](https://github.com/datapane/datapane/discussions)
 
-Need help building a report, have a product suggestion, or want to share something cool you've built? The community forums on GitHub are usually the best place to ask and learn from the Datapane community.
+Need help building a report, have a product or fature suggestion, or want to share something cool you've built? The community forums on GitHub are usually the best place to ask and learn from the Datapane community.
+
+## [API Docs](https://datapane.github.io/datapane/)
+
+Detailed Python documentation for working with our Reports and Blocks object APIs, along with the additional APIs provided for Teams users can be found in our API docs.
 
 ## [Twitter](https://twitter.com/datapaneapp)
 

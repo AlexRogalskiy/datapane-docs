@@ -1,4 +1,4 @@
-# Authentication and Sharing
+# Authentication, Sharing, and Versioning
 
 _Datapane for Teams_ allows secure, authenticated sharing of reports, scripts, blobs, and secrets. Each user on your Datapane instance \(e.g. https://acme.datapane.net\) has a private password-protected account.
 
@@ -25,11 +25,19 @@ For reports and scripts, you can also configure visibility settings through the 
 
 ![](../.gitbook/assets/image%20%2898%29.png)
 
-### Access Tokens
+## Access Tokens
 
 If you want to share a private report with an outside party - such as a client or contractor - you can use the link provided next to the **Share** button to generate a secure signed token. This link contains this token which allows anyone with the link to access the report, without signing up to Datapane.
 
 ![](../.gitbook/assets/image%20%2897%29.png)
 
 This token also works across embeds, so you can [embed](../tutorials/embedding-reports-in-social-platforms.md#business-tooling) a private report into platforms such as Confluence or your own webpage. For security reasons, access tokens are revoked after 24 hours, so this is not a suitable method for long-term sharing.
+
+## Versioning
+
+_Datapane for Teams_ adds versioning support to your reports. If you publish a report with the **same name** as a previous report, it will increment the version. Using the Datapane web UI, you can view previous versions of reports. 
+
+![](../.gitbook/assets/image%20%28112%29.png)
+
+
 
