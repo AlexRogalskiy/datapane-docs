@@ -4,6 +4,8 @@ description: Laying out your report to make it more readable and understandable
 
 # Layout and Customization
 
+## Overview
+
 Although you are you probably analyzing data in a list of sequential steps, it may not the best way to present results -- especially if you are sharing with people who are used to a traditional dashboard or BI tool. Datapane's report library provides components which allow for more flexible grid-style layouts, allowing you to create custom interfaces without knowledge of HTML or CSS.
 
 ## Building grids
@@ -44,7 +46,7 @@ dp.Report(
 As `Blocks` are block components themselves, they are composable, and you can create more custom layers of nested blocks, for instance nesting 2 rows in the left column of a 2 column layout
 {% endhint %}
 
-## Customizing Width
+## Customizing width
 
 By default, reports appear in a portrait orientation. This works well for many reports, but may not be desired if you have multiple columns of blocks. You can opt to make your report full-width by setting the `full_width` property to `True` on the `Report` object. This allows the creation of rich, dashboard-like layouts such as the following:  
 

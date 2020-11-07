@@ -99,9 +99,5 @@ Datapane has special integration into Jupyter Notebooks: if you're iterating a r
 
 Next, we will explore how to publish and share reports online, either on _Datapane Public_, or on your own _Datapane for Teams_ instance.
 
-
-
-
-
 ## 
 
