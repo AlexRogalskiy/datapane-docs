@@ -75,8 +75,6 @@ bokeh_chart.yaxis.axis_label = 'Petal Width'
 bokeh_chart.circle(flowers["petal_length"], flowers["petal_width"],
          color=colors, fill_alpha=0.2, size=10)
 
-output_file("iris.html", title="iris.py example")
-
 # View the plot
 dp.Report(dp.Plot(bokeh_chart)).preview()
 
@@ -204,7 +202,8 @@ You can also share your code using `dp.Markdown` like below
 
 ```python
 code = dp.Markdown(f'''
-```df = data.reset_index().melt('Date', var_name='symbol', value_name='price')
+```python
+df = data.reset_index().melt('Date', var_name='symbol', value_name='price')
 
 base_chart = alt.Chart(df).encode(x='Date:T', y='price:Q', color='symbol').interactive()
 
@@ -256,10 +255,10 @@ In a similar way, any other files can be embedded in your Datapane Report, inclu
 import datapane as dp
 
 report = dp.Report(
-   dp.File("./image.png",
-   dp.File("./data.xlsx",
+   dp.File("./image.png"),
+   dp.File("./data.xlsx"),
    dp.File("./config.json")
-   )
+)
 report.publish(name='Files Sample')
 ```
 
