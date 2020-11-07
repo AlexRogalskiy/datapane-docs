@@ -14,7 +14,7 @@ If you are connecting to a third-party datastore, it may require a form of authe
 
 Please see the relevant documentation for more information on managing secrets.
 
-{% page-ref page="../reference/variables.md" %}
+{% page-ref page="teams-reference/variables.md" %}
 
 ## Managing SQL scripts
 

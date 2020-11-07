@@ -10,7 +10,7 @@ For these use-cases, Datapane provides a Blob API which allows you to upload fil
 
 For API documentation of the Blob functionality, see the following documentation:
 
-{% page-ref page="../reference/blobs.md" %}
+{% page-ref page="teams-reference/blobs.md" %}
 
 
 

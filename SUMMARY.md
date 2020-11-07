@@ -4,13 +4,15 @@
 * [Getting Started](tut-getting-started.md)
 * [Community and Support](community-and-support.md)
 
-## Reports <a id="tutorials"></a>
+## Reports
 
-* [Creating a Report](tutorials/tut-creating-a-report.md)
-* [Publishing and Sharing](tutorials/publishing-and-sharing.md)
-* [Embedding Reports](tutorials/embedding-reports-in-social-platforms.md)
-* [Layout and Customization](tutorials/layout-and-customization.md)
-* [Automation with GitHub Actions](tutorials/automation-with-github-actions.md)
+* [Creating a Report](reports/tut-creating-a-report.md)
+* [Publishing and Sharing](reports/publishing-and-sharing.md)
+* [Report Blocks](reports/blocks.md)
+* [Layout and Customization](reports/layout-and-customization.md)
+* [Embedding Reports](reports/embedding-reports-in-social-platforms/README.md)
+  * [Advanced Embedding](reports/embedding-reports-in-social-platforms/share-or-embed-individual-component-of-a-multi-component-report.md)
+* [Automation](reports/automation-with-github-actions.md)
 
 ## Datapane for Teams <a id="datapane-teams"></a>
 
@@ -23,18 +25,12 @@
 * [Integrating Databases or APIs](datapane-teams/database-and-network-access.md)
 * [Data, Model, and Asset Storage](datapane-teams/data-model-and-asset-storage.md)
 * [Comparisons](datapane-teams/comparisons.md)
-
-## API Reference <a id="reference"></a>
-
-* [Overview](reference/reference-overview.md)
-* [Reports](reference/reports/README.md)
-  * [Components](reference/reports/components.md)
-  * [Querying Components](reference/reports/share-or-embed-individual-component-of-a-multi-component-report.md)
-* [Scripts](reference/scripts/README.md)
-  * [Configuration](reference/scripts/datapane.yaml.md)
-  * [Parameters](reference/scripts/parameters.md)
-* [Blobs](reference/blobs.md)
-* [Variables](reference/variables.md)
+* [Teams Usage Reference](datapane-teams/teams-reference/README.md)
+  * [Scripts](datapane-teams/teams-reference/scripts/README.md)
+    * [Configuration](datapane-teams/teams-reference/scripts/datapane.yaml.md)
+    * [Parameters](datapane-teams/teams-reference/scripts/parameters.md)
+  * [Variables](datapane-teams/teams-reference/variables.md)
+  * [Blobs](datapane-teams/teams-reference/blobs.md)
 
 ## Resources
 

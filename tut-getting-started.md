@@ -28,7 +28,7 @@ If you use `pip`, you can install it with:
 $ pip3 install -U datapane
 ```
 
-## Windows Tips and Troubleshooting
+### Windows Tips and Troubleshooting
 
 {% hint style="info" %}
 Having problems running on Windows? Please read on...
@@ -46,19 +46,19 @@ Also note that on Windows, you can run the `datapane` command either by running 
 
 Some specific issues you may encounter on Windows include:
 
-### Import errors when running/importing datapane
+#### Import errors when running/importing datapane
 
 You may encounter errors such as `ImportError: DLL load failed` when running datapane or importing it within your Python code.
 
 If so, try installing the [Visual C++ Redistributables for Windows](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) from Microsoft and running again \(you most likely want to download the version for x64, i.e. `vc_redist.x64.exe`\)
 
-### Datapane install errors trying to compile `pyarrow` using Visual C++
+#### Datapane install errors trying to compile `pyarrow` using Visual C++
 
 This usually occurs when you are running a 32-bit version of Python and installing via `pip`. Either try using `conda` or install a 64-bit version of Python \(for example from the Windows Store as mentioned above\).
 
 This may also occur when using Windows 7 - we only support directly Windows 10, however, it may be worth trying to install via `conda` instead, if you are stuck on Windows 7.
 
-### `'datapane.exe' is not recognized as an internal or external command`
+#### `'datapane.exe' is not recognized as an internal or external command`
 
 This occurs when your Windows `%PATH%` doesn't include all the Python directories, specifically the `Scripts` directory.
 
@@ -130,9 +130,9 @@ $ datapane --env acme login --server=https://acme.datapane.net
 ```
 {% endhint %}
 
-## Check your Authentication
+### Check your Authentication
 
-To check which account you are logged in as, run:
+To check you have access and which account you are logged in as, run:
 
 {% tabs %}
 {% tab title="CLI" %}

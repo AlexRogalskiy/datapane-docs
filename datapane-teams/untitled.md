@@ -31,7 +31,7 @@ If you want to share a private report with an outside party - such as a client o
 
 ![](../.gitbook/assets/image%20%2897%29.png)
 
-This token also works across embeds, so you can [embed](../tutorials/embedding-reports-in-social-platforms.md#business-tooling) a private report into platforms such as Confluence or your own webpage. For security reasons, access tokens are revoked after 24 hours, so this is not a suitable method for long-term sharing.
+This token also works across embeds, so you can [embed](../reports/embedding-reports-in-social-platforms/#business-tooling) a private report into platforms such as Confluence or your own webpage. For security reasons, access tokens are revoked after 24 hours, so this is not a suitable method for long-term sharing.
 
 ## Versioning
 

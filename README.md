@@ -13,6 +13,7 @@ It provides a way to create reports programmatically from components that wrap a
 * [Pandas DataFrames](https://pandas.pydata.org/)
 * Plots from Python visualization libraries such as [Bokeh](https://bokeh.org/), [Altair](https://altair-viz.github.io/), [Plotly](https://plotly.com/python/), and [Folium](https://python-visualization.github.io/folium/quickstart.html)
 * Markdown and text
+* General files, such as images, PDFs, JSON data, etc.
 
 Once created, reports can be published on the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualizations can be used interactively.
 
@@ -40,17 +41,23 @@ dp.Report(
 
 ![An HTML report](.gitbook/assets/image%20%28101%29.png)
 
+{% hint style="info" %}
+These docs include tutorials and guides on how to use Datapane effectively. 
+
+API docs describing the Python API for building Datapane Reports, along with additional information on the Datapane Teams API can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/)
+{% endhint %}
+
 ## Datapane Public
 
-{% page-ref page="tutorials/publishing-and-sharing.md" %}
+{% page-ref page="reports/publishing-and-sharing.md" %}
 
-If you want to share your report on the web, _Datapane Public_ provides a free API and hosted platform for publishing and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can publish your report, including datasets and plots, in a single command.
+If you want to share your report on the web, _Datapane Public_ provides a free API and hosted platform for publishing and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can publish your report, including datasets and plots, in a single Python command
 
 ```python
 dp.Report(
     dp.Plot(plot), 
     dp.Table(df)
-).publish(name='covid_report', open=True)
+).publish(name='Covid Report', open=True)  # publish & open report in the browser
 ```
 
 Once published, you can share your report with your community, class, or friends by sharing the link.
