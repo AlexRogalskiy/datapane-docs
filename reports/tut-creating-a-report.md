@@ -14,7 +14,7 @@ Datapane allows you to programmatically create reports from the objects in your 
 
 ## Creating a report
 
-Datapane provides a Python API that allows you to create, save, and publish reports comprised of a collection of data-centric blocks.
+Datapane provides a Python API that allows you to create, save, and publish reports comprised of a collection of data-centric blocks - detailed API docs for Datapane Reports can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/).
 
 {% page-ref page="blocks.md" %}
 
