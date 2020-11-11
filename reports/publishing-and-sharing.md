@@ -41,7 +41,15 @@ report.publish(name='Covid Report', open=True)
 ```
 {% endcode %}
 
-Once published, you can share the link with others so they can view your report and comment on it.
+## Sharing
 
-In the next section, we will explore how to embed your report into a range of other platforms. 
+Once published, you can share the link with others so they can view your report and comment on it. 
+
+You can control who can access your report by setting the `visibiliy` option when running `report.publish` . Datapane Public is created as a public reports repository, hence reports are created as public and shareable by default, however you can mark your report as unlisted to remove it from indexing by setting `visibility="UNLISTED"`.
+
+{% hint style="info" %}
+_Datapane for Teams_ provides additional visibility options to share reports with team members only, or keep them fully private, along with expiring access tokens to share securely with select outside members - ideal for users who require more security over their data and analysis.
+{% endhint %}
+
+In future sections, we will explore how to embed your report into a range of other platforms so you can share it with a wider audience.
 
