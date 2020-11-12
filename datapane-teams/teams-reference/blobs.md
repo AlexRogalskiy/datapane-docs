@@ -6,6 +6,10 @@ description: >-
 
 # Blobs
 
+{% hint style="success" %}
+Please see the [Blob API Reference](https://datapane.github.io/datapane/teams.html#datapane.client.api.teams.Blob) for more details.
+{% endhint %}
+
 It is often necessary to make use of non-code assets such as datasets, models, or files when generating reports. In many situations, deploying these alongside your script is not ideal.
 
 1. If they are deployed on a **different cadence** to your script; for instance, you want to make use of a model which is trained on a daily cadence, even though the code of your script remains static.
