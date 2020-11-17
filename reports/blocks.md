@@ -6,9 +6,9 @@ description: All the blocks you can use to develop and layout your reports
 
 ## Overview
 
-Reports are comprised of multiple Blocks, which wrap up all kinds of useful Python objects for use in building your report, such as Pandas DataFrames, Visualisations, and Markdown. We are always adding new components, and if you have some ideas on what you would like to use in your reports, please [start an discussion on GitHub](https://github.com/datapane/datapane/discussions).
+Reports are comprised of multiple Blocks, which wrap up all kinds of Python objects for use in building your report, such as Pandas DataFrames, Visualisations, and Markdown. We are always adding new components, and if you have some ideas on what you would like to use in your reports, please [start a discussion on GitHub](https://github.com/datapane/datapane/discussions).
 
-In this section we describe the Block types and provide examples, more detailed API usage can be found in our [API docs](https://datapane.github.io/datapane/report.html). 
+In this section we describe the Block types and provide examples. More detailed API usage can be found in our [API docs](https://datapane.github.io/datapane/report.html). 
 
 ## Plot
 
@@ -51,7 +51,7 @@ alt_chart = alt.Chart(gap).mark_point(filled=True).encode(
 dp.Report(dp.Plot(alt_chart)).publish(name='time_interval')
 ```
 
-![](../.gitbook/assets/screenshot-from-2020-06-26-11-30-58.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report-blocks-altair/" %}
 
 ### Bokeh
 
@@ -68,21 +68,18 @@ import datapane as dp
 colormap = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}
 colors = [colormap[x] for x in flowers['species']]
 
-bohek_chart = figure(title = "Iris Morphology")
+bokeh_chart = figure(title = "Iris Morphology")
 bokeh_chart.xaxis.axis_label = 'Petal Length'
 bokeh_chart.yaxis.axis_label = 'Petal Width'
 
 bokeh_chart.circle(flowers["petal_length"], flowers["petal_width"],
          color=colors, fill_alpha=0.2, size=10)
 
-# View the plot
-dp.Report(dp.Plot(bokeh_chart)).preview()
-
 # Publish the report
 dp.Report(dp.Plot(bokeh_chart)).publish(name='bokeh_plot')
 ```
 
-![](../.gitbook/assets/screenshot-from-2020-06-26-11-27-46.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report-blocks-bokeh/" %}
 
 ### Matplotlib
 
@@ -94,23 +91,19 @@ Higher-level matplotlib libraries such as [Seaborn](https://seaborn.pydata.org/)
 import matplotlib.pyplot as plt
 import pandas as pd
 import datapane as dp
+from vega_datasets import data as vega_data
 
-new_profile = pd.read_csv("data.csv")
-top_followers = new_profile.sort_values(by='followers', axis=0, ascending=False)[:100]
-
-fig = plt.figure()
-
-plt.bar(top_followers.user_name,
-       top_followers.followers)
-
-dp.Report(dp.Plot(fig)).publish(name="matplotlib demo")
+gap = pd.read_json(vega_data.gapminder.url)
+# gap.plot.scatter()
+fig = gap.plot.scatter(x='life_expect', y='fertility')
+dp.Report(dp.Plot(fig)).publish(name="test_mpl")
 ```
+
+{% embed url="https://datapane.com/u/leo/reports/docs-report-blocks-mpl/" %}
 
 {% hint style="info" %}
 You can pass either a `matplotlib` `Figure` or `Axes` object to `dp.Plot`,  you can obtain the current global figure from `matplotlib` by running `plt.gcf()`
 {% endhint %}
-
-![Matplotlib plot](../.gitbook/assets/image%20%28115%29.png)
 
 ### Plotly
 
@@ -130,7 +123,7 @@ plotly_chart.show()
 dp.Report(dp.Plot(plotly_chart)).publish(name='bubble')
 ```
 
-![Plotly plot](../.gitbook/assets/screenshot-from-2020-06-26-11-46-31.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report-plotly/" %}
 
 ### Folium
 
@@ -138,17 +131,22 @@ dp.Report(dp.Plot(plotly_chart)).publish(name='bubble')
 
 The library has a number of built-in tilesets from OpenStreetMap, Mapbox, and Stamen, and supports custom tilesets with Mapbox or Cloudmade API keys. 
 
+{% hint style="info" %}
+If your folium map consumes live data which expires after a certain time, you can automate it to refresh the map on a cadence. See [Automation](automation-with-github-actions.md).
+{% endhint %}
+
 ```python
 import folium
 import datapane as dp 
 
 m = folium.Map(location=[45.5236, -122.6750])
 
-
 dp.Report(dp.Plot(m)).publish(name='folium_map')
 ```
 
-![https://datapane.com/khuyentran1401/reports/folium\_map/](../.gitbook/assets/screenshot-from-2020-06-29-12-14-45.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report-block-folium/" %}
+
+
 
 ## Markdown
 
@@ -159,6 +157,8 @@ import datapane as dp
 
 dp.Report(dp.Markdown("__My awesome markdown__"))
 ```
+
+{% embed url="https://datapane.com/u/leo/reports/docs-report-block-md/" %}
 
 To include multi-line text and formatting the words, use triple-quoted string, e.g. `"""Some words"""`
 
@@ -179,11 +179,9 @@ report.publish(name = 'results')
 You can also just pass strings directly into the `Report` and `Blocks` objects, or use `dp.Text`, an alias of `dp.Markdown`
 {% endhint %}
 
-![Report with multi-line Markdown text](../.gitbook/assets/screenshot-from-2020-06-26-15-02-29%20%281%29.png)
-
 Check [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for more information on how to format your text with markdown.
 
-### Markdown Tables
+#### Markdown Tables
 
 You can insert a Pandas dataframe in a Markdown block as nicely formatted table by using `df.to_markdown()`, or use the dedicated Table Block \(described below\) for larger data if you need sorting, filtering and more.
 
@@ -196,7 +194,7 @@ df = pd.read_csv("data.csv")
 dp.Report(dp.Markdown(df.to_markdown())
 ```
 
-### Code
+#### Markdown Code
 
 You can also share your code using `dp.Markdown` like below
 
@@ -224,6 +222,7 @@ By default, a Table only displays the first 1000 rows, and gives the user the op
 ```python
 import datapane as dp
 import pandas as pd
+import numpy as np
 
 df = pd.DataFrame({
     'A': np.random.normal(-1, 1, 5000),
@@ -235,30 +234,46 @@ report = dp.Report(table)
 report.publish(name='sample_table')
 ```
 
-![](../.gitbook/assets/table.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report-block-table/" %}
 
 ## Files and Images
 
-Datapane also enables you to share files and images. For example, to share your image, simply use `dp.File` like below
+Datapane also enables you to share files and images. For example, to share your image, you can use `dp.File` and pass the path.
 
 ```python
-dp.File(file=dp.Path('./image.png'))
+dp.File(file='./image.jpeg')
 ```
 
-And your image would appear on Datapane report automatically!
-
-![Embedded an image in a Datapane Report](../.gitbook/assets/screenshot-from-2020-08-05-10-00-54.png)
-
-In a similar way, any other files can be embedded in your Datapane Report, including, for instance, Excel files, JSON data, text files and more. Furthermore, Datapane will attempt to display the files in your report for viewers and allow users to download them.
+In a similar way, any other files can be embedded in your Datapane Report, including, for instance, Excel files, JSON data, text files and more. Furthermore, Datapane will attempt to display images and JSON in your report for viewers and allow users to download them.
 
 ```python
 import datapane as dp
 
 report = dp.Report(
-   dp.File("./image.png"),
-   dp.File("./data.xlsx"),
-   dp.File("./config.json")
+   dp.File(file="./image.jpeg"),
+   dp.File(file="./data.xlsx"),
+   dp.File(file="./config.json")
 )
 report.publish(name='Files Sample')
 ```
+
+{% embed url="https://datapane.com/u/leo/reports/dp-docs-block-file/" %}
+
+Alternatively, instead of passing in a path, you can pass in an object such as a Python dictionary, and use `is_json` to tell Datapane to attempt to render it in JSON format in the front-end.
+
+```python
+import datapane as dp
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+dp.Report(dp.File(thisdict, is_json=True, name='thisdict')).publish(name='json')
+```
+
+{% embed url="https://datapane.com/u/leo/reports/dp-docs-blocks-file-2/" %}
+
+
 

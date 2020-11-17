@@ -14,7 +14,11 @@ Datapane allows you to programmatically create reports from the objects in your 
 
 ## Creating a report
 
-Datapane provides a Python API that allows you to create, save, and publish reports comprised of a collection of data-centric blocks - detailed API docs for Datapane Reports can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/).
+Datapane provides a Python API that allows you to create, save, and publish reports comprised of a collection of data-centric blocks. 
+
+{% hint style="info" %}
+Detailed API docs for Datapane Reports can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/).
+{% endhint %}
 
 {% page-ref page="blocks.md" %}
 
@@ -42,7 +46,7 @@ As seen above, `Reports` can be saved to local `HTML` files. Copying this code i
 $ python3 simple_report.py
 ```
 
-![](../.gitbook/assets/image%20%28108%29.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report-2/" %}
 
 If you send this HTML file to somebody \(or [publish it on _Datapane Public_](publishing-and-sharing.md#publish-your-report)\), they will be able to view your dataset, sort and filter it, and download it as a CSV.
 
@@ -83,7 +87,7 @@ report.save(path='report.html', open=True)
 
 When this python script is run, using the same command as earlier, we get the following report.
 
-![](../.gitbook/assets/image%20%28101%29.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report-3/" %}
 
 ## Previewing your report
 
