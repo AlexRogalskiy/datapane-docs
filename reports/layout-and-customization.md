@@ -42,6 +42,8 @@ dp.Report(
 
 ![](../.gitbook/assets/image%20%28104%29.png)
 
+You can also find an example [here](https://datapane.com/u/leo/reports/dp-docs-layout/).
+
 {% hint style="info" %}
 As `Blocks` are block components themselves, they are composable, and you can create more custom layers of nested blocks, for instance nesting 2 rows in the left column of a 2 column layout
 {% endhint %}
