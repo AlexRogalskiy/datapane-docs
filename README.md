@@ -64,9 +64,9 @@ Once published, you can share your report with your community, class, or friends
 
 ![](.gitbook/assets/image%20%28102%29.png)
 
-Alternatively, you can embed your published report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content.
+Alternatively, you can embed your published report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content, like this:
 
-![](.gitbook/assets/image%20%28107%29.png)
+{% embed url="https://datapane.com/u/leo/reports/docs-report/?whitelabel=True" %}
 
 ## Datapane for Teams
 
