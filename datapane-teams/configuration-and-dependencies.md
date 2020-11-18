@@ -37,35 +37,38 @@ include:
 
 ## Docker dependencies
 
-By default, scripts on Datapane run in our standard docker container, which includes the following libraries.
+By default scripts on Datapane run using our default Docker image, which, in addition to including Datapane and its supported visualisation libraries, includes the following libraries,
 
 ```python
-seaborn == 0.10.*
-altair-recipes ~= 0.8.0
-git+https://github.com/altair-viz/altair_pandas@master#egg=altair-pandas
-git+https://github.com/altair-viz/pdvega@master#egg=pdvega
+# datapane cli includes plotting and basic DS libs, e.g. pandas
 
-scipy == 1.4.*
-scikit-learn == 0.22.*
+# additional visualisations
+seaborn == 0.11.*
+altair-recipes ~= 0.9.0
+git+https://github.com/altair-viz/altair_pandas@master#egg=altair-pandas
+
+# analytics libraries
+scipy == 1.5.*
+scikit-learn == 0.23.*
 patsy ~= 0.5.1
-lightgbm ~= 2.2.3
+lightgbm ~= 3.1.0
 lifetimes == 0.11.*
-lifelines == 0.23.*
-./wheels/fbprophet-0.5-py3-none-any.whl
+lifelines == 0.25.*
+./wheels/fbprophet-0.7.1-py3-none-any.whl
 adtk ~= 0.6.2
 
 # data access
 sqlalchemy ~= 1.3
 psycopg2-binary ~= 2.8
-PyMySQL ~= 0.9.3
-google-cloud-bigquery[pandas, pyarrow] ~= 1.17
-boto3 ~= 1.12.6
-requests ~= 2.23.0
+PyMySQL ~= 0.10.1
+google-cloud-bigquery[pandas, pyarrow] ~= 2.4.0
+boto3 ~= 1.16.19
+requests ~= 2.25.0
 ftpretty ~= 0.3.2
-pymongo ~= 3.10.1
+pymongo ~= 3.11.0
 
 # misc
-dnspython ~= 1.16.0 # requirement for pymongo to connect to certain instances
+dnspython ~= 2.0.0
 sh ~= 1.13.0
 ```
 
