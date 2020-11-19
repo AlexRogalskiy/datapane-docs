@@ -66,7 +66,7 @@ dataset = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv
 continents = dp.Params.get('continents', ['Asia', 'North America'])
 field_to_plot = dp.Params.get('field_to_plot', 'new_cases_smoothed_per_million')
 
-df = dataset[dataset.continent.isin(continents)].groupby(['continent', 'date'])[plot_field].mean().reset_index()
+df = dataset[dataset.continent.isin(continents)].groupby(['continent', 'date'])[field_to_plot].mean().reset_index()
 
 plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
     x='date:T',
