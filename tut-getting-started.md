@@ -81,20 +81,24 @@ As well as a local Python framework for generating reports, Datapane has a serve
 
 ### Datapane Public
 
-_Datapane Public_ is hosted on [datapane.com](https://datapane.com) and is available as a free, public server which you can use to publish and share reports. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), copy the API key provided in the web interface. Next, login using the CLI or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated.
+_Datapane Public_ is hosted on [datapane.com](https://datapane.com) and is available as a free, public server which you can use to publish and share reports. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated.
+
+{% hint style="info" %}
+If you need your API key in the future, you can find it in [your settings page](https://datapane.com/settings).
+{% endhint %}
 
 {% tabs %}
-{% tab title="CLI" %}
-```text
-$ datapane login 
-Enter your API Key: [paste your API key here]
-```
-{% endtab %}
-
 {% tab title="Python Library" %}
 ```python
 import datapane as dp
 dp.login(token=your_token)
+```
+{% endtab %}
+
+{% tab title="CLI" %}
+```text
+$ datapane login 
+Enter your API Key: [paste your API key here]
 ```
 {% endtab %}
 {% endtabs %}
