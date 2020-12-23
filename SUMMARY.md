@@ -6,10 +6,15 @@
 
 ## Reports
 
-* [Creating a Report](reports/tut-creating-a-report.md)
+* [What is a Report?](reports/tut-creating-a-report.md)
 * [Publishing and Sharing](reports/publishing-and-sharing.md)
-* [Report Blocks](reports/blocks.md)
-* [Layout and Customization](reports/layout-and-customization.md)
+* [Building Reports](reports/blocks/README.md)
+  * [Tables and Data](reports/blocks/tables-and-data.md)
+  * [Plots and Visualizations](reports/blocks/plots-and-visualizations.md)
+  * [Text, Code, and HTML](reports/blocks/text-code-and-html.md)
+  * [Layout, Pages, and Selects](reports/blocks/layout-pages-and-selects.md)
+  * [Files and Images](reports/blocks/files-and-images.md)
+* [Templates](reports/templates.md)
 * [Embedding Reports](reports/embedding-reports-in-social-platforms/README.md)
   * [Advanced Embedding](reports/embedding-reports-in-social-platforms/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
@@ -37,6 +42,6 @@
 * [API Docs](https://datapane.github.io/datapane/)
 * [GitHub](https://github.com/datapane/datapane)
 * [Community](https://github.com/datapane/datapane/discussions)
-* [Blog](https://datapane.com/blog/)
+* [Blog](https://blog.datapane.com/)
 * [Demos](https://github.com/datapane/datapane-demos)
 

@@ -15,6 +15,8 @@ It provides a way to create reports programmatically from components that wrap a
 * Markdown and text
 * General files, such as images, PDFs, JSON data, etc.
 
+Datapane reports are flexible and can also contain pages, tabs, drop downs, and more. 
+
 Once created, reports can be published on the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualizations can be used interactively.
 
 ```python

@@ -4,7 +4,7 @@ description: >-
   into interactive documents which you can share.
 ---
 
-# Creating a Report
+# What is a Report?
 
 ## Introduction
 
@@ -20,9 +20,9 @@ Datapane provides a Python API that allows you to create, save, and publish repo
 Detailed API docs for Datapane Reports can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/).
 {% endhint %}
 
-{% page-ref page="blocks.md" %}
+{% page-ref page="blocks/" %}
 
-For instance, Datapane provides a `Table` block that takes a pandas `DataFrame`. We can create a `Table` block by passing a `DataFrame` into it, and create a `Report` with that single block in it as follows:
+For instance, Datapane provides a `DataTable` block that takes a pandas `DataFrame`. We can create a `DataTable` block by passing a `DataFrame` into it, and create a `Report` with that single block in it as follows:
 
 {% code title="simple\_report.py" %}
 ```python
@@ -34,7 +34,7 @@ dataset = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv
 df = dataset.groupby(['continent', 'date'])['new_cases_smoothed_per_million'].mean().reset_index()
 
 report = dp.Report(
-    dp.Table(df)
+    dp.DataTable(df)
 )
 report.save(path='report.html', open=True)
 ```
@@ -79,7 +79,7 @@ plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
 report = dp.Report(
     dp.Markdown("# My Covid Report"),
     dp.Plot(plot), 
-    dp.Table(df)
+    dp.DataTable(df)
 )
 report.save(path='report.html', open=True)
 ```

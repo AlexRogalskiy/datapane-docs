@@ -4,6 +4,10 @@ description: How to find other Datapane users and get help
 
 # Community and Support
 
+## [Slack Community](https://communityinviter.com/apps/datapane-public/datapane-community)
+
+Join the Datapane Slack community for help, guidance, or just to say hi. 
+
 ## [GitHub](https://github.com/datapane/datapane)
 
 We actively develop on our public repository on GitHub. If you have found a specific bug in the product, please submit an issue and we will get to fixing it. If you have a more general query, please use the forums below.

@@ -41,11 +41,23 @@ report.publish(name='Covid Report', open=True)
 ```
 {% endcode %}
 
-Once published, you can share the link with others so they can view your report and comment on it. 
+Once published, you can share the link with others so they can view your report and comment on it. Public reports created are viewable and shareable by default. In future sections, we will also explore how to embed your report into a range of other platforms so you can share it with a wider audience.
 
-_Datapane Public_ provides a public reports repository, hence all reports created are viewable and shareable by default. In future sections, we will also explore how to embed your report into a range of other platforms so you can share it with a wider audience.
+## Private Reports
+
+_Datapane Public_ provides a public reports repository, but also includes two private reports per user. To publish a private report, set the report's visibility to `dp.Visibility.PRIVATE`
+
+```python
+report.publish(name='Covid Report', open=True, visibility=dp.Visibility.PRIVATE)
+```
+
+To share a private report, use the share button once you have published your report to add collaborators via email. 
+
+![](../.gitbook/assets/image%20%28118%29.png)
+
+Collaborators will receive an email containing a secure signed URL which allows them to view your report for 48 hours.
 
 {% hint style="info" %}
-_Datapane for Teams_ provides additional options to share reports with team members only, or keep them fully private, along with expiring access tokens to share securely with select outside members - ideal for users who require privacy and security over their data and analysis.
+\_\_[_Datapane for Teams_](../datapane-teams/tut-deploying-a-script.md) provides additional options to share reports securely across your company.
 {% endhint %}
 
