@@ -18,22 +18,42 @@ dp.Report(dp.Text("__My awesome markdown__"))
 # or dp.Report("__My awesome markdown__")
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-block-md/" %}
-
 To include multi-line text and formatting the words, use triple-quoted string, e.g. `"""Some words"""`
 
 ```python
 import datapane as dp
 
-report = dp.Report(
-           "## My Altair Plot",
-           dp.Plot(alt_chart),
-           dp.Text("""
-* There is a negative relation between life expectanty and fertility
-* The number of population with high life expactancy increases as time increase
-           """)
-report.publish(name = 'results')
+md = """
+Quas *diva coeperat usum*; suisque, ab alii, prato. Et cornua frontes puerum,
+referam vocassent **umeris**. Dies nec suorum alis adstitit, *temeraria*,
+anhelis aliis lacunabant quoque adhuc spissatus illum refugam perterrita in
+sonus. Facturus ad montes victima fluctus undae Zancle et nulli; frigida me.
+Regno memini concedant argento Aiacis terga, foribusque audit Persephone
+serieque, obsidis cupidine qualibet Exadius.
+
+    utf_torrent_flash = -1;
+    urlUpnp -= leakWebE - dslam;
+    skinCdLdap += sessionCyberspace;
+    var ascii = address - software_compile;
+    webFlaming(cable, pathIllegalHtml);
+
+## Quo exul exsecrere cuique non alti caerulaque
+
+*Optatae o*! Quo et callida et caeleste amorem: nocet recentibus causamque.
+
+- Voce adduntque
+- Divesque quam exstinctum revulsus
+- Et utrique eunti
+- Vos tantum quercum fervet et nec
+- Eris pennis maneas quam
+"""
+report = dp.Report(md)
+report.publish(name = 'markdown')
 ```
+
+{% embed url="https://datapane.com/u/datapane/reports/markdown/" %}
+
+
 
 {% hint style="info" %}
 Check [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for more information on how to format your text with markdown.
@@ -46,37 +66,38 @@ If your report is text-heavy \(such as an blogpost\) and it contains multiple ot
 To do this, use double braces to specify where you want your other blocks to appear throughout your text.
 
 ```python
+import seaborn as sns
+import altair as alt 
 import datapane as dp
 
-...
+md = """
 
-markdown_text = """
-# Introduction
-Proximus qui suoque ademit occallescere Peleu, et pedes hostesque refugerit ad Pelates bella. In iam saxoque quaeque latratibus nobis nymphae gentisque equarum letifer ipse stipite hiatu. Mihi sumptaque quoque, iras origo, hanc mutare auctor eheu siste Agamemnona et vertice inhospita Achille. Hunc nec visa, mota hanc tua! Fetus et nate argenteus magno loquuntur et nisi, ore tecta; cetera membra, ab nec.
-
-{{table}}
-
-Mihi Laertaque annos, vim parentem aera unius cibique hoste, pugnabam satis tamen sibi! Titania credita fecit exitus dique altaria simus.
+For example, if we want to visualize the number of people in each class within the interval we select a point chart between age and fare, we could do something like this.
 
 {{plot}}
 
-# Vim parentem
-
-{{other}}
+Altair allows you to create some extremely interactive plots which do on-the-fly calculations — without even requiring a running Python server!
 
 """
 
+titanic = sns.load_dataset("titanic")
+
+points = alt.Chart(titanic).mark_point().encode(
+    x='age:Q',
+    color='class:N',
+    y='fare:Q',
+).interactive().properties(width='container')
 
 dp.Report(
-  dp.Text(markdown_text).format(
-    table=gen_table_df(), 
-    plot=get_plot(), 
-    other=other
-  )
-)
+  dp.Text(md).format(plot=points)
+).publish(name='altair_example')
 ```
 
-Alternatively, you can write your article or post in your favourite markdown editor, and pass it in a file.
+{% embed url="https://datapane.com/u/datapane/reports/altair-example/?utm\_medium=embed&utm\_content=viewfull" %}
+
+
+
+Alternatively, you can write your article or post in your favourite markdown editor, and pass it in as a file.
 
 ```python
 import datapane as dp
@@ -84,11 +105,7 @@ import datapane as dp
 ...
 
 dp.Report(
-  dp.Text(file="./my_blogpost.md").format(
-    table=gen_table_df(), 
-    plot=get_plot(), 
-    other=other
-  )
+  dp.Text(file="./my_blogpost.md").format(plot=points)
 )
 ```
 
@@ -100,18 +117,22 @@ The code block allows you to embed syntax highlighted source code into your repo
 import datapane as dp
 
 code = '''
-function foo() {
-  return x + 1
+function foo(n) {
+  return foo(n + 1)
 }
 '''
 
 dp.Report(
    dp.Code(
-      code=code
+      code=code,
       language="javascript"
    )
-)
+).publish(name='code')
 ```
+
+{% embed url="https://datapane.com/u/datapane/reports/code/" %}
+
+
 
 ## HTML
 
@@ -124,14 +145,40 @@ The HTML component is sandboxed and cannot execute JavaScript.
 ```python
 import datapane as dp
 
-html = '''
-<div style='background:black;color:white'>
-    <h1> This is a title </h1>
-    <p> This is my paragraph </p>
-</div>
-'''
+html = """
+<html>
+    <style type='text/css'>
+        @keyframes example {
+            0%   {color: #EEE;}
+            25%  {color: #EC4899;}
+            50%  {color: #8B5CF6;}
+            100% {color: #EF4444;}
+        }
+        #container {
+            background: #1F2937;
+            padding: 10em;
+        }
+        h1 {
+            color:#eee;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <div id="container">
+      <h1> Welcome to my Report </h1>
+    </div>
+</html>
+"""
 
-report = dp.Report(dp.HTML(html))
-report.publish(name='sample_table')
+dp.Report(
+  dp.HTML(
+    html
+  )
+).publish(name='docs_html', open=True)
 ```
+
+{% embed url="https://datapane.com/u/datapane/reports/docs-html/" %}
+
+
 

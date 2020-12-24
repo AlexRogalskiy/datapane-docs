@@ -34,7 +34,7 @@ plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
 
 report = dp.Report(
     dp.Plot(plot), 
-    dp.Table(df)
+    dp.DataTable(df)
 )
 # report.save(path='report.html', open=True)
 report.publish(name='Covid Report', open=True)

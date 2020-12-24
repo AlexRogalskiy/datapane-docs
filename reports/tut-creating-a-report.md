@@ -46,7 +46,7 @@ As seen above, `Reports` can be saved to local `HTML` files. Copying this code i
 $ python3 simple_report.py
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-2/" %}
+{% embed url="https://datapane.com/u/datapane/reports/docs-report-2/" %}
 
 If you send this HTML file to somebody \(or [publish it on _Datapane Public_](publishing-and-sharing.md#publish-your-report)\), they will be able to view your dataset, sort and filter it, and download it as a CSV.
 
@@ -77,7 +77,7 @@ plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
 ).interactive().properties(width='container')
 
 report = dp.Report(
-    dp.Markdown("# My Covid Report"),
+    dp.Text("# My Covid Report"),
     dp.Plot(plot), 
     dp.DataTable(df)
 )
@@ -87,15 +87,11 @@ report.save(path='report.html', open=True)
 
 When this python script is run, using the same command as earlier, we get the following report.
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-3/" %}
+{% embed url="https://datapane.com/u/datapane/reports/docs-report-3/" %}
 
 ## Previewing your report
 
 As described above, we can easily view our report in a browser. However, there are other ways to view and share our report whilst developing it.
-
-{% hint style="info" %}
-If you are using Datapane on a private instance, any report with `ORG` level visibility will be accessible to people inside your organization, but not the public.
-{% endhint %}
 
 Datapane has special integration into Jupyter Notebooks: if you're iterating a report, instead of having to open a new window to view it, you can preview a report directly from inside your notebook by calling `report.preview()`, embedding it live into your notebook.
 

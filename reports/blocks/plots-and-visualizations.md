@@ -49,7 +49,7 @@ alt_chart = alt.Chart(gap).mark_point(filled=True).encode(
 dp.Report(dp.Plot(alt_chart)).publish(name='time_interval')
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-blocks-altair/" %}
+{% embed url="https://datapane.com/u/datapane/reports/time-interval/" %}
 
 ## Bokeh
 
@@ -77,7 +77,7 @@ bokeh_chart.circle(flowers["petal_length"], flowers["petal_width"],
 dp.Report(dp.Plot(bokeh_chart)).publish(name='bokeh_plot')
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-blocks-bokeh/" %}
+{% embed url="https://datapane.com/u/datapane/reports/bokeh-plot/" %}
 
 ## Matplotlib
 
@@ -97,7 +97,9 @@ fig = gap.plot.scatter(x='life_expect', y='fertility')
 dp.Report(dp.Plot(fig)).publish(name="test_mpl")
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-blocks-mpl/" %}
+{% embed url="https://datapane.com/u/datapane/reports/test-mpl/" %}
+
+
 
 {% hint style="info" %}
 You can pass either a `matplotlib` `Figure` or `Axes` object to `dp.Plot`,  you can obtain the current global figure from `matplotlib` by running `plt.gcf()`
@@ -121,7 +123,7 @@ plotly_chart.show()
 dp.Report(dp.Plot(plotly_chart)).publish(name='bubble')
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-plotly/" %}
+{% embed url="https://datapane.com/u/datapane/reports/bubble/" %}
 
 ## Folium
 
@@ -142,7 +144,7 @@ m = folium.Map(location=[45.5236, -122.6750])
 dp.Report(dp.Plot(m)).publish(name='folium_map')
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-block-folium/" %}
+{% embed url="https://datapane.com/u/datapane/reports/folium-map/" %}
 
 
 

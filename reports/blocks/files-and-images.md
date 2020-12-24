@@ -23,8 +23,6 @@ report = dp.Report(
 report.publish(name='Files Sample')
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/dp-docs-block-file/" %}
-
 ## Python objects
 
 Alternatively, instead of passing in a path of a file, you can pass in an object such as a Python dictionary, and use `is_json` to tell Datapane to attempt to render it in JSON format in the front-end, where the user will be able to explore and download it.
@@ -41,5 +39,7 @@ thisdict = {
 dp.Report(dp.File(thisdict, is_json=True, name='thisdict')).publish(name='json')
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/dp-docs-blocks-file-2/" %}
+{% embed url="https://datapane.com/u/datapane/reports/json/" %}
+
+
 

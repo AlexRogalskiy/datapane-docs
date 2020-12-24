@@ -36,7 +36,7 @@ plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
 
 dp.Report(
     dp.Plot(plot), 
-    dp.Table(df)
+    dp.DataTable(df)
 ).save(path='report.html', open=True)
 
 ```
@@ -58,7 +58,7 @@ If you want to share your report on the web, _Datapane Public_ provides a free A
 ```python
 dp.Report(
     dp.Plot(plot), 
-    dp.Table(df)
+    dp.DataTable(df)
 ).publish(name='Covid Report', open=True)  # publish & open report in the browser
 ```
 
@@ -68,7 +68,7 @@ Once published, you can share your report with your community, class, or friends
 
 Alternatively, you can embed your published report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content, like this:
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report/?whitelabel=True" %}
+{% embed url="https://datapane.com/u/datapane/reports/docs-report/?whitelabel=True" %}
 
 ## Datapane for Teams
 

@@ -68,26 +68,32 @@ Pages cannot be nested, and can only exist at the root level of your `dp.Report`
 {% endhint %}
 
 ```python
+import seaborn as sns
+import altair as alt 
 import datapane as dp
-...
+
+titanic = sns.load_dataset("titanic")
+
+points = alt.Chart(titanic).mark_point().encode(
+    x='age:Q',
+    color='class:N',
+    y='fare:Q',
+).interactive().properties(width='container')
 
 dp.Report(
-    dp.Page(
-        blocks=[
-            dp.Group(md_block, md_block, columns=2),
-            dp.Select(blocks=[md_block, group], type=dp.SelectType.DROPDOWN),
-        ],
-        label="Page Uno",
-    ),
-    dp.Page(
-        blocks=[
-            dp.Group(select, select, columns=2),
-            dp.Select(blocks=[md_block, md_block, md_block], type=dp.SelectType.TABS),
-        ],
-        label="Page Duo",
-    )
-)
+  dp.Page(
+    label="Titanic Dataset",
+    blocks=["### Dataset", titanic]
+  ),
+  dp.Page(
+    label="Titanic Plot",
+    blocks=["### Plot", points]
+  )
+).publish(name='altair_example_pages')
+
 ```
+
+{% embed url="https://datapane.com/u/datapane/reports/altair-example-pages/?utm\_medium=embed&utm\_content=viewfull" %}
 
 ## Tabs and Selects
 
@@ -96,34 +102,35 @@ In addition to top-level pages elements, you can include tabs and dropdown selec
 Datapane provides two select options on the `dp.Select` block: drop downs and tabs. Tabs are recommended if you have only a few choices and dropdowns are recommended for selects which have more than five options.
 
 ```python
+import seaborn as sns
+import altair as alt 
 import datapane as dp
 
-md_two = dp.Text("""
-# This is our first block
-""", label="First text block")
+code = '''
+titanic = sns.load_dataset("titanic")
 
-md_two = dp.Text("""
-# This is our second block
-""", label="Second text block")
+dp.Report(
+    dp.Select(blocks=[
+        dp.Table(titanic.describe(), label='Data Description'),
+        dp.DataTable(titanic, label='Whole Dataset'),
+        dp.Code(code, label='Source code')
+    ])
+).publish(name='altair_example_select')
+'''
 
-tab_report = dp.Report(
-    dp.Select(
-        blocks=[
-          md_one,
-          md_two
-        ], 
-        type=dp.SelectType.dp.SelectType.DROPDOWN
-    )
-)
+dp.Report(
+    "# Titanic overview",
+    dp.HTML('<html><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/1599px-RMS_Titanic_3.jpg" style="height:400px;display:flex;margin:auto"></img></html>'),
+    dp.Select(blocks=[
+        dp.Table(titanic.describe(), label='Data Description'),
+        dp.DataTable(titanic, label='Whole Dataset'),
+        dp.Code(code, label='Source code')
+    ])
+).publish(name='altair_example_select')
 
-tab_report = dp.Report(
-    dp.Select(
-        blocks=[
-          md_one,
-          md_two
-        ], 
-        type=dp.SelectType.dp.SelectType.TABS
-    )
-)
 ```
+
+{% embed url="https://datapane.com/u/datapane/reports/altair-example-select/?utm\_medium=embed&utm\_content=viewfull" %}
+
+
 

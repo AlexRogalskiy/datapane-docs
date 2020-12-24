@@ -25,7 +25,15 @@ report = dp.Report(table)
 report.publish(name='sample_table')
 ```
 
-If your DataFrame includes [DataFrame Styles](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html), these will be included in your report. DataFrame styles allows you create custom formatted tables; for instance, to show trends, highlight cells, add bar charts, or display correlations. This table is the best option for displaying multidimensional DataFrames, as `DataTable` will flatten your data.
+{% embed url="https://datapane.com/u/datapane/reports/sample-table/" %}
+
+If your DataFrame includes [DataFrame Styles](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html), these will be included in your report. DataFrame styles allows you create custom formatted tables; for instance, to show trends, highlight cells, add bar charts, or display correlations. 
+
+{% embed url="https://datapane.com/u/datapane/reports/df-styled-table/?utm\_medium=embed&utm\_content=viewfull" %}
+
+{% hint style="info" %}
+Table is the best option for displaying multidimensional DataFrames, as `DataTable` will flatten your data.
+{% endhint %}
 
 ## DataTable
 
@@ -46,7 +54,7 @@ report = dp.Report(table)
 report.publish(name='sample_table')
 ```
 
-{% embed url="https://datapane.com/u/leo/reports/docs-report-block-table/" %}
+{% embed url="https://datapane.com/u/datapane/reports/sample-datatable/" %}
 
 ## Python Dictionary & JSON 
 
@@ -64,14 +72,22 @@ For full reference on styling your number, see the [API Documentation](https://d
 import datapane as dp
 
 dp.Report(
-   dp.BigNumber(
-      heading="Number of percentage points", 
-      value="84%",
-      change="2%",
-      is_upward_change=True
+   dp.Group(columns=2,
+      dp.BigNumber(
+         heading="Number of percentage points", 
+         value="84%",
+         change="2%",
+         is_upward_change=True
+      ),
+      dp.BigNumber(
+         heading="Simple Statistic", 
+         value=100
+      )
    )
 )
 ```
 
-![](../../.gitbook/assets/image%20%28116%29.png)
+{% embed url="https://datapane.com/u/datapane/reports/big-number/" %}
+
+
 
