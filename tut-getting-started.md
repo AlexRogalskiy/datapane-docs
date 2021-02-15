@@ -20,7 +20,7 @@ If you use `conda`, you can install it with:
 $ conda install -c conda-forge "datapane>=0.9.0"
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Conda sometimes installs an older version of datapane. If you receive errors, please check the version and try running `conda update --all` or try in a new conda environment
 {% endhint %}
 
