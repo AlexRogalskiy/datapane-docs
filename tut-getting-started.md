@@ -17,8 +17,12 @@ Instructions for installing Python can be found at [https://wiki.python.org/moin
 If you use `conda`, you can install it with:
 
 ```bash
-$ conda install -c conda-forge datapane
+$ conda install -c conda-forge "datapane>=0.9.0"
 ```
+
+{% hint style="info" %}
+Conda sometimes installs an older version of datapane. If you receive errors, please check the version and try running `conda update --all`
+{% endhint %}
 
 ### pip
 
