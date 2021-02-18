@@ -52,10 +52,7 @@ As `Group` components are components themselves, they are composable, and you ca
 
 ### Customizing width
 
-By default, reports appear in a portrait orientation. This works well for many reports, but may not be desired if you have multiple columns of blocks. You can opt to make your report full-width by setting the `full_width` property to `True` on the `Report` object. This allows the creation of rich, dashboard-like layouts such as the following:  
-
-
-![](../../.gitbook/assets/image%20%28106%29.png)
+To customize the width of your report, you can set the [report type](./#report-types).
 
 ## Pages 
 

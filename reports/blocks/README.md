@@ -16,6 +16,29 @@ In this section we describe the Block types and provide examples. More detailed 
 If you pass your Python object into your without wrapping it in a specific block component, Datapane will try and automatically choose the best block type. 
 {% endhint %}
 
+## Report Types
+
+Datapane has three types of reports, which dictate sizing and layout:
+
+* **Report:** medium width and margins, optimized for mixed content
+* **Article:** small width and large margins, optimized for long-form text
+* **Dashboard:** full-width with no margins, optimized for grid layout and visualizations
+
+The default type is report, and you can choose other types when you create your report as follows:
+
+```python
+import datapane as dp
+
+# Create a report (default)
+dp.Report(..., type=dp.ReportType.REPORT)
+
+# Create a dashboard
+dp.Report(..., type=dp.ReportType.DASHBOARD)
+
+# Create an article
+dp.Report(..., type=dp.ReportType.ARTICLE)
+```
+
 ## Block Types
 
 {% page-ref page="tables-and-data.md" %}
