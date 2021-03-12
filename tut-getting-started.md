@@ -83,9 +83,9 @@ If you are still having problems installing, please ask on the [Datapane Forum](
 
 As well as a local Python framework for generating reports, Datapane has a server component which is accessed through the CLI and Python library and requires an authentication token. You can authenticate through either the CLI or the Python library, and all future requests from both the CLI and Python library will automatically be authenticated.
 
-### Datapane Public
+### Datapane.com
 
-_Datapane Public_ is hosted on [datapane.com](https://datapane.com) and is available as a free, public server which you can use to publish and share reports. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. 
+_Datapane_ is hosted on [datapane.com](https://datapane.com) and is available as a free server which you can use to publish reports. Reports can be public or private, and shared securely or with the entire community. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. 
 
 Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated.
 
@@ -109,9 +109,9 @@ Enter your API Key: [paste your API key here]
 {% endtab %}
 {% endtabs %}
 
-### Datapane for Teams
+### Datapane Enterprise
 
-_Datapane for Teams_ provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net` , using the credentials provided to you by your admin.
+_Datapane Enterprise_ provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net` , using the credentials provided to you by your admin.
 
 Similarly to using the public instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You will need to pass in the full URL of your server \(including the `https://`\) to the login command as follows.
 
