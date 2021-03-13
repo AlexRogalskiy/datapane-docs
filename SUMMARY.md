@@ -19,23 +19,23 @@
   * [Advanced Embedding](reports/embedding-reports-in-social-platforms/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
-## Datapane for Teams <a id="datapane-teams"></a>
+## Datapane Enterprise
 
-* [Introduction](datapane-teams/tut-deploying-a-script.md)
-* [Authentication, Sharing, and Versioning](datapane-teams/untitled.md)
-* [Script and Jupyter Deployment](datapane-teams/script-and-jupyter-deployment.md)
-* [Parameters and Forms](datapane-teams/tut-parameterising-a-script.md)
-* [Scheduled Report Runs](datapane-teams/scheduling.md)
-* [Libraries and Dependencies](datapane-teams/configuration-and-dependencies.md)
-* [Integrating Databases or APIs](datapane-teams/database-and-network-access.md)
-* [Data, Model, and Asset Storage](datapane-teams/data-model-and-asset-storage.md)
-* [Comparisons](datapane-teams/comparisons.md)
-* [Teams Usage Reference](datapane-teams/teams-reference/README.md)
-  * [Scripts](datapane-teams/teams-reference/scripts/README.md)
-    * [Configuration](datapane-teams/teams-reference/scripts/datapane.yaml.md)
-    * [Parameters](datapane-teams/teams-reference/scripts/parameters.md)
-  * [Variables](datapane-teams/teams-reference/variables.md)
-  * [Blobs](datapane-teams/teams-reference/blobs.md)
+* [Introduction](datapane-enterprise/tut-deploying-a-script.md)
+* [Authentication, Sharing, and Versioning](datapane-enterprise/untitled.md)
+* [Script and Jupyter Deployment](datapane-enterprise/script-and-jupyter-deployment.md)
+* [Parameters and Forms](datapane-enterprise/tut-parameterising-a-script.md)
+* [Scheduled Report Runs](datapane-enterprise/scheduling.md)
+* [Libraries and Dependencies](datapane-enterprise/configuration-and-dependencies.md)
+* [Integrating Databases or APIs](datapane-enterprise/database-and-network-access.md)
+* [Data, Model, and Asset Storage](datapane-enterprise/data-model-and-asset-storage.md)
+* [Comparisons](datapane-enterprise/comparisons.md)
+* [Teams Usage Reference](datapane-enterprise/teams-reference/README.md)
+  * [Scripts](datapane-enterprise/teams-reference/scripts/README.md)
+    * [Configuration](datapane-enterprise/teams-reference/scripts/datapane.yaml.md)
+    * [Parameters](datapane-enterprise/teams-reference/scripts/parameters.md)
+  * [Variables](datapane-enterprise/teams-reference/variables.md)
+  * [Blobs](datapane-enterprise/teams-reference/blobs.md)
 
 ## Resources
 
@@ -43,5 +43,5 @@
 * [GitHub](https://github.com/datapane/datapane)
 * [Community](https://github.com/datapane/datapane/discussions)
 * [Blog](https://blog.datapane.com/)
-* [Demos](https://github.com/datapane/datapane-demos)
+* [Demos](https://github.com/datapane/gallery)
 
