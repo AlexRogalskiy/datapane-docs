@@ -37,7 +37,11 @@ Table is the best option for displaying multidimensional DataFrames, as `DataTab
 
 ## DataTable
 
-The DataTable block takes a pandas DataFrame and renders an interactive, sortable, searchable table in your report. By default it displays 10 rows per page, with multiple pages which allows for arbitrarily large datasets. Viewers can also download the table from the website as a CSV file. 
+The DataTable block takes a pandas DataFrame and renders an interactive, sortable, searchable table in your report, along with advanced analysis options such as [Sanddance](https://www.microsoft.com/en-us/research/project/sanddance/) and [Pandas Profiling](https://pandas-profiling.github.io/pandas-profiling/). It supports large datasets and viewers can also download the table from the website as a CSV or Excel file.
+
+{% hint style="info" %}
+DataTable's advanced features require publishing your report to a Datapane server and not currently supported on locally saved reports.
+{% endhint %}
 
 ```python
 import datapane as dp

@@ -10,6 +10,7 @@ Templates are reusable helpers which are contributed by the Datapane Community t
 
 * Add an interactive source code tab to any other block \(such as a plot or a dataset\)
 * Build a report from a Markdown file and a list of datasets and plots
+* Add reusable headers or footers to all pages in a report
 
 To see current templates, please [view the API docs](https://datapane.github.io/datapane/templates.html), which are automatically updated with the latest contributions.
 
