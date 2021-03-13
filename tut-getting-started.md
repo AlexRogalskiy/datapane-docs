@@ -6,7 +6,7 @@ description: Installing and setting up the Datapane library and API on your devi
 
 ## Installation
 
-Datapane's Python library and CLI can be installed using either `conda` or `pip` on macOS, Windows, or Linux. Datapane supports Python **3.6 - 3.8**. Support for **3.9** is currently in progress and will be added imminently. 
+Datapane's Python library and CLI can be installed using either `conda` or `pip` on macOS, Windows, or Linux. Datapane supports Python **3.6 - 3.9**.
 
 {% hint style="info" %}
 Instructions for installing Python can be found at [https://wiki.python.org/moin/BeginnersGuide/Download](https://wiki.python.org/moin/BeginnersGuide/Download). 
@@ -17,11 +17,11 @@ Instructions for installing Python can be found at [https://wiki.python.org/moin
 If you use `conda`, you can install it with:
 
 ```bash
-$ conda install -c conda-forge "datapane>=0.9.0"
+$ conda install -c conda-forge "datapane>=0.10.0"
 ```
 
 {% hint style="warning" %}
-Conda sometimes installs an older version of datapane. If you receive errors, please check the version and try running `conda update --all` or try in a new conda environment
+Conda sometimes installs an older version of datapane. If you receive errors, please check the version and try running `conda update --all` or try in a new conda environment \(`conda create -n ENV` and `conda activate ENV)`
 {% endhint %}
 
 ### pip
@@ -30,6 +30,33 @@ If you use `pip`, you can install it with:
 
 ```bash
 $ pip3 install -U datapane
+```
+
+### Upgrading
+
+We upgrade datapane regularly to include new features, both in the client and on the hosted version. From time to time your client may no longer be compatible with the datapane server when publishing a report.. If this happens, you receive an error like the following,
+
+```text
+IncompatibleVersionError: Your client is out-of-date (version 0.9.2) and may be causing errors, "
+please upgrade to version 0.10.2
+```
+
+In such an event, please upgrade your datapane cli via `pip` or `conda` and try again.
+
+**Upgrading via pip**
+
+If you installed datapane via pip, run the following command, adding `--user` flag if needed
+
+```text
+pip install -U datapane OR pip install --user -U datapane
+```
+
+**Upgrading via conda**
+
+If you installed `datapane` via conda, run the following command, adding the `--all` flag if needed. As above, if you receive errors please try using a fresh conda environment.
+
+```text
+conda update datapane OR conda update --all
 ```
 
 ### Windows Tips and Troubleshooting
@@ -85,7 +112,7 @@ As well as a local Python framework for generating reports, Datapane has a serve
 
 ### Datapane.com
 
-_Datapane_ is hosted on [datapane.com](https://datapane.com) and is available as a free server which you can use to publish reports. Reports can be public or private, and shared securely or with the entire community. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. 
+_Datapane_ is hosted on [datapane.com](https://datapane.com) and is available as a free server where you can publish reports. Reports can be public or private, and shared securely or with the entire community. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. 
 
 Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated.
 
