@@ -10,9 +10,9 @@ When you publish a report to a Datapane instance, you can embed it into other pl
 
 ![](../../.gitbook/assets/image%20%28107%29.png)
 
-Datapane reports can be embedded into any websites that supports either HTML `iframes` or the [oEmbed](https://oembed.com/) protocol. Sites that support oEmbed allow you to just paste the link to the report, and will handle the embedding automatically. Sites that support iframes, including your own websites and pages, simply require you to copy and paste the embed code from your report page on Datapane.
+Datapane reports can be embedded into any websites that supports either HTML `iframes` or the [oEmbed](https://oembed.com/) protocol. Sites that support oEmbed allow you to just paste the link to the report, and will handle the embedding automatically. Sites that support iframes, including your own websites and pages, simply require you to copy and paste the embed code from your report page on Datapane. You can find examples of embedded reports throughout these docs.
 
-We support the following third-party sites, and any others that are compatible with either oEmbed or HTML iframes
+We support the following third-party sites, and any others that are compatible with either oEmbed or HTML iframes.
 
 | Site | Embed Type |
 | :--- | :--- |
@@ -48,9 +48,11 @@ Confluence will then display your report or visualization in the page:
 
 ![](../../.gitbook/assets/image%20%28110%29.png)
 
-### Personal / Internal websites
+### Personal / Internal / Company websites
 
-You can embed into your own website using an iframe. After publishing your report, if you browse to it's page on Datapane.com, and select **Embed** in the share menu, you will be able to copy and paste a snippet of code to embed it into your page.
+You can embed into your own website using an iframe. After publishing your report, and select **Embed** in the share menu on the report. This will provide a simple piece of HTML code that you can copy and paste into your webpage.
+
+Datapane Enterprise also provides the ability for private reports, which can be securely embedded in your own tools to make use of Datapane reports across your applications.
 
 {% hint style="info" %}
 You can use this method on any website where you control the underlying HTML code.

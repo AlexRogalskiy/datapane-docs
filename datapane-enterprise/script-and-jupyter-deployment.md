@@ -2,7 +2,7 @@
 
 ## Introduction
 
-_Datapane for Teams_ provides a Script Runner, which allows you to deploy Jupyter Notebooks or Python scripts and run them in the cloud with parameters. This means you can generate reports in an automated fashion, in addition to creating them in your local environment.
+_Datapane Enterprise_ provides a Script Runner, which allows you to deploy Jupyter Notebooks or Python scripts and run them in the cloud with parameters. This means you can generate reports in an automated fashion, in addition to creating them in your local environment.
 
 Once you deploy your script or notebook, it can be run in three ways:
 
@@ -20,7 +20,7 @@ Scripts can generate and update reports on a schedule, allowing you to create "l
 
 #### Through an API
 
-You can trigger report generation through our API, which allows you to generate reports in response to events from other tools, such as Slack and Teams, or your own product.
+You can trigger report generation through our API, which allows you to generate reports in response to events from other tools, such as Slack and Microsoft Teams, or your own product.
 
 ## Deploying a script
 

@@ -30,12 +30,12 @@
 * [Integrating Databases or APIs](datapane-enterprise/database-and-network-access.md)
 * [Data, Model, and Asset Storage](datapane-enterprise/data-model-and-asset-storage.md)
 * [Comparisons](datapane-enterprise/comparisons.md)
-* [Teams Usage Reference](datapane-enterprise/teams-reference/README.md)
-  * [Scripts](datapane-enterprise/teams-reference/scripts/README.md)
-    * [Configuration](datapane-enterprise/teams-reference/scripts/datapane.yaml.md)
-    * [Parameters](datapane-enterprise/teams-reference/scripts/parameters.md)
-  * [Variables](datapane-enterprise/teams-reference/variables.md)
-  * [Blobs](datapane-enterprise/teams-reference/blobs.md)
+* [Enterprise Usage Reference](datapane-enterprise/reference/README.md)
+  * [Scripts](datapane-enterprise/reference/scripts/README.md)
+    * [Configuration](datapane-enterprise/reference/scripts/datapane.yaml.md)
+    * [Parameters](datapane-enterprise/reference/scripts/parameters.md)
+  * [Variables](datapane-enterprise/reference/variables.md)
+  * [Blobs](datapane-enterprise/reference/blobs.md)
 
 ## Resources
 

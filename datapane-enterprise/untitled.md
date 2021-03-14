@@ -1,6 +1,6 @@
 # Authentication, Sharing, and Versioning
 
-_Datapane for Teams_ allows secure, authenticated sharing of reports, scripts, blobs, and secrets. Each user on your Datapane instance \(e.g. https://acme.datapane.net\) has a private password-protected account.
+_Datapane Enterprise_ allows secure, authenticated sharing of reports, scripts, blobs, and secrets. Each user on your Datapane instance \(e.g. https://acme.datapane.net\) has a private password-protected account.
 
 {% hint style="info" %}
 Each Datapane instance exists as a separate database tenancy, so accounts are not shared between instances. You cannot use the same account to authenticate across multiple instances.
@@ -35,7 +35,7 @@ This token also works across embeds, so you can [embed](../reports/embedding-rep
 
 ## Versioning
 
-_Datapane for Teams_ adds versioning support to your reports. If you publish a report with the **same name** as a previous report, it will increment the version. Using the Datapane web UI, you can view previous versions of reports. 
+_Datapane Enterprise_ adds versioning support to your reports. If you publish a report with the **same name** as a previous report, it will increment the version. Using the Datapane web UI, you can view previous versions of reports. 
 
 ![](../.gitbook/assets/image%20%28112%29.png)
 

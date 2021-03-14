@@ -4,6 +4,10 @@ description: Learn how to embed subsets of your reports via queries
 
 # Advanced Embedding
 
+{% hint style="warning" %}
+This feature is in beta and may change
+{% endhint %}
+
 ## Overview
 
 Many times, your report will have different blocks, but you may wish to share only a subset, for instance it's often useful to embed a specific chart or dataset into another platform - especially if you are refreshing it on a cadence. 
