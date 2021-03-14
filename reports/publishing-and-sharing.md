@@ -12,7 +12,7 @@ This feature requires use of the free _Datapane_ hosted platform or a private _D
 
 So far we've demonstrated how to build and view reports locally; however, one of the most powerful features of Datapane is the ability to publish your report straight from your code and share it directly with your team or the wider world.
 
-Once you've [logged in](../tut-getting-started.md#authentication) to your chosen Datapane server, call `report.publish(name='Your report name')` in your script and your report will be published to your Datapane instance for viewing online. This will return the URL of the report that you can share, if the report  is public.
+Once you've [logged in](../tut-getting-started.md#authentication) to your chosen Datapane server, call `report.publish(name='Your report name')` in your script and your report will be published to your Datapane instance for viewing online. This will return the URL of the report that you can share, if the report is public.
 
 If we take the report from the previous example, all we need to do is change `.save` to `.publish` and choose a name for our report. We also change the `dp.Table` to use `dp.DataTable` - an interactive table component which supports larger dataframes and additional analysis options. To open the report afterwards automatically, set the `open` boolean parameter.
 

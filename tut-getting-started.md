@@ -140,7 +140,7 @@ Enter your API Key: [paste your API key here]
 
 _Datapane Enterprise_ provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net` , using the credentials provided to you by your admin.
 
-Similarly to using the public instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You will need to pass in the full URL of your server \(including the `https://`\) to the login command as follows.
+Similar to when using the free _Datapane_ instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You will need to pass in the full URL of your server \(including the `https://`\) to the login command as follows.
 
 {% tabs %}
 {% tab title="CLI" %}
@@ -159,10 +159,10 @@ dp.login(token=your_token, server='https://[your-server].datapane.net')
 {% endtabs %}
 
 {% hint style="info" %}
-The CLI supports multiple profiles using the --env flag, so you can easily work with both the public and your team instance at the same time
+The CLI supports multiple profiles using the --env flag, so you can easily work with both the default _Datapane_ instance and your private enterprise instance at the same time
 
 ```bash
-$ datapane --env public login
+$ datapane --env default login
 $ datapane --env acme login --server=https://acme.datapane.net
 ```
 {% endhint %}

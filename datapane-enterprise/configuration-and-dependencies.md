@@ -75,7 +75,7 @@ sh ~= 1.13.0
 If you want your script to run in your own Docker container, you can specify your own. 
 
 {% hint style="info" %}
-This support currently only supports **public** Docker images, and we're adding support for private repositories in the near future. With that in mind, for anything that you don't want to be public, we would recommend continuing to upload private directories through the regular `include` the mechanism, and including OS requirements or pip `requirements.txt` in the Dockerfile.
+This support works with both public and private Docker images, so you can add private internal libraries, for instance, to your Docker image and just add login credentials for the Docker registry to your _Datapane Enterprise_ settings
 {% endhint %}
 
 Although you can use any base for your Docker image, we would recommend inheriting off ours. To do this, create a Docker image which inherits from the our base image \(`nstack/datapane-python-runner`\) and adds your required dependencies. 
