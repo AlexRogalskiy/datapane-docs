@@ -6,9 +6,13 @@ description: Embed your reports across the web and in internal tools
 
 ## Overview
 
-When you publish a report to a Datapane instance, you can embed it into other platforms. 
+When you publish a report to a Datapane instance, you can embed it into other platforms, such as in these docs,
 
-![](../../.gitbook/assets/image%20%28107%29.png)
+{% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" %}
+
+Or on other platforms like Medium and Notion,
+
+![Datapane report embedded on Medium](../../.gitbook/assets/image%20%28107%29.png)
 
 Datapane reports can be embedded into any websites that supports either HTML `iframes` or the [oEmbed](https://oembed.com/) protocol. Sites that support oEmbed allow you to just paste the link to the report, and will handle the embedding automatically. Sites that support iframes, including your own websites and pages, simply require you to copy and paste the embed code from your report page on Datapane. You can find examples of embedded reports throughout these docs.
 
