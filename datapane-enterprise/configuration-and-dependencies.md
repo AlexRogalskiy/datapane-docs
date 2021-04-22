@@ -2,6 +2,10 @@
 
 Your Python script or notebook may have requirements on external libraries. Datapane supports the ability to add local folders and files, which you can deploy alongside your script, the ability to include `pip` requirements, which are made available to your script when it is run on Datapane, and the ability to specify a Docker container which your script runs in. These are all configured in your `datapane.yaml`.
 
+{% hint style="info" %}
+For complex dependencies and internal libraries, we highly recommend creating a Docker container.
+{% endhint %}
+
 ## Python dependencies
 
 If we were building a reporting tool to pull down financial data, we may want to use the [yfinance](https://pypi.org/project/yfinance/) library in Python. To do this, we could add it to a `requirements` list in our `datapane.yaml`
@@ -75,7 +79,7 @@ sh ~= 1.13.0
 If you want your script to run in your own Docker container, you can specify your own. 
 
 {% hint style="info" %}
-This support works with both public and private Docker images, so you can add private internal libraries, for instance, to your Docker image and just add login credentials for the Docker registry to your _Datapane Enterprise_ settings
+This support works with both public and private Docker images, so you can add private internal libraries, for instance, to your Docker image.
 {% endhint %}
 
 Although you can use any base for your Docker image, we would recommend inheriting off ours. To do this, create a Docker image which inherits from the our base image \(`nstack/datapane-python-runner`\) and adds your required dependencies. 

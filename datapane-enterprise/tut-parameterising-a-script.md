@@ -1,6 +1,6 @@
 ---
 description: >-
-  Scripts can be parameterised, allowing them to dynamically generate reports
+  Apps can be parameterised, allowing them to dynamically generate reports
   through web forms or the API.
 ---
 
@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-Stakeholders commonly need to provide some configuration to scripts to enable self-service report generation. Datapane allows you to add parameters to a script, which are presented to end users as web forms. This means that other people who have accounts on your instance can generate reports without worrying about code, notebooks, or setting up a Python environment. 
+Stakeholders commonly need to provide some configuration to your apps to enable self-service report generation. Datapane allows you to add parameters, which are presented to end users as **web forms**. This means that other people who have accounts on your instance can generate reports without worrying about code, notebooks, or setting up a Python environment. 
 
 ## Running & Parameters
 

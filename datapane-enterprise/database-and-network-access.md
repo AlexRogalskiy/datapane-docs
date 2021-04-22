@@ -5,7 +5,7 @@ Unlike a traditional BI platform, Datapane does not offer a proprietary set of c
 When scripts run on Datapane, they have full network access to allow you to connect out to other platforms.
 
 {% hint style="info" %}
-If you need to connect to an internal database and are using the cloud-hosted _Datapane Enterprise_ product, please reach out to support if you need to whitelist your instance's IP address.
+If you need to connect to an internal database and are using the cloud-hosted Datapane server product, please reach out to support if you need to whitelist your instance's IP address.
 {% endhint %}
 
 ## Managing secrets 

@@ -20,11 +20,11 @@
   * [Advanced Embedding](reports/embedding-reports-in-social-platforms/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
-## Datapane Enterprise
+## Datapane Cloud <a id="datapane-enterprise"></a>
 
 * [Introduction](datapane-enterprise/tut-deploying-a-script.md)
-* [Authentication, Sharing, and Versioning](datapane-enterprise/untitled.md)
-* [Script and Jupyter Deployment](datapane-enterprise/script-and-jupyter-deployment.md)
+* [Authentication and Sharing](datapane-enterprise/untitled.md)
+* [Apps: Script and Jupyter Deployment](datapane-enterprise/script-and-jupyter-deployment.md)
 * [Parameters and Forms](datapane-enterprise/tut-parameterising-a-script.md)
 * [Scheduled Report Runs](datapane-enterprise/scheduling.md)
 * [Libraries and Dependencies](datapane-enterprise/configuration-and-dependencies.md)

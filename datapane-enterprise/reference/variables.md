@@ -22,7 +22,6 @@ Scripts often contain variables such as database keys and passwords, which you d
 | :--- | :--- | :--- |
 | `name` | The name of your variable | True |
 | `value` | The value of your variable | True |
-| `visibility` | The visibility setting \(`ORG`, `PRIVATE`, or `PUBLIC`\) | False |
 
 #### Response
 
@@ -30,13 +29,7 @@ A Variable object
 
 #### Description & Example
 
-Create a new user variable. Adding multiple versions of variables with the same name will create new versions.
-
-By default, variables are private to the creator's account, but they can be shared across an organization. To set visibility, use the `--visibility` flag \(or `visibility` field in Python\) with `OWNER_ONLY` or `ORG`. 
-
-{% hint style="warning" %}
-If you want other people inside your organisation to run your scripts, your variable must be `ORG`, as scripts are executed under their user account.
-{% endhint %}
+Create a new user variable. Adding multiple versions of variables with the same name will create new versions. 
 
 {% tabs %}
 {% tab title="CLI" %}

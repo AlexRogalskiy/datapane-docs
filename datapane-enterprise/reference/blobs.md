@@ -49,11 +49,6 @@ All methods have the additional parameters:
 | Parameter | Description | Required |
 | :--- | :--- | :--- |
 | `name` | The value of your variable | True |
-| `visibility` | The visibility setting \(`ORG`, `PRIVATE`, or `PUBLIC`\) | False |
-
-{% hint style="warning" %}
- If you want other people in your organization to make use of blobs you created in their scripts, you must set visibility to `ORG`
-{% endhint %}
 
 ```python
 import datapane as dp
@@ -75,7 +70,6 @@ Download a DataFrame, file, or object. All download operations have the followin
 |  |  | Required |
 | :--- | :--- | :--- |
 | `name` | The name of your blob | True |
-| `version` | The version of the blob to retrieve | False |
 | `owner` | The owner of the blob.  | False |
 
 {% hint style="warning" %}
@@ -109,7 +103,7 @@ You may wish to share your blob to others such as your teammates so that your te
 To enable sharing with the public,  set `visibility=PUBLIC` when uploading your dataframe, file, or object to a blob. 
 
 ```python
-dp.Blob.upload_df(df, name='myblob', visibility='PUBLIC')
+dp.Blob.upload_df(df, name='myblob')
 ```
 
 When others want to access your blob, they could simply retrieve by specifying the name of the blob and  your account in `owner`
@@ -121,5 +115,5 @@ blob = dp.Blob.get(name='myblob', owner='khuyentran')
 b = blob.download_df() # Or download_file(), download_obj()
 ```
 
-Now others can use your blob for their code! If you want to share your blob privately in your organization, follow the same process, but set the visibility of your blob to `ORG`
+Now others can use your blob for their code!
 
