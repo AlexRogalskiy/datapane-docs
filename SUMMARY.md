@@ -9,6 +9,7 @@
 * [What is a Report?](reports/tut-creating-a-report.md)
 * [Publishing and Sharing](reports/publishing-and-sharing.md)
 * [Building Reports](reports/blocks/README.md)
+  * [Web Editor](reports/blocks/web-editor.md)
   * [Tables and Data](reports/blocks/tables-and-data.md)
   * [Plots and Visualizations](reports/blocks/plots-and-visualizations.md)
   * [Text, Code, and HTML](reports/blocks/text-code-and-html.md)
