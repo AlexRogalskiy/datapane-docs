@@ -56,7 +56,7 @@ Once published, you can share the link with others so they can view your report 
 
 ## Report Visibility and Sharing
 
-Datapane provides a free server where reports can be uploaded, either privately or published publicly to our community platform. It includes two private reports per user, and unlimited public reports. Reports are private by default. To publish a report publicly, just set the report's visibility to `dp.Visibility.PUBLIC`, e.g.
+Datapane provides a free community platform where reports can be uploaded, either privately or published and shared publicly. It includes two private reports per user, and unlimited public reports. Reports are private by default. To publish a report publicly, just set the report's visibility to `dp.Visibility.PUBLIC`, e.g.
 
 ```python
 report.publish(name='Covid Vaccinations', open=True, visibility=dp.Visibility.PUBLIC)
