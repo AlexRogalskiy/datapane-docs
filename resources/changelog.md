@@ -15,7 +15,7 @@ description: >-
 
 ## 19 April 2021
 
-#### Python version 0.X.X
+#### Python version 0.11.0
 
 ### **🕸 Web editor** 
 
@@ -48,6 +48,8 @@ dp.Report(...).publish(name='My guide', tags=['guide'])
 And it will appear in our guides section. Stay tuned as we improve the knowledge sharing aspects of the product, which we know are really important to many of you.
 
 ## 23 December 2020
+
+#### Python version 0.**9**.0
 
 ### **✍️ Text-centric reports**
 
