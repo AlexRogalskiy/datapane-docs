@@ -38,6 +38,10 @@
   * [Variables](datapane-enterprise/reference/variables.md)
   * [Blobs](datapane-enterprise/reference/blobs.md)
 
+## On-Premise Deployment <a id="on-prem"></a>
+
+* [Introduction](on-prem/introduction.md)
+
 ## Resources
 
 * [Changelog](resources/changelog.md)
