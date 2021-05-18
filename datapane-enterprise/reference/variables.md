@@ -4,13 +4,13 @@ description: 'Variables are secret, encrypted values which you can share between
 
 # Variables
 
-{% hint style="success" %}
-Please see the [Variable API Reference](https://datapane.github.io/datapane/teams.html#datapane.client.api.teams.Variable) for more details.
+{% hint style="info" %}
+Please see the [Variable API Reference](https://datapane.github.io/datapane/teams.html#datapane.client.api.teams.Variable) for more details. You can also create Variables directly from the Web interface.
 {% endhint %}
 
 ## Overview
 
-Scripts often contain variables such as database keys and passwords, which you do not want embedding in your source code and visible to the outside world. Datapane's `Variable` object provides a safe and secure way to create, store, and retrieve values which your scripts require. See the Python [API Docs](https://datapane.github.io/datapane/teams.html#datapane.client.api.teams.Variable) for more information on using Variables.
+Scripts often contain variables such as database keys and passwords, which you do not want embedding in your source code and visible to the outside world. Datapane's `Variable` object provides a safe and secure way to create, store, and retrieve values which your scripts require. See the Python [API Docs](https://datapane.github.io/datapane/teams.html#datapane.client.api.teams.Variable) for more information on using Variables. You can also create Variables directly from the Web interface.
 
 ## CLI
 

@@ -4,7 +4,7 @@ description: >-
   for creating text-heavy Python reports.
 ---
 
-# Text, Code, and HTML
+# Text, Formulas, Code, and HTML
 
 ## Text
 
@@ -71,13 +71,11 @@ import altair as alt
 import datapane as dp
 
 md = """
-
 For example, if we want to visualize the number of people in each class within the interval we select a point chart between age and fare, we could do something like this.
 
 {{plot}}
 
 Altair allows you to create some extremely interactive plots which do on-the-fly calculations — without even requiring a running Python server!
-
 """
 
 titanic = sns.load_dataset("titanic")
@@ -95,8 +93,6 @@ dp.Report(
 
 {% embed url="https://datapane.com/u/datapane/reports/altair-example/?utm\_medium=embed&utm\_content=viewfull" %}
 
-
-
 Alternatively, you can write your article or post in your favourite markdown editor, and pass it in as a file.
 
 ```python
@@ -108,6 +104,22 @@ dp.Report(
   dp.Text(file="./my_blogpost.md").format(plot=points)
 )
 ```
+
+## Formulas
+
+The formula block allows you easily to add [_LaTeX_](https://en.wikipedia.org/wiki/LaTeX)-formatted equations to your report, with an optional caption. A brief intro into _LaTeX_ formulas can be found [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+
+```python
+import datapane as dp
+
+dp.Report(
+  dp.Formula(r"\frac{1}{\sqrt{x^2 + 1}}", caption="")
+).publish("formula")
+```
+
+{% hint style="info" %}
+_LaTeX_ formulas commonly uses special characters, hence prefix your formulas with `r` as per the example above to make them raw strings, e.g. `r"x^2"`
+{% endhint %}
 
 ## Code
 

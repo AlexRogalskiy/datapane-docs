@@ -92,7 +92,9 @@ script: simple_script.py # this could also be ipynb if it was a notebook
 ```
 {% endcode %}
 
-If we run `datapane script deploy` in this directory, Datapane will deploy our code with the configuration in `datapane.yaml`. Because we have given the script the same name as our previous one, this will overwrite `covid_script`. 
+If we run `datapane script deploy` in this directory, Datapane will deploy our code with the configuration in `datapane.yaml`. Because we have given the script the same name as our previous one, this will overwrite `covid_script`. See the following link for the full reference on the configuration format.
+
+{% page-ref page="reference/scripts/datapane-yaml.md" %}
 
 In the next section, we will explore adding parameters to your script, to enable reports to be generated dynamically based on user inputs.
 
