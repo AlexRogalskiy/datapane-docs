@@ -13,6 +13,21 @@ description: >-
 * Free trials of Datapane Teams
 * Deploy an on-premise version of Datapane Teams
 
+## 23 May 2021
+
+#### Python version 0.11.4
+
+### **Improvements**
+
+* LaTeX equations can now be added to your reports! Check out the [Formula](https://docs.datapane.com/reports/blocks/text-code-and-html#formulas) block for more info. 
+* Increased the maximum size of a report from 25MB to 100MB
+* Scripts can now specify environment variables directly from their `datapane.yaml` file - these can be static value or user variables that are dynamically injected into your script e.g. DB parameters. [See the docs](../datapane-enterprise/configuration-and-dependencies.md#environment-variables) for more info!
+* Teams users can now set their private report sharing timeout \(previously this was fixed at 48 hours\)
+
+### **Bug Fixes**
+
+* Sharing a private report link sometimes broke due to an extra \# being appended to the URL
+
 ## 19 April 2021
 
 #### Python version 0.11.0

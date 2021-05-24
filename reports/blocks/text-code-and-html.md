@@ -118,7 +118,7 @@ dp.Report(
 ```
 
 {% hint style="info" %}
-_LaTeX_ formulas commonly uses special characters, hence prefix your formulas with `r` as per the example above to make them raw strings, e.g. `r"x^2"`
+_LaTeX_ formulas commonly make use of special characters, hence prefix your formulas with `r` in Python as per the example above to make them raw strings, e.g. `r"x^2"`
 {% endhint %}
 
 ## Code
