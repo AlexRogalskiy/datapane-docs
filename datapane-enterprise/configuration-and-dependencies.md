@@ -15,7 +15,7 @@ For complex dependencies and internal libraries, we highly recommend creating a 
 
 ## Environment Variables
 
-You require certain environment variables to be set when running your script - these could be static values such as the number of iterations for a algorithm, or a dynamic, secret value, such as a database password.
+You may require certain environment variables to be set when running your script - these could be static values such as the number of iterations for a algorithm, or a dynamic, secret value, such as a database password.
 
 {% hint style="info" %}
 Environment variables are different to [parameters](reference/scripts/parameters.md), in that they can not be viewed or configured by the script runner
@@ -31,7 +31,7 @@ env:
 
 This will set an environment value called `ENV_VAR` with the value `env_value` that can be accessed from python as usual - e.g. `os.environ["ENV_VAR"]` .
 
-Such environment values are static within your script, you may also need make use of more dynamic and private values, such as cloud or database credentials. To support this, Datapane also supports referencing Datapane User Variables / Secrets directly from your `env` settings and loading them into your environment.
+Such environment values are static within your script, you may also need make use of more dynamic and private values, such as cloud or database credentials. To support this, Datapane also supports referencing Datapane [User Variables / Secrets](reference/variables.md) directly from your `env` settings and loading them into your environment.
 
 ```yaml
 env:
