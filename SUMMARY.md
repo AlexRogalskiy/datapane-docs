@@ -3,6 +3,7 @@
 * [Welcome to Datapane](README.md)
 * [Getting Started](tut-getting-started.md)
 * [Community and Support](community-and-support.md)
+* [Product Updates](changelog.md)
 
 ## Reports
 
@@ -44,7 +45,6 @@
 
 ## Resources
 
-* [Changelog](resources/changelog.md)
 * [API Docs](https://datapane.github.io/datapane/)
 * [GitHub](https://github.com/datapane/datapane)
 * [Community](https://github.com/datapane/datapane/discussions)

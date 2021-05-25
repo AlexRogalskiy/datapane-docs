@@ -28,6 +28,8 @@ Datapane currently supports the following libraries:
 
 To get started using Altair to make your visualizations, begin with Altair's [Documentation](https://altair-viz.github.io/)
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import altair as alt
 import datapane as dp
@@ -48,6 +50,8 @@ alt_chart = alt.Chart(gap).mark_point(filled=True).encode(
 
 dp.Report(dp.Plot(alt_chart)).publish(name='time_interval')
 ```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/time-interval/" %}
 

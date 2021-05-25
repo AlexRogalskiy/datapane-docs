@@ -4,7 +4,7 @@ description: >-
   so far. We welcome your ideas and requests on our Github page!
 ---
 
-# Changelog
+# Product Updates
 
 ## 🚀 Coming Soon
 
@@ -21,7 +21,7 @@ description: >-
 
 * LaTeX equations can now be added to your reports! Check out the [Formula](https://docs.datapane.com/reports/blocks/text-code-and-html#formulas) block for more info. 
 * Increased the maximum size of a report from 25MB to 100MB
-* Scripts can now specify environment variables directly from their `datapane.yaml` file - these can be static value or user variables that are dynamically injected into your script e.g. DB parameters. [See the docs](../datapane-enterprise/configuration-and-dependencies.md#environment-variables) for more info!
+* Scripts can now specify environment variables directly from their `datapane.yaml` file - these can be static value or user variables that are dynamically injected into your script e.g. DB parameters. [See the docs](datapane-enterprise/configuration-and-dependencies.md#environment-variables) for more info!
 * Teams users can now set their private report sharing timeout \(previously this was fixed at 48 hours\)
 
 ### **Bug Fixes**
@@ -36,7 +36,7 @@ description: >-
 
 One of the challenges our users face is adding text to Python reports - it sucks to have to write long text strings and markdown directly from within your Python script/notebook. To solve this challenge, we've introduced a new web-based Markdown editor where you can edit the report once it's published. Simply write Markdown and insert your Python assets from the right sidebar. You can also use some of our nifty extra blocks, like LaTeX, HTML, BigNumbers etc. This makes it **much** easier to write blogs, articles, tutorials and other long-form content directly on [Datapane.com](http://datapane.com)!
 
-![](../.gitbook/assets/screenshot-2021-05-04-at-19.45.30.png)
+![](.gitbook/assets/screenshot-2021-05-04-at-19.45.30.png)
 
 ## **31 March 2021**
 
@@ -44,13 +44,13 @@ One of the challenges our users face is adding text to Python reports - it sucks
 
 One of the things Datapane users struggled with was finding a good place to showcase their skills to the community or prospective employees. They had GitHub for code and libraries, Medium for blogging, Kaggle for code-heavy ML, and LinkedIn for their work — but where does their data visualization and storytelling identity live? We’ve improved profiles on Datapane so users can showcase their skills. This might be the place where you link to from your CV or which people discover when they Google you. If you’re a current Datapane user, be sure to [update your bio](https://datapane.com/settings) and choose some high quality reports so that it does you justice!
 
-![](../.gitbook/assets/1_ezfj3xujcwb0v2r45vzngg.png)
+![](.gitbook/assets/1_ezfj3xujcwb0v2r45vzngg.png)
 
 ### **🗞 Newsfeed**
 
 Our first versions of Datapane didn’t take into account that users wanted to talk to **learn from each other** — the product was quite insular to each individual user. Our first change to solve this is to add a newsfeed so that you can see what is happening in the Datapane Community, get more visibility on your reports, and learn techniques from others. Check your your [own Datapane newsfeed](https://datapane.com/home). As your reports increase in visibility, it’s more important than ever to include proper context and source-code, so the community can see how you’ve built your report and offer any tips.
 
-![](../.gitbook/assets/screenshot-2021-05-04-at-19.41.59.png)
+![](.gitbook/assets/screenshot-2021-05-04-at-19.41.59.png)
 
 ### **🦯 Guides** 
 
@@ -92,7 +92,7 @@ We’re pleased to announce we’re adding a great new feature to this: Pages. P
 
 We’ve been using this internally to create multiple scenarios, add full source code to reports, and single reports which previously would have had to be multiple reports.
 
-![](../.gitbook/assets/screenshot-2021-05-04-at-19.57.47%20%281%29.png)
+![](.gitbook/assets/screenshot-2021-05-04-at-19.57.47%20%281%29.png)
 
 ### **🗂 Dropdowns and Tabs**
 
@@ -100,7 +100,7 @@ Pages work at the top-level of the report, and many users also wanted to have dy
 
 What if we want our titanic data above, but want to allow the user to choose whether they wanted to view the whole dataset, or a description of the dataset? Instead of making you include them both side by side, we’ve added `dp.Select`, which takes other blocks and turns them into tabs or drop downs.
 
-![](../.gitbook/assets/screenshot-2021-05-04-at-19.57.47.png)
+![](.gitbook/assets/screenshot-2021-05-04-at-19.57.47.png)
 
 This is also a great block for showing the source code behind a plot or dataset for documentation \(which most of your viewers may not want to see\). For instance, to see the source code of the `Select` component, click on the "Source code" tab.
 
@@ -112,7 +112,7 @@ Our primary Table component was built for large data with interactive filtering 
 
 Many users were using our Markdown component to build a table, and we looked at building our own, before settling on supporting Pandas HTML tables. This allows us to support [Pandas Styling](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html) and is a natural fit for our HTML reports, making it simple to build beautiful styled tables like this:
 
-![](../.gitbook/assets/screenshot-2021-05-04-at-19.58.07.png)
+![](.gitbook/assets/screenshot-2021-05-04-at-19.58.07.png)
 
 As part of this, we are making this the default `Table` component, and renaming our interactive component for larger datasets as `DataTable`.
 
@@ -120,13 +120,13 @@ As part of this, we are making this the default `Table` component, and renaming 
 
 Although users like being able to create reports without touching HTML, sometimes it’s helpful to be able to pull in another UI library or custom component — for instance, maybe you want to include your company’s logo or styling. To allow this for power users, we’ve added an HTML component which you can use anywhere in your Datapane report. You can also use the [dominate library](https://github.com/Knio/dominate/) to create HTML directly from python code.
 
-![](../.gitbook/assets/screenshot-2021-05-04-at-19.58.14.png)
+![](.gitbook/assets/screenshot-2021-05-04-at-19.58.14.png)
 
 ### **Big Number**
 
 Sometimes one statistic or KPI is the most important thing in your report — and we had a few users who were missing this from their BI tools. To save you the trouble of building one using HTML, we’ve included a `BigNumber` component for you \(built with the amazing [TailwindCSS](https://tailwindcss.com/) library\).
 
-![](../.gitbook/assets/screenshot-2021-05-04-at-19.58.20.png)
+![](.gitbook/assets/screenshot-2021-05-04-at-19.58.20.png)
 
 
 
