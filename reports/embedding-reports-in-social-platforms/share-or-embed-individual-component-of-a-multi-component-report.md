@@ -12,31 +12,31 @@ This feature is in beta and may change
 
 Many times, your report will have different blocks, but you may wish to share only a subset, for instance it's often useful to embed a specific chart or dataset into another platform - especially if you are refreshing it on a cadence. 
 
-Instead of creating a report for each block, Datapane provides an `blocksquery` parameter you can add to your report link that allows you to query your report using [XPath](https://developer.mozilla.org/en-US/docs/Web/XPath), so you can embed only the relevant blocks.
+Instead of creating a report for each block, Datapane provides an `block_name` query parameter you can add to your report link that allows you to query your report, so you can embed only the relevant blocks.
 
 Here are a few of the most common examples and use-cases you will encounter.
 
-## Querying by Block id
+## Querying by Block name
 
-The easiest way to embed only a single block is to assign an `id` to your block when creating it, e.g. `dp.Plot(plot, id="my-plot")`, and then use a simple query of the following form to select it in your embed URL,
+The easiest way to embed only a single block is to assign a `name` to your block when creating it, e.g. `dp.Plot(plot, name="my-plot")`, and then use a simple query of the following form to select it in your embed URL,
 
 ```text
-https://datapane.com/u/user/reports/report-name?blocksquery=//*[@id='my-plot']
+https://datapane.com/u/user/reports/report-name?block_name=my-plot
 ```
 
-where `//*[@id="my-plot"]` is an XPath query that will extract any report block with the `id` of `my-plot`.
+where `?block_name=my-plot` is a URL param that will extract any report block with the `name` of `my-plot`.
 
-For instance, the plot in [this report](https://datapane.com/leo/reports/continent_covid_cases) has an id of `block-7`, and so the following query will select just that plot: [https://datapane.com/leo/reports/continent\_covid\_cases/?blocksquery=//\*\[@id='block-7'\]](https://datapane.com/leo/reports/continent_covid_cases/?blocksquery=//*[@id='block-7'])
+For instance, the plot in [this report](https://datapane.com/leo/reports/continent_covid_cases) has a name of `block-7`, and so the following query will select just that plot: [https://datapane.com/leo/reports/continent\_covid\_cases/?block\_name=block-7](https://datapane.com/leo/reports/continent_covid_cases/?block_name=block-7)
 
 {% hint style="info" %}
 These queries can be applied to embedded reports, e.g.
 
-[https://datapane.com/leo/reports/continent\_covid\_cases/embed/?blocksquery=//\*\[@id='block-7'\]](https://datapane.com/leo/reports/continent_covid_cases/embed/?blocksquery=//*[@id='block-7'])
+[https://datapane.com/u/leo/reports/continent-covid-cases/embed/?block\_name=block-7](https://datapane.com/u/leo/reports/continent-covid-cases/embed/?block_name=block-7)
 {% endhint %}
 
 ## Querying by Block type and index
 
-As mentioned, Reports are comprised of multiple block types, such as `Plot`, `Table`, `Text`, and so on - we can select just blocks of a specific type also using XPath, and even select the specific index of a particular block type or a range.
+As mentioned, Reports are comprised of multiple block types, such as `Plot`, `Table`, `Text`, and so on - we can select just blocks of a specific type using [XPath](https://developer.mozilla.org/en-US/docs/Web/XPath), and even select the specific index of a particular block type or a range.
 
 Let's say there are both Table and Plot blocks in your report, and you want to only embed the plots from your report. Simply add `/?blocksquery=//Plot` at the end of the report link. For example, to extract all the plots in [this report](https://datapane.com/u/leo/reports/google-trends/) you can use the following query,
 
