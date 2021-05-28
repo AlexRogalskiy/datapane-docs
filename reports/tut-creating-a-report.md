@@ -47,7 +47,7 @@ $ python3 simple_report.py
 
 {% embed url="https://datapane.com/u/datapane/reports/docs-report-2/" %}
 
-If you send this HTML file to somebody \(or [publish it on _Datapane Public_](publishing-and-sharing.md#publish-your-report)\), they will be able to view your dataset, sort and filter it, and download it as a CSV.
+If you send this HTML file to somebody \(or [publish it on _Datapane Public_](publishing-and-sharing/#publish-your-report)\), they will be able to view your dataset, sort and filter it, and download it as a CSV.
 
 ## A richer report
 

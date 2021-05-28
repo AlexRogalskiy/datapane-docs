@@ -53,7 +53,7 @@ API docs describing the Python API for building Datapane Reports, along with add
 
 ## Datapane Public
 
-{% page-ref page="reports/publishing-and-sharing.md" %}
+{% page-ref page="reports/publishing-and-sharing/" %}
 
 If you want to share your report on the web, _Datapane Public_ provides a free API and hosted platform for publishing and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can publish your report, including datasets and plots, in a single Python command
 
