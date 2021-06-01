@@ -1,6 +1,12 @@
 # Export to Medium
 
-Tired of pasting embeds from your report to a Medium article? Datapane lets you convert your existing Datapane reports into Medium articles, preserving formatting and layout while making all visualizations interactive. The steps are as follows: 
+Write a lot on Medium? Datapane lets you convert your existing Datapane reports into Medium article drafts, preserving formatting and layout while making all visualizations interactive. 
+
+{% hint style="info" %}
+If you just need to embed a public report or plot directly into a Medium article, see the section on [embedding](https://docs.datapane.com/reports/embedding-reports-in-social-platforms). This section is for converting Datapane reports into Medium drafts.   
+{% endhint %}
+
+The steps are as follows: 
 
 1. **Get a Medium Integration token**
 
@@ -16,7 +22,7 @@ Copy this token and go to your Datapane settings page. Paste in the 'Medium toke
 
 **3. Share Report**
 
-When you navigate to an existing report and click 'Share Report', you'll now see an option to 'Export to Medium'. Clicking on this will export the contents of your existing report to Medium \(just make sure that your report visibility is set to 'Public'\). You can edit the content further and publish on Medium once you're ready. Easy, right? 
+When you navigate to an existing report and click 'Share Report', you'll now see an option to 'Export to Medium'. Clicking on this will export the contents of your existing report to Medium as a draft \(just make sure that your report visibility is set to 'Public'\). You can edit the content further and publish on Medium once you're ready. Easy, right? 
 
 ![](../../.gitbook/assets/screenshot-2021-05-28-at-10.25.40.png)
 
