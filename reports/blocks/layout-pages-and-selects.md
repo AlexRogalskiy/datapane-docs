@@ -58,7 +58,7 @@ To customize the width of your report, you can set the [report type](./#report-t
 
 Reports on Datapane can have multiple pages, which are presented to users as tabs at the top of your report. These can be used similarly to sheets in an Excel document.
 
-To add a page, use the `dp.Page` block at the top-level of your report, and give it a title with the `label` parameter.
+To add a page, use the `dp.Page` block at the top-level of your report, and give it a title with the `title` parameter.
 
 {% hint style="info" %}
 Pages cannot be nested, and can only exist at the root level of your `dp.Report` object
@@ -79,11 +79,11 @@ points = alt.Chart(titanic).mark_point().encode(
 
 dp.Report(
   dp.Page(
-    label="Titanic Dataset",
+    title="Titanic Dataset",
     blocks=["### Dataset", titanic]
   ),
   dp.Page(
-    label="Titanic Plot",
+    title="Titanic Plot",
     blocks=["### Plot", points]
   )
 ).publish(name='altair_example_pages')
