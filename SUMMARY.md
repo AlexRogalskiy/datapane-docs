@@ -33,6 +33,7 @@
 * [Integrating Databases or APIs](datapane-enterprise/database-and-network-access.md)
 * [Data, Model, and Asset Storage](datapane-enterprise/data-model-and-asset-storage.md)
 * [Comparisons](datapane-enterprise/comparisons.md)
+* [Support Policy](datapane-enterprise/support-policy.md)
 * [Enterprise Usage Reference](datapane-enterprise/reference/README.md)
   * [Scripts](datapane-enterprise/reference/scripts/README.md)
     * [Configuration](datapane-enterprise/reference/scripts/datapane-yaml.md)
