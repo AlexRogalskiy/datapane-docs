@@ -56,7 +56,7 @@ Confluence will then display your report or visualization in the page:
 
 You can embed into your own website using an iframe. After publishing your report, and select **Embed** in the share menu on the report. This will provide a simple piece of HTML code that you can copy and paste into your webpage.
 
-Datapane Enterprise also provides the ability for private reports, which can be securely embedded in your own tools to make use of Datapane reports across your applications.
+Datapane Teams also provides the ability for private reports, which can be securely embedded in your own tools to make use of Datapane reports across your applications.
 
 {% hint style="info" %}
 You can use this method on any website where you control the underlying HTML code.

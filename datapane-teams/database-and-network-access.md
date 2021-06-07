@@ -5,7 +5,7 @@ Unlike a traditional BI platform, Datapane does not offer a proprietary set of c
 When scripts run on Datapane, they have full network access to allow you to connect out to other platforms.
 
 {% hint style="info" %}
-If you need to connect to an internal database and are using the cloud-hosted _Datapane for Teams_ product, please reach out to support if you need to whitelist your instance's IP address.
+If you need to connect to an internal database and are using the cloud-hosted Datapane server product, please reach out to support if you need to whitelist your instance's IP address.
 {% endhint %}
 
 ## Managing secrets 
@@ -14,7 +14,7 @@ If you are connecting to a third-party datastore, it may require a form of authe
 
 Please see the relevant documentation for more information on managing secrets.
 
-{% page-ref page="teams-reference/variables.md" %}
+{% page-ref page="reference/variables.md" %}
 
 ## Managing SQL scripts
 

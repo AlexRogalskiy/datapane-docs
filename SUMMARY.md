@@ -22,24 +22,25 @@
   * [Advanced Embedding](reports/embedding-reports-in-social-platforms/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
-## Datapane Cloud <a id="datapane-enterprise"></a>
+## Datapane Teams
 
-* [Introduction](datapane-enterprise/tut-deploying-a-script.md)
-* [Authentication and Sharing](datapane-enterprise/untitled.md)
-* [Apps: Script and Jupyter Deployment](datapane-enterprise/script-and-jupyter-deployment.md)
-* [Parameters and Forms](datapane-enterprise/tut-parameterising-a-script.md)
-* [Scheduled Report Runs](datapane-enterprise/scheduling.md)
-* [Configuration and Dependencies](datapane-enterprise/configuration-and-dependencies.md)
-* [Integrating Databases or APIs](datapane-enterprise/database-and-network-access.md)
-* [Data, Model, and Asset Storage](datapane-enterprise/data-model-and-asset-storage.md)
-* [Comparisons](datapane-enterprise/comparisons.md)
-* [Support Policy](datapane-enterprise/support-policy.md)
-* [Enterprise Usage Reference](datapane-enterprise/reference/README.md)
-  * [Scripts](datapane-enterprise/reference/scripts/README.md)
-    * [Configuration](datapane-enterprise/reference/scripts/datapane-yaml.md)
-    * [Parameters](datapane-enterprise/reference/scripts/parameters.md)
-  * [Variables](datapane-enterprise/reference/variables.md)
-  * [Blobs](datapane-enterprise/reference/blobs.md)
+* [Introduction](datapane-teams/tut-deploying-a-script.md)
+* [Managing Users](datapane-teams/managing-users.md)
+* [Authentication and Sharing](datapane-teams/untitled.md)
+* [Apps: Script and Jupyter Deployment](datapane-teams/script-and-jupyter-deployment.md)
+* [Parameters and Forms](datapane-teams/tut-parameterising-a-script.md)
+* [Scheduled Report Runs](datapane-teams/scheduling.md)
+* [Configuration and Dependencies](datapane-teams/configuration-and-dependencies.md)
+* [Integrating Databases or APIs](datapane-teams/database-and-network-access.md)
+* [Data, Model, and Asset Storage](datapane-teams/data-model-and-asset-storage.md)
+* [Comparisons](datapane-teams/comparisons.md)
+* [Support Policy](datapane-teams/support-policy.md)
+* [Teams Usage Reference](datapane-teams/reference/README.md)
+  * [Scripts](datapane-teams/reference/scripts/README.md)
+    * [Configuration](datapane-teams/reference/scripts/datapane-yaml.md)
+    * [Parameters](datapane-teams/reference/scripts/parameters.md)
+  * [Variables](datapane-teams/reference/variables.md)
+  * [Blobs](datapane-teams/reference/blobs.md)
 
 ## On-Premise Deployment <a id="deployment"></a>
 

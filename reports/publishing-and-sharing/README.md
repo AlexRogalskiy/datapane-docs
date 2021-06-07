@@ -5,7 +5,7 @@ description: Publishing your report so you can share it with others
 # Publishing and Sharing
 
 {% hint style="info" %}
-This feature requires use of the free _Datapane_ hosted platform or a private _Datapane Cloud_ instance
+This feature requires use of the free _Datapane_ hosted platform or a private _Datapane Teams_ instance
 {% endhint %}
 
 ## Publish your report
@@ -67,6 +67,6 @@ Private reports can be shared securely, just press the share button on the publi
 ![](../../.gitbook/assets/image%20%28118%29.png)
 
 {% hint style="info" %}
-\_\_[_Datapane Cloud_ ](../../datapane-enterprise/tut-deploying-a-script.md)provides additional options to share reports securely across your company.
+\_\_[_Datapane Teams_](../../datapane-teams/tut-deploying-a-script.md) __provides additional options to share reports securely across your company.
 {% endhint %}
 

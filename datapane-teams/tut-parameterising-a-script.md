@@ -1,6 +1,6 @@
 ---
 description: >-
-  Scripts can be parameterised, allowing them to dynamically generate reports
+  Apps can be parameterised, allowing them to dynamically generate reports
   through web forms or the API.
 ---
 
@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-Stakeholders commonly need to provide some configuration to scripts to enable self-service report generation. Datapane allows you to add parameters to a script, which are presented to end users as web forms. This means that other people who have accounts on your instance can generate reports without worrying about code, notebooks, or setting up a Python environment. 
+Stakeholders commonly need to provide some configuration to your apps to enable self-service report generation. Datapane allows you to add parameters, which are presented to end users as **web forms**. This means that other people who have accounts on your instance can generate reports without worrying about code, notebooks, or setting up a Python environment. 
 
 ## Running & Parameters
 
@@ -19,7 +19,7 @@ Following the previous example, the dataset we are pulling includes a few other 
 Based on this, we are going to add two parameters: `plot_field` and `continents` to the `parameters` section of our `datapane.yaml`. To configure what the end-user's form looks like, we can choose the type of widget. For the above, we're choosing a `enum` \(which provides a dropdown select menu where the user must select one option\), and a `list` \(which allows the user to choose or more choices from a predefined list\). We can also set the default parameters for each input and a description.
 
 {% hint style="info" %}
-Full details of parameter configuration and available fields are provided in the [API reference](teams-reference/scripts/parameters.md#parameter-form-fields).
+Full details of parameter configuration and available fields are provided in the [API reference](reference/scripts/parameters.md#parameter-form-fields).
 {% endhint %}
 
 {% code title="datapane.yaml" %}

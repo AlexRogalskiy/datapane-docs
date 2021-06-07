@@ -1,8 +1,10 @@
-# Script and Jupyter Deployment
+# Apps: Script and Jupyter Deployment
 
 ## Introduction
 
-_Datapane for Teams_ provides a Script Runner, which allows you to deploy Jupyter Notebooks or Python scripts and run them in the cloud with parameters. This means you can generate reports in an automated fashion, in addition to creating them in your local environment.
+In addition to creating reports by running the computation on your own notebook, pipeline, or server, you may want to deploy scripts or notebooks to Datapane so they can be scheduled, be run with parameters, or run in response to API events.
+
+Datapane provides an app platform, which allows you to deploy Jupyter Notebooks or Python scripts and run them in the cloud. This means you can generate reports in an automated fashion, in addition to creating them in your local environment.
 
 Once you deploy your script or notebook, it can be run in three ways:
 
@@ -20,7 +22,7 @@ Scripts can generate and update reports on a schedule, allowing you to create "l
 
 #### Through an API
 
-You can trigger report generation through our API, which allows you to generate reports in response to events from other tools, such as Slack and Teams, or your own product.
+You can trigger report generation through our API, which allows you to generate reports in response to events from other tools, such as Slack and Microsoft Teams, or your own product.
 
 ## Deploying a script
 
@@ -90,11 +92,9 @@ script: simple_script.py # this could also be ipynb if it was a notebook
 ```
 {% endcode %}
 
-If we run `datapane script deploy` in this directory, Datapane will deploy our code with the configuration in `datapane.yaml`. Because we have given the script the same name as our previous one, this will create version 2 of `covid_script`. 
+If we run `datapane script deploy` in this directory, Datapane will deploy our code with the configuration in `datapane.yaml`. Because we have given the script the same name as our previous one, this will overwrite `covid_script`. See the following link for the full reference on the configuration format.
 
-{% hint style="info" %}
-Like reports, scripts can have multiple versions, allowing you to update and iterate on a single Python project.
-{% endhint %}
+{% page-ref page="reference/scripts/datapane-yaml.md" %}
 
 In the next section, we will explore adding parameters to your script, to enable reports to be generated dynamically based on user inputs.
 

@@ -136,9 +136,9 @@ Enter your API Key: [paste your API key here]
 {% endtab %}
 {% endtabs %}
 
-### Datapane Enterprise
+### Datapane Teams
 
-_Datapane Enterprise_ provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net` , using the credentials provided to you by your admin.
+_Datapane Teams_ provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net` , using the credentials provided to you by your admin.
 
 Similar to when using the free _Datapane_ instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You will need to pass in the full URL of your server \(including the `https://`\) to the login command as follows.
 

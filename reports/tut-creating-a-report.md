@@ -110,5 +110,5 @@ Datapane has special integration into Jupyter Notebooks: if you're iterating a r
 Some components, such as `DataTable` require the Datapane server to function and hence aren't currently supported in preview mode.
 {% endhint %}
 
-Next, we will explore how to publish and optionally share reports online, either on the free default _Datapane_ server, or on your own _Datapane Enterprise_ instance.
+Next, we will explore how to publish and optionally share reports online, either on the free default _Datapane_ server, or on your own _Datapane Teams_ instance.
 
