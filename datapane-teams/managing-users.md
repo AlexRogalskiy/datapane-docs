@@ -20,7 +20,7 @@ Every user must be assigned to one of our three system roles:
 2. **Editor** - all permissions of viewer, plus creating reports and scripts
 3. **Admin** - all permissions of editor, plus settings, user management and billing
 
-The default group is automatically created by the server and is for internal users. If you need to invite an external collaborator for a specific report, see the section on [Groups](https://docs.datapane.com/datapane-enterprise/untitled#groups). 
+The default group is automatically created by the server and is for internal users. If you need to invite an external collaborator for a specific report, see the section on [Groups](https://docs.datapane.com/datapane-teams/authentication-and-sharing#groups). 
 
 ### Advanced
 
