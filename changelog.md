@@ -8,10 +8,59 @@ description: >-
 
 ## 🚀 Coming Soon
 
-* Create a TextReport directly from the web interface
-* Better user management and onboarding for Datapane Teams
+* Create a Markdown Report directly from the web interface
 * Free trials of Datapane Teams
-* Deploy an on-premise version of Datapane Teams
+* Styling for reports \(background colour, fonts, spacing\)
+
+## 6 June 2021
+
+**Python Version 0.11.8**
+
+### 👨‍👩‍👧‍👦 Settings & User Management
+
+![](.gitbook/assets/screenshot-2021-06-07-at-17.43.46.png)
+
+Admins on Datapane Teams have a lot more control over their instance, as we've added several new Settings pages:  
+
+**Account**
+
+* View pricing plan
+* Customise report sharing timeout
+* Set company logo
+* Set company name
+* Set docker registry credentials
+
+**Team Members**
+
+* Invite a user via email
+* Set user role \(admin, editor, viewer\)
+* Add new user to group
+* See list of pending invites
+
+**Groups**
+
+* Create a group
+* Add existing user to group
+
+Check out the section on [managing users ](https://docs.datapane.com/datapane-teams/managing-users)for more. 
+
+### 🏡 On-premise installation
+
+Datapane Teams can now be installed in your own cloud environment \(AWS or GCP\). This is perfect for users with stricter security requirements who want to ensure that confidential data doesn't leave their system. We use docker-compose to ensure that you can get up and running within 15 minutes.
+
+Read our [installation guide](https://github.com/datapane/datapane-onpremise) on Github for more. 
+
+### Improvements
+
+* See the report visibility \(Public/Private\) on the 'My Reports' page
+* Live support chat has been added to hosted Datapane Teams instances
+* Clearer signup process for Datapane Teams users
+* DataTable component is now available for offline reports generated via `report.save`
+
+### Bug Fixes
+
+* 'More from user' section of a report no longer shows that same report
+* Fixed a bug with Bokeh where some report blocks would be repeated
 
 ## 23 May 2021
 
