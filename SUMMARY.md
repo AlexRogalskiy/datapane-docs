@@ -24,7 +24,7 @@
 
 ## Datapane Teams
 
-* [Introduction](datapane-teams/tut-deploying-a-script.md)
+* [Introduction](datapane-teams/introduction.md)
 * [Managing Users](datapane-teams/managing-users.md)
 * [Authentication and Sharing](datapane-teams/authentication-and-sharing.md)
 * [Apps: Script and Jupyter Deployment](datapane-teams/script-and-jupyter-deployment.md)

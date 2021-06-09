@@ -67,6 +67,6 @@ Private reports can be shared securely, just press the share button on the publi
 ![](../../.gitbook/assets/image%20%28118%29.png)
 
 {% hint style="info" %}
-\_\_[_Datapane Teams_](../../datapane-teams/tut-deploying-a-script.md) __provides additional options to share reports securely across your company.
+\_\_[_Datapane Teams_](../../datapane-teams/introduction.md) __provides additional options to share reports securely across your company.
 {% endhint %}
 
