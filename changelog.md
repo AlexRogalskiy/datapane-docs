@@ -52,12 +52,13 @@ Read our [installation guide](https://github.com/datapane/datapane-onpremise) on
 
 ### Improvements
 
+* Better report header design
 * See the report visibility \(Public/Private\) on the 'My Reports' page
-* Live support chat has been added to hosted Datapane Teams instances
-* Clearer signup process for Datapane Teams users
 * DataTable component is now available for offline reports generated via `report.save`
+* Live support chat added to hosted Datapane Teams instances
+* Clearer signup process for Datapane Teams users
 
-### Bug Fixes
+### **Bug Fixes**
 
 * 'More from user' section of a report no longer shows that same report
 * Fixed a bug with Bokeh where some report blocks would be repeated
