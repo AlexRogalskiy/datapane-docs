@@ -63,6 +63,10 @@ Check [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) f
 
 If your report is text-heavy \(such as an blogpost\) and it contains multiple other blocks, creating a list of strings and blocks in Python can be cumbersome. To solve this, Datapane provides a `format` option, which allows you to write a single block of Markdown \(either in your report, or in a separate file\), and intersperse it with other blocks. 
 
+{% hint style="info" %}
+Try building a [Markdown Report](web-editor.md) if you want to write long-form text on the browser!
+{% endhint %}
+
 To do this, use double braces to specify where you want your other blocks to appear throughout your text.
 
 ```python
@@ -191,6 +195,88 @@ dp.Report(
   )
 ).upload(name='docs_html', open=True)
 ```
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import datapane as dp
+
+html = """
+<html>
+    <style type='text/css'>
+        @keyframes example {
+            0%   {color: #EEE;}
+            25%  {color: #EC4899;}
+            50%  {color: #8B5CF6;}
+            100% {color: #EF4444;}
+        }
+        #container {
+            background: #1F2937;
+            padding: 10em;
+        }
+        h1 {
+            color:#eee;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <div id="container">
+      <h1> Welcome to my Report </h1>
+    </div>
+</html>
+"""
+
+dp.Report(
+  dp.HTML(
+    html
+  )
+).publish(name='docs_html', open=True)
+```
+
+```python
+import datapane as dp
+
+html = """
+<html>
+    <style type='text/css'>
+        @keyframes example {
+            0%   {color: #EEE;}
+            25%  {color: #EC4899;}
+            50%  {color: #8B5CF6;}
+            100% {color: #EF4444;}
+        }
+        #container {
+            background: #1F2937;
+            padding: 10em;
+        }
+        h1 {
+            color:#eee;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <div id="container">
+      <h1> Welcome to my Report </h1>
+    </div>
+</html>
+"""
+
+dp.Report(
+  dp.HTML(
+    html
+  )
+).upload(name='docs_html', open=True)
+```
+{% endtab %}
+
+{% tab title="Web Editor" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/docs-html/" %}
 
