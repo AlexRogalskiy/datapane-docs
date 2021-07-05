@@ -65,7 +65,7 @@ Datapane provides a free community platform where reports can be uploaded and sh
 * They won't appear on your profile
 * They won't appear in search results
 * They won't appear on the Explore pages
-* They can be accessed by anyone with the link
+* Anyone with the URL can access it. This is not a truly private mechanism, so make sure you aren't uploading very sensitive information. 
 
 You can also choose to publish your report to the Datapane community, meaning it will be featured on our [Explore](https://datapane.com/explore/) page and potentially our social media accounts. This is a great way to gain an audience and receive feedback on your reports! 
 
