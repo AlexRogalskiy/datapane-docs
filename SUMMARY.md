@@ -11,7 +11,7 @@
 * [Uploading and Sharing](reports/publishing-and-sharing/README.md)
   * [Export to Medium](reports/publishing-and-sharing/export-to-medium.md)
 * [Building Reports](reports/blocks/README.md)
-  * [Markdown in the Web Editor](reports/blocks/web-editor.md)
+  * [Text Reports](reports/blocks/web-editor.md)
   * [Tables and Data](reports/blocks/tables-and-data.md)
   * [Plots and Visualizations](reports/blocks/plots-and-visualizations.md)
   * [Text, Formulas, Code, and HTML](reports/blocks/text-code-and-html.md)

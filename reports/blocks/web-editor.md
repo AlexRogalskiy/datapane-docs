@@ -2,7 +2,7 @@
 description: How to use our web editor to create long-form reports
 ---
 
-# Markdown in the Web Editor
+# Text Reports
 
 ‌One of the challenges with building reports in Python is working with long chunks of text. To make this easier, we've introduced a Markdown editor on the web, where you can build rich long-form reports for articles or tutorials and seamlessly include interactive elements from your Python environment.
 
@@ -40,7 +40,7 @@ For example, try the following Markdown in the Text editor:
 
 This will generate a report which looks as follows:
 
-{% embed url="https://datapane.com/u/johnmicahreid/reports/text-report-77321/embed/" %}
+{% embed url="https://datapane.com/u/johnmicahreid/reports/markdown-example/embed/?foo" %}
 
 ## **Inserting blocks**
 

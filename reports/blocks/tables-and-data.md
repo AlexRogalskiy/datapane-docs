@@ -10,6 +10,8 @@ description: >-
 
 The Table component takes a pandas DataFrame and renders an HTML table in your report. 
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import datapane as dp
 import pandas as pd
@@ -24,6 +26,24 @@ table = dp.Table(df)
 report = dp.Report(table)
 report.upload(name='sample_table')
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    'A': np.random.normal(-1, 1, 5),
+    'B': np.random.normal(1, 2, 5),
+})
+
+table = dp.Table(df)
+report = dp.TextReport(table)
+report.upload(name='sample_table')
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-table/" %}
 
@@ -43,6 +63,8 @@ The DataTable block takes a pandas DataFrame and renders an interactive, sortabl
 DataTable works for reports uploaded to Datapane.com as well as locally saved reports.
 {% endhint %}
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import datapane as dp
 import pandas as pd
@@ -57,6 +79,24 @@ table = dp.DataTable(df)
 report = dp.Report(table)
 report.upload(name='sample_table')
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    'A': np.random.normal(-1, 1, 5000),
+    'B': np.random.normal(1, 2, 5000),
+})
+
+table = dp.DataTable(df)
+report = dp.TextReport(table)
+report.upload(name='sample_table')
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-datatable/" %}
 
@@ -72,6 +112,8 @@ A single number or change can often be the most important thing in a report. The
 
 For full reference on styling your number, see the [API Documentation](https://datapane.github.io/datapane/report.html#datapane.client.api.report.BigNumber).
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import datapane as dp
 
@@ -90,6 +132,24 @@ dp.Report(
    )
 )
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+    ```datapane
+    block: Group
+    columns: 2
+    blocks: 
+      - block: BigNumber
+        heading: Number of percentage points
+        value: 84%
+        change: 2%
+        is_upward_change: True
+      - block: BigNumber
+        heading: Simple Statistic
+        value: 100
+    ```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/big-number/" %}
 

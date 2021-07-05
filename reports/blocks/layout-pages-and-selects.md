@@ -16,6 +16,8 @@ If you pass a list of blocks \(such as `Plot` and `Table`\) to a Report, they ar
 
 If we take the example in the earlier tutorial, but want to lay the plot and dataset side-by-side, we can use specify this using `Group` and specifying the number of columns.
 
+{% tabs %}
+{% tab title="Python" %}
 {% code title="simple\_report.py" %}
 ```python
 import pandas as pd
@@ -35,19 +37,61 @@ plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
 dp.Report(
     dp.Group(
         dp.Plot(plot), 
-        dp.Table(df),
+        dp.DataTable(df),
         columns=2
     )
 ).upload(name='covid_report', open=True)
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+# Python Code
+
+import pandas as pd
+import altair as alt
+import datapane as dp
+
+dataset = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv')
+df = dataset.groupby(['continent', 'date'])['new_cases_smoothed_per_million'].mean().reset_index()
+
+plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
+    x='date:T',
+    y=alt.Y('new_cases_smoothed_per_million:Q', stack=None),
+    color=alt.Color('continent:N', scale=alt.Scale(scheme='set1')),
+    tooltip='continent:N'
+).interactive().properties(width='container')
+
+dp.TextReport(
+    dp.Plot(plot), 
+    dp.DataTable(df)
+).upload(name='covid_report')
+
+
+# Markdown 
+
+"""
+```datapane
+block: Group
+columns: 2
+blocks: 
+  - block: asset
+    label: plot-1
+  - block: asset
+    label: table-2
+```
+"""
+```
+{% endtab %}
+{% endtabs %}
 
 ![](../../.gitbook/assets/image%20%28104%29.png)
 
 You can also find an example [here](https://datapane.com/u/leo/reports/dp-docs-layout/).
 
 {% hint style="info" %}
-As `Group` components are components themselves, they are composable, and you can create more custom layers of nested blocks, for instance nesting 2 rows in the left column of a 2 column layout
+As `Group`components are components themselves, they are composable, and you can create more custom layers of nested blocks, for instance nesting 2 rows in the left column of a 2 column layout
 {% endhint %}
 
 ### Customizing width
@@ -64,6 +108,8 @@ To add a page, use the `dp.Page` block at the top-level of your report, and give
 Pages cannot be nested, and can only exist at the root level of your `dp.Report` object
 {% endhint %}
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import seaborn as sns
 import altair as alt 
@@ -89,6 +135,61 @@ dp.Report(
 ).upload(name='altair_example_pages')
 
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+# Python Code
+import altair as alt 
+import datapane as dp
+
+titanic = sns.load_dataset("titanic")
+
+points = alt.Chart(titanic).mark_point().encode(
+    x='age:Q',
+    color='class:N',
+    y='fare:Q',
+).interactive().properties(width='container')
+
+dp.Report(
+  dp.Page(
+    title="Titanic Dataset",
+    blocks=["### Dataset", titanic]
+  ),
+  dp.Page(
+    title="Titanic Plot",
+    blocks=["### Plot", points]
+  )
+).upload(name='altair_example_pages')
+
+# Markdown 
+
+"""
+```datapane
+block: page
+title: Titanic Dataset
+```
+### Dataset
+
+```datapane
+block: asset
+label: datatable-1
+```
+
+```datapane
+block: page
+title: Titanic Ploc
+```
+### Plot
+
+```datapane
+block: asset
+label: plot-2
+```
+"""
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/altair-example-pages/?utm\_medium=embed&utm\_content=viewfull" %}
 

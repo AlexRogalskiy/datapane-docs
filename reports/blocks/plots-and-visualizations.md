@@ -51,6 +51,30 @@ alt_chart = alt.Chart(gap).mark_point(filled=True).encode(
 dp.Report(dp.Plot(alt_chart)).upload(name='time_interval')
 ```
 {% endtab %}
+
+{% tab title="Web Report" %}
+```python
+import altair as alt
+import datapane as dp
+from vega_datasets import data as vega_data
+gap = pd.read_json(vega_data.gapminder.url)
+
+select_year = alt.selection_single(
+    name='select', fields=['year'], init={'year': 1955},
+    bind=alt.binding_range(min=1955, max=2005, step=5)
+)
+alt_chart = alt.Chart(gap).mark_point(filled=True).encode(
+    alt.X('fertility', scale=alt.Scale(zero=False)),
+    alt.Y('life_expect', scale=alt.Scale(zero=False)),
+    alt.Size('pop:Q'),
+    alt.Color('cluster:N'),
+    alt.Order('pop:Q', sort='descending'),
+).add_selection(select_year).transform_filter(select_year)
+
+# Upload as a Text Report - use id instead of name if uploading to existing report
+dp.TextReport(dp.Plot(alt_chart)).upload(name='time_interval')
+```
+{% endtab %}
 {% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/time-interval/" %}
@@ -61,6 +85,8 @@ Bokeh is an interactive visualization library which provides elegant, concise co
 
 To get started using Bokeh to make your visualizations, begin with Bokeh's [User Guide](https://docs.bokeh.org/en/latest/docs/user_guide.html#userguide).
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 from bokeh.plotting import figure, output_file, show
 from bokeh.sampledata.iris import flowers
@@ -80,6 +106,30 @@ bokeh_chart.circle(flowers["petal_length"], flowers["petal_width"],
 # Upload the report
 dp.Report(dp.Plot(bokeh_chart)).upload(name='bokeh_plot')
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+from bokeh.plotting import figure, output_file, show
+from bokeh.sampledata.iris import flowers
+import datapane as dp 
+
+# Create scatter plot with Bokeh
+colormap = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}
+colors = [colormap[x] for x in flowers['species']]
+
+bokeh_chart = figure(title = "Iris Morphology")
+bokeh_chart.xaxis.axis_label = 'Petal Length'
+bokeh_chart.yaxis.axis_label = 'Petal Width'
+
+bokeh_chart.circle(flowers["petal_length"], flowers["petal_width"],
+         color=colors, fill_alpha=0.2, size=10)
+
+# Upload as a Text Report - use id instead of name if uploading to existing report
+dp.TextReport(dp.Plot(bokeh_chart)).upload(name='bokeh_plot')
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/bokeh-plot/" %}
 
@@ -89,6 +139,8 @@ dp.Report(dp.Plot(bokeh_chart)).upload(name='bokeh_plot')
 
 Higher-level matplotlib libraries such as [Seaborn](https://seaborn.pydata.org/) are also supported, and can be used in a similar way to the matplotlib example below,
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -100,10 +152,25 @@ gap = pd.read_json(vega_data.gapminder.url)
 fig = gap.plot.scatter(x='life_expect', y='fertility')
 dp.Report(dp.Plot(fig)).upload(name="test_mpl")
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+import matplotlib.pyplot as plt
+import pandas as pd
+import datapane as dp
+from vega_datasets import data as vega_data
+
+gap = pd.read_json(vega_data.gapminder.url)
+# gap.plot.scatter()
+fig = gap.plot.scatter(x='life_expect', y='fertility')
+# Upload as a Text Report - use id instead of name if uploading to existing report
+dp.TextReport(dp.Plot(fig)).upload(name="test_mpl")
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/test-mpl/" %}
-
-
 
 {% hint style="info" %}
 You can pass either a `matplotlib` `Figure` or `Axes` object to `dp.Plot`,  you can obtain the current global figure from `matplotlib` by running `plt.gcf()`
@@ -113,6 +180,8 @@ You can pass either a `matplotlib` `Figure` or `Axes` object to `dp.Plot`,  you 
 
 [Plotly's Python graphing library](https://plotly.com/python/) makes interactive, publication-quality graphs.
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import plotly.express as px
 import datapane as dp
@@ -126,6 +195,25 @@ plotly_chart.show()
 
 dp.Report(dp.Plot(plotly_chart)).upload(name='bubble')
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+import plotly.express as px
+import datapane as dp
+
+df = px.data.gapminder()
+
+plotly_chart = px.scatter(df.query("year==2007"), x="gdpPercap", y="lifeExp",
+	         size="pop", color="continent",
+                 hover_name="country", log_x=True, size_max=60)
+plotly_chart.show()
+
+# Upload as a Text Report - use ID if uploading to existing report
+dp.TextReport(dp.Plot(plotly_chart)).upload(name='bubble')
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/bubble/" %}
 
@@ -139,6 +227,8 @@ The library has a number of built-in tilesets from OpenStreetMap, Mapbox, and St
 If your folium map consumes live data which expires after a certain time, you can automate it to refresh the map on a cadence. See [Automation](../automation-with-github-actions.md).
 {% endhint %}
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import folium
 import datapane as dp 
@@ -147,6 +237,20 @@ m = folium.Map(location=[45.5236, -122.6750])
 
 dp.Report(dp.Plot(m)).upload(name='folium_map')
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```python
+import folium
+import datapane as dp 
+
+m = folium.Map(location=[45.5236, -122.6750])
+
+# Upload as a Text Report - use id instead of name if uploading to existing report
+dp.TextReport(dp.Plot(m)).upload(name='folium_map')
+```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/folium-map/" %}
 

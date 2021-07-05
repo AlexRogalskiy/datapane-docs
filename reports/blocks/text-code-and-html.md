@@ -8,6 +8,10 @@ description: >-
 
 ## Text
 
+The best way to include long-form text is to use the [Web Editor,](web-editor.md) which allows you to add and edit text directly in the browser, and preview the result. 
+
+However, you can still add text from within your Python script, as follows: 
+
 **Markdown** is a lightweight markup language that allows you to include formatted text in your report, and can be access through `dp.Text`, or by passing in a string directly. 
 
 ```python
@@ -63,10 +67,6 @@ Check [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) f
 
 If your report is text-heavy \(such as an blogpost\) and it contains multiple other blocks, creating a list of strings and blocks in Python can be cumbersome. To solve this, Datapane provides a `format` option, which allows you to write a single block of Markdown \(either in your report, or in a separate file\), and intersperse it with other blocks. 
 
-{% hint style="info" %}
-Try building a [Markdown Report](web-editor.md) if you want to write long-form text on the browser!
-{% endhint %}
-
 To do this, use double braces to specify where you want your other blocks to appear throughout your text.
 
 ```python
@@ -113,6 +113,8 @@ dp.Report(
 
 The formula block allows you easily to add [_LaTeX_](https://en.wikipedia.org/wiki/LaTeX)-formatted equations to your report, with an optional caption. A brief intro into _LaTeX_ formulas can be found [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics). 
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import datapane as dp
 
@@ -120,6 +122,17 @@ dp.Report(
   dp.Formula(r"\frac{1}{\sqrt{x^2 + 1}}", caption="")
 ).upload("formula")
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+```markup
+```datapane
+block: Formula
+formula: x^2 + y^2 = z^2
+```
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 _LaTeX_ formulas commonly make use of special characters, hence prefix your formulas with `r` in Python as per the example above to make them raw strings, e.g. `r"x^2"`
@@ -131,6 +144,10 @@ Under the hood we use MathJAX to render the equations in the browser and not a f
 
 The code block allows you to embed syntax highlighted source code into your report. This block currently supports Python and JavaScript.
 
+For the Web Editor 
+
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import datapane as dp
 
@@ -147,6 +164,19 @@ dp.Report(
    )
 ).upload(name='code')
 ```
+{% endtab %}
+
+{% tab title="Web Report" %}
+    ```datapane
+    block: Code
+    language: javascript
+    code: |
+        function foo(n) {
+          return foo(n + 1)
+        }
+    ```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/code/" %}
 
@@ -159,42 +189,6 @@ The HTML block allows you to add raw HTML to your report,  allowing for highly c
 {% hint style="info" %}
 The HTML component is sandboxed and cannot execute JavaScript.
 {% endhint %}
-
-```python
-import datapane as dp
-
-html = """
-<html>
-    <style type='text/css'>
-        @keyframes example {
-            0%   {color: #EEE;}
-            25%  {color: #EC4899;}
-            50%  {color: #8B5CF6;}
-            100% {color: #EF4444;}
-        }
-        #container {
-            background: #1F2937;
-            padding: 10em;
-        }
-        h1 {
-            color:#eee;
-            animation-name: example;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-        }
-    </style>
-    <div id="container">
-      <h1> Welcome to my Report </h1>
-    </div>
-</html>
-"""
-
-dp.Report(
-  dp.HTML(
-    html
-  )
-).upload(name='docs_html', open=True)
-```
 
 {% tabs %}
 {% tab title="Python" %}
@@ -231,49 +225,39 @@ dp.Report(
   dp.HTML(
     html
   )
-).publish(name='docs_html', open=True)
-```
-
-```python
-import datapane as dp
-
-html = """
-<html>
-    <style type='text/css'>
-        @keyframes example {
-            0%   {color: #EEE;}
-            25%  {color: #EC4899;}
-            50%  {color: #8B5CF6;}
-            100% {color: #EF4444;}
-        }
-        #container {
-            background: #1F2937;
-            padding: 10em;
-        }
-        h1 {
-            color:#eee;
-            animation-name: example;
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-        }
-    </style>
-    <div id="container">
-      <h1> Welcome to my Report </h1>
-    </div>
-</html>
-"""
-
-dp.Report(
-  dp.HTML(
-    html
-  )
-).upload(name='docs_html', open=True)
+).upload(name='docs_html')
 ```
 {% endtab %}
 
 {% tab title="Web Editor" %}
+```markup
+```datapane
+block: HTML
+html: |
+  <html>
+      <style type='text/css'>
+          @keyframes example {
+              0%   {color: #EEE;}
+              25%  {color: #EC4899;}
+              50%  {color: #8B5CF6;}
+              100% {color: #EF4444;}
+          }
+          #container {
+              background: #1F2937;
+              padding: 10em;
+          }
+          h1 {
+              color:#eee;
+              animation-name: example;
+              animation-duration: 4s;
+              animation-iteration-count: infinite;
+          }
+      </style>
+      <div id="container">
+        <h1> Welcome to my Report </h1>
+      </div>
+  </html>
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
