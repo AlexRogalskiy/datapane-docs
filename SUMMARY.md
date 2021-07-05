@@ -8,7 +8,7 @@
 ## Reports
 
 * [What is a Report?](reports/tut-creating-a-report.md)
-* [Publishing and Sharing](reports/publishing-and-sharing/README.md)
+* [Uploading and Sharing](reports/publishing-and-sharing/README.md)
   * [Export to Medium](reports/publishing-and-sharing/export-to-medium.md)
 * [Building Reports](reports/blocks/README.md)
   * [Web Editor](reports/blocks/web-editor.md)

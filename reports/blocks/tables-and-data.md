@@ -22,7 +22,7 @@ df = pd.DataFrame({
 
 table = dp.Table(df)
 report = dp.Report(table)
-report.publish(name='sample_table')
+report.upload(name='sample_table')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-table/" %}
@@ -40,7 +40,7 @@ Table is the best option for displaying multidimensional DataFrames, as `DataTab
 The DataTable block takes a pandas DataFrame and renders an interactive, sortable, searchable table in your report, along with advanced analysis options such as [Sanddance](https://www.microsoft.com/en-us/research/project/sanddance/) and [Pandas Profiling](https://pandas-profiling.github.io/pandas-profiling/). It supports large datasets and viewers can also download the table from the website as a CSV or Excel file.
 
 {% hint style="info" %}
-DataTable's advanced features require publishing your report to a Datapane server and not currently supported on locally saved reports.
+DataTable works for reports uploaded to Datapane.com as well as locally saved reports.
 {% endhint %}
 
 ```python
@@ -55,7 +55,7 @@ df = pd.DataFrame({
 
 table = dp.DataTable(df)
 report = dp.Report(table)
-report.publish(name='sample_table')
+report.upload(name='sample_table')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-datatable/" %}

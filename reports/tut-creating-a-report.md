@@ -14,7 +14,7 @@ Datapane allows you to programmatically create reports from the objects in your 
 
 ## Creating a report
 
-Datapane provides a Python API that allows you to create, save, and publish reports comprised of a collection of data-centric blocks. 
+Datapane provides a Python API that allows you to create, save, and upload reports comprised of a collection of data-centric blocks. 
 
 {% hint style="info" %}
 Detailed API docs for Datapane Reports can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/).
@@ -53,7 +53,7 @@ If you send this HTML file to somebody \(or [publish it on _Datapane Public_](pu
 
 That report was pretty basic, but we can jazz it up by adding some plots and Markdown text. Unlike a traditional BI tool, Datapane does not rely on a proprietary visualization engine; instead, it natively supports Python visualization libraries such as [Altair](https://altair-viz.github.io/), [Plotly](https://plotly.com/python/), [Bokeh](https://bokeh.org/), and [Folium](https://python-visualization.github.io/folium/).
 
-We also support an advanced Table component, called `DataTable`, which allows sorting, filtering, and interactive analysis - however it requires publishing your report to a Datapane server to function.
+We also support an advanced Table component, called `DataTable`, which allows sorting, filtering, and interactive analysis - however it requires uploading your report to a Datapane server to function.
 
 Let's take the example above, and plot some data using the Python library Altair and add some text.
 
@@ -110,5 +110,5 @@ Datapane has special integration into Jupyter Notebooks: if you're iterating a r
 Some components, such as `DataTable` require the Datapane server to function and hence aren't currently supported in preview mode.
 {% endhint %}
 
-Next, we will explore how to publish and optionally share reports online, either on the free default _Datapane_ server, or on your own _Datapane Teams_ instance.
+Next, we will explore how to upload and optionally share reports online, either on the free default _Datapane_ server, or on your own _Datapane Teams_ instance.
 

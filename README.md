@@ -17,7 +17,7 @@ It provides a way to create reports programmatically from components that wrap a
 
 Datapane reports are flexible and can also contain pages, tabs, drop downs, and more. 
 
-Once created, reports can be published on the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualizations can be used interactively.
+Once created, reports can be uploaded to the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualizations can be used interactively.
 
 ```python
 import pandas as pd
@@ -55,20 +55,20 @@ API docs describing the Python API for building Datapane Reports, along with add
 
 {% page-ref page="reports/publishing-and-sharing/" %}
 
-If you want to share your report on the web, _Datapane Community_ provides a free API and hosted platform for publishing and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can publish your report, including datasets and plots, in a single Python command
+If you want to share your report on the web, _Datapane Community_ provides a free API and hosted platform for uploading and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can upload your report, including datasets and plots, in a single Python command:
 
 ```python
 dp.Report(
     dp.Plot(plot), 
     dp.DataTable(df)
-).publish(name='Vaccination Report', open=True)  # publish & open report in the browser
+).upload(name='Vaccination Report', open=True)  # publish & open report in the browser
 ```
 
-Once published, you can share your report with your community, class, or friends by sharing the link.
+Once uploaded, you can share your report with your community, class, or friends by sharing the link.
 
 ![A published report on Datapane - easy to share privately or publicly](.gitbook/assets/dp-screenshot.png)
 
-Alternatively, you can embed your published report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content, like this:
+Alternatively, you can embed your uploaded report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content, like this:
 
 {% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" caption="Live embedded Datapane report" %}
 

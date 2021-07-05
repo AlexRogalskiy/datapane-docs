@@ -34,7 +34,7 @@ $ pip3 install -U datapane
 
 ### Upgrading
 
-We upgrade datapane regularly to include new features, both in the client and on the hosted version. From time to time your client may no longer be compatible with the datapane server when publishing a report.. If this happens, you receive an error like the following,
+We upgrade datapane regularly to include new features, both in the client and on the hosted version. From time to time your client may no longer be compatible with the datapane server when uploading a report. If this happens, you will receive an error like the following: 
 
 ```text
 IncompatibleVersionError: Your client is out-of-date (version 0.9.2) and may be causing errors, "
@@ -112,7 +112,7 @@ As well as a local Python framework for generating reports, Datapane has a serve
 
 ### Datapane.com
 
-_Datapane_ is hosted on [datapane.com](https://datapane.com) and is available as a free server where you can publish reports. Reports can be public or private, and shared securely or with the entire community. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. 
+_Datapane_ is hosted on [datapane.com](https://datapane.com) and is available as a free server where you can upload reports. Reports are public and unlisted by default, and you can choose to publish them to the entire community. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. 
 
 Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated.
 

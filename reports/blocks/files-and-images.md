@@ -20,7 +20,7 @@ report = dp.Report(
    dp.File(file="./data.xlsx"),
    dp.File(file="./config.json")
 )
-report.publish(name='Files Sample')
+report.upload(name='Files Sample')
 ```
 
 ## Python objects
@@ -36,7 +36,7 @@ thisdict = {
   "year": 1964
 }
 
-dp.Report(dp.File(thisdict, is_json=True, name='thisdict')).publish(name='json')
+dp.Report(dp.File(thisdict, is_json=True, name='thisdict')).upload(name='json')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/json/" %}

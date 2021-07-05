@@ -48,7 +48,7 @@ alt_chart = alt.Chart(gap).mark_point(filled=True).encode(
     alt.Order('pop:Q', sort='descending'),
 ).add_selection(select_year).transform_filter(select_year)
 
-dp.Report(dp.Plot(alt_chart)).publish(name='time_interval')
+dp.Report(dp.Plot(alt_chart)).upload(name='time_interval')
 ```
 {% endtab %}
 {% endtabs %}
@@ -77,8 +77,8 @@ bokeh_chart.yaxis.axis_label = 'Petal Width'
 bokeh_chart.circle(flowers["petal_length"], flowers["petal_width"],
          color=colors, fill_alpha=0.2, size=10)
 
-# Publish the report
-dp.Report(dp.Plot(bokeh_chart)).publish(name='bokeh_plot')
+# Upload the report
+dp.Report(dp.Plot(bokeh_chart)).upload(name='bokeh_plot')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/bokeh-plot/" %}
@@ -98,7 +98,7 @@ from vega_datasets import data as vega_data
 gap = pd.read_json(vega_data.gapminder.url)
 # gap.plot.scatter()
 fig = gap.plot.scatter(x='life_expect', y='fertility')
-dp.Report(dp.Plot(fig)).publish(name="test_mpl")
+dp.Report(dp.Plot(fig)).upload(name="test_mpl")
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/test-mpl/" %}
@@ -124,7 +124,7 @@ plotly_chart = px.scatter(df.query("year==2007"), x="gdpPercap", y="lifeExp",
                  hover_name="country", log_x=True, size_max=60)
 plotly_chart.show()
 
-dp.Report(dp.Plot(plotly_chart)).publish(name='bubble')
+dp.Report(dp.Plot(plotly_chart)).upload(name='bubble')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/bubble/" %}
@@ -145,7 +145,7 @@ import datapane as dp
 
 m = folium.Map(location=[45.5236, -122.6750])
 
-dp.Report(dp.Plot(m)).publish(name='folium_map')
+dp.Report(dp.Plot(m)).upload(name='folium_map')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/folium-map/" %}

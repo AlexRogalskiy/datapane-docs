@@ -6,7 +6,7 @@ description: Embed your reports across the web and in internal tools
 
 ## Overview
 
-When you publish a report to a Datapane instance, you can embed it into other platforms, such as in these docs,
+When you upload a report to a Datapane instance, you can embed it into other platforms, such as in these docs,
 
 {% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" %}
 
@@ -54,7 +54,7 @@ Confluence will then display your report or visualization in the page:
 
 ### Personal / Internal / Company websites
 
-You can embed into your own website using an iframe. After publishing your report, and select **Embed** in the share menu on the report. This will provide a simple piece of HTML code that you can copy and paste into your webpage.
+You can embed into your own website using an iframe. After uploading your report, select **Embed** in the share menu on the report. This will provide a simple piece of HTML code that you can copy and paste into your webpage.
 
 Datapane Teams also provides the ability for private reports, which can be securely embedded in your own tools to make use of Datapane reports across your applications.
 
@@ -68,7 +68,7 @@ You can use this method on any website where you control the underlying HTML cod
 
 [Example ](https://medium.com/@leo_26134/embedding-with-datapane-366e60434b5f)
 
-To embed a report on Medium, publish it to Datapane, and copy and paste the full URL of your report into your Medium editor. Medium will automatically create the embed, and you will see the following. In edit mode, your embed will not be interactive - you must publish the post first to use interactive elements.
+To embed a report on Medium, upload it to Datapane, and copy and paste the full URL of your report into your Medium editor. Medium will automatically create the embed, and you will see the following. In edit mode, your embed will not be interactive - you must publish the post first to use interactive elements.
 
 ![Edit mode](../../.gitbook/assets/image%20%2893%29.png)
 

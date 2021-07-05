@@ -38,7 +38,7 @@ dp.Report(
         dp.Table(df),
         columns=2
     )
-).publish(name='covid_report', open=True)
+).upload(name='covid_report', open=True)
 ```
 {% endcode %}
 
@@ -86,7 +86,7 @@ dp.Report(
     title="Titanic Plot",
     blocks=["### Plot", points]
   )
-).publish(name='altair_example_pages')
+).upload(name='altair_example_pages')
 
 ```
 
@@ -112,7 +112,7 @@ dp.Report(
         dp.DataTable(titanic, label='Whole Dataset'),
         dp.Code(code, label='Source code')
     ])
-).publish(name='altair_example_select')
+).upload(name='altair_example_select')
 '''
 
 dp.Report(
@@ -123,7 +123,7 @@ dp.Report(
         dp.DataTable(titanic, label='Whole Dataset'),
         dp.Code(code, label='Source code')
     ])
-).publish(name='altair_example_select')
+).upload(name='altair_example_select')
 
 ```
 

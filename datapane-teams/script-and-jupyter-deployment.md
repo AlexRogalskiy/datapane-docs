@@ -26,7 +26,7 @@ You can trigger report generation through our API, which allows you to generate 
 
 ## Deploying a script
 
-If you have a local Python script or notebook which creates a report using Datapane's `Report.publish` method \(see [Creating a Report](../reports/tut-creating-a-report.md)\), you can deploy it to Datapane using the CLI. Let's take our COVID script from before deploy it using Datapane's CLI. The report we publish in this code will be returned to the user when they run our script using the Datapane web interface.
+If you have a local Python script or notebook which creates a report using Datapane's `Report.upload` method \(see [Creating a Report](../reports/tut-creating-a-report.md)\), you can deploy it to Datapane using the CLI. Let's take our COVID script from before deploy it using Datapane's CLI. The report we upload in this code will be returned to the user when they run our script using the Datapane web interface.
 
 {% hint style="info" %}
 We recommend creating only one report per script. As many can be created as needed; however, only the last one in each script will be tracked in the web interface.
@@ -51,7 +51,7 @@ plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
 dp.Report(
     dp.Plot(plot), 
     dp.Table(df)
-).publish(name='covid_report', open=True)
+).upload(name='covid_report', open=True)
 ```
 {% endcode %}
 

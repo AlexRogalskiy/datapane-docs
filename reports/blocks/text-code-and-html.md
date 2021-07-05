@@ -48,7 +48,7 @@ serieque, obsidis cupidine qualibet Exadius.
 - Eris pennis maneas quam
 """
 report = dp.Report(md)
-report.publish(name = 'markdown')
+report.upload(name = 'markdown')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/markdown/" %}
@@ -88,7 +88,7 @@ points = alt.Chart(titanic).mark_point().encode(
 
 dp.Report(
   dp.Text(md).format(plot=points)
-).publish(name='altair_example')
+).upload(name='altair_example')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/altair-example/?utm\_medium=embed&utm\_content=viewfull" %}
@@ -107,19 +107,21 @@ dp.Report(
 
 ## Formulas
 
-The formula block allows you easily to add [_LaTeX_](https://en.wikipedia.org/wiki/LaTeX)-formatted equations to your report, with an optional caption. A brief intro into _LaTeX_ formulas can be found [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+The formula block allows you easily to add [_LaTeX_](https://en.wikipedia.org/wiki/LaTeX)-formatted equations to your report, with an optional caption. A brief intro into _LaTeX_ formulas can be found [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics). 
 
 ```python
 import datapane as dp
 
 dp.Report(
   dp.Formula(r"\frac{1}{\sqrt{x^2 + 1}}", caption="")
-).publish("formula")
+).upload("formula")
 ```
 
 {% hint style="info" %}
 _LaTeX_ formulas commonly make use of special characters, hence prefix your formulas with `r` in Python as per the example above to make them raw strings, e.g. `r"x^2"`
 {% endhint %}
+
+Under the hood we use MathJAX to render the equations in the browser and not a full TeX engine. This means that some of your TeX input may not be rendered correctly on our system - read the [MathJAX documentation](http://docs.mathjax.org/en/latest/input/tex/differences.html) for more info. 
 
 ## Code
 
@@ -139,7 +141,7 @@ dp.Report(
       code=code,
       language="javascript"
    )
-).publish(name='code')
+).upload(name='code')
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/code/" %}
@@ -187,7 +189,7 @@ dp.Report(
   dp.HTML(
     html
   )
-).publish(name='docs_html', open=True)
+).upload(name='docs_html', open=True)
 ```
 
 {% embed url="https://datapane.com/u/datapane/reports/docs-html/" %}
