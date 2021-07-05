@@ -6,9 +6,7 @@ description: This section describes how to add custom colours and fonts to your 
 
 Datapane Teams allows you to define a global style block which will apply to all of your reports. In this block you can \(re\)define the default font, background colour and more. 
 
-{% hint style="info" %}
- This feature is a part of our Datapane [Growth and Enterprise](https://datapane.com/pricing/) plans - you may need to upgrade in order to use it.
-{% endhint %}
+![Example of a styled report](../.gitbook/assets/screenshot-2021-07-05-at-12.03.44.png)
 
 To use this feature, you'll need to have Admin Access. Head over to Settings -&gt; Visual Settings, and scroll to the Styling section, where you'll see a block of HTML/CSS which looks like this: 
 
