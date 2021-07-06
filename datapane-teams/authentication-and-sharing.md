@@ -20,14 +20,6 @@ This token also works across embeds, so you can [embed](../reports/embedding-rep
 For security reasons, access tokens are revoked after 48 hours, but this can be configured by your instance admin under Settings -&gt; Account -&gt; Secure signed link timeout. 
 {% endhint %}
 
-**Whitelabelling**
-
-Our Pro and Enterprise plans include a whitelabel feature for embeddings, which allows you to remove the Datapane branding on a report shared via access token.  
-
-To use it, simply append the URL parameter `?whitelabel=True` to the end of the report link. The URL path of the full report should look something like the following: 
-
-`https://yourcompany.datapane.net/u/username/reports/my-report-title/embed/?accesstoken=ABCD?whitelabel=True`
-
 ## Groups
 
 Your administrator can create user groups on your Datapane Server under Settings -&gt; Groups. This allows reports and apps to be restricted to specific groups of users -- for instance an external client, or a specific internal team. When a new user is added to your Datapane server, the administrator can add them to a specific user group.

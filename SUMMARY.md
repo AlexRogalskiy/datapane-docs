@@ -29,7 +29,7 @@
 * [Introduction](datapane-teams/introduction.md)
 * [Managing Users](datapane-teams/managing-users.md)
 * [Authentication and Sharing](datapane-teams/authentication-and-sharing.md)
-* [Styling](datapane-teams/styling.md)
+* [Styling and Whitelabelling](datapane-teams/styling.md)
 * [Apps: Script and Jupyter Deployment](datapane-teams/script-and-jupyter-deployment.md)
 * [Parameters and Forms](datapane-teams/tut-parameterising-a-script.md)
 * [Scheduled Report Runs](datapane-teams/scheduling.md)
