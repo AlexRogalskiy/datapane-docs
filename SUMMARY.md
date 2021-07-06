@@ -17,6 +17,7 @@
   * [Text, Formulas, Code, and HTML](reports/blocks/text-code-and-html.md)
   * [Layout, Pages, and Selects](reports/blocks/layout-pages-and-selects.md)
   * [Files and Images](reports/blocks/files-and-images.md)
+  * [Styling](reports/blocks/styling.md)
 * [Adding Source Code](reports/adding-source-code.md)
 * [Templates](reports/templates.md)
 * [Embedding Reports](reports/embedding-reports-in-social-platforms/README.md)
