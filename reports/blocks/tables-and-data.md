@@ -10,8 +10,6 @@ description: >-
 
 The Table component takes a pandas DataFrame and renders an HTML table in your report. 
 
-{% tabs %}
-{% tab title="Python" %}
 ```python
 import datapane as dp
 import pandas as pd
@@ -26,24 +24,6 @@ table = dp.Table(df)
 report = dp.Report(table)
 report.upload(name='sample_table')
 ```
-{% endtab %}
-
-{% tab title="Web Report" %}
-```python
-import pandas as pd
-import numpy as np
-
-df = pd.DataFrame({
-    'A': np.random.normal(-1, 1, 5),
-    'B': np.random.normal(1, 2, 5),
-})
-
-table = dp.Table(df)
-report = dp.TextReport(table)
-report.upload(name='sample_table')
-```
-{% endtab %}
-{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-table/" %}
 
@@ -63,8 +43,6 @@ The DataTable block takes a pandas DataFrame and renders an interactive, sortabl
 DataTable works for reports uploaded to Datapane.com as well as locally saved reports.
 {% endhint %}
 
-{% tabs %}
-{% tab title="Python" %}
 ```python
 import datapane as dp
 import pandas as pd
@@ -79,24 +57,6 @@ table = dp.DataTable(df)
 report = dp.Report(table)
 report.upload(name='sample_table')
 ```
-{% endtab %}
-
-{% tab title="Web Report" %}
-```python
-import pandas as pd
-import numpy as np
-
-df = pd.DataFrame({
-    'A': np.random.normal(-1, 1, 5000),
-    'B': np.random.normal(1, 2, 5000),
-})
-
-table = dp.DataTable(df)
-report = dp.TextReport(table)
-report.upload(name='sample_table')
-```
-{% endtab %}
-{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-datatable/" %}
 
@@ -134,7 +94,7 @@ dp.Report(
 ```
 {% endtab %}
 
-{% tab title="Web Report" %}
+{% tab title="Text Report" %}
     ```datapane
     block: Group
     columns: 2

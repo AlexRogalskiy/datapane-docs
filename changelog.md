@@ -12,6 +12,45 @@ description: >-
 * Free trials of Datapane Teams
 * Styling for reports \(background colour, fonts, spacing\)
 
+## 3 July 2021
+
+**Python Version 0.11.9**
+
+###  ✍️ Text Report Improvements
+
+![](.gitbook/assets/screenshot-2021-07-05-at-10.08.36.png)
+
+Now you can create [text reports](reports/blocks/text-reports.md) directly from the browser! This means it's a lot quicker to write long-form articles and reports. 
+
+We've also changed the syntax for blocks on the text editor - previously inserting a block like Formula would show up as follows:   
+
+`{{block: formula, name: asset-1, value: x^2 + y^2 = z^2}}`
+
+Now, we're using YAML syntax, which allows us to add multi-line content in code and formula blocks, and nest different blocks inside eachother. 
+
+```
+  - block: formula
+    name: asset-1
+    value: |
+      x^2 + y^2 = z^2
+```
+
+### 🎨 Report Styling & Whitelabelling on Teams
+
+Now you can add your own fonts, colours, custom headers and more on your Datapane Teams reports. This is great for organizations who have brand guidelines to follow, or want to experiment with their own defaults. 
+
+![Isn&apos;t this a beautifully-styled report? :P ](.gitbook/assets/screenshot-2021-07-05-at-12.03.44.png)
+
+Read the [docs](datapane-teams/styling.md) section for more. 
+
+### Improvements
+
+* Decreased report font size and changed from dark grey to black
+* Changed default padding on reports
+* Added fullscreen viewing options for embeds
+* Show a more informative error message when signing up with an expired email link
+* Changed default report visibility to Unlisted
+
 ## 6 June 2021
 
 **Python Version 0.11.8**

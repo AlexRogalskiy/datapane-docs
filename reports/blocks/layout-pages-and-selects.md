@@ -45,33 +45,8 @@ dp.Report(
 {% endcode %}
 {% endtab %}
 
-{% tab title="Web Report" %}
-```python
-# Python Code
-
-import pandas as pd
-import altair as alt
-import datapane as dp
-
-dataset = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv')
-df = dataset.groupby(['continent', 'date'])['new_cases_smoothed_per_million'].mean().reset_index()
-
-plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
-    x='date:T',
-    y=alt.Y('new_cases_smoothed_per_million:Q', stack=None),
-    color=alt.Color('continent:N', scale=alt.Scale(scheme='set1')),
-    tooltip='continent:N'
-).interactive().properties(width='container')
-
-dp.TextReport(
-    dp.Plot(plot), 
-    dp.DataTable(df)
-).upload(name='covid_report')
-
-
-# Markdown 
-
-"""
+{% tab title="Text Report" %}
+```text
 ```datapane
 block: Group
 columns: 2
@@ -81,7 +56,6 @@ blocks:
   - block: asset
     label: table-2
 ```
-"""
 ```
 {% endtab %}
 {% endtabs %}
@@ -137,34 +111,8 @@ dp.Report(
 ```
 {% endtab %}
 
-{% tab title="Web Report" %}
-```python
-# Python Code
-import altair as alt 
-import datapane as dp
-
-titanic = sns.load_dataset("titanic")
-
-points = alt.Chart(titanic).mark_point().encode(
-    x='age:Q',
-    color='class:N',
-    y='fare:Q',
-).interactive().properties(width='container')
-
-dp.Report(
-  dp.Page(
-    title="Titanic Dataset",
-    blocks=["### Dataset", titanic]
-  ),
-  dp.Page(
-    title="Titanic Plot",
-    blocks=["### Plot", points]
-  )
-).upload(name='altair_example_pages')
-
-# Markdown 
-
-"""
+{% tab title="Text Report" %}
+```text
 ```datapane
 block: page
 title: Titanic Dataset
@@ -199,6 +147,8 @@ In addition to top-level pages elements, you can include tabs and dropdown selec
 
 Datapane provides two select options on the `dp.Select` block: drop downs and tabs. Tabs are recommended if you have only a few choices and dropdowns are recommended for selects which have more than five options.
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import seaborn as sns
 import altair as alt 
@@ -227,6 +177,33 @@ dp.Report(
 ).upload(name='altair_example_select')
 
 ```
+{% endtab %}
+
+{% tab title="Text Report" %}
+    ```datapane
+    block: Select
+    blocks: 
+      - block: asset
+        name: table-1
+        label: Data Description
+      - block: asset
+        name: table-2
+        label: Whole Dataset
+      - block: code
+        label: Source code
+        value: |
+            titanic = sns.load_dataset("titanic")
+
+            dp.Report(
+                dp.Select(blocks=[
+                    dp.Table(titanic.describe(), label='Data Description'),
+                    dp.DataTable(titanic, label='Whole Dataset'),
+                    dp.Code(code, label='Source code')
+                ])
+            ).upload(name='altair_example_select')   
+    ```    
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/altair-example-select/?utm\_medium=embed&utm\_content=viewfull" %}
 

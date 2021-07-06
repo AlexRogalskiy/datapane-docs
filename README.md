@@ -64,11 +64,20 @@ dp.Report(
 ).upload(name='Vaccination Report', open=True)  # publish & open report in the browser
 ```
 
+Alternatively, you can create a [Text Report](reports/blocks/text-reports.md) on Datapane.com where you can combine long-form text and  assets uploaded from your Python environment, like so: 
+
+```python
+dp.TextReport(
+    dp.Plot(plot), 
+    dp.DataTable(df)
+).upload(id='AAAAAA') # Assumes you have an existing report with id AAAAAA 
+```
+
 Once uploaded, you can share your report with your community, class, or friends by sharing the link.
 
 ![A published report on Datapane - easy to share privately or publicly](.gitbook/assets/dp-screenshot.png)
 
-Alternatively, you can embed your uploaded report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content, like this:
+In addition, you can embed your uploaded report into social platforms, like Reddit and Medium, where your readers can explore your data and plots interactively without leaving your content, like this:
 
 {% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" caption="Live embedded Datapane report" %}
 

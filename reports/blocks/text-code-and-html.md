@@ -8,7 +8,7 @@ description: >-
 
 ## Text
 
-The best way to include long-form text is to use the [Web Editor,](web-editor.md) which allows you to add and edit text directly in the browser, and preview the result. 
+The best way to include long-form text is to use the [Web Editor,](text-reports.md) which allows you to add and edit text directly in the browser, and preview the result. 
 
 However, you can still add text from within your Python script, as follows: 
 
