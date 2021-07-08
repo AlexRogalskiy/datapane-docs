@@ -1,4 +1,4 @@
-# Files and Images
+# Files, Images and Embeds
 
 ## Files and Images
 
@@ -41,5 +41,28 @@ dp.Report(dp.File(thisdict, is_json=True, name='thisdict')).upload(name='json')
 
 {% embed url="https://datapane.com/u/datapane/reports/json/" %}
 
+## Embeds
 
+The Embed block lets you embed content from other platforms e.g. Youtube, Spotify. This is how you'd use it: 
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import datapane as dp
+
+dp.Report(
+    dp.Embed(url='https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+).upload(name='Embex example')
+```
+{% endtab %}
+
+{% tab title="Text Report" %}
+    ```datapane
+    block: embed
+    url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    ```
+{% endtab %}
+{% endtabs %}
+
+You don't need to use this block for simple embeds on TextReports like GIFS. For those, just use Markdown syntax i.e. `![](https://my-example-gif.gif)`
 

@@ -24,6 +24,8 @@ dp.Report(dp.Text("__My awesome markdown__"))
 
 To include multi-line text and formatting the words, use triple-quoted string, e.g. `"""Some words"""`
 
+{% tabs %}
+{% tab title="Python" %}
 ```python
 import datapane as dp
 
@@ -54,6 +56,15 @@ serieque, obsidis cupidine qualibet Exadius.
 report = dp.Report(md)
 report.upload(name = 'markdown')
 ```
+{% endtab %}
+
+{% tab title="Text Report" %}
+    ```datapane
+    block: text
+    text: hello world
+    ```
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/markdown/" %}
 
