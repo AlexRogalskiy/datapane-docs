@@ -66,3 +66,7 @@ dp.Report(
 
 You don't need to use this block for simple embeds on TextReports like GIFS. For those, just use Markdown syntax i.e. `![](https://my-example-gif.gif)`
 
+{% hint style="info" %}
+If you're trying to embed an `iframe,` you can wrap it in an [HTML block](text-code-and-html.md#html). 
+{% endhint %}
+
