@@ -45,10 +45,6 @@
   * [Variables](datapane-teams/reference/variables.md)
   * [Blobs](datapane-teams/reference/blobs.md)
 
-## On-Premise Deployment <a id="deployment"></a>
-
-* [Introduction](deployment/introduction.md)
-
 ## Resources
 
 * [API Docs](https://datapane.github.io/datapane/)
