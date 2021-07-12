@@ -6,12 +6,6 @@ description: >-
 
 # Product Updates
 
-## 🚀 Coming Soon
-
-* Create a Markdown Report directly from the web interface
-* Free trials of Datapane Teams
-* Styling for reports \(background colour, fonts, spacing\)
-
 ## 3 July 2021
 
 **Python Version 0.11.9**
