@@ -25,10 +25,6 @@ To use this feature, you'll need to have Admin Access. Head over to Settings -&g
 
 You can edit this block to add your brand colours, load in a custom font or even add a logo. Any assets that you add will be displayed in a bar at the top of your report, and these changes will apply retroactively to your old reports. 
 
-{% hint style="info" %}
-Styling works differently on Community vs Teams - 
-{% endhint %}
-
 ### **Adding a custom font**
 
 If you have a brand font, you can load it in as follows: 
