@@ -48,7 +48,7 @@ Aside from Markdown, you can enrich your report by adding different blocks.
 
 **Datapane Blocks**
 
-You can insert these blocks directly into your report from the editor, and edit the content inside the blocks \(parameters follow [YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)\). For example, clicking on the Formula block will insert the following snippet into the web editor:
+You can insert these blocks directly into your report from the editor, and edit the content inside the blocks \(parameters follow [YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) so make sure you get your indentations correct\). For example, clicking on the Formula block will insert the following snippet into the web editor:
 
 ```text
 ```datapane
