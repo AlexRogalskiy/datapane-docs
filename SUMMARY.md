@@ -38,6 +38,7 @@
 * [Data, Model, and Asset Storage](datapane-teams/data-model-and-asset-storage.md)
 * [Comparisons](datapane-teams/comparisons.md)
 * [Support Policy](datapane-teams/support-policy.md)
+* [Deployment and Hosting](datapane-teams/deployment-and-hosting.md)
 * [Teams Usage Reference](datapane-teams/reference/README.md)
   * [Scripts](datapane-teams/reference/scripts/README.md)
     * [Configuration](datapane-teams/reference/scripts/datapane-yaml.md)
