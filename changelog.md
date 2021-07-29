@@ -1,10 +1,38 @@
----
-description: >-
-  See what exciting new features are coming up in roadmap, plus what we've built
-  so far. We welcome your ideas and requests on our Github page!
----
-
 # Product Updates
+
+Check out our [Product Roadmap](https://roadmap.prodpad.com/d37d9988-f04a-11eb-9032-0abbec7104a5) to see what upcoming features we are considering, and submit [new ideas here](https://portal.prodpad.com/21dc45da-edf7-11eb-96ba-06df22ffaf6f)! 
+
+## 27 July 2021
+
+**Python Version 0.11.11**
+
+### 🖥 **Add Code**
+
+Datapane now allows you to upload a Jupyter Notebook to your report so that others can reproduce and build on your work. If you're using the Community version, it's a great way to build an audience and show the world your Python skills. For Datapane Teams, it helps to democratize data science, provide reproducibility, and empower your team to create their own reports. 
+
+### **🎨 Report Styling**
+
+We've had a ton of feedback from users wanting to create more custom reports. Now you can set a custom background color, font, and text alignment. Try it on the Report Settings page or through our Python library.
+
+### **🔧 Fixes**
+
+* Fixed the error `DataTable: No objects to concatenate`
+* Fixed DataTable numeric column sorting
+* Fixed a broken docs link for TextReports
+* Removed some unnecessary extra padding on report embeds
+
+### **✨ Improvements**
+
+* Removed signup requirement for 'Request Workspace' form
+* Added Google, Github OAuth options on signup page
+* Added &gt;, &gt;=, &lt;, &lt;= DataTable column filter options
+* Added a Copy button to the Code block for viewers
+* Added a Text icon to TextReports for multi-column layouts
+* Added 'Previous Page', 'Next Page' to reports with multiple pages
+* Improved report comment email notification
+* Doubled the allowed document size
+* Doubled the limit on `dp.Select` option names
+* Support both Jinja v2 and v3
 
 ## 3 July 2021
 

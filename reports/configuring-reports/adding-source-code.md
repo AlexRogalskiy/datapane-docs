@@ -6,6 +6,10 @@ Ever checked out a cool report and wondered how it is built? Datapane now allows
 
 If you're using the Community version, it's a great way to build an audience. For Datapane Teams, it helps to democratize data and empower your team to build their own reports. 
 
+{% hint style="info" %}
+This feature is available for Datapane version 0.11.11 or later
+{% endhint %}
+
 ### Adding Source code
 
 In the report settings page, attach a static file \(we only support `.ipynb` at present\) or a link to a repo: 

@@ -2,6 +2,10 @@
 
 Keen to mix up your report? You can change the font, background colour and text alignment to match your brand guidelines or personal aesthetics. There are two methods for doing this: via the API, and via the Report Settings page. 
 
+{% hint style="info" %}
+This feature is available for Datapane version 0.11.11 or later
+{% endhint %}
+
 ## Python API
 
 When you create a report, you can ****override the default styling properties by passing in a `ReportFormatting` object as follows: 
