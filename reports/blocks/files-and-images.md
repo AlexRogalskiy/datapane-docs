@@ -16,12 +16,16 @@ In the following example, Datapane will attempt to display images and JSON in yo
 import datapane as dp
 
 report = dp.Report(
-   dp.File(file="./image.jpeg"),
+   dp.File(file="./image.jpeg", caption = "Example image from Unsplash"),
    dp.File(file="./data.xlsx"),
    dp.File(file="./config.json")
 )
 report.upload(name='Files Sample')
 ```
+
+{% hint style="info" %}
+Try adding a `name` and a `caption` to your images to make them stand out and add attribution. 
+{% endhint %}
 
 ## Python objects
 
@@ -60,11 +64,12 @@ dp.Report(
     ```datapane
     block: embed
     url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    caption: Youtube video
     ```
 {% endtab %}
 {% endtabs %}
 
-You don't need to use this block for simple embeds on TextReports like GIFS. For those, just use Markdown syntax i.e. `![](https://my-example-gif.gif)`
+You don't need to use this block for simple embeds on TextReports like GIFs. For those, just use Markdown syntax i.e. `![](https://my-example-gif.gif)`
 
 {% hint style="info" %}
 If you're trying to embed an `iframe,` you can wrap it in an [HTML block](text-code-and-html.md#html). 

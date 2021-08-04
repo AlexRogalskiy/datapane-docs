@@ -18,13 +18,13 @@ Here are a few of the most common examples and use-cases you will encounter.
 
 ## Querying by Block name
 
-The easiest way to embed only a single block is to assign a `name` to your block when creating it, e.g. `dp.Plot(plot, name="my-plot")`, and then use a simple query of the following form to select it in your embed URL,
+The easiest way to embed only a single block is to assign a `name` to your block when creating it, e.g. `dp.Plot(plot, name="my-plot")`, and then add a query param to your embed URL as follows: 
 
 ```text
 https://datapane.com/u/user/reports/report-name?block_name=my-plot
 ```
 
-where `?block_name=my-plot` is a URL param that will extract any report block with the `name` of `my-plot`.
+where `?block_name=my-plot` is a URL param that will extract any report block with the `name` of `my-plot`. Note that your block name cannot contain spaces. 
 
 For instance, the plot in [this report](https://datapane.com/leo/reports/continent_covid_cases) has a name of `block-7`, and so the following query will select just that plot: [https://datapane.com/leo/reports/continent\_covid\_cases/?block\_name=block-7](https://datapane.com/leo/reports/continent_covid_cases/?block_name=block-7)
 

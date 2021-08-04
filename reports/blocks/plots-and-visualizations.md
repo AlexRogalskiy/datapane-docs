@@ -12,6 +12,12 @@ The `dp.Plot` block takes a plot object from one of the supported Python visuali
 Datapane will automatically wrap your visualization or plot in a `dp.Plot` block if you pass it into your report directly.
 {% endhint %}
 
+You can also pass in  `name` and `caption` parameters into `dp.Plot` to style your plots, like this: 
+
+```python
+dp.Plot(fig, name="fig1", caption="Chart showing average life expectancy")
+```
+
 Datapane currently supports the following libraries:
 
 | Library | Site / Docs |

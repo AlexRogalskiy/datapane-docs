@@ -53,6 +53,8 @@ report.upload(..., formatting=dp.ReportFormatting(width=dp.ReportWidth.NARROW))
 
 {% page-ref page="files-and-images.md" %}
 
+Except for Page blocks, every block can be nested inside a layout block, meaning you can build arbitrarily complex reports. In addition, most blocks take optional `name` and `caption` parameters and display those to your viewers. 
+
 ## Default Block Handling
 
 As well as explicitly specifying your block type \(for instance, by using `dp.Plot`\), Datapane will try and choose the best block for your object if you pass it in directly, for instance as follows:
