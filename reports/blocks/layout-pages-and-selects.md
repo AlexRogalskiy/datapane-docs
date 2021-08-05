@@ -79,7 +79,7 @@ Reports on Datapane can have multiple pages, which are presented to users as tab
 To add a page, use the `dp.Page` block at the top-level of your report, and give it a title with the `title` parameter.
 
 {% hint style="info" %}
-Pages cannot be nested, and can only exist at the root level of your `dp.Report` object
+Pages cannot be nested, and can only exist at the root level of your `dp.Report` object. If you're using pages, all other blocks must be contained inside a Page block. 
 {% endhint %}
 
 {% tabs %}
