@@ -7,7 +7,7 @@ The File block allows you to include files in your reports. If the file is in a 
 To include a file, you can use `dp.File` and pass the path.
 
 ```python
-dp.File(filepath='./image.jpeg')
+dp.File(file='./image.jpeg')
 ```
 
 In the following example, Datapane will attempt to display images and JSON in your report for viewers and allow users to download them.
@@ -16,9 +16,9 @@ In the following example, Datapane will attempt to display images and JSON in yo
 import datapane as dp
 
 report = dp.Report(
-   dp.File(filepath="./image.jpeg", caption = "Example image from Unsplash"),
-   dp.File(filepath="./data.xlsx"),
-   dp.File(filepath="./config.json")
+   dp.File(file="./image.jpeg", caption = "Example image from Unsplash"),
+   dp.File(file="./data.xlsx"),
+   dp.File(file="./config.json")
 )
 report.upload(name='Files Sample')
 ```
