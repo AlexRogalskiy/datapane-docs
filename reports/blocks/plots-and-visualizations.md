@@ -28,6 +28,8 @@ Datapane currently supports the following libraries:
 | Plotly | [https://plotly.com/python/](https://plotly.com/python/) |
 | Folium | [https://python-visualization.github.io/folium/](https://python-visualization.github.io/folium/) |
 
+If you're using another visualization library e.g. Pyvis for networks, try saving your chart as a local HTML file and wrapping that in a [dp.HTML](text-code-and-html.md#html) block. 
+
 ## Altair
 
 [Altair](https://altair-viz.github.io/) is a declarative statistical visualization library for Python, based on [Vega](http://vega.github.io/vega) and [Vega-Lite](http://vega.github.io/vega-lite). Altair’s API is simple, friendly and consistent and built on top of the powerful [Vega-Lite](http://vega.github.io/vega-lite) visualization grammar. This elegant simplicity produces beautiful and effective visualizations with a minimal amount of code.
