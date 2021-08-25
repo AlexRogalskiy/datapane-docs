@@ -27,7 +27,6 @@ Unsure what to build with Datapane? Try creating a report from one of our templa
 * Report URLs no longer break when you change the title
 * Report thumbnails are now shown correctly when the first asset is an image
 * Added a product feedback form in left sidebar of Datapane Home
-* Added page navigation links to the bottom of a report
 * Per-report styling is now available on Enterprise
 * Medium exports no longer require Publishing a report
 * Streamlined `Home` and `Gallery` pages
