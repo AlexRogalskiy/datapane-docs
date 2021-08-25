@@ -3,7 +3,7 @@
 * [Welcome to Datapane](README.md)
 * [Getting Started](tut-getting-started.md)
 * [Community and Support](community-and-support.md)
-* [Product Updates](changelog.md)
+* [Changelog](changelog.md)
 
 ## Reports
 

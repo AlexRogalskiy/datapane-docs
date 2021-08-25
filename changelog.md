@@ -1,6 +1,37 @@
-# Product Updates
+# Changelog
 
 Check out our [Product Roadmap](https://roadmap.prodpad.com/d37d9988-f04a-11eb-9032-0abbec7104a5) to see what upcoming features we are considering, and submit [new ideas here](https://portal.prodpad.com/21dc45da-edf7-11eb-96ba-06df22ffaf6f)! 
+
+## 25 August 2021
+
+**Python Version 0.12.0**
+
+### 🔨**Templates**
+
+Unsure what to build with Datapane? Try creating a report from one of our templates!
+
+* **Python Reports** - view and download source code to run on your own machine
+* **Text Reports** - duplicate an existing report & assets, edit markdown, download and run code on your machine
+
+### **🧮 DataTable Improvements**
+
+* Fixed encoding issue mismatch between `dp.Table` and `dp.DataTable`. 
+* Allow column autosizing on double-click
+* You can now input uppercase strings in column filters 
+* `ID` column is no longer added by default, instead row numbers will appear to the left of the first column
+* `Select` and `Date` column types added
+
+### **🐛 Other bug fixes & improvements**
+
+* `dp.Select` blocks are now searchable, so they work better with many options
+* Report URLs no longer break when you change the title
+* Report thumbnails are now shown correctly when the first asset is an image
+* Added a product feedback form in left sidebar of Datapane Home
+* Added page navigation links to the bottom of a report
+* Per-report styling is now available on Enterprise
+* Medium exports no longer require Publishing a report
+* Streamlined `Home` and `Gallery` pages
+* If you have added code to a report, it will now show in the embed view
 
 ## 27 July 2021
 
