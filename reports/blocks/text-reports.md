@@ -4,16 +4,32 @@ description: How to use our web editor to create long-form reports
 
 # Text Reports
 
-‌One of the challenges with building reports in Python is working with long chunks of text. To make this easier, we've introduced a Markdown editor on the web, where you can build rich long-form reports for articles or tutorials and seamlessly include interactive elements from your Python environment.
+‌One of the challenges with building reports in Python is working with long chunks of text. To make this easier, we've introduced a web-based Report editor where you can build rich long-form reports for articles or tutorials and seamlessly include interactive elements from your Python environment.
 
 ![](../../.gitbook/assets/screenshot-2021-07-05-at-10.08.36.png)
 
-To get started, create a report through the [Home](https://datapane.com/home/) or [My Reports](https://datapane.com/my-reports/) pages, and choose the 'Create Markdown Report' option.
+To get started, choose a template through the [Home](https://datapane.com/home/) page. 
 
-You can also create a TextReport directly in Python by running the following code \(just make sure to pass in real objects for `df` and `plot`\): 
+You can also create a TextReport directly in Python by running the following code: 
 
 ```python
-dp.TextReport(df=df, plot=plot).upload(id="REPORT_ID")
+import datapane as dp
+import altair as alt
+from vega_datasets import data
+
+source = data.cars()
+
+plot1 = alt.Chart(source).mark_circle(size=60).encode(
+    x='Horsepower', 
+    y='Miles_per_Gallon', 
+    color='Origin',
+    tooltip=['Name', 'Origin', 'Horsepower', 'Miles_per_Gallon']
+).interactive()
+
+dp.TextReport(
+  dp.Plot(plot1),
+  dp.DataTable(source)
+).upload(name="Hello world")
 ```
 
 {% hint style="info" %}
@@ -44,11 +60,7 @@ This will generate a report which looks as follows:
 
 ## **Inserting blocks**
 
-Aside from Markdown, you can enrich your report by adding different blocks. 
-
-**Datapane Blocks**
-
-You can insert these blocks directly into your report from the editor, and edit the content inside the blocks \(parameters follow [YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) so make sure you get your indentations correct\). For example, clicking on the Formula block will insert the following snippet into the web editor:
+Aside from Markdown, you can enrich your report by adding special blocks,  For example, clicking on the Formula block will insert the following snippet into the web editor:
 
 ```text
 ```datapane
@@ -61,13 +73,13 @@ When you click 'Preview', you'll see this display as follows:
 
 ![](../../.gitbook/assets/screenshot-2021-07-05-at-17.07.07.png)
 
-For more information check out the pages about the block types:
+You can edit the content inside the blocks, just make sure the parameters follow [YAML syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) \(indentations can be tricky\). For more information check out the pages about the block types:
 
 {% page-ref page="text-code-and-html.md" %}
 
 {% page-ref page="layout-pages-and-selects.md" %}
 
-**Python** **assets**
+### Uploading Blocks from Python
 
 You can push up assets to your existing report from Python by passing in the report `id` to a TextReport object, like this: 
 
@@ -76,12 +88,6 @@ dp.TextReport(df=df, plot=plot).upload(id="REPORT_ID")
 ```
 
 ‌\(You'll need to replace `df` and `plot` with your own assets\). 
-
-As mentioned above, you can also create a Markdown Report directly from your Python script or notebook. In that case, you'll need to use the `name` parameter instead, as follows: 
-
-```python
-dp.TextReport(df=df, plot=plot).upload(name="My First Report")
-```
 
 {% hint style="warning" %}
 Make sure to save your report before viewing or sharing it, otherwise you might lose your work!
