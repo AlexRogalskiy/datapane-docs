@@ -143,9 +143,14 @@ label: plot-2
 
 ## Tabs and Selects
 
-In addition to top-level pages elements, you can include tabs and dropdown selects inside your reports. This allows users to switch between multiple blocks interactively and allows the creation of very interactive reports. It is also useful for providing background context to another block - for instance, to add source code to a plot or a dataset.
+In addition to top-level pages elements, you can include tabs and dropdown selects inside your reports using the `dp.Select` block. This allows users to switch between multiple blocks interactively and can even function as a basic filter. It is also useful for providing background context to another block - for instance, to add source code to a plot or a dataset.
 
-Datapane provides two select options on the `dp.Select` block: drop downs and tabs. Tabs are the default if you have fewer than five options, otherwise dropdowns will be used. To override the default, pass in the parameter `type = dp.Select.DROPDOWN` or `type=dp.Select.TABS` to your `dp.Select` block. 
+The `dp.Select` block has two modes: 
+
+* **Tabs** are used for less than 5 options - you can override this default by passing in the parameter `type=dp.Select.TABS`
+* **Drop downs** are used for 5 or more options - you can override this default by passing in the parameter`type = dp.Select.DROPDOWN`. In addition, a search bar will appear if the block contains more than 10 options. 
+
+To set the option names, make sure each block contained inside your `dp.Select` has a `label` - see example:
 
 {% tabs %}
 {% tab title="Python" %}
