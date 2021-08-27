@@ -21,11 +21,12 @@ dp.Report(
         bg_color="#EEE", 
         text_alignment=dp.TextAlignment.RIGHT,
         font=dp.FontChoice.MONOSPACE
+        width=dp.ReportWidth.MEDIUM
     )
 )
 ```
 
-There are currently five styling properties supported: 
+There are currently six styling properties supported: 
 
 **1.Light Prose**
 
@@ -41,11 +42,15 @@ Controls the background colour of the page.  Can be any of the [140 CSS colour n
 
 **4. Text Alignment**
 
-Controls how the text is aligned - can be any of `JUSTIFY`, `LEFT`, `RIGHT`, `CENTER`. 
+Controls how the text is aligned - can be any of `JUSTIFY`, `LEFT` \(default\),   `RIGHT`, `CENTER`. 
 
 **5. Font**
 
 Controls the font for the prose text - can be any of `DEFAULT`, `SANS`, `SERIF`, `MONOSPACE`. 
+
+6. **Width** 
+
+Controls the horizontal width of the report - can be any of `NARROW`, `MEDIUM` \(default\), `WIDE`. 
 
 ## Report Settings Page
 
