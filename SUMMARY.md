@@ -12,7 +12,7 @@
   * [Export to Medium](reports/publishing-and-sharing/export-to-medium.md)
 * [Building Reports](reports/blocks/README.md)
   * [Text Reports](reports/blocks/text-reports.md)
-  * [Tables and Data](reports/blocks/tables-and-data.md)
+  * [Tables, Data and Big Numbers](reports/blocks/tables-and-data.md)
   * [Plots and Visualizations](reports/blocks/plots-and-visualizations.md)
   * [Text, Formulas, Code, and HTML](reports/blocks/text-code-and-html.md)
   * [Layout, Pages, and Selects](reports/blocks/layout-pages-and-selects.md)
