@@ -6,7 +6,16 @@ Check out our [Product Roadmap](https://roadmap.prodpad.com/d37d9988-f04a-11eb-9
 
 **Python Version 0.12.0**
 
-### 🔨**Templates**
+{% hint style="warning" %}
+This is a breaking change, and you may need to update your reports with the following syntax to ensure they continue working: 
+{% endhint %}
+
+* `report.publish` is now called `report.upload`
+* `dp.Markdown` replaced with `dp.Text` for text content
+* `dp.Page` must use `title` parameter to set the page title, not `label`
+* Objects like `scripts`, `blobs` and `variables` now keep their original name instead of being converted to lowercase slugs, for instance `my variable` won't be renamed to`my_variable`. You may need to update any scripts to use the new names \(or re-add variables / blobs with the older names\). 
+
+### 🔨 **Templates**
 
 Unsure what to build with Datapane? Try creating a report from one of our templates!
 
