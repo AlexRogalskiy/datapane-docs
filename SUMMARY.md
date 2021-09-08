@@ -21,8 +21,8 @@
   * [Styling](reports/configuring-reports/styling.md)
   * [Adding Source Code](reports/configuring-reports/adding-source-code.md)
 * [Templates](reports/templates.md)
-* [Embedding Reports](reports/embedding-reports-in-social-platforms/README.md)
-  * [Advanced Embedding](reports/embedding-reports-in-social-platforms/share-or-embed-individual-component-of-a-multi-component-report.md)
+* [Embedding Reports](reports/embedding-reports/README.md)
+  * [Advanced Embedding](reports/embedding-reports/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
 ## Datapane Teams

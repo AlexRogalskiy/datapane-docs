@@ -14,7 +14,7 @@ If you want to share a private report with an outside party - such as a client o
 
 ![](../.gitbook/assets/image%20%28119%29.png)
 
-This token also works across embeds, so you can [embed](../reports/embedding-reports-in-social-platforms/#business-tooling) a private report into platforms such as Confluence or your own webpage. 
+This token also works across embeds, so you can [embed](../reports/embedding-reports/#business-tooling) a private report into platforms such as Confluence or your own webpage. 
 
 {% hint style="info" %}
 For security reasons, access tokens are revoked after 48 hours, but this can be configured by your instance admin under Settings -&gt; Account -&gt; Secure signed link timeout. 
