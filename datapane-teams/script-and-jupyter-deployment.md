@@ -59,10 +59,9 @@ To deploy it, use Datapane's CLI.
 
 ```bash
 datapane script deploy --script=simple_script.py --name=covid_script
-Uploaded simple_script.py to https://acme.datapane.net/leo/scripts/covid_script/
 ```
 
-This makes your script available on your private instance, where you can share it with other users. If you send them your script, they are able to generate the report from the previous example dynamically by hitting the **Run** button.
+This makes your script available on your private instance, where you can share it with other users. If you send them your script, they are able to generate the report from the previous example dynamically by hitting the Run button.
 
 ![](../.gitbook/assets/image%20%28105%29.png)
 
@@ -74,16 +73,18 @@ Every time the script is run, it pulls new COVID data and generates a fresh repo
 
 In the previous example, we are deploying a single script and providing the name and file location through command-line arguments. This works well for simple scripts, but scripts often need other configuration, such as [parameter definitions](tut-parameterising-a-script.md), other files or folders to deploy, and Python or OS requirements.
 
-Datapane allows you to provide a configuration file called `datapane.yaml`. When you run `deploy`, Datapane looks for this file automatically. Before we continue, create a project structure with the `script init` command, which creates a sample `datapane.yaml` and a simple script.
+Datapane allows you to provide a configuration file called `datapane.yaml`. When you run `deploy`, Datapane looks for this file automatically. Before we continue, create a new folder and then run the `datapane script init` command inside it: 
 
 ```bash
- ~/C/d/d/my-new-proj> datapane script init
-Created script 'my-new-proj', edit as needed and upload
- ~/C/d/d/my-new-proj> ls
-datapane.yaml dp-script.py
+datapane script init
+ls
 ```
 
-We already have a script from our previous example, so we can delete the sample `dp-script.py` and copy in our own. Because we're replacing the default script, we should specify the filename of our script in `datapane.yaml` using the `script` field. Whilst we are there, we can also choose a name.
+This will create a `datapane.yaml` file and a sample script. 
+
+![](../.gitbook/assets/screenshot-2021-09-17-at-14.31.13.png)
+
+We already have a script from our previous example, so we can delete the sample `dp_script.py` and copy in our own. Because we're replacing the default script, we should specify the filename of our script in `datapane.yaml` using the `script` field. Whilst we are there, we can also choose a name.
 
 {% code title="datapane.yaml" %}
 ```yaml
