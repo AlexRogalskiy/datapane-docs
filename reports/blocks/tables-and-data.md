@@ -60,7 +60,7 @@ report.upload(name='sample_table')
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-datatable/" %}
 
-**Run Query**
+#### **Running Queries on DataTable**
 
 You can run SQL queries on your datatable if you need more advanced filtering & calculations. In the previous example, if we wanted to show only the rows which had a value A &gt; 0.5, we would write the following \(note that `$tbl` is the builtin table name and cannot be changed\):   
 
