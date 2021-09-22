@@ -1,6 +1,50 @@
-# Changelog
+# ✨ Changelog
 
 Check out our [Product Roadmap](https://roadmap.prodpad.com/d37d9988-f04a-11eb-9032-0abbec7104a5) to see what upcoming features we are considering, and submit [new ideas here](https://portal.prodpad.com/21dc45da-edf7-11eb-96ba-06df22ffaf6f)! 
+
+## 21 September 2021
+
+**Python Version 0.12.1**
+
+### **🚀API-first Signup**
+
+In keeping with our vision of being a developer-friendly API-first product, we're launching a new onboarding experience for local client users. After installing Datapane, you'll be prompted to run the following command: 
+
+```text
+datapane hello
+```
+
+This will run some Python code to generate a local HTML report which demonstrates how the product works. After viewing that local report, you can run the following command to create an account and get an API key for hosting reports: 
+
+```text
+datapane signup
+```
+
+### **💬 Report Notifications** 
+
+You can now add email recipients to a report, who will receive a screenshot of the first page of the report plus a link back to the hosted report. 
+
+![](.gitbook/assets/email_recipients.png)
+
+To use this feature, go to the Report Settings page -&gt; Email recipients, and enter your recipient email addresses. Click 'Send Email Now' to send the emails \(note that users will need to have an account to view the full report\).
+
+{% hint style="info" %}
+**Datapane Teams** users can choose to notify their email recipients every time the report is updated. This is great for any kind of regular/automated reporting workflow. 
+{% endhint %}
+
+**🌱Studio plan with Private Report Sharing**
+
+We've renamed our Community account to Studio and added 5 private reports per account. This is great for sharing confidential data and testing Datapane out in your organization. 
+
+![](.gitbook/assets/screenshot-2021-09-22-at-09.13.21.png)
+
+To use this feature, go to Report Settings and change your visibility to Private. You can then add email recipients in the 'Email Recipients' section or 'Share' page.  To learn more, see our section on [Uploading and Sharing](reports/publishing-and-sharing/). 
+
+**🐛Bug fixes & improvements**
+
+* Improved `dp.Table` default styling
+* Added a SQL query runner to `dp.DataTable` for more advanced filtering and calculation logic
+* Fixed a bug where thumbnails weren't being generated for new reports
 
 ## 25 August 2021
 

@@ -37,7 +37,7 @@ Table is the best option for displaying multidimensional DataFrames, as `DataTab
 
 ## DataTable
 
-The DataTable block takes a pandas DataFrame and renders an interactive, sortable, searchable table in your report, along with advanced analysis options such as [Sanddance](https://www.microsoft.com/en-us/research/project/sanddance/) and [Pandas Profiling](https://pandas-profiling.github.io/pandas-profiling/). It supports large datasets and viewers can also download the table from the website as a CSV or Excel file.
+The DataTable block takes a pandas DataFrame and renders an interactive, sortable, searchable table in your report, along with advanced analysis options such as exploring data through [SandDance](https://www.microsoft.com/en-us/research/project/sanddance/). It supports large datasets and viewers can also download the table from the website as a CSV or Excel file.
 
 {% hint style="info" %}
 DataTable works for reports uploaded to Datapane.com as well as locally saved reports.
@@ -60,9 +60,20 @@ report.upload(name='sample_table')
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-datatable/" %}
 
+**Run Query**
+
+You can run SQL queries on your datatable if you need more advanced filtering & calculations. In the previous example, if we wanted to show only the rows which had a value A &gt; 0.5, we would write the following \(note that `$tbl` is the builtin table name and cannot be changed\):   
+
+```sql
+SELECT * FROM $tbl
+WHERE A > 0.5
+```
+
 ## Python Dictionary & JSON 
 
 To include Python objects and JSON, we recommend using the `File` block.
+
+
 
 {% page-ref page="files-and-images.md" %}
 

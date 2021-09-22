@@ -4,6 +4,8 @@
 
 Ever checked out a cool report and wondered how it is built? Datapane now allows you to add your source code to a report so that others can reproduce and build on it. 
 
+![](../../.gitbook/assets/screenshot-2021-09-16-at-15.22.06.png)
+
 If you're using the Community version, it's a great way to build an audience. For Datapane Teams, it helps to democratize data and empower your team to build their own reports. 
 
 {% hint style="info" %}
@@ -36,7 +38,9 @@ dp.Report(
 {% endtab %}
 {% endtabs %}
 
-When a viewer sees your report, they will see an option to 'View Source Code'. Clicking on that option will show them the rendered notebook code.
+When a viewer sees your report, they will see an option to 'View code'. Clicking on that option will show them the rendered notebook code - try it with the embedded report below! 
+
+{% embed url="https://datapane.com/u/johnmicahreid/reports/0kzZz2k/hello-world/" %}
 
 {% hint style="warning" %}
 Adding source code does not auto-refresh or execute your report. If you are interested in building a report that updates regularly, check out our section on [Automation](../automation-with-github-actions.md). 

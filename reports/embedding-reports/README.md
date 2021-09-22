@@ -2,7 +2,7 @@
 description: Embed your reports across the web and in internal tools
 ---
 
-# Embedding Reports
+# Embedding
 
 ## Overview
 
@@ -27,6 +27,10 @@ We support the following third-party sites, and any others that are compatible w
 | Medium | oEmbed |
 | Salesforce | HTML iframe |
 | Personal / Internal sites and pages | HTML iframe |
+
+{% hint style="info" %}
+Embeds work great with the [Adding Source Code](../configuring-reports/adding-source-code.md) feature, so viewers can see your source code to understand how you built your report.
+{% endhint %}
 
 ## Business Integrations
 

@@ -3,13 +3,11 @@
 * [Welcome to Datapane](README.md)
 * [Getting Started](tut-getting-started.md)
 * [Community and Support](community-and-support.md)
-* [Changelog](changelog.md)
+* [✨ Changelog](changelog.md)
 
 ## Reports
 
 * [What is a Report?](reports/tut-creating-a-report.md)
-* [Uploading and Sharing](reports/publishing-and-sharing/README.md)
-  * [Export to Medium](reports/publishing-and-sharing/export-to-medium.md)
 * [Building Reports](reports/blocks/README.md)
   * [Text Reports](reports/blocks/text-reports.md)
   * [Tables, Data and Big Numbers](reports/blocks/tables-and-data.md)
@@ -17,12 +15,14 @@
   * [Text, Formulas, Code, and HTML](reports/blocks/text-code-and-html.md)
   * [Layout, Pages, and Selects](reports/blocks/layout-pages-and-selects.md)
   * [Files, Images and Embeds](reports/blocks/files-and-images.md)
+* [Uploading and Sharing](reports/publishing-and-sharing/README.md)
+  * [Report Notifications](reports/publishing-and-sharing/report-notifications.md)
+  * [Export to Medium](reports/publishing-and-sharing/export-to-medium.md)
 * [Configuring Reports](reports/configuring-reports/README.md)
   * [Styling](reports/configuring-reports/styling.md)
   * [Adding Source Code](reports/configuring-reports/adding-source-code.md)
-* [Templates](reports/templates.md)
-* [Embedding Reports](reports/embedding-reports/README.md)
-  * [Advanced Embedding](reports/embedding-reports/share-or-embed-individual-component-of-a-multi-component-report.md)
+* [Embedding](reports/embedding-reports/README.md)
+  * [Embed specific blocks](reports/embedding-reports/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
 ## Datapane Teams

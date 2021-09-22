@@ -47,7 +47,7 @@ $ python3 simple_report.py
 
 {% embed url="https://datapane.com/u/datapane/reports/docs-report-2/" %}
 
-If you send this HTML file to somebody \(or [publish it on _Datapane Public_](publishing-and-sharing/#publish-your-report)\), they will be able to view your dataset, sort and filter it, and download it as a CSV.
+If you send this HTML file to somebody \(or [upload it on _Datapane Studio_](publishing-and-sharing/#publish-your-report)\), they will be able to view your dataset, sort and filter it, and download it as a CSV.
 
 ## A richer report
 
@@ -98,17 +98,5 @@ When this python script is run, we get the following report.
 
 {% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" caption="A richer Datapane report" %}
 
-## Previewing your report
-
-As described above, we can easily view our report in a browser. However, there are other ways to view and share our report whilst developing it.
-
-Datapane has special integration into Jupyter Notebooks: if you're iterating a report, instead of having to open a new window to view it, you can preview a report directly from inside your notebook by calling `report.preview()`, embedding it live into your notebook.
-
-![Previewing a report from Jupyter](../.gitbook/assets/docs-1.png)
-
-{% hint style="info" %}
-Some components, such as `DataTable` require the Datapane server to function and hence aren't currently supported in preview mode.
-{% endhint %}
-
-Next, we will explore how to upload and optionally share reports online, either on the free default _Datapane_ server, or on your own _Datapane Teams_ instance.
+Next, we will explore the blocks that make up a report, followed by how to upload and optionally share reports online. 
 

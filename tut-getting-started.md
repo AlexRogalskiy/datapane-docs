@@ -18,6 +18,7 @@ If you use `conda`, you can install it with:
 
 ```bash
 $ conda install -c conda-forge "datapane>=0.10.0"
+$ datapane hello
 ```
 
 {% hint style="warning" %}
@@ -30,6 +31,7 @@ If you use `pip`, you can install it with:
 
 ```bash
 $ pip3 install -U datapane
+$ datapane hello
 ```
 
 ### Upgrading
@@ -110,11 +112,17 @@ If you are still having problems installing, please ask on the [Datapane Forum](
 
 As well as a local Python framework for generating reports, Datapane has a server component which is accessed through the CLI and Python library and requires an authentication token. You can authenticate through either the CLI or the Python library, and all future requests from both the CLI and Python library will automatically be authenticated.
 
-### Datapane.com
+### Datapane Studio
 
-_Datapane_ is hosted on [datapane.com](https://datapane.com) and is available as a free server where you can upload reports. Reports are public and unlisted by default, and you can choose to publish them to the entire community. The API and CLI are configured to use this server by default. After you [sign up for a free account](https://datapane.com/accounts/signup/), you will see a code snippet which includes a login command, `dp.login`, with your token. 
+_Datapane Studio_ is hosted on [datapane.com](https://datapane.com) and is available as a free server where you can upload reports. The API and CLI are configured to use this server by default. You can sign up for a free account via [our website](https://datapane.com/accounts/signup) or via CLI: 
 
-Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated.
+```text
+$ datapane signup
+```
+
+After this, you'll see a code snippet with `datapane login` and your token. 
+
+Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated. Reports are unlisted by default, and you can share them publicly or privately \(see [Uploading and Sharing](reports/publishing-and-sharing/)\).
 
 {% hint style="info" %}
 If you need your API key in the future, you can find it in [your settings page](https://datapane.com/settings).
@@ -138,7 +146,7 @@ Enter your API Key: [paste your API key here]
 
 ### Datapane Teams
 
-_Datapane Teams_ provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net` , using the credentials provided to you by your admin.
+\_\_[_Datapane Teams_](https://datapane.com/teams/) provides private hosted servers and supports on-premise instances for organizations. In such a case, log in to your instance, for instance `https://your-company.datapane.net` , using the credentials provided to you by your admin.
 
 Similar to when using the free _Datapane_ instance, your home page will indicate your API key and you will be able to authenticate by passing in your API key to the login command. You will need to pass in the full URL of your server \(including the `https://`\) to the login command as follows.
 

@@ -2,7 +2,7 @@
 description: Learn how to embed subsets of your reports via queries
 ---
 
-# Advanced Embedding
+# Embed specific blocks
 
 {% hint style="warning" %}
 This feature is in beta and may change

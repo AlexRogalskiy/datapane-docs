@@ -6,18 +6,18 @@ description: High-level introduction to Datapane
 
 ## What is Datapane?
 
-Datapane is for people who analyze data in Python and need a way to share their results.
+Datapane is a Python library for building interactive reports for your end-users in seconds. 
 
-It provides a way to create reports programmatically from components that wrap around the common objects in analyses, such as:
+Import our library into your existing script/notebook and build reports programmatically by wrapping components such as:
 
 * [Pandas DataFrames](https://pandas.pydata.org/)
 * Plots from Python visualization libraries such as [Bokeh](https://bokeh.org/), [Altair](https://altair-viz.github.io/), [Plotly](https://plotly.com/python/), and [Folium](https://python-visualization.github.io/folium/quickstart.html)
 * Markdown and text
 * General files, such as images, PDFs, JSON data, etc.
 
-Datapane reports are flexible and can also contain pages, tabs, drop downs, and more. 
+Datapane reports are flexible and can also contain pages, tabs, drop downs, and more. Once created, reports can be uploaded to the web, dynamically generated in the cloud, or embedded into your own application, where your viewers can interact with your data and visualizations. 
 
-Once created, reports can be uploaded to the web, dynamically generated in the cloud, or embedded into your own application, where data can be explored, and visualizations can be used interactively.
+Here's an example of a basic Datapane report exported to a HTML document: 
 
 ```python
 import pandas as pd
@@ -51,26 +51,17 @@ These docs include tutorials and guides on how to use Datapane effectively.
 API docs describing the Python API for building Datapane Reports, along with additional information on the Datapane Teams API can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/)
 {% endhint %}
 
-## Datapane Community
+## Datapane Studio
 
 {% page-ref page="reports/publishing-and-sharing/" %}
 
-If you want to share your report on the web, _Datapane Community_ provides a free API and hosted platform for uploading and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can upload your report, including datasets and plots, in a single Python command:
+If you want to share your report on the web, _Datapane Studio_ provides a free API and hosted platform for uploading and sharing reports. If you have already [created an account and are signed in](tut-getting-started.md#authentication), you can upload your report in a single Python command:
 
 ```python
 dp.Report(
     dp.Plot(plot), 
     dp.DataTable(df)
-).upload(name='Vaccination Report', open=True)  # publish & open report in the browser
-```
-
-Alternatively, you can create a [Text Report](reports/blocks/text-reports.md) on Datapane.com where you can combine long-form text and  assets uploaded from your Python environment, like so: 
-
-```python
-dp.TextReport(
-    dp.Plot(plot), 
-    dp.DataTable(df)
-).upload(id='AAAAAA') # Assumes you have an existing report with id AAAAAA 
+).upload(name='Vaccination Report', open=True)  # upload & open report in the browser
 ```
 
 Once uploaded, you can share your report with your community, class, or friends by sharing the link.
@@ -81,6 +72,10 @@ In addition, you can embed your uploaded report into social platforms, like Redd
 
 {% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" caption="Live embedded Datapane report" %}
 
+{% hint style="info" %}
+Your free Studio account comes with an unlimited number of public reports, and 5 private reports so you can test it within your organization. If you need more private reports, [contact us](mailto:support@datapane.com) or try our Enterprise product \(read on\)
+{% endhint %}
+
 ## Datapane Teams
 
 If your team is using the Python data stack for analysis and visualization, but is still relying on a drag-and-drop BI tool to share results, _Datapane Teams_ provides an API-first way to share reports directly from Python. This enables data teams to use the tools they are gifted at to drive business decisions, and allows stakeholders to self-serve on what the data team is building, instead of going through a backlog.
@@ -90,7 +85,7 @@ In addition to providing secure, authenticated report sharing, _Datapane Teams_ 
 Other features include:
 
 * APIs to utilise blobs and secrets in your scripts
-* Whitelabel embedding of Datapane reports in your own products
-* Groups and secure-sharing features to control access and share reports with external clients
+* [Whitelabel embedding](datapane-teams/styling.md) of Datapane reports in your own products
+* [Groups and secure-sharing features](datapane-teams/authentication-and-sharing.md) to control access and share reports with external clients
 * and [many more](https://datapane.com/enterprise/)
 
