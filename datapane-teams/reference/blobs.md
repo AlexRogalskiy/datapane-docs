@@ -18,6 +18,10 @@ It is often necessary to make use of non-code assets such as datasets, models, o
 
 For these use-cases, Datapane provides a Blob API which allows you to upload files from any Python or CLI environment, and access them inside your scripts or through the CLI. See the Python [API Docs](https://datapane.github.io/datapane/teams.html#datapane.client.api.teams.Blob) for more information on using Blobs.
 
+{% hint style="info" %}
+This feature is only available on Datapane Teams plans at present
+{% endhint %}
+
 ## **CLI**
 
 ### `upload`
@@ -96,17 +100,7 @@ b = blob.download_file("~/my_dataset.csv")
 b = blob.download_obj()
 ```
 
-## Share your Blob
-
-You may wish to share your blob to others such as your teammates so that your team could work on the same dataframe, object, or file. 
-
-To enable sharing with the public,  set `visibility=PUBLIC` when uploading your dataframe, file, or object to a blob. 
-
-```python
-dp.Blob.upload_df(df, name='myblob')
-```
-
-When others want to access your blob, they could simply retrieve by specifying the name of the blob and  your account in `owner`
+If your teammates within your private workspace want to access your blob, they need to specifying the name of the blob and your username in `owner`
 
 ```python
 blob = dp.Blob.get(name='myblob', owner='khuyentran')
