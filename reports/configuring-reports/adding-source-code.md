@@ -38,7 +38,7 @@ dp.Report(
 {% endtab %}
 {% endtabs %}
 
-When a viewer sees your report, they will see an option to 'View code'. Clicking on that option will show them the rendered notebook code - try it with the embedded report below! 
+\(Hint: you can also include the name of the file you are currently working in!\). When a viewer sees your report, they will see an option to 'View code'. Clicking on that option will show them the rendered notebook code - try it with the embedded report below! 
 
 {% embed url="https://datapane.com/u/johnmicahreid/reports/0kzZz2k/hello-world/" %}
 
