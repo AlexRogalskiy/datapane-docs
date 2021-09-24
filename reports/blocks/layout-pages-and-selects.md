@@ -62,7 +62,37 @@ blocks:
 
 ![](../../.gitbook/assets/image%20%28104%29.png)
 
-You can also find an example [here](https://datapane.com/u/leo/reports/dp-docs-layout/).
+If you're generating your plots programmatically or have a lot of plots, you can pass them into the Group block as a list, using the `blocks` parameter. We can rewrite the previous example as follows : 
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import pandas as pd
+import altair as alt
+import datapane as dp
+
+dataset = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv')
+df = dataset.groupby(['continent', 'date'])['new_cases_smoothed_per_million'].mean().reset_index()
+
+plot = alt.Chart(df).mark_area(opacity=0.4, stroke='black').encode(
+    x='date:T',
+    y=alt.Y('new_cases_smoothed_per_million:Q', stack=None),
+    color=alt.Color('continent:N', scale=alt.Scale(scheme='set1')),
+    tooltip='continent:N'
+).interactive().properties(width='container')
+
+# You could also generate these in a loop/function
+my_plots = [dp.Plot(plot), dp.DataTable(df)]
+
+dp.Report(
+    dp.Group(
+        blocks=my_plots,
+        columns=2
+    )
+).upload(name='covid_report', open=True)
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 As `Group`components are components themselves, they are composable, and you can create more custom layers of nested blocks, for instance nesting 2 rows in the left column of a 2 column layout
