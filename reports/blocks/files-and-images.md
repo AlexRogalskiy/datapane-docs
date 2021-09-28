@@ -16,7 +16,7 @@ In the following example, Datapane will attempt to display images and JSON in yo
 import datapane as dp
 
 report = dp.Report(
-   dp.File(file="./image.jpeg", caption = "Example image from Unsplash"),
+   dp.File(file="./image.jpeg"),
    dp.File(file="./data.xlsx"),
    dp.File(file="./config.json")
 )
@@ -24,7 +24,7 @@ report.upload(name='Files Sample')
 ```
 
 {% hint style="info" %}
-Try adding a `name` and a `caption` to your images to make them stand out and add attribution. 
+`caption` support for images is coming soon! 
 {% endhint %}
 
 ## Python objects

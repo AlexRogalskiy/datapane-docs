@@ -120,9 +120,7 @@ _Datapane Studio_ is hosted on [datapane.com](https://datapane.com) and is avail
 $ datapane signup
 ```
 
-After this, you'll see a code snippet with `datapane login` and your token. 
-
-Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated. Reports are unlisted by default, and you can share them publicly or privately \(see [Uploading and Sharing](reports/publishing-and-sharing/)\).
+After this, you'll see a code snippet with `datapane login` and your token. Login by running this code snippet or Python library using this key. All future requests from both the CLI and Python library will automatically be authenticated. Reports are unlisted by default, and you can share them publicly or privately \(see [Uploading and Sharing](reports/publishing-and-sharing/)\).
 
 {% hint style="info" %}
 If you need your API key in the future, you can find it in [your settings page](https://datapane.com/settings).
