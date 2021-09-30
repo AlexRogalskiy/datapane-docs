@@ -24,7 +24,6 @@ Detailed API docs for Datapane Reports can be found at [https://datapane.github.
 
 For instance, Datapane provides a `Table` block that takes a pandas `DataFrame`. We can create a `Table` block by passing a `DataFrame` into it, and create a `Report` with that single block in it as follows:
 
-{% code title="simple\_report.py" %}
 ```python
 import pandas as pd
 import datapane as dp
@@ -37,7 +36,6 @@ report = dp.Report(
 )
 report.save(path='report.html', open=True)
 ```
-{% endcode %}
 
 As seen above, `Reports` can be saved to local `HTML` files. Copying this code into a new script and running it will generate the report. 
 

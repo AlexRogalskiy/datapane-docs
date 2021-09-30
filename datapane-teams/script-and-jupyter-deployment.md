@@ -58,7 +58,7 @@ dp.Report(
 To deploy it, use Datapane's CLI.
 
 ```bash
-datapane script deploy --script=simple_script.py --name=covid_script
+$ datapane script deploy --script=simple_script.py --name=covid_script
 ```
 
 This makes your script available on your private instance, where you can share it with other users. If you send them your script, they are able to generate the report from the previous example dynamically by hitting the Run button.
@@ -76,8 +76,8 @@ In the previous example, we are deploying a single script and providing the name
 Datapane allows you to provide a configuration file called `datapane.yaml`. When you run `deploy`, Datapane looks for this file automatically. Before we continue, create a new folder and then run the `datapane script init` command inside it: 
 
 ```bash
-datapane script init
-ls
+$ datapane script init
+$ ls
 ```
 
 This will create a `datapane.yaml` file and a sample script. 

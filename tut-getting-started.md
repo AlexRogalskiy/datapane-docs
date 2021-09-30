@@ -16,10 +16,21 @@ Instructions for installing Python can be found at [https://wiki.python.org/moin
 
 If you use `conda`, you can install it with:
 
+{% tabs %}
+{% tab title="Bash" %}
 ```bash
 $ conda install -c conda-forge "datapane>=0.10.0"
 $ datapane hello
 ```
+{% endtab %}
+
+{% tab title="Jupyter" %}
+```
+!conda install -c conda-forge "datapane>=0.10.0"
+!datapane hello
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="warning" %}
 Conda sometimes installs an older version of datapane. If you receive errors, please check the version and try running `conda update --all` or try in a new conda environment \(`conda create -n ENV` and `conda activate ENV)`
@@ -29,10 +40,21 @@ Conda sometimes installs an older version of datapane. If you receive errors, pl
 
 If you use `pip`, you can install it with:
 
+{% tabs %}
+{% tab title="Bash" %}
 ```bash
 $ pip3 install -U datapane
 $ datapane hello
 ```
+{% endtab %}
+
+{% tab title="Jupyter" %}
+```
+!pip3 install -U datapane
+!datapane hello
+```
+{% endtab %}
+{% endtabs %}
 
 ### Upgrading
 
@@ -47,10 +69,10 @@ In such an event, please upgrade your datapane cli via `pip` or `conda` and try 
 
 **Upgrading via pip**
 
-If you installed datapane via pip, run the following command, adding `--user` flag if needed
+If you installed datapane via pip, run the following command:
 
 ```text
-pip install -U datapane OR pip install --user -U datapane
+$ pip install -U datapane
 ```
 
 **Upgrading via conda**
@@ -58,7 +80,7 @@ pip install -U datapane OR pip install --user -U datapane
 If you installed `datapane` via conda, run the following command, adding the `--all` flag if needed. As above, if you receive errors please try using a fresh conda environment.
 
 ```text
-conda update datapane OR conda update --all
+$ conda update datapane OR conda update --all
 ```
 
 ### Windows Tips and Troubleshooting
@@ -72,7 +94,7 @@ We generally recommend installing via `conda` over `pip` on Windows as it's easi
 If you need to install Python first, the latest versions of Windows 10 can install Python for you automatically - running `python` from the command-prompt will take you to the Windows Store where you can download an [official version](https://docs.python.org/3/using/windows.html#the-microsoft-store-package). We also strongly recommend using a 64-bit rather than the 32-bit version of Python, you can check this by running the command `python -c "import struct; print(struct.calcsize('P')*8, 'bit')"` from the Command Prompt.
 
 ```text
-python -c "import struct; print(struct.calcsize('P')*8, 'bit')"
+$ python -c "import struct; print(struct.calcsize('P')*8, 'bit')"
 ```
 
 Also note that on Windows, you can run the `datapane` command either by running `datapane` or `datapane.exe` on the command-line.
@@ -110,7 +132,7 @@ If you are still having problems installing, please ask on the [Datapane Forum](
 
 ## Authentication
 
-As well as a local Python framework for generating reports, Datapane has a server component which is accessed through the CLI and Python library and requires an authentication token. You can authenticate through either the CLI or the Python library, and all future requests from both the CLI and Python library will automatically be authenticated.
+Datapane has a server component which you can access through the CLI and Python library and requires an authentication token. You can authenticate through either the CLI or the Python library, and all future requests will automatically be authenticated.
 
 ### Datapane Studio
 
@@ -137,7 +159,6 @@ dp.login(token=your_token)
 {% tab title="CLI" %}
 ```text
 $ datapane login 
-Enter your API Key: [paste your API key here]
 ```
 {% endtab %}
 {% endtabs %}
