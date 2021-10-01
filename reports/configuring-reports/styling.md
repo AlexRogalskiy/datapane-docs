@@ -50,7 +50,7 @@ Controls the font for the prose text - can be any of `DEFAULT`, `SANS`, `SERIF`,
 
 6. **Width** 
 
-Controls the horizontal width of the report - can be any of `NARROW`, `MEDIUM` \(default\), `WIDE`. 
+Controls the horizontal width of the report - can be any of `NARROW`, `MEDIUM` \(default\), `FULL`. 
 
 ## Report Settings Page
 
