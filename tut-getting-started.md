@@ -20,14 +20,14 @@ If you use `conda`, you can install it with:
 {% tab title="Bash" %}
 ```bash
 $ conda install -c conda-forge "datapane>=0.10.0"
-$ datapane hello
+$ datapane hello-world
 ```
 {% endtab %}
 
 {% tab title="Jupyter" %}
 ```
 !conda install -c conda-forge "datapane>=0.10.0"
-!datapane hello
+!datapane hello-world
 ```
 {% endtab %}
 {% endtabs %}
@@ -44,14 +44,14 @@ If you use `pip`, you can install it with:
 {% tab title="Bash" %}
 ```bash
 $ pip3 install -U datapane
-$ datapane hello
+$ datapane hello-world
 ```
 {% endtab %}
 
 {% tab title="Jupyter" %}
 ```
 !pip3 install -U datapane
-!datapane hello
+!datapane hello-world
 ```
 {% endtab %}
 {% endtabs %}
