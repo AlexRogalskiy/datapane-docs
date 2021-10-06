@@ -126,7 +126,7 @@ from bokeh.plotting import figure, show
 from bokeh.models import CustomJS 
 from bokeh.layouts import row,column
 
-df = pd.read_csv("/Users/johnreid/PycharmProjects/pythonProject/internal-reports/Docs/covid_19_clean_complete.csv")
+df = pd.read_csv("./covid_19_clean_complete.csv")
 country_list = list(df['Country/Region'].unique())
 
 df['Date'] = pd.to_datetime(df['Date'])
@@ -168,14 +168,14 @@ This is how the plot will look like:
 
 ### Matplotlib/Seaborn
 
-If you want to use a non-interactive library like Matplotlib or Seaborn, you can use the `dp.Select`  block to mimic the interactive filter ability, like this:
+If you want to use a non-interactive library like Matplotlib or Seaborn, you can use the `dp.Select`  block to mimic the interactive filter ability, like this: 
 
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
 import datapane as dp
 
-df = pd.read_csv("/Users/johnreid/PycharmProjects/pythonProject/internal-reports/Docs/covid_19_clean_complete.csv")
+df = pd.read_csv("./covid_19_clean_complete.csv")
 country_list = list(df['Country/Region'].unique())[:10]
 
 plt.figure(figsize=(10, 5), dpi=300)
@@ -188,7 +188,7 @@ report = dp.Report(
 ).upload(name="Matplotlib example")
 ```
 
-This is how it will look like: 
+Note that this is extremely memory-intensive for Matplotlib, so we've restricted it to 10 plots. This is how it will look like: 
 
 {% embed url="https://datapane.com/u/shoumik/reports/R70pzg7/dropdown-with-datapane/embed/" %}
 
@@ -261,7 +261,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 
-df = pd.read_csv("/Users/johnreid/PycharmProjects/pythonProject/internal-reports/Docs/covid_19_clean_complete.csv")
+df = pd.read_csv("./covid_19_clean_complete.csv")
 
 fig = go.Figure()
 
