@@ -1,4 +1,4 @@
-# Interactive filters for timeseries
+# Plotting interactive timeseries with filters
 
 ## Introduction <a id="02b9"></a>
 
