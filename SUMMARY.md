@@ -25,6 +25,10 @@
   * [Embed specific blocks](reports/embedding-reports/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
+## Tutorials & Guides
+
+* [Accessing data in Python](tutorials-and-guides/getting-data-into-python.md)
+
 ## Datapane Teams
 
 * [Introduction](datapane-teams/introduction.md)
