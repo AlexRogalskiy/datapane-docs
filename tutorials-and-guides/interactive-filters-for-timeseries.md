@@ -1,10 +1,6 @@
-# Plotting interactive timeseries with filters
+# Adding interactive filters
 
 ## Introduction <a id="02b9"></a>
-
-From identifying trends to understanding ’cause and effect’ behaviors, timeseries analysis is one of the most popular ways of understanding user behaviour. 
-
-We often start with plotting plotting one categorical variable changing over time. But often you’ll need to show multiple categorical variables together e.g. a list of stocks for market data, or regions/locations for sales data. In such cases, you can either show all your series in the same plot or create a separate plot for each series. However, these options are hard to make sense of and take up a lot of space. 
 
 This guide will show you how to build interactive timeseries plots using advanced visualization libraries like Plotly, Bokeh, and Altair. We'll focus on these two components: 
 
