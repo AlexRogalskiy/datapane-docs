@@ -158,7 +158,7 @@ layout=column(menu, bokeh_p) # creating the layout
 show(layout)
 ```
 
-This is how the plot will look like: 
+This is how the plot will look: 
 
 ![](https://miro.medium.com/max/1400/1*Y_Jgo484IKhjIbxVoIiDbA.png)
 
@@ -184,19 +184,19 @@ report = dp.Report(
 ).upload(name="Matplotlib example")
 ```
 
-Note that this is extremely memory-intensive for Matplotlib, so we've restricted it to 10 plots. This is how it will look like: 
+In this example, we've restricted it to 10 plots. 
 
 {% embed url="https://datapane.com/u/shoumik/reports/R70pzg7/dropdown-with-datapane/embed/" %}
 
 ## Date range slider <a id="63d5"></a>
 
-Another interactive component that comes really handy while working with timeseries plots is a date range slider or a slider in general.
+Another interactive component that comes really handy \(especially while working with timeseries plots\) is a date range slider.
 
 Since most of the timeseries plots have a date range in the X-axis, a slider allows you to dynamically change the period and view only a section of the plot to understand the trends for that particular period.
 
 ### Altair
 
-With Altair, similar to Plotly, you can use the generic slider to use as a Date Range Slider. However, keep in mind that Vega considers the timeseries data in milliseconds and it is very difficult to show the date information in the slider. It works if you have yearly data but if the data is broken into days and months, it is tricky to make it work.
+With Altair, similar to Plotly, you can use the generic slider to use as a Date Range Slider. However, keep in mind that Vega considers the timeseries data in milliseconds and it is  difficult to show the date information in the slider. It works if you have yearly data - but if the data is broken into days and months, it is tricky to make it work.
 
 ```python
 import altair as alt
@@ -242,7 +242,7 @@ alt_plot = alt.Chart(df).mark_line().encode(
 alt_plot
 ```
 
-This is how it will look like: 
+This is how it will look: 
 
 {% embed url="https://datapane.com/u/shoumik/reports/VkGyaV3/dropdown-and-slider-with-altair/embed/" %}
 
