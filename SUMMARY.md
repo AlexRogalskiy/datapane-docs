@@ -28,7 +28,7 @@
 ## Tutorials & Guides
 
 * [Accessing data in Python](tutorials-and-guides/getting-data-into-python.md)
-* [Adding interactive filters](tutorials-and-guides/interactive-filters-for-timeseries.md)
+* [Adding interactive filters](tutorials-and-guides/interactive-filters.md)
 
 ## Datapane Teams
 
