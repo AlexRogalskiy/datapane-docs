@@ -13,7 +13,7 @@ The only major requirement is installing the `pandas` library:
 
 {% tabs %}
 {% tab title="Terminal" %}
-```text
+```
 $ pip install pandas
 OR
 $ conda install pandas
@@ -55,7 +55,7 @@ After importing the data, it's helpful to run `df.info()` to understand how your
 ![](../.gitbook/assets/screenshot-2021-10-04-at-16.30.23.png)
 
 {% hint style="info" %}
-If you keep getting  a`FileNotFoundError`, try renaming your filename to replace spaces with underscores e.g. "Financial Sample.xlsx" becomes "Financial\_Sample.xlsx". 
+If you keep getting  a`FileNotFoundError`, try renaming your filename to replace spaces with underscores e.g. "Financial Sample.xlsx" becomes "Financial_Sample.xlsx". 
 {% endhint %}
 
 ### **Excel files**
@@ -149,7 +149,7 @@ Running that code gives us the following output:
 
 ## Databases
 
-Most organizations store their business-critical data in a [relational database](https://en.wikipedia.org/wiki/Relational_database) like Postgres or MySQL, and you’ll need to know **S**tructured **Q**uery **L**anguage \(SQL\) to access or update the data stored there.
+Most organizations store their business-critical data in a [relational database](https://en.wikipedia.org/wiki/Relational_database) like Postgres or MySQL, and you’ll need to know **S**tructured **Q**uery **L**anguage (SQL) to access or update the data stored there.
 
 ### SQLite
 
@@ -183,7 +183,7 @@ password = "SecurePas$1"
 ```
 {% endcode %}
 
-and then import it into your Python script as follows \(you'll also need the `psychopg2` library\): 
+and then import it into your Python script as follows (you'll also need the `psychopg2` library): 
 
 ```python
 import psycopg2
@@ -202,13 +202,42 @@ conn = psycopg2.connect(
 Make sure to keep your `config.py` file safe and don't upload it elsewhere - you can add it to your `.gitignore` to make sure it doesn't get included in git commits. 
 {% endhint %}
 
+### **SQLAlchemy**
+
+If you want a more ‘pythonic’ way of querying a database, try the [SQLAlchemy](https://www.sqlalchemy.org) library, which is an Object-Relational-Mapper. It’s typically used for applications so that developers don’t have to write pure SQL to update their database, but you can use it for querying data too!
+
+Here’s an example using the same Chinook music store database: 
+
+```python
+import sqlalchemy as db
+import pandas as pd
+
+engine = db.create_engine('sqlite:///chinook.db')
+connection = engine.connect()
+metadata = db.MetaData()
+invoice = db.Table('invoice', metadata, autoload=True, autoload_with=engine)
+
+# Get the first 10 invoices from the USA
+query = (
+    db.select([invoice])    
+    .filter_by(billing_country = 'USA')
+    .limit(10)        
+    )
+    
+df = pd.read_sql(query, engine)
+```
+
+In this code we connect to the database, then set up some tables & metadata in SQLAlchemy. Once that’s defined, we can write a query in a more ‘pythonic’ way and read the results directly to a Pandas dataframe. Running that code gives the following output: 
+
+![](https://cdn-images-1.medium.com/max/1600/1\*ny184a5Zzl-foqOheejl1g.png)
+
 ## APIs 
 
 Sometimes you'll need to access data from a particular platform your company uses, like Hubspot, Twitter or Trello. These platforms often have a public API that you can pull data from, directly inside your Python environment. 
 
-The basic idea is you send a request \(which may include query parameters and access credentials\) to an endpoint. That endpoint will return a response code plus the data you asked for \(hopefully\). The most common response codes are: 
+The basic idea is you send a request (which may include query parameters and access credentials) to an endpoint. That endpoint will return a response code plus the data you asked for (hopefully). The most [common response codes](https://www.restapitutorial.com/httpstatuscodes.html) are: 
 
-* `200`: Everything went okay, and the result has been returned \(if any\).
+* `200`: Everything went okay, and the result has been returned.
 * `301`: The server is redirecting you to a different endpoint. This can happen when a company switches domain names, or an endpoint name is changed.
 * `400`: The server thinks you made a bad request. This can happen when you don’t send along the right data, among other things.
 * `403`: The resource you’re trying to access is forbidden: you don’t have the right permissions to see it.
@@ -238,11 +267,11 @@ From here, try including query parameters or access credentials for your favouri
 If you don't want to deal with JSON you can try searching for a Python library for that API - these are usually open-source and maintained by the company or third parties. 
 {% endhint %}
 
-## Public data sources
+## Data Access Libraries
 
-### **Pandas\_datareader**
+### **Pandas_datareader**
 
-[Pandas\_datareader](https://pandas-datareader.readthedocs.io/en/latest/index.html) is a great way to pull data from the internet into your Python environment. It is particularly suited to financial data, but also has some World Bank datasources. To get Zoom's daily share price over the past few years, try the following: 
+[Pandas_datareader](https://pandas-datareader.readthedocs.io/en/latest/index.html) is a great way to pull data from the internet into your Python environment. It is particularly suited to financial data, but also has some World Bank datasources. To get Zoom's daily share price over the past few years, try the following: 
 
 ```python
 !pip install pandas_datareader
@@ -264,7 +293,7 @@ Running that code gives us the following output:
 
 ### **DataCommons**
 
-[Datacommons](https://datacommons.org/) is a project by Google providing access to standardized and cleaned public datasets. The underlying data is represented in a graph format, making it really easy to [query and join data](https://towardsdatascience.com/exploring-datacommons-the-api-powering-google-search-afc366ec242b) from many different datasources e.g. the US Census, World Bank, Wikipedia, Centre for Disease Control and more. Here's a basic example: 
+[Datacommons](https://datacommons.org) is a project by Google providing access to standardized and cleaned public datasets. The underlying data is represented in a graph format, making it really easy to [query and join data](https://towardsdatascience.com/exploring-datacommons-the-api-powering-google-search-afc366ec242b) from many different datasources e.g. the US Census, World Bank, Wikipedia, Centre for Disease Control and more. Here's a basic example: 
 
 ```python
 !pip install datacommons datacommons_pandas --upgrade --quiet
@@ -293,9 +322,9 @@ Running that code gives us the following:
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-13.54.24.png)
 
-### **PyTrends \(Google Trends\)**
+### **PyTrends (Google Trends)**
 
-[PyTrends](https://github.com/GeneralMills/pytrends#interest-over-time) is an unofficial but useful library for querying [Google Trends](https://trends.google.com/trends/explore?date=today%205-y&q=oat%20milk,soy%20milk,almond%20milk) data - here's a simple example: 
+[PyTrends](https://github.com/GeneralMills/pytrends#interest-over-time) is an unofficial but useful library for querying [Google Trends](https://trends.google.com/trends/explore?date=today%205-y\&q=oat%20milk,soy%20milk,almond%20milk) data - here's a simple example: 
 
 ```python
 import pandas as pd
@@ -315,11 +344,11 @@ Running that code gives us the following output:
 
 ### **Kaggle**
 
-Kaggle is a data science community that hosts a lot of datasets and competitions for learning Python. You can download some of these datasets to play around with through their command-line interface \(note: you'll need to sign up for a Kaggle account\). For example, say we want to download some [Zillow economics data](https://www.kaggle.com/zillow/zecon): 
+Kaggle is a data science community that hosts a lot of datasets and competitions for learning Python. You can download some of these datasets to play around with through their command-line interface (note: you'll need to sign up for a Kaggle account). For example, say we want to download some [Zillow economics data](https://www.kaggle.com/zillow/zecon): 
 
 {% tabs %}
 {% tab title="Terminal" %}
-```text
+```
 $ pip install kaggle
 $ export KAGGLE_USERNAME=datadinosaur
 $ export KAGGLE_KEY=xxxxxxxxxxxxxx
@@ -340,4 +369,3 @@ df_from_csv.info()
 ```
 
 To learn more, check out the [Kaggle API documentation](https://github.com/Kaggle/kaggle-api).  
-
