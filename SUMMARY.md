@@ -28,7 +28,7 @@
 ## Tutorials & Guides
 
 * [Accessing data in Python](tutorials-and-guides/getting-data-into-python.md)
-* [Adding interactive filters](tutorials-and-guides/interactive-filters.md)
+* [Adding interactive filters to plots](tutorials-and-guides/interactive-filters.md)
 
 ## Datapane Teams
 
@@ -57,6 +57,5 @@
 * [API Docs](https://datapane.github.io/datapane/)
 * [GitHub](https://github.com/datapane/datapane)
 * [Community](https://github.com/datapane/datapane/discussions)
-* [Blog](https://blog.datapane.com/)
+* [Blog](https://blog.datapane.com)
 * [Demos](https://github.com/datapane/gallery)
-

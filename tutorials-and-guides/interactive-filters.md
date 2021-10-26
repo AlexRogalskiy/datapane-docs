@@ -1,13 +1,13 @@
-# Adding interactive filters
+# Adding interactive filters to plots
 
-## Introduction <a id="02b9"></a>
+## Introduction <a href="02b9" id="02b9"></a>
 
-This guide will show you how to build interactive timeseries plots using advanced visualization libraries like Plotly, Bokeh, and Altair. We'll focus on these two components: 
+This guide will show you how to build interactive timeseries plots using advanced visualization libraries like Plotly, Bokeh, and Altair. We'll focus on these two components:&#x20;
 
 1. **Dropdown menus** let you toggle between different series in the same plot
 2. **Date range sliders** allowing you to observe trends between specific periods
 
-## Dropdown menu <a id="4a19"></a>
+## Dropdown menu <a href="4a19" id="4a19"></a>
 
 A dropdown menu is really handy if you have a lot of categories in the data, e.g. stocks or countries, and you want to observe the trends using a line plot in the same plot or figure. This saves you from creating several plots in a loop.
 
@@ -15,7 +15,7 @@ In this tutorial, we'll use a [Covid 19 dataset](https://www.kaggle.com/imdevskp
 
 ### Altair
 
-You can read more about interactive components with Altair [here](https://altair-viz.github.io/gallery/multiple_interactions.html). Creating the plot with Altair involves binding a country list to a selection component: 
+You can read more about interactive components with Altair [here](https://altair-viz.github.io/gallery/multiple\_interactions.html). Creating the plot with Altair involves binding a country list to a selection component:&#x20;
 
 ```python
 import pandas as pd
@@ -44,13 +44,13 @@ alt_plot = alt.Chart(df).mark_line().encode(
 alt_plot
 ```
 
-Running that code gives us:  
+Running that code gives us: &#x20;
 
 {% embed url="https://datapane.com/u/shoumik/reports/dkjVxgk/dropdown-with-altair/embed/" %}
 
 ### Plotly
 
-Plotly offers a range of interactive options which are called [Custom Controls](https://plotly.com/python/#controls). The best part about these controls is that they can be added to the plots purely in pythonic code. Let's visualize the same plot in Plotly: 
+Plotly offers a range of interactive options which are called [Custom Controls](https://plotly.com/python/#controls). The best part about these controls is that they can be added to the plots purely in pythonic code. Let's visualize the same plot in Plotly:&#x20;
 
 ```python
 import pandas as pd
@@ -101,15 +101,15 @@ fig.update_layout(
 )
 ```
 
-And you will have a nice-looking dropdown added to the time-series plot: 
+And you will have a nice-looking dropdown added to the time-series plot:&#x20;
 
 {% embed url="https://datapane.com/u/shoumik/reports/0kz9Za7/dropdown-with-plotly/embed/" %}
 
 ### Bokeh
 
-Bokeh has components called widgets which can be used to add several interactive components to your plots. Widgets are primarily aimed at creating dashboard components hosted on the Bokeh server. You can read more about widgets [here](https://docs.bokeh.org/en/latest/docs/user_guide/interaction/widgets.html).
+Bokeh has components called widgets which can be used to add several interactive components to your plots. Widgets are primarily aimed at creating dashboard components hosted on the Bokeh server. You can read more about widgets [here](https://docs.bokeh.org/en/latest/docs/user\_guide/interaction/widgets.html).
 
-Keep in mind that in order to create widgets for standalone HTML files or even while working with Jupyter notebook, you will need to use **CustomJS** callbacks. This requires a bit of JavaScript knowledge to get the dropdown working properly. If you want to do it the pure pythonic way, you have to use the Bokeh server to make the widgets work.
+Keep in mind that in order to create widgets for standalone HTML files or even while working with Jupyter notebook, you will need to use **CustomJS **callbacks. This requires a bit of JavaScript knowledge to get the dropdown working properly. If you want to do it the pure pythonic way, you have to use the Bokeh server to make the widgets work.
 
 We will replicate the same use-case as above using Bokeh dropdowns.
 
@@ -158,13 +158,13 @@ layout=column(menu, bokeh_p) # creating the layout
 show(layout)
 ```
 
-This is how the plot will look: 
+This is how the plot will look:&#x20;
 
-![](https://miro.medium.com/max/1400/1*Y_Jgo484IKhjIbxVoIiDbA.png)
+![](https://miro.medium.com/max/1400/1\*Y\_Jgo484IKhjIbxVoIiDbA.png)
 
 ### Matplotlib/Seaborn
 
-If you want to use a non-interactive library like Matplotlib or Seaborn, you can use the `dp.Select`  block to mimic the interactive filter ability, like this: 
+If you want to use a non-interactive library like Matplotlib or Seaborn, you can use the `dp.Select`  block to mimic the interactive filter ability, like this:&#x20;
 
 ```python
 import pandas as pd
@@ -184,13 +184,13 @@ report = dp.Report(
 ).upload(name="Matplotlib example")
 ```
 
-In this example, we've restricted it to 10 plots. 
+In this example, we've restricted it to 10 plots.&#x20;
 
 {% embed url="https://datapane.com/u/shoumik/reports/R70pzg7/dropdown-with-datapane/embed/" %}
 
-## Date range slider <a id="63d5"></a>
+## Date range slider <a href="63d5" id="63d5"></a>
 
-Another interactive component that comes really handy \(especially while working with timeseries plots\) is a date range slider.
+Another interactive component that comes really handy (especially while working with timeseries plots) is a date range slider.
 
 Since most of the timeseries plots have a date range in the X-axis, a slider allows you to dynamically change the period and view only a section of the plot to understand the trends for that particular period.
 
@@ -242,7 +242,7 @@ alt_plot = alt.Chart(df).mark_line().encode(
 alt_plot
 ```
 
-This is how it will look: 
+This is how it will look:&#x20;
 
 {% embed url="https://datapane.com/u/shoumik/reports/VkGyaV3/dropdown-and-slider-with-altair/embed/" %}
 
@@ -250,7 +250,7 @@ This is how it will look:
 
 Plotly has a generic slider component that can be used to change the data corresponding to any axis. While it does not have a specific slider for timeseries data, the generic slider can be used to create a date range slider. You can read more about sliders [here](https://plotly.com/python/sliders/).
 
-To create a slider, we will take the same timeseries plot created previously with the dropdown menu and add a slider component below the plot - just a single extra parameter `xaxis1_rangeslider_visible`! 
+To create a slider, we will take the same timeseries plot created previously with the dropdown menu and add a slider component below the plot - just a single extra parameter `xaxis1_rangeslider_visible`!&#x20;
 
 ```python
 import pandas as pd
@@ -305,7 +305,7 @@ fig.update_layout(
 fig
 ```
 
-This will give you something like this: 
+This will give you something like this:&#x20;
 
 {% embed url="https://datapane.com/u/shoumik/reports/43gPbv7/dropdown-and-slider-with-plotly/embed/" %}
 
@@ -352,9 +352,8 @@ layout = column(menu, date_range_slider, bokeh_p)
 show(layout) # displaying the layout
 ```
 
-This is how it will look like: 
+This is how it will look like:&#x20;
 
-![](https://miro.medium.com/max/1400/1*oss5eDaeEaiZHWzEMaFU-g.png)
+![](https://miro.medium.com/max/1400/1\*oss5eDaeEaiZHWzEMaFU-g.png)
 
-### 
-
+###
