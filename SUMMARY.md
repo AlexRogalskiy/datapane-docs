@@ -25,10 +25,21 @@
   * [Embed specific blocks](reports/embedding-reports/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
-## Tutorials & Guides
+## Examples
+
+***
+
+* [Simple one-pager](simple-one-pager.md)
+* [Dashboard with rows and columns](dashboard-with-rows-and-columns.md)
+* [Multiple pages](multiple-pages.md)
+* [Tabs and Dropdowns](tabs-and-dropdowns.md)
+* [Rich Media](rich-media.md)
+
+## Tutorials <a href="tutorials-and-guides" id="tutorials-and-guides"></a>
 
 * [Accessing data in Python](tutorials-and-guides/getting-data-into-python.md)
 * [Adding interactive filters to plots](tutorials-and-guides/interactive-filters.md)
+* [Sentiment Analysis for textual data](tutorials-and-guides/sentiment-analysis-for-textual-data.md)
 
 ## Datapane Teams
 
