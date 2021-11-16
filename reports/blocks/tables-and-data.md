@@ -8,7 +8,7 @@ description: >-
 
 ## Table
 
-The Table component takes a pandas DataFrame and renders an HTML table in your report. 
+The Table component takes a pandas DataFrame and renders an HTML table in your report.&#x20;
 
 ```python
 import datapane as dp
@@ -27,9 +27,9 @@ report.upload(name='sample_table')
 
 {% embed url="https://datapane.com/u/datapane/reports/sample-table/" %}
 
-If your DataFrame includes [DataFrame Styles](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html), these will be included in your report. DataFrame styles allows you create custom formatted tables; for instance, to show trends, highlight cells, add bar charts, or display correlations. 
+If your DataFrame includes [DataFrame Styles](https://pandas.pydata.org/pandas-docs/stable/user\_guide/style.html), these will be included in your report. DataFrame styles allows you create custom formatted tables; for instance, to show trends, highlight cells, add bar charts, or display correlations.&#x20;
 
-{% embed url="https://datapane.com/u/datapane/reports/df-styled-table/?utm\_medium=embed&utm\_content=viewfull" %}
+{% embed url="https://datapane.com/u/datapane/reports/df-styled-table/?utm_medium=embed&utm_content=viewfull" %}
 
 {% hint style="info" %}
 Table is the best option for displaying multidimensional DataFrames, as `DataTable` will flatten your data.
@@ -62,24 +62,26 @@ report.upload(name='sample_table')
 
 #### **Running Queries on DataTable**
 
-You can run SQL queries on your datatable if you need more advanced filtering & calculations. In the previous example, if we wanted to show only the rows which had a value A &gt; 0.5, we would write the following \(note that `$tbl` is the builtin table name and cannot be changed\):   
+You can run SQL queries on your datatable if you need more advanced filtering & calculations. In the previous example, if we wanted to show only the rows which had a value A > 0.5, we would write the following (note that `$tbl` is the builtin table name and cannot be changed):  &#x20;
 
 ```sql
 SELECT * FROM $tbl
 WHERE A > 0.5
 ```
 
-## Python Dictionary & JSON 
+## Python Dictionary & JSON&#x20;
 
 To include Python objects and JSON, we recommend using the `File` block.
 
 
 
-{% page-ref page="files-and-images.md" %}
+{% content-ref url="files-and-images.md" %}
+[files-and-images.md](files-and-images.md)
+{% endcontent-ref %}
 
 ## Big Number
 
-A single number or change can often be the most important thing in a report. The `BigNumber`component allows you to present KPIs, changes, and statistics in a friendly way to your viewers. You can optionally set intent, and pass in numbers or text. 
+A single number or change can often be the most important thing in a report. The `BigNumber`component allows you to present KPIs, changes, and statistics in a friendly way to your viewers. You can optionally set intent, and pass in numbers or text.&#x20;
 
 For full reference on styling your number, see the [API Documentation](https://datapane.github.io/datapane/report.html#datapane.client.api.report.BigNumber).
 
@@ -106,23 +108,23 @@ dp.Report(
 {% endtab %}
 
 {% tab title="Text Report" %}
-    ```datapane
-    block: Group
-    columns: 2
-    blocks: 
-      - block: BigNumber
-        heading: Number of percentage points
-        value: 84%
-        change: 2%
-        is_upward_change: True
-      - block: BigNumber
-        heading: Simple Statistic
-        value: 100
-    ```
+````
+```datapane
+block: Group
+columns: 2
+blocks: 
+  - block: BigNumber
+    heading: Number of percentage points
+    value: 84%
+    change: 2%
+    is_upward_change: True
+  - block: BigNumber
+    heading: Simple Statistic
+    value: 100
+```
+````
 {% endtab %}
 {% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/big-number/" %}
-
-
 

@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-Stakeholders commonly need to provide some configuration to your apps to enable self-service report generation. Datapane allows you to add parameters, which are presented to end users as **web forms**. This means that other people who have accounts on your instance can generate reports without worrying about code, notebooks, or setting up a Python environment. 
+Stakeholders commonly need to provide some configuration to your apps to enable self-service report generation. Datapane allows you to add parameters, which are presented to end users as **web forms**. This means that other people who have accounts on your instance can generate reports without worrying about code, notebooks, or setting up a Python environment.&#x20;
 
 ## Running & Parameters
 
@@ -16,7 +16,7 @@ Input parameters can be defined in your `datapane.yaml` configuration file, wher
 
 Following the previous example, the dataset we are pulling includes a few other useful parameters which people may want to graph. Let's add the ability for the end-user to choose from `new_cases_smoothed_per_million` , `new_deaths_smoothed_per_million`, `median_age`, and `gdp_per_capita` . Additionally, let's allow them to choose a subset of continents for the graph.
 
-Based on this, we are going to add two parameters: `plot_field` and `continents` to the `parameters` section of our `datapane.yaml`. To configure what the end-user's form looks like, we can choose the type of widget. For the above, we're choosing a `enum` \(which provides a dropdown select menu where the user must select one option\), and a `list` \(which allows the user to choose or more choices from a predefined list\). We can also set the default parameters for each input and a description.
+Based on this, we are going to add two parameters: `plot_field` and `continents` to the `parameters` section of our `datapane.yaml`. To configure what the end-user's form looks like, we can choose the type of widget. For the above, we're choosing a `enum` (which provides a dropdown select menu where the user must select one option), and a `list` (which allows the user to choose or more choices from a predefined list). We can also set the default parameters for each input and a description.
 
 {% hint style="info" %}
 Full details of parameter configuration and available fields are provided in the [API reference](reference/scripts/parameters.md#parameter-form-fields).
@@ -54,7 +54,7 @@ parameters:
 
 You can then use the `Params` object as you would when running on your Datapane instance, and we can customise our data and graph based on those inputs.
 
-{% code title="simple\_script.py" %}
+{% code title="simple_script.py" %}
 ```python
 import pandas as pd
 import altair as alt
@@ -84,11 +84,9 @@ dp.Report(
 
 When we run `script deploy`, Datapane will deploy a new version of our script, and use our parameters definition to generate the following form:
 
-![](../.gitbook/assets/image%20%28103%29.png)
+![](<../.gitbook/assets/image (103).png>)
 
-Stakeholders can enter parameters and generate custom reports themselves, based on these fields.  
+Stakeholders can enter parameters and generate custom reports themselves, based on these fields. &#x20;
 
-![](../.gitbook/assets/image%20%28111%29.png)
-
-
+![](<../.gitbook/assets/image (111).png>)
 

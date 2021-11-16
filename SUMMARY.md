@@ -25,21 +25,17 @@
   * [Embed specific blocks](reports/embedding-reports/share-or-embed-individual-component-of-a-multi-component-report.md)
 * [Automation](reports/automation-with-github-actions.md)
 
-## Examples
+## Examples & Tutorials
 
-***
-
-* [Simple one-pager](simple-one-pager.md)
-* [Dashboard with rows and columns](dashboard-with-rows-and-columns.md)
-* [Multiple pages](multiple-pages.md)
-* [Tabs and Dropdowns](tabs-and-dropdowns.md)
-* [Rich Media](rich-media.md)
-
-## Tutorials <a href="tutorials-and-guides" id="tutorials-and-guides"></a>
-
-* [Accessing data in Python](tutorials-and-guides/getting-data-into-python.md)
-* [Adding interactive filters to plots](tutorials-and-guides/interactive-filters.md)
-* [Sentiment Analysis for textual data](tutorials-and-guides/sentiment-analysis-for-textual-data.md)
+* [Example Gallery](examples-and-tutorials/example-gallery/README.md)
+  * [Simple one-pager](examples-and-tutorials/example-gallery/simple-one-pager.md)
+  * [Multiple pages](examples-and-tutorials/example-gallery/multiple-pages.md)
+  * [Dashboard with rows and columns](examples-and-tutorials/example-gallery/dashboard-with-rows-and-columns.md)
+  * [Tabs and Dropdowns](examples-and-tutorials/example-gallery/tabs-and-dropdowns.md)
+  * [Rich Media](examples-and-tutorials/example-gallery/rich-media.md)
+* [Accessing data in Python](examples-and-tutorials/getting-data-into-python.md)
+* [Adding interactive filters to plots](examples-and-tutorials/interactive-filters.md)
+* [Sentiment Analysis for textual data](examples-and-tutorials/sentiment-analysis-for-textual-data.md)
 
 ## Datapane Teams
 

@@ -8,11 +8,11 @@ description: >-
 
 ## Text
 
-The best way to include long-form text is to use the [Web Editor,](text-reports.md) which allows you to add and edit text directly in the browser, and preview the result. 
+The best way to include long-form text is to use the [Web Editor,](text-reports.md) which allows you to add and edit text directly in the browser, and preview the result.&#x20;
 
-However, you can still add text from within your Python script, as follows: 
+However, you can still add text from within your Python script, as follows:&#x20;
 
-**Markdown** is a lightweight markup language that allows you to include formatted text in your report, and can be access through `dp.Text`, or by passing in a string directly. 
+**Markdown** is a lightweight markup language that allows you to include formatted text in your report, and can be access through `dp.Text`, or by passing in a string directly.&#x20;
 
 ```python
 import datapane as dp
@@ -59,10 +59,12 @@ report.upload(name = 'markdown')
 {% endtab %}
 
 {% tab title="Text Report" %}
-    ```datapane
-    block: text
-    text: hello world
-    ```
+````
+```datapane
+block: text
+text: hello world
+```
+````
 {% endtab %}
 {% endtabs %}
 
@@ -76,7 +78,7 @@ Check [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) f
 
 ## Text-heavy Reports
 
-If your report is text-heavy \(such as an blogpost\) and it contains multiple other blocks, creating a list of strings and blocks in Python can be cumbersome. To solve this, Datapane provides a `format` option, which allows you to write a single block of Markdown \(either in your report, or in a separate file\), and intersperse it with other blocks. 
+If your report is text-heavy (such as an blogpost) and it contains multiple other blocks, creating a list of strings and blocks in Python can be cumbersome. To solve this, Datapane provides a `format` option, which allows you to write a single block of Markdown (either in your report, or in a separate file), and intersperse it with other blocks.&#x20;
 
 To do this, use double braces to specify where you want your other blocks to appear throughout your text.
 
@@ -106,7 +108,7 @@ dp.Report(
 ).upload(name='altair_example')
 ```
 
-{% embed url="https://datapane.com/u/datapane/reports/altair-example/?utm\_medium=embed&utm\_content=viewfull" %}
+{% embed url="https://datapane.com/u/datapane/reports/altair-example/?utm_medium=embed&utm_content=viewfull" %}
 
 Alternatively, you can write your article or post in your favourite markdown editor, and pass it in as a file.
 
@@ -122,7 +124,7 @@ dp.Report(
 
 ## Formulas
 
-The formula block allows you easily to add [_LaTeX_](https://en.wikipedia.org/wiki/LaTeX)-formatted equations to your report, with an optional caption. A brief intro into _LaTeX_ formulas can be found [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics). 
+The formula block allows you easily to add [_LaTeX_](https://en.wikipedia.org/wiki/LaTeX)-formatted equations to your report, with an optional caption. A brief intro into _LaTeX_ formulas can be found [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics).&#x20;
 
 {% tabs %}
 {% tab title="Python" %}
@@ -136,12 +138,12 @@ dp.Report(
 {% endtab %}
 
 {% tab title="Web Report" %}
-```markup
+````markup
 ```datapane
 block: Formula
 formula: x^2 + y^2 = z^2
 ```
-```
+````
 {% endtab %}
 {% endtabs %}
 
@@ -149,13 +151,13 @@ formula: x^2 + y^2 = z^2
 _LaTeX_ formulas commonly make use of special characters, hence prefix your formulas with `r` in Python as per the example above to make them raw strings, e.g. `r"x^2"`
 {% endhint %}
 
-Under the hood we use MathJAX to render the equations in the browser and not a full TeX engine. This means that some of your TeX input may not be rendered correctly on our system - read the [MathJAX documentation](http://docs.mathjax.org/en/latest/input/tex/differences.html) for more info. 
+Under the hood we use MathJAX to render the equations in the browser and not a full TeX engine. This means that some of your TeX input may not be rendered correctly on our system - read the [MathJAX documentation](http://docs.mathjax.org/en/latest/input/tex/differences.html) for more info.&#x20;
 
 ## Code
 
 The code block allows you to embed syntax highlighted source code into your report. This block currently supports Python and JavaScript.
 
-For the Web Editor 
+For the Web Editor&#x20;
 
 {% tabs %}
 {% tab title="Python" %}
@@ -178,14 +180,16 @@ dp.Report(
 {% endtab %}
 
 {% tab title="Web Report" %}
-    ```datapane
-    block: Code
-    language: javascript
-    code: |
-        function foo(n) {
-          return foo(n + 1)
-        }
-    ```
+````
+```datapane
+block: Code
+language: javascript
+code: |
+    function foo(n) {
+      return foo(n + 1)
+    }
+```
+````
 {% endtab %}
 {% endtabs %}
 
@@ -241,7 +245,7 @@ dp.Report(
 {% endtab %}
 
 {% tab title="Web Editor" %}
-```markup
+````markup
 ```datapane
 block: HTML
 html: |
@@ -269,11 +273,9 @@ html: |
       </div>
   </html>
 ```
-```
+````
 {% endtab %}
 {% endtabs %}
 
 {% embed url="https://datapane.com/u/datapane/reports/docs-html/" %}
-
-
 

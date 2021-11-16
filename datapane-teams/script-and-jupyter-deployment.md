@@ -12,13 +12,17 @@ Once you deploy your script or notebook, it can be run in three ways:
 
 Scripts can be run with parameters entered through friendly web forms, which allows you to create interactive, self-service reporting tools for stakeholders.
 
-{% page-ref page="tut-parameterising-a-script.md" %}
+{% content-ref url="tut-parameterising-a-script.md" %}
+[tut-parameterising-a-script.md](tut-parameterising-a-script.md)
+{% endcontent-ref %}
 
 #### On a schedule
 
 Scripts can generate and update reports on a schedule, allowing you to create "live" dashboards and automated reports.
 
-{% page-ref page="scheduling.md" %}
+{% content-ref url="scheduling.md" %}
+[scheduling.md](scheduling.md)
+{% endcontent-ref %}
 
 #### Through an API
 
@@ -26,13 +30,13 @@ You can trigger report generation through our API, which allows you to generate 
 
 ## Deploying a script
 
-If you have a local Python script or notebook which creates a report using Datapane's `Report.upload` method \(see [Creating a Report](../reports/tut-creating-a-report.md)\), you can deploy it to Datapane using the CLI. Let's take our COVID script from before deploy it using Datapane's CLI. The report we upload in this code will be returned to the user when they run our script using the Datapane web interface.
+If you have a local Python script or notebook which creates a report using Datapane's `Report.upload` method (see [Creating a Report](../reports/tut-creating-a-report.md)), you can deploy it to Datapane using the CLI. Let's take our COVID script from before deploy it using Datapane's CLI. The report we upload in this code will be returned to the user when they run our script using the Datapane web interface.
 
 {% hint style="info" %}
 We recommend creating only one report per script. As many can be created as needed; however, only the last one in each script will be tracked in the web interface.
 {% endhint %}
 
-{% code title="simple\_script.py" %}
+{% code title="simple_script.py" %}
 ```python
 import pandas as pd
 import altair as alt
@@ -63,24 +67,24 @@ $ datapane script deploy --script=simple_script.py --name=covid_script
 
 This makes your script available on your private instance, where you can share it with other users. If you send them your script, they are able to generate the report from the previous example dynamically by hitting the Run button.
 
-![](../.gitbook/assets/image%20%28105%29.png)
+![](<../.gitbook/assets/image (105).png>)
 
 Every time the script is run, it pulls new COVID data and generates a fresh report, which can be shared or embedded.
 
-![](../.gitbook/assets/image%20%28113%29.png)
+![](<../.gitbook/assets/image (113).png>)
 
 ## Configuration
 
 In the previous example, we are deploying a single script and providing the name and file location through command-line arguments. This works well for simple scripts, but scripts often need other configuration, such as [parameter definitions](tut-parameterising-a-script.md), other files or folders to deploy, and Python or OS requirements.
 
-Datapane allows you to provide a configuration file called `datapane.yaml`. When you run `deploy`, Datapane looks for this file automatically. Before we continue, create a new folder and then run the `datapane script init` command inside it: 
+Datapane allows you to provide a configuration file called `datapane.yaml`. When you run `deploy`, Datapane looks for this file automatically. Before we continue, create a new folder and then run the `datapane script init` command inside it:&#x20;
 
 ```bash
 $ datapane script init
 $ ls
 ```
 
-This will create a `datapane.yaml` file and a sample script. 
+This will create a `datapane.yaml` file and a sample script.&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-09-17-at-14.31.13.png)
 
@@ -95,7 +99,8 @@ script: simple_script.py # this could also be ipynb if it was a notebook
 
 If we run `datapane script deploy` in this directory, Datapane will deploy our code with the configuration in `datapane.yaml`. Because we have given the script the same name as our previous one, this will overwrite `covid_script`. See the following link for the full reference on the configuration format.
 
-{% page-ref page="reference/scripts/datapane-yaml.md" %}
+{% content-ref url="reference/scripts/datapane-yaml.md" %}
+[datapane-yaml.md](reference/scripts/datapane-yaml.md)
+{% endcontent-ref %}
 
 In the next section, we will explore adding parameters to your script, to enable reports to be generated dynamically based on user inputs.
-

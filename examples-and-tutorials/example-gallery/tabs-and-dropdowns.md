@@ -1,6 +1,6 @@
 # Tabs and Dropdowns
 
-If you have multiple pieces of content that you don't want to show at the same time, consider using the [Select](reports/blocks/layout-pages-and-selects.md#tabs-and-selects) block. These can be nested inside each other, and can show Tabs (5 or less options) or Dropdowns:&#x20;
+If you have multiple pieces of content that you don't want to show at the same time, consider using the [Select](../../reports/blocks/layout-pages-and-selects.md#tabs-and-selects) block. These can be nested inside each other, and can show Tabs (5 or less options) or Dropdowns:&#x20;
 
 ```python
 import altair as alt

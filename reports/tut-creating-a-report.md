@@ -10,17 +10,19 @@ description: >-
 
 For many Python data analyses, you only want to share a specific user-facing part of it rather than the whole code or notebook. This often is of the form of a standalone product that non-technical people can view directly from their existing tools - e.g. browsers, email, Slack, etc., and without the overhead and requirements of Python and Jupyter.
 
-Datapane allows you to programmatically create reports from the objects in your Python analyses, such as pandas DataFrames, plots from visualization libraries, and Markdown text. 
+Datapane allows you to programmatically create reports from the objects in your Python analyses, such as pandas DataFrames, plots from visualization libraries, and Markdown text.&#x20;
 
 ## Creating a report
 
-Datapane provides a Python API that allows you to create, save, and upload reports comprised of a collection of data-centric blocks. 
+Datapane provides a Python API that allows you to create, save, and upload reports comprised of a collection of data-centric blocks.&#x20;
 
 {% hint style="info" %}
 Detailed API docs for Datapane Reports can be found at [https://datapane.github.io/datapane/](https://datapane.github.io/datapane/).
 {% endhint %}
 
-{% page-ref page="blocks/" %}
+{% content-ref url="blocks/" %}
+[blocks](blocks/)
+{% endcontent-ref %}
 
 For instance, Datapane provides a `Table` block that takes a pandas `DataFrame`. We can create a `Table` block by passing a `DataFrame` into it, and create a `Report` with that single block in it as follows:
 
@@ -37,7 +39,7 @@ report = dp.Report(
 report.save(path='report.html', open=True)
 ```
 
-As seen above, `Reports` can be saved to local `HTML` files. Copying this code into a new script and running it will generate the report. 
+As seen above, `Reports` can be saved to local `HTML` files. Copying this code into a new script and running it will generate the report.&#x20;
 
 ```bash
 $ python3 simple_report.py
@@ -45,11 +47,11 @@ $ python3 simple_report.py
 
 {% embed url="https://datapane.com/u/datapane/reports/docs-report-2/" %}
 
-If you send this HTML file to somebody \(or [upload it on _Datapane Studio_](publishing-and-sharing/#publish-your-report)\), they will be able to view your dataset, sort and filter it, and download it as a CSV.
+If you send this HTML file to somebody (or [upload it on _Datapane Studio_](publishing-and-sharing/#publish-your-report)), they will be able to view your dataset, sort and filter it, and download it as a CSV.
 
 ## A richer report
 
-That report was pretty basic, but we can jazz it up by adding some plots and Markdown text. Unlike a traditional BI tool, Datapane does not rely on a proprietary visualization engine; instead, it natively supports Python visualization libraries such as [Altair](https://altair-viz.github.io/), [Plotly](https://plotly.com/python/), [Bokeh](https://bokeh.org/), and [Folium](https://python-visualization.github.io/folium/).
+That report was pretty basic, but we can jazz it up by adding some plots and Markdown text. Unlike a traditional BI tool, Datapane does not rely on a proprietary visualization engine; instead, it natively supports Python visualization libraries such as [Altair](https://altair-viz.github.io), [Plotly](https://plotly.com/python/), [Bokeh](https://bokeh.org), and [Folium](https://python-visualization.github.io/folium/).
 
 We also support an advanced Table component, called `DataTable`, which allows sorting, filtering, and interactive analysis - however it requires uploading your report to a Datapane server to function.
 
@@ -59,7 +61,7 @@ Let's take the example above, and plot some data using the Python library Altair
 We'll use the below sample code snippet for the rest of the tutorials, so feel free to copy and paste it into a new Python script or Jupyter notebook and follow along
 {% endhint %}
 
-{% code title="richer\_report.py" %}
+{% code title="richer_report.py" %}
 ```python
 import pandas as pd
 import altair as alt
@@ -94,7 +96,8 @@ report.save("report.html", open=True)
 
 When this python script is run, we get the following report.
 
-{% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" caption="A richer Datapane report" %}
+{% embed url="https://datapane.com/u/datapane/reports/covid-vaccinations/" %}
+A richer Datapane report
+{% endembed %}
 
-Next, we will explore the blocks that make up a report, followed by how to upload and optionally share reports online. 
-
+Next, we will explore the blocks that make up a report, followed by how to upload and optionally share reports online.&#x20;

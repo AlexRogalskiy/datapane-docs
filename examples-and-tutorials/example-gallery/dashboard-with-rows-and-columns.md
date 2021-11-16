@@ -1,6 +1,6 @@
 # Dashboard with rows and columns
 
-The [Group](reports/blocks/layout-pages-and-selects.md#grid-layouts) block is a great way to create grid layouts - just specify the number of rows and columns you want. You can also nest groups within each other. If you have a non-fixed number of plots, you can pass them in as a list via the `blocks` parameter:&#x20;
+The [Group](../../reports/blocks/layout-pages-and-selects.md#grid-layouts) block is a great way to create grid layouts - just specify the number of rows and columns you want. You can also nest groups within each other. If you have a non-fixed number of plots, you can pass them in as a list via the `blocks` parameter:&#x20;
 
 ```python
 import altair as alt

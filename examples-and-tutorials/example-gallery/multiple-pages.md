@@ -1,6 +1,6 @@
 # Multiple pages
 
-Datapane allows you to add multiple [pages](reports/blocks/layout-pages-and-selects.md#pages) to a report as follows:&#x20;
+Datapane allows you to add multiple [pages](../../reports/blocks/layout-pages-and-selects.md#pages) to a report as follows:&#x20;
 
 ```python
 import altair as alt

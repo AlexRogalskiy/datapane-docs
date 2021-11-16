@@ -1,5 +1,5 @@
 ---
-description: 'Automating report creation, including via GitHub Actions'
+description: Automating report creation, including via GitHub Actions
 ---
 
 # Automation
@@ -14,7 +14,7 @@ To learn more about GitHub actions, [see the documentation](https://docs.github.
 
 ### GitHub Actions vs. Datapane Teams Script Runner
 
-_Datapane Teams_ also provides a [script runner](../datapane-teams/script-and-jupyter-deployment.md), which has several advantages and optimizations not available on the GitHub action runner, including:
+_Datapane Teams _also provides a [script runner](../datapane-teams/script-and-jupyter-deployment.md), which has several advantages and optimizations not available on the GitHub action runner, including:
 
 * **Friendly end-user forms**. GitHub actions are not suitable for allowing authenticated, non-technical users to to run your script with parameters; Datapane's script runner provides self-service forms for stakeholders.
 * **Jupyter support**. Datapane's script runner allows you to deploy and run Jupyter Notebooks with parameters to generate dynamic reports, whilst the GitHub Action relies on a Python file
@@ -64,7 +64,7 @@ on:
 
 Manual runs can be triggered via the `workflow_dispatch` option. If your report has user-configurable parameters, you can define these in your workflow and enter them via the GH Action site when manually triggering your workflow.
 
-The parameters in the GH Action UI are all strings, however Datapane will convert them to primitive values as needed, e.g. the string `false` becomes a python boolean `False` value. Workflow parameters are described in the [docs](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow_dispatch). The input must manually be converted to the `parameters` json string to pass to the Datapane `build-action` as follows.
+The parameters in the GH Action UI are all strings, however Datapane will convert them to primitive values as needed, e.g. the string `false` becomes a python boolean `False` value. Workflow parameters are described in the [docs](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow\_dispatch). The input must manually be converted to the `parameters` json string to pass to the Datapane `build-action` as follows.
 
 ```yaml
 on:
@@ -101,7 +101,7 @@ Once you have committed your manual run, you can run it in the following ways:
 For more information, see GH [docs](https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow-on-github) for running a parameterised datapane workflow using the GH Action UI.
 {% endhint %}
 
-GitHub's action UI provides an interface for running your action with parameters. 
+GitHub's action UI provides an interface for running your action with parameters.&#x20;
 
 **Trigger by API/Webhook**
 
@@ -192,4 +192,3 @@ jobs:
 ```
 
 Note that when doing this, ensure that you clearly specify your package version in your requirements otherwise you may end up with cache hits for old versions of your packages.
-
