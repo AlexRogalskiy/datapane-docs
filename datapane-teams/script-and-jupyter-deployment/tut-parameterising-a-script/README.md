@@ -19,7 +19,7 @@ Following the previous example, the dataset we are pulling includes a few other 
 Based on this, we are going to add two parameters: `plot_field` and `continents` to the `parameters` section of our `datapane.yaml`. To configure what the end-user's form looks like, we can choose the type of widget. For the above, we're choosing a `enum` (which provides a dropdown select menu where the user must select one option), and a `list` (which allows the user to choose or more choices from a predefined list). We can also set the default parameters for each input and a description.
 
 {% hint style="info" %}
-Full details of parameter configuration and available fields are provided in the [API reference](reference/scripts/parameters.md#parameter-form-fields).
+Full details of parameter configuration and available fields are provided in the [API reference](parameters.md#parameter-form-fields).
 {% endhint %}
 
 {% code title="datapane.yaml" %}
@@ -82,11 +82,11 @@ dp.Report(
 ```
 {% endcode %}
 
-When we run `script deploy`, Datapane will deploy a new version of our script, and use our parameters definition to generate the following form:
+When we run `app deploy`, Datapane will deploy a new version of our app, and use our parameters definition to generate the following form:
 
-![](<../.gitbook/assets/image (103).png>)
+![](<../../../.gitbook/assets/image (103).png>)
 
 Stakeholders can enter parameters and generate custom reports themselves, based on these fields. &#x20;
 
-![](<../.gitbook/assets/image (111).png>)
+![](<../../../.gitbook/assets/image (111).png>)
 

@@ -10,7 +10,7 @@ If you just need to embed a public report or plot directly into a Medium article
 
 ### **1. Get a Medium Integration token**
 
-Go to Medium.com -> Settings, then scroll down to 'Integration tokens'. Type a name** **like 'Datapane' into the input box, then click 'Get integration token' to create a new, 65-character token.&#x20;
+Go to Medium.com -> Settings, then scroll down to 'Integration tokens'. Type a name **** like 'Datapane' into the input box, then click 'Get integration token' to create a new, 65-character token.&#x20;
 
 ![Medium Settings page](../../.gitbook/assets/screenshot-2021-05-28-at-10.24.26.png)
 

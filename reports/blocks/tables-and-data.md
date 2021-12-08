@@ -75,8 +75,8 @@ To include Python objects and JSON, we recommend using the `File` block.
 
 
 
-{% content-ref url="files-and-images.md" %}
-[files-and-images.md](files-and-images.md)
+{% content-ref url="media-attachments-embeds.md" %}
+[media-attachments-embeds.md](media-attachments-embeds.md)
 {% endcontent-ref %}
 
 ## Big Number

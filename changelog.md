@@ -2,6 +2,45 @@
 
 Check out our [Product Roadmap](https://roadmap.prodpad.com/d37d9988-f04a-11eb-9032-0abbec7104a5) to see what upcoming features we are considering, and submit [new ideas here](https://portal.prodpad.com/21dc45da-edf7-11eb-96ba-06df22ffaf6f)!&#x20;
 
+## 26 November 2021
+
+**Python Version 0.13.0**
+
+### :pencil2: Editable Reports
+
+![](<.gitbook/assets/Screenshot 2021-11-23 at 15.29.42.png>)
+
+One of the challenges of building reports is the dependence on a Python environment. Datapane now allows you to create and edit reports directly on our server, meaning it's much easier to onboard non-technical users and make small changes to existing reports.
+
+Our web editor can be used on any of your existing reports - just click 'Edit' and you'll see a side-by-side view with the left hand side showing the report XML structure, and the right hand side showing a report preview. You can then edit the XML to update the report.&#x20;
+
+You'll see an XML representation of your report on the left, plus a preview on the right.&#x20;
+
+{% hint style="info" %}
+As part of this change, we've deprecated the TextReport API and merged its functionality in with Python reports.&#x20;
+{% endhint %}
+
+### ****:projector: Org Renaming
+
+In preparation for unifying our enterprise and studio products, we're renaming and upgrading some of our core objects to make them easier to understand.
+
+* `Script` will be renamed `App`
+* `Blob` will be renamed `File`
+* The current `dp.File` block will be split into `dp.Media` and `dp.Attachment`
+* `Group` will be renamed `Project`
+* `Variables` will be combined with Docker images into a new `Environment` system
+
+This is a **breaking change**, meaning that any new objects you create after the update will need to follow the new syntax. Your existing scripts/blobs/groups should continue to work.
+
+### :bug: Bug Fixes and Improvements
+
+* Fixed a bug where we didn't show explanatory text for Report Notifications on Org
+* Fixed a bug where `dp.Blob.upload_file` gave an error for certain filetypes
+* Fixed a bug where nested groups didn't always display correctly in the embed view
+* Fixed a bug where table cells didn't display correctly on Safari browsers
+* Updated our report preview text to sound more professional
+* Added a Divider block (`dp.Divider`) for more layout control
+
 ## 21 September 2021
 
 **Python Version 0.12.1**
@@ -20,7 +59,7 @@ This will run some Python code to generate a local HTML report which demonstrate
 datapane signup
 ```
 
-### **💬 Report Notifications **
+### **💬 Report Notifications**&#x20;
 
 You can now add email recipients to a report, who will receive a screenshot of the first page of the report plus a link back to the hosted report.&#x20;
 
@@ -32,7 +71,7 @@ To use this feature, go to the Report Settings page -> Email recipients, and ent
 **Datapane Teams** users can choose to notify their email recipients every time the report is updated. This is great for any kind of regular/automated reporting workflow.&#x20;
 {% endhint %}
 
-**🌱Studio plan with Private Report Sharing**
+### **🌱Studio plan with Private Report Sharing**
 
 We've renamed our Community account to Studio and added 5 private reports per account. This is great for sharing confidential data and testing Datapane out in your organization.&#x20;
 
@@ -125,7 +164,7 @@ We've had a ton of feedback from users wanting to create more custom reports. No
 
 ![](.gitbook/assets/screenshot-2021-07-05-at-10.08.36.png)
 
-Now you can create [text reports](reports/blocks/text-reports.md) directly from the browser! This means it's a lot quicker to write long-form articles and reports.&#x20;
+Now you can create [text reports](broken-reference) directly from the browser! This means it's a lot quicker to write long-form articles and reports.&#x20;
 
 We've also changed the syntax for blocks on the text editor - previously inserting a block like Formula would show up as follows:  &#x20;
 
@@ -215,7 +254,7 @@ Read our [installation guide](https://github.com/datapane/datapane-onpremise) on
 
 * LaTeX equations can now be added to your reports! Check out the [Formula](https://docs.datapane.com/reports/blocks/text-code-and-html#formulas) block for more info.&#x20;
 * Increased the maximum size of a report from 25MB to 100MB
-* Scripts can now specify environment variables directly from their `datapane.yaml` file - these can be static value or user variables that are dynamically injected into your script e.g. DB parameters. [See the docs](datapane-teams/configuration-and-dependencies.md#environment-variables) for more info!
+* Scripts can now specify environment variables directly from their `datapane.yaml` file - these can be static value or user variables that are dynamically injected into your script e.g. DB parameters. [See the docs](datapane-teams/script-and-jupyter-deployment/configuration-and-dependencies.md#environment-variables) for more info!
 * Teams users can now set their private report sharing timeout (previously this was fixed at 48 hours)
 
 ### **Bug Fixes**
@@ -246,7 +285,7 @@ Our first versions of Datapane didn’t take into account that users wanted to t
 
 ![](.gitbook/assets/screenshot-2021-05-04-at-19.41.59.png)
 
-### **🦯 Guides **
+### **🦯 Guides**&#x20;
 
 We have added a new [**Guides and Tutorials**](https://datapane.com/guides-and-tutorials/) section to the product, which you can check out. It’s a work in progress, and we would love community-contributions. Want to show-case your skills? Create a guide or tutorial as a Datapane report and tag it like this:
 

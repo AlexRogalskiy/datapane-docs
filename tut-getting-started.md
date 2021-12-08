@@ -136,7 +136,7 @@ Datapane has a server component which you can access through the CLI and Python 
 
 ### Datapane Studio
 
-_Datapane Studio _is hosted on [datapane.com](https://datapane.com) and is available as a free server where you can upload reports. The API and CLI are configured to use this server by default. You can sign up for a free account via [our website](https://datapane.com/accounts/signup) or via CLI:&#x20;
+_Datapane Studio_ is hosted on [datapane.com](https://datapane.com) and is available as a free server where you can upload reports. The API and CLI are configured to use this server by default. You can sign up for a free account via [our website](https://datapane.com/accounts/signup) or via CLI:&#x20;
 
 ```
 $ datapane signup

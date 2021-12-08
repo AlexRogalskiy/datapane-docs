@@ -178,7 +178,7 @@ In addition to top-level pages elements, you can include tabs and dropdown selec
 The `dp.Select` block has two modes:&#x20;
 
 * **Tabs** are used for less than 5 options - you can override this default by passing in the parameter `type=dp.SelectType.TABS`
-* **Drop downs **are used for 5 or more options - you can override this default by passing in the parameter`type = dp.SelectType.DROPDOWN`. In addition, a search bar will appear if the block contains more than 10 options.&#x20;
+* **Drop downs** are used for 5 or more options - you can override this default by passing in the parameter`type = dp.SelectType.DROPDOWN`. In addition, a search bar will appear if the block contains more than 10 options.&#x20;
 
 To set the option names, make sure each block contained inside your `dp.Select` has a `label` - see example:
 

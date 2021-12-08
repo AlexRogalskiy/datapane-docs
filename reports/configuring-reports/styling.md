@@ -8,7 +8,7 @@ This feature is available for Datapane version 0.11.11 or later
 
 ## Python API
 
-When you create a report, you can** **override the default styling properties by passing in a `ReportFormatting` object as follows:&#x20;
+When you create a report, you can **** override the default styling properties by passing in a `ReportFormatting` object as follows:&#x20;
 
 ```python
 dp.Report(

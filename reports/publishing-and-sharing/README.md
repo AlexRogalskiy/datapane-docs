@@ -5,7 +5,7 @@ description: Uploading your report so you can share it with others
 # Uploading and Sharing
 
 {% hint style="info" %}
-This feature requires use of the free _Datapane Studio _hosted platform or a private _Datapane Teams _instance
+This feature requires use of the free _Datapane Studio_ hosted platform or a private _Datapane Teams_ instance
 {% endhint %}
 
 ## Upload your report
@@ -18,7 +18,7 @@ Once you've [logged in](../../tut-getting-started.md#authentication) to your cho
 `Report.upload` was previously called `Report.publish.` The old syntax will still work but has been deprecated.&#x20;
 {% endhint %}
 
-Let's see an example report uploaded to Datapane.com, with the `upload`syntax. Set the `open `boolean parameter to `True`  to open the report afterwards automatically, and add a `description` to change the preview text for your viewers.&#x20;
+Let's see an example report uploaded to Datapane.com, with the `upload`syntax. Set the `open` boolean parameter to `True`  to open the report afterwards automatically, and add a `description` to change the preview text for your viewers.&#x20;
 
 {% code title="richer_report.py" %}
 ```python
@@ -53,9 +53,9 @@ Once uploaded, you can share the link with others so they can view your report a
 
 Datapane Studio provides a free platform for uploading reports, with the following options for report visibility: &#x20;
 
-1. **Default (unlisted): **You have unlimited default reports, which allow anyone with the URL to access them, but they won't appear on your profile or in search results. This is not a truly private system, so make sure you aren't uploading very sensitive information.
-2. **Portfolio: **You can also choose to add the report to your public portfolio ([see example](https://datapane.com/u/johnmicahreid/)) which you can share with potential employers/readers. This is a great way to gain an audience and receive feedback on your reports!&#x20;
-3. **Private: **Your Community account comes with a limited number of private reports if you need to share data confidentially within your organization. Private reports are shared through the [Report Notifications](report-notifications.md) mechanism.&#x20;
+1. **Default (unlisted):** You have unlimited default reports, which allow anyone with the URL to access them, but they won't appear on your profile or in search results. This is not a truly private system, so make sure you aren't uploading very sensitive information.
+2. **Portfolio:** You can also choose to add the report to your public portfolio ([see example](https://datapane.com/u/johnmicahreid/)) which you can share with potential employers/readers. This is a great way to gain an audience and receive feedback on your reports!&#x20;
+3. **Private:** Your Community account comes with a limited number of private reports if you need to share data confidentially within your organization. Private reports are shared through the [Report Notifications](report-notifications.md) mechanism.&#x20;
 
 You can set these via the Report Settings page, or in Python as follows:&#x20;
 
@@ -75,5 +75,5 @@ report.upload(name='report',visibility = dp.Visibility.PRIVATE)
 ```
 
 {% hint style="info" %}
-__[_Datapane Teams_](../../datapane-teams/introduction.md)_ _provides additional options to share reports securely across your company.
+__[_Datapane Teams_](../../datapane-teams/introduction/) __ provides additional options to share reports securely across your company.
 {% endhint %}

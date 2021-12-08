@@ -5,7 +5,7 @@ Datapane allows you to share copies of your report via email. To use this, go to
 ![](../../.gitbook/assets/screenshot-2021-09-20-at-17.43.24.png)
 
 {% hint style="info" %}
-Report notifications are the only way to share **private **reports on Datapane.com, but they can also be used to share **default **and **portfolio **reports.&#x20;
+Report notifications are the only way to share **private** reports on Datapane.com, but they can also be used to share **default** and **portfolio** reports.&#x20;
 {% endhint %}
 
 ## Scheduled Report Notifications
@@ -16,6 +16,6 @@ The mechanism is the same as for Community, except in addition to the 'Send Emai
 
 To learn how to schedule a report to update, check out our section on scheduling:&#x20;
 
-{% content-ref url="../../datapane-teams/scheduling.md" %}
-[scheduling.md](../../datapane-teams/scheduling.md)
+{% content-ref url="../../datapane-teams/script-and-jupyter-deployment/scheduling.md" %}
+[scheduling.md](../../datapane-teams/script-and-jupyter-deployment/scheduling.md)
 {% endcontent-ref %}

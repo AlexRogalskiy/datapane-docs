@@ -2,14 +2,14 @@
 
 ## Introduction
 
-To build Datapane reports, you'll usually start by importing data into your Python environment. This is an overview of the main data sources and how to access them: 
+To build Datapane reports, you'll usually start by importing data into your Python environment. This is an overview of the main data sources and how to access them:&#x20;
 
 1. Local files
 2. Databases
 3. APIs
 4. Data access libraries
 
-The only major requirement is installing the `pandas` library: 
+The only major requirement is installing the `pandas` library:&#x20;
 
 {% tabs %}
 {% tab title="Terminal" %}
@@ -29,7 +29,7 @@ $ conda install pandas
 
 ## Local files
 
-Often the data you need is stored in a local file on your computer. Depending on where you're running your Python environment, you can either specify the filename as a [relative or absolute path](https://www.earthdatascience.org/courses/intro-to-earth-data-science/python-code-fundamentals/work-with-files-directories-paths-in-python/): 
+Often the data you need is stored in a local file on your computer. Depending on where you're running your Python environment, you can either specify the filename as a [relative or absolute path](https://www.earthdatascience.org/courses/intro-to-earth-data-science/python-code-fundamentals/work-with-files-directories-paths-in-python/):&#x20;
 
 ```python
 # Absolute path
@@ -40,7 +40,7 @@ file2 = "./data/example.csv"
 
 ### **CSV files**
 
-CSVs are a popular choice for storing tabular data, here we'll look at a population dataset from[ Our World in Data](https://ourworldindata.org/grapher/population-by-country) using `pd.read_csv`: 
+CSVs are a popular choice for storing tabular data, here we'll look at a population dataset from[ Our World in Data](https://ourworldindata.org/grapher/population-by-country) using `pd.read_csv`:&#x20;
 
 ```python
 import pandas as pd
@@ -50,17 +50,17 @@ df_from_csv = pd.read_csv(csv_file)
 df_from_csv.info()
 ```
 
-After importing the data, it's helpful to run `df.info()` to understand how your data is structured e.g. how many rows, columns and non-null values you have. Running that code gives us the following output: 
+After importing the data, it's helpful to run `df.info()` to understand how your data is structured e.g. how many rows, columns and non-null values you have. Running that code gives us the following output:&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-04-at-16.30.23.png)
 
 {% hint style="info" %}
-If you keep getting  a`FileNotFoundError`, try renaming your filename to replace spaces with underscores e.g. "Financial Sample.xlsx" becomes "Financial_Sample.xlsx". 
+If you keep getting  a`FileNotFoundError`, try renaming your filename to replace spaces with underscores e.g. "Financial Sample.xlsx" becomes "Financial\_Sample.xlsx".&#x20;
 {% endhint %}
 
 ### **Excel files**
 
-You need to be a bit more cautious with Excel files, because they may contain more than one sheet of data and complex visual formatting e.g. extra header rows. Otherwise the syntax is pretty similar - here's a [financial data](https://go.microsoft.com/fwlink/?LinkID=521962) example: 
+You need to be a bit more cautious with Excel files, because they may contain more than one sheet of data and complex visual formatting e.g. extra header rows. Otherwise the syntax is pretty similar - here's a [financial data](https://go.microsoft.com/fwlink/?LinkID=521962) example:&#x20;
 
 ```python
 import pandas as pd
@@ -71,11 +71,11 @@ df_from_excel.info()
 
 ### **Text**
 
-Text files often need more data processing - start by looking at how the data is stored and how you'd like to represent it in Python. From there, you can write code to transform textual input into a dataframe. Let's use a shopping list example, with each line containing an item and a quantity: 
+Text files often need more data processing - start by looking at how the data is stored and how you'd like to represent it in Python. From there, you can write code to transform textual input into a dataframe. Let's use a shopping list example, with each line containing an item and a quantity:&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-10.52.49.png)
 
-To convert that to a dataframe, you can try the following: 
+To convert that to a dataframe, you can try the following:&#x20;
 
 ```python
 shopping_list = "/Users/johnreid/Downloads/shopping_list.txt"
@@ -93,15 +93,15 @@ f.close()
 df_from_textfile = pd.DataFrame(results, columns = ["Item", "Quantity"])
 ```
 
-We read the lines one-by-one, strip extra whitespaces and split the line into two parts. When we create a dataframe, we also need to assign column names. 
+We read the lines one-by-one, strip extra whitespaces and split the line into two parts. When we create a dataframe, we also need to assign column names.&#x20;
 
 ### **Multiple files / folders**
 
- Let's combine a couple of things that we've learned to extract data from the [BBC Sport text dataset](http://mlg.ucd.ie/datasets/bbc.html). 
+&#x20;Let's combine a couple of things that we've learned to extract data from the [BBC Sport text dataset](http://mlg.ucd.ie/datasets/bbc.html).&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-11.06.23.png)
 
-We have 5 subfolders, each with around 100 files. Each file starts with a headline, followed by the body of the article. Our goal will be to combine all these files into a single dataframe with 'Title', 'Subtitle', 'Body' and 'Genre' columns. The `glob` library comes really in handy: 
+We have 5 subfolders, each with around 100 files. Each file starts with a headline, followed by the body of the article. Our goal will be to combine all these files into a single dataframe with 'Title', 'Subtitle', 'Body' and 'Genre' columns. The `glob` library comes really in handy:&#x20;
 
 ```python
 import glob
@@ -141,19 +141,19 @@ final_df = pd.concat([get_df_from_genre(base_path, g) for g in genres])
 final_df
 ```
 
-Note that you can concatenate multiple dataframes together using `pd.concat`. 
+Note that you can concatenate multiple dataframes together using `pd.concat`.&#x20;
 
-Running that code gives us the following output: 
+Running that code gives us the following output:&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-11.50.23.png)
 
 ## Databases
 
-Most organizations store their business-critical data in a [relational database](https://en.wikipedia.org/wiki/Relational_database) like Postgres or MySQL, and you’ll need to know **S**tructured **Q**uery **L**anguage (SQL) to access or update the data stored there.
+Most organizations store their business-critical data in a [relational database](https://en.wikipedia.org/wiki/Relational\_database) like Postgres or MySQL, and you’ll need to know **S**tructured **Q**uery **L**anguage (SQL) to access or update the data stored there.
 
 ### SQLite
 
-SQLite is an embedded database that is stored as a single file, so it's a great place to start testing out queries. Here we'll show an example of connecting to a SQLite file of the [Chinook](https://github.com/lerocha/chinook-database) database: 
+SQLite is an embedded database that is stored as a single file, so it's a great place to start testing out queries. Here we'll show an example of connecting to a SQLite file of the [Chinook](https://github.com/lerocha/chinook-database) database:&#x20;
 
 ```python
 import pandas as pd
@@ -172,7 +172,7 @@ df2 = pd.DataFrame(results)
 
 ### Remote databases
 
-Connecting to a remote database like Postgres, Redshift, or SQLServer uses mostly the same syntax but requires access credentials. For security reasons, it's best to store these credentials in a config file and load them into your Python script. You can create a separate `.py` file like this: 
+Connecting to a remote database like Postgres, Redshift, or SQLServer uses mostly the same syntax but requires access credentials. For security reasons, it's best to store these credentials in a config file and load them into your Python script. You can create a separate `.py` file like this:&#x20;
 
 {% code title="config.py" %}
 ```python
@@ -183,7 +183,7 @@ password = "SecurePas$1"
 ```
 {% endcode %}
 
-and then import it into your Python script as follows (you'll also need the `psychopg2` library): 
+and then import it into your Python script as follows (you'll also need the `psychopg2` library):&#x20;
 
 ```python
 import psycopg2
@@ -199,14 +199,14 @@ conn = psycopg2.connect(
 ```
 
 {% hint style="info" %}
-Make sure to keep your `config.py` file safe and don't upload it elsewhere - you can add it to your `.gitignore` to make sure it doesn't get included in git commits. 
+Make sure to keep your `config.py` file safe and don't upload it elsewhere - you can add it to your `.gitignore` to make sure it doesn't get included in git commits.&#x20;
 {% endhint %}
 
 ### **SQLAlchemy**
 
 If you want a more ‘pythonic’ way of querying a database, try the [SQLAlchemy](https://www.sqlalchemy.org) library, which is an Object-Relational-Mapper. It’s typically used for applications so that developers don’t have to write pure SQL to update their database, but you can use it for querying data too!
 
-Here’s an example using the same Chinook music store database: 
+Here’s an example using the same Chinook music store database:&#x20;
 
 ```python
 import sqlalchemy as db
@@ -227,15 +227,15 @@ query = (
 df = pd.read_sql(query, engine)
 ```
 
-In this code we connect to the database, then set up some tables & metadata in SQLAlchemy. Once that’s defined, we can write a query in a more ‘pythonic’ way and read the results directly to a Pandas dataframe. Running that code gives the following output: 
+In this code we connect to the database, then set up some tables & metadata in SQLAlchemy. Once that’s defined, we can write a query in a more ‘pythonic’ way and read the results directly to a Pandas dataframe. Running that code gives the following output:&#x20;
 
 ![](https://cdn-images-1.medium.com/max/1600/1\*ny184a5Zzl-foqOheejl1g.png)
 
-## APIs 
+## APIs&#x20;
 
-Sometimes you'll need to access data from a particular platform your company uses, like Hubspot, Twitter or Trello. These platforms often have a public API that you can pull data from, directly inside your Python environment. 
+Sometimes you'll need to access data from a particular platform your company uses, like Hubspot, Twitter or Trello. These platforms often have a public API that you can pull data from, directly inside your Python environment.&#x20;
 
-The basic idea is you send a request (which may include query parameters and access credentials) to an endpoint. That endpoint will return a response code plus the data you asked for (hopefully). The most [common response codes](https://www.restapitutorial.com/httpstatuscodes.html) are: 
+The basic idea is you send a request (which may include query parameters and access credentials) to an endpoint. That endpoint will return a response code plus the data you asked for (hopefully). The most [common response codes](https://www.restapitutorial.com/httpstatuscodes.html) are:&#x20;
 
 * `200`: Everything went okay, and the result has been returned.
 * `301`: The server is redirecting you to a different endpoint. This can happen when a company switches domain names, or an endpoint name is changed.
@@ -244,7 +244,7 @@ The basic idea is you send a request (which may include query parameters and acc
 * `404`: The resource you tried to access wasn’t found on the server.
 * `503`: The server is not ready to handle the request.
 
-You'll need to look at the API documentation to understand what data fields are available. The data will usually be returned in JSON format, which allows for deeply-nested data. Let's do a minimal example using the [OpenNotify](http://open-notify.org/Open-Notify-API/People-In-Space/) API, which tracks all the people currently in space: 
+You'll need to look at the API documentation to understand what data fields are available. The data will usually be returned in JSON format, which allows for deeply-nested data. Let's do a minimal example using the [OpenNotify](http://open-notify.org/Open-Notify-API/People-In-Space/) API, which tracks all the people currently in space:&#x20;
 
 ```python
 import requests
@@ -257,21 +257,21 @@ res = pd.DataFrame(response.json()["people"])
 res.head()
 ```
 
-Running that code gives us the following output: 
+Running that code gives us the following output:&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-15.41.28.png)
 
-From here, try including query parameters or access credentials for your favourite API! 
+From here, try including query parameters or access credentials for your favourite API!&#x20;
 
 {% hint style="info" %}
-If you don't want to deal with JSON you can try searching for a Python library for that API - these are usually open-source and maintained by the company or third parties. 
+If you don't want to deal with JSON you can try searching for a Python library for that API - these are usually open-source and maintained by the company or third parties.&#x20;
 {% endhint %}
 
 ## Data Access Libraries
 
-### **Pandas_datareader**
+### **Pandas\_datareader**
 
-[Pandas_datareader](https://pandas-datareader.readthedocs.io/en/latest/index.html) is a great way to pull data from the internet into your Python environment. It is particularly suited to financial data, but also has some World Bank datasources. To get Zoom's daily share price over the past few years, try the following: 
+[Pandas\_datareader](https://pandas-datareader.readthedocs.io/en/latest/index.html) is a great way to pull data from the internet into your Python environment. It is particularly suited to financial data, but also has some World Bank datasources. To get Zoom's daily share price over the past few years, try the following:&#x20;
 
 ```python
 !pip install pandas_datareader
@@ -287,13 +287,13 @@ zm = data.DataReader("ZM",
 zm.head()
 ```
 
-Running that code gives us the following output: 
+Running that code gives us the following output:&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-13.52.38.png)
 
 ### **DataCommons**
 
-[Datacommons](https://datacommons.org) is a project by Google providing access to standardized and cleaned public datasets. The underlying data is represented in a graph format, making it really easy to [query and join data](https://towardsdatascience.com/exploring-datacommons-the-api-powering-google-search-afc366ec242b) from many different datasources e.g. the US Census, World Bank, Wikipedia, Centre for Disease Control and more. Here's a basic example: 
+[Datacommons](https://datacommons.org) is a project by Google providing access to standardized and cleaned public datasets. The underlying data is represented in a graph format, making it really easy to [query and join data](https://towardsdatascience.com/exploring-datacommons-the-api-powering-google-search-afc366ec242b) from many different datasources e.g. the US Census, World Bank, Wikipedia, Centre for Disease Control and more. Here's a basic example:&#x20;
 
 ```python
 !pip install datacommons datacommons_pandas --upgrade --quiet
@@ -318,13 +318,13 @@ cdc500_df = dc.build_multivariate_dataframe(
 cdc500_df.info()
 ```
 
-Running that code gives us the following: 
+Running that code gives us the following:&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-13.54.24.png)
 
 ### **PyTrends (Google Trends)**
 
-[PyTrends](https://github.com/GeneralMills/pytrends#interest-over-time) is an unofficial but useful library for querying [Google Trends](https://trends.google.com/trends/explore?date=today%205-y\&q=oat%20milk,soy%20milk,almond%20milk) data - here's a simple example: 
+[PyTrends](https://github.com/GeneralMills/pytrends#interest-over-time) is an unofficial but useful library for querying [Google Trends](https://trends.google.com/trends/explore?date=today%205-y\&q=oat%20milk,soy%20milk,almond%20milk) data - here's a simple example:&#x20;
 
 ```python
 import pandas as pd
@@ -338,13 +338,13 @@ top_queries = pytrends.interest_over_time()[keywords]
 top_queries.head()
 ```
 
-Running that code gives us the following output: 
+Running that code gives us the following output:&#x20;
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-14.20.59.png)
 
 ### **Kaggle**
 
-Kaggle is a data science community that hosts a lot of datasets and competitions for learning Python. You can download some of these datasets to play around with through their command-line interface (note: you'll need to sign up for a Kaggle account). For example, say we want to download some [Zillow economics data](https://www.kaggle.com/zillow/zecon): 
+Kaggle is a data science community that hosts a lot of datasets and competitions for learning Python. You can download some of these datasets to play around with through their command-line interface (note: you'll need to sign up for a Kaggle account). For example, say we want to download some [Zillow economics data](https://www.kaggle.com/zillow/zecon):&#x20;
 
 {% tabs %}
 {% tab title="Terminal" %}
@@ -358,7 +358,7 @@ $ unzip zecon.zip
 {% endtab %}
 {% endtabs %}
 
-This will download a zipped file of the datasets, and then uncompress them. From there, you can open them as local files with Pandas: 
+This will download a zipped file of the datasets, and then uncompress them. From there, you can open them as local files with Pandas:&#x20;
 
 ```python
 import pandas as pd
@@ -368,4 +368,4 @@ df_from_csv = pd.read_csv(csv_file)
 df_from_csv.info()
 ```
 
-To learn more, check out the [Kaggle API documentation](https://github.com/Kaggle/kaggle-api).  
+To learn more, check out the [Kaggle API documentation](https://github.com/Kaggle/kaggle-api). &#x20;

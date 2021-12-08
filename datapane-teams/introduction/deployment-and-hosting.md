@@ -70,7 +70,7 @@ This may include:&#x20;
 * Managing storage, database, and cache backends&#x20;
 * Creating SSL certificates and load balancers
 
-## **Enterprise (Cloud-first on-premise) **
+## **Enterprise (Cloud-first on-premise)**&#x20;
 
 ### **Overview**
 

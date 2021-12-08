@@ -4,7 +4,7 @@ description: Parameters customise your script and can turn it into a web form
 
 # Parameters
 
-### Parameters Options
+### Parameter Options
 
 When you define your list of parameters, all can include the following options.
 
@@ -20,7 +20,7 @@ When you define your list of parameters, all can include the following options.
 
 The `type` of your parameter and other settings dictates how it is presented in your form. Datapane supports the following form fields.
 
-| **Form Field**       | **`type`** | Extra options                                                | **Default value **        |
+| **Form Field**       | **`type`** | Extra options                                                | **Default value**         |
 | -------------------- | ---------- | ------------------------------------------------------------ | ------------------------- |
 | Text input           | `string`   |                                                              | `””`                      |
 | Slider               | `integer`  | Both `min` and`max`properties set.                           | `min` value               |

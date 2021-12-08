@@ -1,13 +1,13 @@
 # Adding interactive filters to plots
 
-## Introduction <a href="02b9" id="02b9"></a>
+## Introduction <a href="#02b9" id="02b9"></a>
 
 This guide will show you how to build interactive timeseries plots using advanced visualization libraries like Plotly, Bokeh, and Altair. We'll focus on these two components:&#x20;
 
 1. **Dropdown menus** let you toggle between different series in the same plot
 2. **Date range sliders** allowing you to observe trends between specific periods
 
-## Dropdown menu <a href="4a19" id="4a19"></a>
+## Dropdown menu <a href="#4a19" id="4a19"></a>
 
 A dropdown menu is really handy if you have a lot of categories in the data, e.g. stocks or countries, and you want to observe the trends using a line plot in the same plot or figure. This saves you from creating several plots in a loop.
 
@@ -109,7 +109,7 @@ And you will have a nice-looking dropdown added to the time-series plot:&#x20;
 
 Bokeh has components called widgets which can be used to add several interactive components to your plots. Widgets are primarily aimed at creating dashboard components hosted on the Bokeh server. You can read more about widgets [here](https://docs.bokeh.org/en/latest/docs/user\_guide/interaction/widgets.html).
 
-Keep in mind that in order to create widgets for standalone HTML files or even while working with Jupyter notebook, you will need to use **CustomJS **callbacks. This requires a bit of JavaScript knowledge to get the dropdown working properly. If you want to do it the pure pythonic way, you have to use the Bokeh server to make the widgets work.
+Keep in mind that in order to create widgets for standalone HTML files or even while working with Jupyter notebook, you will need to use **CustomJS** callbacks. This requires a bit of JavaScript knowledge to get the dropdown working properly. If you want to do it the pure pythonic way, you have to use the Bokeh server to make the widgets work.
 
 We will replicate the same use-case as above using Bokeh dropdowns.
 
@@ -188,7 +188,7 @@ In this example, we've restricted it to 10 plots.&#x20;
 
 {% embed url="https://datapane.com/u/shoumik/reports/R70pzg7/dropdown-with-datapane/embed/" %}
 
-## Date range slider <a href="63d5" id="63d5"></a>
+## Date range slider <a href="#63d5" id="63d5"></a>
 
 Another interactive component that comes really handy (especially while working with timeseries plots) is a date range slider.
 

@@ -1,6 +1,6 @@
 # Sentiment Analysis for textual data
 
-Data analysis often starts with **structured data **that’s** **already stored as numbers, dates, categories etc. However, unstructured data can yield crucial insights if you use appropriate techniques. Often you need to create a report for your CS team using NLP... In this tutorial, we'll run sentiment analysis on a textual dataset to figure out how positive and negative each phrase is, and turn the results into an interactive Datapane report.&#x20;
+Data analysis often starts with **structured data** that’s **** already stored as numbers, dates, categories etc. However, unstructured data can yield crucial insights if you use appropriate techniques. Often you need to create a report for your CS team using NLP... In this tutorial, we'll run sentiment analysis on a textual dataset to figure out how positive and negative each phrase is, and turn the results into an interactive Datapane report.&#x20;
 
 ## The dataset
 
@@ -35,7 +35,7 @@ We have 8 columns and about 400k rows. We’ll use the ‘Title’ for the actua
 
 Through the magic of open-source, we can use someone else’s hard-earned knowledge in our analysis — in this case a pretrained model called the Vader Sentiment Intensity Analyser from the popular [NLTK](https://www.nltk.org/index.html) library.
 
-To build the model, the authors gathered a list of common words and then asked a panel of human testers to rate each one on **valence **i.e. positive or negative, and **intensity **i.e. how strong the sentiment is. As the [original paper](http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf) says: :&#x20;
+To build the model, the authors gathered a list of common words and then asked a panel of human testers to rate each one on **valence** i.e. positive or negative, and **intensity** i.e. how strong the sentiment is. As the [original paper](http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf) says: :&#x20;
 
 > \[After stripping out irrelevant words] this left us with just over 7,500 lexical features with validated valence scores that indicated both the sentiment polarity (positive/negative), and the sentiment intensity on a scale from –4 to +4. For example, the word “okay” has a positive valence of 0.9, “good” is 1.9, and “great” is 3.1, whereas “horrible” is –2.5, the frowning emoticon “:(” is –2.2, and “sucks” and “sux” are both –1.5.
 

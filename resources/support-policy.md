@@ -2,7 +2,7 @@
 
 ## Scheduled Maintenance Windows
 
-Datapane deploys new versions of our software on a regular basis to fix bugs and add new features. We reserve a deployment window on **Saturdays at 10am BST for up to 15 minutes. **We won't use it every week, and most deployments should take less than a minute.&#x20;
+Datapane deploys new versions of our software on a regular basis to fix bugs and add new features. We reserve a deployment window on **Saturdays at 10am BST for up to 15 minutes.** We won't use it every week, and most deployments should take less than a minute.&#x20;
 
 Here's what you can expect to happen during this period,&#x20;
 

@@ -22,7 +22,7 @@ Datapane has three standard report, which dictate sizing and layout:
 
 * **Medium:** medium width and margins, optimized for mixed content
 * **Narrow:** small width and large margins, optimized for long-form text
-* **Full: **full-width with no margins, optimized for grid layout and visualizations
+* **Full:** full-width with no margins, optimized for grid layout and visualizations
 
 The default type is Medium, and you can choose other widths when you create your report as follows:
 
@@ -61,8 +61,8 @@ report.upload(..., formatting=dp.ReportFormatting(width=dp.ReportWidth.NARROW))
 [layout-pages-and-selects.md](layout-pages-and-selects.md)
 {% endcontent-ref %}
 
-{% content-ref url="files-and-images.md" %}
-[files-and-images.md](files-and-images.md)
+{% content-ref url="media-attachments-embeds.md" %}
+[media-attachments-embeds.md](media-attachments-embeds.md)
 {% endcontent-ref %}
 
 Except for Page blocks, every block can be nested inside a layout block, meaning you can build arbitrarily complex reports. In addition, most blocks take optional `name` and `caption` parameters and display those to your viewers.&#x20;
